@@ -273,25 +273,17 @@ class NotebookWindow(tk.Toplevel):
         # Configure style for tabs
         style = ttk.Style()
         style.configure('TNotebook', tabposition='nw')
-        style.configure('TNotebook.Tab', 
-            padding=[10, 5],
-            anchor='w',
-            background='black',
-            foreground='white'
-        )
-        style.map('TNotebook.Tab',
-            background=[('selected', '#333333'), ('!selected', 'black')],
-            foreground=[('selected', 'white'), ('!selected', '#999999')]
-        )
+        style.configure('TNotebook.Tab', padding=[10, 5])
         
         # Create notebook for tabs
         self.notebook = ttk.Notebook(self)
         self.notebook.pack(fill=tk.BOTH, expand=True, padx=5, pady=5)
         
-        # Keep track of terminals
+        # Keep track of terminals and tab labels
         self.terminals = {}
+        self.tab_labels = {}
         
-        # Bind events for tab selection
+        # Bind tab change event
         self.notebook.bind('<<NotebookTabChanged>>', self._on_tab_changed)
         
         # Set minimum size
@@ -304,36 +296,57 @@ class NotebookWindow(tk.Toplevel):
         """Add a new terminal tab"""
         from .terminal import TerminalGUI  # Import here to avoid circular import
         
-        # Create a frame for the new tab
+        # Create tab frame
         tab_frame = ttk.Frame(self.notebook)
-        terminal = TerminalGUI(tab_frame)
         
-        # Store reference to terminal
+        # Create header frame for tab label and close button
+        header_frame = ttk.Frame(tab_frame)
+        header_frame.pack(fill='x', side='top')
+        
+        # Add tab label
+        tab_num = len(self.terminals) + 1
+        label = ttk.Label(header_frame, text=f"Terminal {tab_num}")
+        label.pack(side='left', padx=5)
+        
+        # Add close button
+        close_button = ttk.Button(header_frame, text="×", width=2,
+                                command=lambda: self.close_tab(tab_frame))
+        close_button.pack(side='right', padx=5)
+        
+        # Create terminal
+        terminal = TerminalGUI(tab_frame)
+        terminal.frame.pack(fill='both', expand=True)
         self.terminals[tab_frame] = terminal
         
-        # Add the tab to the notebook with title
-        tab_num = self.notebook.index('end') + 1
-        self.notebook.add(tab_frame, text=f"Terminal {tab_num}", sticky='w')
+        # Add the tab to notebook
+        self.notebook.add(tab_frame, text=f"Terminal {tab_num}")
         
         # Select the new tab
         self.notebook.select(tab_frame)
-        
-        # Focus the terminal's command entry
         terminal.command_entry.focus_set()
     
-    def close_current_tab(self) -> None:
+    def close_tab(self, tab_frame):
+        """Close a specific tab"""
+        if len(self.terminals) > 1:
+            # Remove the terminal
+            if tab_frame in self.terminals:
+                del self.terminals[tab_frame]
+            
+            # Remove the tab
+            self.notebook.forget(tab_frame)
+            
+            # Update remaining tab numbers
+            for i, tab in enumerate(self.notebook.tabs(), 1):
+                self.notebook.tab(tab, text=f"Terminal {i}")
+        else:
+            # If this is the last tab, close the window
+            self.close_window()
+    
+    def close_current_tab(self):
         """Close the currently selected tab"""
         current = self.notebook.select()
-        if current and self.notebook.index('end') > 1:  # Don't close last tab
-            # Clean up references
-            if current in self.terminals:
-                del self.terminals[current]
-            self.notebook.forget(current)
-            
-            # Focus the new current tab's terminal
-            current = self.notebook.select()
-            if current in self.terminals:
-                self.terminals[current].command_entry.focus_set()
+        if current:
+            self.close_tab(current)
     
     def close_window(self):
         self.destroy()
