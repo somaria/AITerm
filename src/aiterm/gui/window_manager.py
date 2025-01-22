@@ -104,11 +104,17 @@ class NotebookWindow:
         
         # Configure style for tabs
         style = ttk.Style()
-        style.configure('TNotebook', background='black')
-        style.configure('TNotebook.Tab', padding=[5, 5], background='black', foreground='white')
+        style.configure('TNotebook', tabposition='nw')
+        style.configure('TNotebook.Tab', 
+            padding=[10, 5],
+            anchor='w',
+            background='black',
+            foreground='white'
+        )
         style.map('TNotebook.Tab',
-                 background=[('selected', '#333333'), ('!selected', 'black')],
-                 foreground=[('selected', 'white'), ('!selected', '#999999')])
+            background=[('selected', '#333333'), ('!selected', 'black')],
+            foreground=[('selected', 'white'), ('!selected', '#999999')]
+        )
         
         # Create notebook for tabs
         self.notebook = ttk.Notebook(root)
@@ -139,7 +145,7 @@ class NotebookWindow:
         
         # Add the tab to the notebook with title
         tab_num = self.notebook.index('end') + 1
-        self.notebook.add(tab_frame, text=f"Terminal {tab_num}")
+        self.notebook.add(tab_frame, text=f"Terminal {tab_num}", sticky='w')
         
         # Select the new tab
         self.notebook.select(tab_frame)
