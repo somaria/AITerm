@@ -26,21 +26,11 @@ class GitCommand:
             parts = parts[1:]
         return " ".join(parts)
 
-    def _preprocess_command(self, command: str) -> str:
-        """Preprocess command to handle ambiguous arguments."""
-        parts = self._normalize_command(command).split()
-        
-        # Handle "show last N commits" pattern
-        if parts and parts[0] == 'show' and len(parts) >= 4:
-            if parts[1] == 'last' and parts[3] == 'commits':
-                return f"log --oneline -{parts[2]}"
-        # Handle "last N commits" pattern
-        elif parts and parts[0] == 'last' and len(parts) >= 3:
-            if parts[2] == 'commits':
-                return f"log --oneline -{parts[1]}"
-        
-        return " ".join(parts)
-    
+    def _preprocess_command(self, command: str) -> List[str]:
+        """Preprocess command using AI interpretation."""
+        # Let AI processor handle all command variations
+        return self.ai_processor.process_command(command)
+
     def _rewrite_command(self, command: str) -> List[str]:
         """Rewrite command using AI processor."""
         return self.ai_processor.process_command(command)
@@ -107,12 +97,9 @@ class GitCommand:
         if not repo_path:
             return self._interpret_error("not a git repository")
         
-        # Normalize and preprocess command
-        if isinstance(command, list):
-            command = " ".join(command)
-        
-        command = self._preprocess_command(command)
-        args = command.split()
+        # Process command through AI interpretation
+        args = self._preprocess_command(command if isinstance(command, str) 
+                                      else " ".join(command))
         
         try:
             command = ['git'] + args

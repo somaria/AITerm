@@ -2,7 +2,21 @@
 
 import logging
 import os
+import glob
 from datetime import datetime
+
+def cleanup_logs() -> str:
+    """Remove all log files from the logs directory."""
+    try:
+        log_files = glob.glob('logs/aiterm_*.log')
+        if not log_files:
+            return "No log files found to clean up."
+        
+        for log_file in log_files:
+            os.remove(log_file)
+        return f"Successfully removed {len(log_files)} log files."
+    except Exception as e:
+        return f"Error cleaning up logs: {str(e)}"
 
 def get_logger(name: str = None) -> logging.Logger:
     """Get or create a logger instance."""

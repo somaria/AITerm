@@ -1,7 +1,0 @@
-2025-01-23 19:58:16,214 - AITerm - INFO - logger:48 - Logger initialized. Log file: logs/aiterm_20250123_195816.log
-2025-01-23 19:58:16,447 - AITerm - INFO - logger:54 - Initialized TerminalCompleter with 46 commands
-2025-01-23 19:58:16,447 - AITerm - INFO - logger:54 - Initializing SuggestionDropdown
-2025-01-23 19:58:16,475 - AITerm - INFO - logger:54 - SuggestionDropdown initialized and hidden
-2025-01-23 19:58:23,525 - AITerm - INFO - logger:54 - Initialized TerminalCompleter with 46 commands
-2025-01-23 19:58:23,525 - AITerm - INFO - logger:54 - Initializing SuggestionDropdown
-2025-01-23 19:58:23,531 - AITerm - INFO - logger:54 - SuggestionDropdown initialized and hidden

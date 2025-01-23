@@ -38,6 +38,14 @@ class TerminalCompleter:
             # Others
             'echo', 'clear', 'python', 'node'
         ])
+        
+        self.git_patterns = {
+            'show last': ['commits', 'changes'],
+            'git show last': ['commits', 'changes'],
+            'git log': ['-n', '--oneline', '--graph'],
+            'git show': ['last', 'HEAD', 'master']
+        }
+        
         logger.info(f"Initialized TerminalCompleter with {len(self.commands)} commands")
         
     def get_suggestions(self, text):
@@ -51,6 +59,12 @@ class TerminalCompleter:
         suggestions = []
         text = parts[0].lower()  # Only match first word, case insensitive
         logger.info(f"Getting suggestions for text: '{text}'")
+        
+        # Handle git command patterns
+        if len(parts) >= 2:
+            pattern = ' '.join(parts[:2])
+            if pattern in self.git_patterns:
+                return [f"{text} {suffix}" for suffix in self.git_patterns[pattern]]
         
         # If we have multiple parts, complete the last part as a path
         if len(parts) > 1:

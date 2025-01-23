@@ -4,6 +4,7 @@ import os
 import sys
 from aiterm.gui.window_manager import WindowManager
 from aiterm.commands.git_command import GitCommand
+from aiterm.utils.logger import cleanup_logs
 
 def handle_git_command(args):
     """Handle Git command execution."""
@@ -14,6 +15,11 @@ def handle_git_command(args):
 def main():
     """Main entry point."""
     if len(sys.argv) > 1:
+        if sys.argv[1] == "cleanup-logs":
+            result = cleanup_logs()
+            print(result)
+            return
+
         command = sys.argv[1:]
         result = handle_git_command(command)
         print(result)

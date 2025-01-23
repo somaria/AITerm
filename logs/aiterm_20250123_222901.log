@@ -1,0 +1,469 @@
+INFO - Initialized TerminalCompleter with 46 commands
+INFO - Initializing SuggestionDropdown
+INFO - SuggestionDropdown initialized and hidden
+INFO - Key release event - keysym: s, char: s, keycode: 16777331
+INFO - Current text: 'sh'
+INFO - Getting suggestions for text: 'sh'
+INFO - Prefix matches for 'sh': []
+INFO - Fuzzy matches for 'sh': ['ssh', 'ps', 'ls', 'svn', 'sed']
+INFO - New fuzzy matches: ['ssh', 'ps', 'ls', 'svn', 'sed']
+INFO - Final suggestions: ['ssh', 'ps', 'ls', 'svn', 'sed']
+INFO - Got suggestions: ['ssh', 'ps', 'ls', 'svn', 'sed']
+INFO - Showing dropdown at position (134, 672)
+INFO - Showing dropdown with 5 suggestions at (134, 672)
+INFO - Setting geometry to: 1x1+34+59
+INFO - Dropdown shown and configured
+INFO - Dropdown visible: True
+INFO - Dropdown geometry: 404x184+134+672
+INFO - Key release event - keysym: h, char: h, keycode: 67108968
+INFO - Current text: 'show'
+INFO - Getting suggestions for text: 'show'
+INFO - Prefix matches for 'show': []
+INFO - Fuzzy matches for 'show': ['ssh', 'sort', 'echo', 'python', 'wc']
+INFO - New fuzzy matches: ['ssh', 'sort', 'echo', 'python', 'wc']
+INFO - Final suggestions: ['ssh', 'sort', 'echo', 'python', 'wc']
+INFO - Got suggestions: ['ssh', 'sort', 'echo', 'python', 'wc']
+INFO - Showing dropdown at position (134, 672)
+INFO - Showing dropdown with 5 suggestions at (134, 672)
+INFO - Setting geometry to: 404x184+134+672
+INFO - Dropdown shown and configured
+INFO - Dropdown visible: True
+INFO - Dropdown geometry: 404x184+134+672
+INFO - Key release event - keysym: o, char: o, keycode: 520093807
+INFO - Current text: 'show'
+INFO - Getting suggestions for text: 'show'
+INFO - Prefix matches for 'show': []
+INFO - Fuzzy matches for 'show': ['ssh', 'sort', 'echo', 'python', 'wc']
+INFO - New fuzzy matches: ['ssh', 'sort', 'echo', 'python', 'wc']
+INFO - Final suggestions: ['ssh', 'sort', 'echo', 'python', 'wc']
+INFO - Got suggestions: ['ssh', 'sort', 'echo', 'python', 'wc']
+INFO - Showing dropdown at position (134, 672)
+INFO - Showing dropdown with 5 suggestions at (134, 672)
+INFO - Setting geometry to: 404x184+134+672
+INFO - Dropdown shown and configured
+INFO - Dropdown visible: True
+INFO - Dropdown geometry: 404x184+134+672
+INFO - Key release event - keysym: w, char: w, keycode: 218103927
+INFO - Current text: 'show'
+INFO - Getting suggestions for text: 'show'
+INFO - Prefix matches for 'show': []
+INFO - Fuzzy matches for 'show': ['ssh', 'sort', 'echo', 'python', 'wc']
+INFO - New fuzzy matches: ['ssh', 'sort', 'echo', 'python', 'wc']
+INFO - Final suggestions: ['ssh', 'sort', 'echo', 'python', 'wc']
+INFO - Got suggestions: ['ssh', 'sort', 'echo', 'python', 'wc']
+INFO - Showing dropdown at position (134, 672)
+INFO - Showing dropdown with 5 suggestions at (134, 672)
+INFO - Setting geometry to: 404x184+134+672
+INFO - Dropdown shown and configured
+INFO - Dropdown visible: True
+INFO - Dropdown geometry: 404x184+134+672
+INFO - Key release event - keysym: space, char:  , keycode: 822083616
+INFO - Current text: 'show '
+INFO - Getting suggestions for text: 'show'
+INFO - Prefix matches for 'show': []
+INFO - Fuzzy matches for 'show': ['ssh', 'sort', 'echo', 'python', 'wc']
+INFO - New fuzzy matches: ['ssh', 'sort', 'echo', 'python', 'wc']
+INFO - Final suggestions: ['ssh', 'sort', 'echo', 'python', 'wc']
+INFO - Got suggestions: ['ssh', 'sort', 'echo', 'python', 'wc']
+INFO - Showing dropdown at position (134, 672)
+INFO - Showing dropdown with 5 suggestions at (134, 672)
+INFO - Setting geometry to: 404x184+134+672
+INFO - Dropdown shown and configured
+INFO - Dropdown visible: True
+INFO - Dropdown geometry: 404x184+134+672
+INFO - Key release event - keysym: c, char: c, keycode: 134217827
+INFO - Current text: 'show cu'
+INFO - Getting suggestions for text: 'show'
+INFO - Trying path completion for: ./cu*
+INFO - Final suggestions: []
+INFO - Got suggestions: []
+INFO - No suggestions, hiding dropdown
+INFO - Hiding dropdown
+INFO - Key release event - keysym: u, char: u, keycode: 536871029
+INFO - Current text: 'show cu'
+INFO - Getting suggestions for text: 'show'
+INFO - Trying path completion for: ./cu*
+INFO - Final suggestions: []
+INFO - Got suggestions: []
+INFO - No suggestions, hiding dropdown
+INFO - Key release event - keysym: r, char: r, keycode: 251658354
+INFO - Current text: 'show cur'
+INFO - Getting suggestions for text: 'show'
+INFO - Trying path completion for: ./cur*
+INFO - Final suggestions: []
+INFO - Got suggestions: []
+INFO - No suggestions, hiding dropdown
+INFO - Key release event - keysym: r, char: r, keycode: 251658354
+INFO - Current text: 'show curre'
+INFO - Getting suggestions for text: 'show'
+INFO - Trying path completion for: ./curre*
+INFO - Final suggestions: []
+INFO - Got suggestions: []
+INFO - No suggestions, hiding dropdown
+INFO - Key release event - keysym: e, char: e, keycode: 234881125
+INFO - Current text: 'show curren'
+INFO - Getting suggestions for text: 'show'
+INFO - Trying path completion for: ./curren*
+INFO - Final suggestions: []
+INFO - Got suggestions: []
+INFO - No suggestions, hiding dropdown
+INFO - Key release event - keysym: n, char: n, keycode: 754974830
+INFO - Current text: 'show current'
+INFO - Getting suggestions for text: 'show'
+INFO - Trying path completion for: ./current*
+INFO - Final suggestions: []
+INFO - Got suggestions: []
+INFO - No suggestions, hiding dropdown
+INFO - Key release event - keysym: t, char: t, keycode: 285212788
+INFO - Current text: 'show current'
+INFO - Getting suggestions for text: 'show'
+INFO - Trying path completion for: ./current*
+INFO - Final suggestions: []
+INFO - Got suggestions: []
+INFO - No suggestions, hiding dropdown
+INFO - Key release event - keysym: space, char:  , keycode: 822083616
+INFO - Current text: 'show current '
+INFO - Getting suggestions for text: 'show'
+INFO - Trying path completion for: ./current*
+INFO - Final suggestions: []
+INFO - Got suggestions: []
+INFO - No suggestions, hiding dropdown
+INFO - Key release event - keysym: d, char: d, keycode: 33554532
+INFO - Current text: 'show current di'
+INFO - Getting suggestions for text: 'show'
+INFO - Trying path completion for: ./di*
+INFO - Final suggestions: []
+INFO - Got suggestions: []
+INFO - No suggestions, hiding dropdown
+INFO - Key release event - keysym: i, char: i, keycode: 570425449
+INFO - Current text: 'show current di'
+INFO - Getting suggestions for text: 'show'
+INFO - Trying path completion for: ./di*
+INFO - Final suggestions: []
+INFO - Got suggestions: []
+INFO - No suggestions, hiding dropdown
+INFO - Key release event - keysym: f, char: f, keycode: 50331750
+INFO - Current text: 'show current dif'
+INFO - Getting suggestions for text: 'show'
+INFO - Trying path completion for: ./dif*
+INFO - Final suggestions: []
+INFO - Got suggestions: []
+INFO - No suggestions, hiding dropdown
+INFO - Key release event - keysym: BackSpace, char: , keycode: 855638143
+INFO - Current text: 'show current di'
+INFO - Getting suggestions for text: 'show'
+INFO - Trying path completion for: ./di*
+INFO - Final suggestions: []
+INFO - Got suggestions: []
+INFO - No suggestions, hiding dropdown
+INFO - Key release event - keysym: r, char: r, keycode: 251658354
+INFO - Current text: 'show current dire'
+INFO - Getting suggestions for text: 'show'
+INFO - Trying path completion for: ./dire*
+INFO - Final suggestions: []
+INFO - Got suggestions: []
+INFO - No suggestions, hiding dropdown
+INFO - Key release event - keysym: e, char: e, keycode: 234881125
+INFO - Current text: 'show current dire'
+INFO - Getting suggestions for text: 'show'
+INFO - Trying path completion for: ./dire*
+INFO - Final suggestions: []
+INFO - Got suggestions: []
+INFO - No suggestions, hiding dropdown
+INFO - Key release event - keysym: c, char: c, keycode: 134217827
+INFO - Current text: 'show current direc'
+INFO - Getting suggestions for text: 'show'
+INFO - Trying path completion for: ./direc*
+INFO - Final suggestions: []
+INFO - Got suggestions: []
+INFO - No suggestions, hiding dropdown
+INFO - Key release event - keysym: t, char: t, keycode: 285212788
+INFO - Current text: 'show current direct'
+INFO - Getting suggestions for text: 'show'
+INFO - Trying path completion for: ./direct*
+INFO - Final suggestions: []
+INFO - Got suggestions: []
+INFO - No suggestions, hiding dropdown
+INFO - Key release event - keysym: o, char: o, keycode: 520093807
+INFO - Current text: 'show current director'
+INFO - Getting suggestions for text: 'show'
+INFO - Trying path completion for: ./director*
+INFO - Final suggestions: []
+INFO - Got suggestions: []
+INFO - No suggestions, hiding dropdown
+INFO - Key release event - keysym: r, char: r, keycode: 251658354
+INFO - Current text: 'show current director'
+INFO - Getting suggestions for text: 'show'
+INFO - Trying path completion for: ./director*
+INFO - Final suggestions: []
+INFO - Got suggestions: []
+INFO - No suggestions, hiding dropdown
+INFO - Key release event - keysym: y, char: y, keycode: 268435577
+INFO - Current text: 'show current directory'
+INFO - Getting suggestions for text: 'show'
+INFO - Trying path completion for: ./directory*
+INFO - Final suggestions: []
+INFO - Got suggestions: []
+INFO - No suggestions, hiding dropdown
+INFO - Hiding dropdown
+INFO - Executing command: show current directory
+INFO - Key release event - keysym: Return, char: , keycode: 603979789
+INFO - Ignoring special key: Return
+INFO - Key release event - keysym: p, char: p, keycode: 587202672
+INFO - Current text: 'pw'
+INFO - Getting suggestions for text: 'pw'
+INFO - Prefix matches for 'pw': ['pwd']
+INFO - Fuzzy matches for 'pw': ['pwd', 'wc', 'ps', 'cp']
+INFO - New fuzzy matches: ['wc', 'ps', 'cp']
+INFO - Final suggestions: ['pwd', 'wc', 'ps', 'cp']
+INFO - Got suggestions: ['pwd', 'wc', 'ps', 'cp']
+INFO - Showing dropdown at position (134, 672)
+INFO - Showing dropdown with 4 suggestions at (134, 672)
+INFO - Setting geometry to: 404x184+134+672
+INFO - Dropdown shown and configured
+INFO - Dropdown visible: True
+INFO - Dropdown geometry: 404x184+134+672
+INFO - Key release event - keysym: w, char: w, keycode: 218103927
+INFO - Current text: 'pwd'
+INFO - Getting suggestions for text: 'pwd'
+INFO - Prefix matches for 'pwd': ['pwd']
+INFO - Fuzzy matches for 'pwd': ['pwd', 'wc', 'ps', 'du']
+INFO - New fuzzy matches: ['wc', 'ps', 'du']
+INFO - Final suggestions: ['pwd', 'wc', 'ps', 'du']
+INFO - Got suggestions: ['pwd', 'wc', 'ps', 'du']
+INFO - Showing dropdown at position (134, 672)
+INFO - Showing dropdown with 4 suggestions at (134, 672)
+INFO - Setting geometry to: 404x184+134+672
+INFO - Dropdown shown and configured
+INFO - Dropdown visible: True
+INFO - Dropdown geometry: 404x184+134+672
+INFO - Key release event - keysym: d, char: d, keycode: 33554532
+INFO - Current text: 'pwd'
+INFO - Getting suggestions for text: 'pwd'
+INFO - Prefix matches for 'pwd': ['pwd']
+INFO - Fuzzy matches for 'pwd': ['pwd', 'wc', 'ps', 'du']
+INFO - New fuzzy matches: ['wc', 'ps', 'du']
+INFO - Final suggestions: ['pwd', 'wc', 'ps', 'du']
+INFO - Got suggestions: ['pwd', 'wc', 'ps', 'du']
+INFO - Showing dropdown at position (134, 672)
+INFO - Showing dropdown with 4 suggestions at (134, 672)
+INFO - Setting geometry to: 404x184+134+672
+INFO - Dropdown shown and configured
+INFO - Dropdown visible: True
+INFO - Dropdown geometry: 404x184+134+672
+INFO - Hiding dropdown
+INFO - Executing command: pwd
+INFO - Key release event - keysym: Return, char: , keycode: 603979789
+INFO - Ignoring special key: Return
+INFO - Key release event - keysym: s, char: s, keycode: 16777331
+INFO - Current text: 'sh'
+INFO - Getting suggestions for text: 'sh'
+INFO - Prefix matches for 'sh': []
+INFO - Fuzzy matches for 'sh': ['ssh', 'ps', 'ls', 'svn', 'sed']
+INFO - New fuzzy matches: ['ssh', 'ps', 'ls', 'svn', 'sed']
+INFO - Final suggestions: ['ssh', 'ps', 'ls', 'svn', 'sed']
+INFO - Got suggestions: ['ssh', 'ps', 'ls', 'svn', 'sed']
+INFO - Showing dropdown at position (134, 672)
+INFO - Showing dropdown with 5 suggestions at (134, 672)
+INFO - Setting geometry to: 404x184+134+672
+INFO - Dropdown shown and configured
+INFO - Dropdown visible: True
+INFO - Dropdown geometry: 404x184+134+672
+INFO - Key release event - keysym: h, char: h, keycode: 67108968
+INFO - Current text: 'show'
+INFO - Getting suggestions for text: 'show'
+INFO - Prefix matches for 'show': []
+INFO - Fuzzy matches for 'show': ['ssh', 'sort', 'echo', 'python', 'wc']
+INFO - New fuzzy matches: ['ssh', 'sort', 'echo', 'python', 'wc']
+INFO - Final suggestions: ['ssh', 'sort', 'echo', 'python', 'wc']
+INFO - Got suggestions: ['ssh', 'sort', 'echo', 'python', 'wc']
+INFO - Showing dropdown at position (134, 672)
+INFO - Showing dropdown with 5 suggestions at (134, 672)
+INFO - Setting geometry to: 404x184+134+672
+INFO - Dropdown shown and configured
+INFO - Dropdown visible: True
+INFO - Dropdown geometry: 404x184+134+672
+INFO - Key release event - keysym: o, char: o, keycode: 520093807
+INFO - Current text: 'show'
+INFO - Getting suggestions for text: 'show'
+INFO - Prefix matches for 'show': []
+INFO - Fuzzy matches for 'show': ['ssh', 'sort', 'echo', 'python', 'wc']
+INFO - New fuzzy matches: ['ssh', 'sort', 'echo', 'python', 'wc']
+INFO - Final suggestions: ['ssh', 'sort', 'echo', 'python', 'wc']
+INFO - Got suggestions: ['ssh', 'sort', 'echo', 'python', 'wc']
+INFO - Showing dropdown at position (134, 672)
+INFO - Showing dropdown with 5 suggestions at (134, 672)
+INFO - Setting geometry to: 404x184+134+672
+INFO - Dropdown shown and configured
+INFO - Dropdown visible: True
+INFO - Dropdown geometry: 404x184+134+672
+INFO - Key release event - keysym: w, char: w, keycode: 218103927
+INFO - Current text: 'show'
+INFO - Getting suggestions for text: 'show'
+INFO - Prefix matches for 'show': []
+INFO - Fuzzy matches for 'show': ['ssh', 'sort', 'echo', 'python', 'wc']
+INFO - New fuzzy matches: ['ssh', 'sort', 'echo', 'python', 'wc']
+INFO - Final suggestions: ['ssh', 'sort', 'echo', 'python', 'wc']
+INFO - Got suggestions: ['ssh', 'sort', 'echo', 'python', 'wc']
+INFO - Showing dropdown at position (134, 672)
+INFO - Showing dropdown with 5 suggestions at (134, 672)
+INFO - Setting geometry to: 404x184+134+672
+INFO - Dropdown shown and configured
+INFO - Dropdown visible: True
+INFO - Dropdown geometry: 404x184+134+672
+INFO - Key release event - keysym: space, char:  , keycode: 822083616
+INFO - Current text: 'show '
+INFO - Getting suggestions for text: 'show'
+INFO - Prefix matches for 'show': []
+INFO - Fuzzy matches for 'show': ['ssh', 'sort', 'echo', 'python', 'wc']
+INFO - New fuzzy matches: ['ssh', 'sort', 'echo', 'python', 'wc']
+INFO - Final suggestions: ['ssh', 'sort', 'echo', 'python', 'wc']
+INFO - Got suggestions: ['ssh', 'sort', 'echo', 'python', 'wc']
+INFO - Showing dropdown at position (134, 672)
+INFO - Showing dropdown with 5 suggestions at (134, 672)
+INFO - Setting geometry to: 404x184+134+672
+INFO - Dropdown shown and configured
+INFO - Dropdown visible: True
+INFO - Dropdown geometry: 404x184+134+672
+INFO - Key release event - keysym: l, char: l, keycode: 620757100
+INFO - Current text: 'show l'
+INFO - Getting suggestions for text: 'show'
+INFO - Trying path completion for: ./l*
+INFO - Path suggestions: ['show ./logs/']
+INFO - Final suggestions: ['show ./logs/']
+INFO - Got suggestions: ['show ./logs/']
+INFO - Showing dropdown at position (134, 672)
+INFO - Showing dropdown with 1 suggestions at (134, 672)
+INFO - Setting geometry to: 404x184+134+672
+INFO - Dropdown shown and configured
+INFO - Dropdown visible: True
+INFO - Dropdown geometry: 404x184+134+672
+INFO - Key release event - keysym: a, char: a, keycode: 97
+INFO - Current text: 'show las'
+INFO - Getting suggestions for text: 'show'
+INFO - Trying path completion for: ./las*
+INFO - Final suggestions: []
+INFO - Got suggestions: []
+INFO - No suggestions, hiding dropdown
+INFO - Hiding dropdown
+INFO - Key release event - keysym: s, char: s, keycode: 16777331
+INFO - Current text: 'show las'
+INFO - Getting suggestions for text: 'show'
+INFO - Trying path completion for: ./las*
+INFO - Final suggestions: []
+INFO - Got suggestions: []
+INFO - No suggestions, hiding dropdown
+INFO - Key release event - keysym: t, char: t, keycode: 285212788
+INFO - Current text: 'show last'
+INFO - Getting suggestions for text: 'show'
+INFO - Got suggestions: ['show commits', 'show changes']
+INFO - Showing dropdown at position (134, 672)
+INFO - Showing dropdown with 2 suggestions at (134, 672)
+INFO - Setting geometry to: 404x184+134+672
+INFO - Dropdown shown and configured
+INFO - Dropdown visible: True
+INFO - Dropdown geometry: 404x184+134+672
+INFO - Key release event - keysym: space, char:  , keycode: 822083616
+INFO - Current text: 'show last '
+INFO - Getting suggestions for text: 'show'
+INFO - Got suggestions: ['show commits', 'show changes']
+INFO - Showing dropdown at position (134, 672)
+INFO - Showing dropdown with 2 suggestions at (134, 672)
+INFO - Setting geometry to: 404x184+134+672
+INFO - Dropdown shown and configured
+INFO - Dropdown visible: True
+INFO - Dropdown geometry: 404x184+134+672
+INFO - Key release event - keysym: 5, char: 5, keycode: 385876021
+INFO - Current text: 'show last 5'
+INFO - Getting suggestions for text: 'show'
+INFO - Got suggestions: ['show commits', 'show changes']
+INFO - Showing dropdown at position (134, 672)
+INFO - Showing dropdown with 2 suggestions at (134, 672)
+INFO - Setting geometry to: 404x184+134+672
+INFO - Dropdown shown and configured
+INFO - Dropdown visible: True
+INFO - Dropdown geometry: 404x184+134+672
+INFO - Key release event - keysym: space, char:  , keycode: 822083616
+INFO - Current text: 'show last 5 '
+INFO - Getting suggestions for text: 'show'
+INFO - Got suggestions: ['show commits', 'show changes']
+INFO - Showing dropdown at position (134, 672)
+INFO - Showing dropdown with 2 suggestions at (134, 672)
+INFO - Setting geometry to: 404x184+134+672
+INFO - Dropdown shown and configured
+INFO - Dropdown visible: True
+INFO - Dropdown geometry: 404x184+134+672
+INFO - Key release event - keysym: c, char: c, keycode: 134217827
+INFO - Current text: 'show last 5 co'
+INFO - Getting suggestions for text: 'show'
+INFO - Got suggestions: ['show commits', 'show changes']
+INFO - Showing dropdown at position (134, 672)
+INFO - Showing dropdown with 2 suggestions at (134, 672)
+INFO - Setting geometry to: 404x184+134+672
+INFO - Dropdown shown and configured
+INFO - Dropdown visible: True
+INFO - Dropdown geometry: 404x184+134+672
+INFO - Key release event - keysym: o, char: o, keycode: 520093807
+INFO - Current text: 'show last 5 co'
+INFO - Getting suggestions for text: 'show'
+INFO - Got suggestions: ['show commits', 'show changes']
+INFO - Showing dropdown at position (134, 672)
+INFO - Showing dropdown with 2 suggestions at (134, 672)
+INFO - Setting geometry to: 404x184+134+672
+INFO - Dropdown shown and configured
+INFO - Dropdown visible: True
+INFO - Dropdown geometry: 404x184+134+672
+INFO - Key release event - keysym: m, char: m, keycode: 771752045
+INFO - Current text: 'show last 5 com'
+INFO - Getting suggestions for text: 'show'
+INFO - Got suggestions: ['show commits', 'show changes']
+INFO - Showing dropdown at position (134, 672)
+INFO - Showing dropdown with 2 suggestions at (134, 672)
+INFO - Setting geometry to: 404x184+134+672
+INFO - Dropdown shown and configured
+INFO - Dropdown visible: True
+INFO - Dropdown geometry: 404x184+134+672
+INFO - Key release event - keysym: m, char: m, keycode: 771752045
+INFO - Current text: 'show last 5 commi'
+INFO - Getting suggestions for text: 'show'
+INFO - Got suggestions: ['show commits', 'show changes']
+INFO - Showing dropdown at position (134, 672)
+INFO - Showing dropdown with 2 suggestions at (134, 672)
+INFO - Setting geometry to: 404x184+134+672
+INFO - Dropdown shown and configured
+INFO - Dropdown visible: True
+INFO - Dropdown geometry: 404x184+134+672
+INFO - Key release event - keysym: i, char: i, keycode: 570425449
+INFO - Current text: 'show last 5 commit'
+INFO - Getting suggestions for text: 'show'
+INFO - Got suggestions: ['show commits', 'show changes']
+INFO - Showing dropdown at position (134, 672)
+INFO - Showing dropdown with 2 suggestions at (134, 672)
+INFO - Setting geometry to: 404x184+134+672
+INFO - Dropdown shown and configured
+INFO - Dropdown visible: True
+INFO - Dropdown geometry: 404x184+134+672
+INFO - Key release event - keysym: t, char: t, keycode: 285212788
+INFO - Current text: 'show last 5 commits'
+INFO - Getting suggestions for text: 'show'
+INFO - Got suggestions: ['show commits', 'show changes']
+INFO - Showing dropdown at position (134, 672)
+INFO - Showing dropdown with 2 suggestions at (134, 672)
+INFO - Setting geometry to: 404x184+134+672
+INFO - Dropdown shown and configured
+INFO - Dropdown visible: True
+INFO - Dropdown geometry: 404x184+134+672
+INFO - Key release event - keysym: s, char: s, keycode: 16777331
+INFO - Current text: 'show last 5 commits'
+INFO - Getting suggestions for text: 'show'
+INFO - Got suggestions: ['show commits', 'show changes']
+INFO - Showing dropdown at position (134, 672)
+INFO - Showing dropdown with 2 suggestions at (134, 672)
+INFO - Setting geometry to: 404x184+134+672
+INFO - Dropdown shown and configured
+INFO - Dropdown visible: True
+INFO - Dropdown geometry: 404x184+134+672
+INFO - Hiding dropdown
+INFO - Executing command: show last 5 commits
+INFO - Key release event - keysym: Return, char: , keycode: 603979789
+INFO - Ignoring special key: Return

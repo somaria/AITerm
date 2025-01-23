@@ -1,56 +1,6 @@
 INFO - Initialized TerminalCompleter with 46 commands
 INFO - Initializing SuggestionDropdown
 INFO - SuggestionDropdown initialized and hidden
-INFO - Key release event - keysym: p, char: p, keycode: 587202672
-INFO - Current text: 'pw'
-INFO - Getting suggestions for text: 'pw'
-INFO - Prefix matches for 'pw': ['pwd']
-INFO - Fuzzy matches for 'pw': ['pwd', 'wc', 'ps', 'cp']
-INFO - New fuzzy matches: ['wc', 'ps', 'cp']
-INFO - Final suggestions: ['pwd', 'wc', 'ps', 'cp']
-INFO - Got suggestions: ['pwd', 'wc', 'ps', 'cp']
-INFO - Showing dropdown at position (134, 672)
-INFO - Showing dropdown with 4 suggestions at (134, 672)
-INFO - Setting geometry to: 1x1+34+59
-INFO - Dropdown shown and configured
-INFO - Dropdown visible: True
-INFO - Dropdown geometry: 404x184+134+672
-INFO - Key release event - keysym: w, char: w, keycode: 218103927
-INFO - Current text: 'pw'
-INFO - Getting suggestions for text: 'pw'
-INFO - Prefix matches for 'pw': ['pwd']
-INFO - Fuzzy matches for 'pw': ['pwd', 'wc', 'ps', 'cp']
-INFO - New fuzzy matches: ['wc', 'ps', 'cp']
-INFO - Final suggestions: ['pwd', 'wc', 'ps', 'cp']
-INFO - Got suggestions: ['pwd', 'wc', 'ps', 'cp']
-INFO - Showing dropdown at position (134, 672)
-INFO - Showing dropdown with 4 suggestions at (134, 672)
-INFO - Setting geometry to: 404x184+134+672
-INFO - Dropdown shown and configured
-INFO - Dropdown visible: True
-INFO - Dropdown geometry: 404x184+134+672
-INFO - Hiding dropdown
-INFO - Executing command: pw
-INFO - Key release event - keysym: Return, char: , keycode: 603979789
-INFO - Ignoring special key: Return
-INFO - Key release event - keysym: d, char: d, keycode: 33554532
-INFO - Current text: 'd'
-INFO - Getting suggestions for text: 'd'
-INFO - Prefix matches for 'd': ['df', 'du']
-INFO - Fuzzy matches for 'd': ['du', 'df', 'cd']
-INFO - New fuzzy matches: ['cd']
-INFO - Final suggestions: ['df', 'du', 'cd']
-INFO - Got suggestions: ['df', 'du', 'cd']
-INFO - Showing dropdown at position (134, 672)
-INFO - Showing dropdown with 3 suggestions at (134, 672)
-INFO - Setting geometry to: 404x184+134+672
-INFO - Dropdown shown and configured
-INFO - Dropdown visible: True
-INFO - Dropdown geometry: 404x184+134+672
-INFO - Key release event - keysym: BackSpace, char: , keycode: 855638143
-INFO - Current text: ''
-INFO - No text, hiding suggestions
-INFO - Hiding dropdown
 INFO - Key release event - keysym: s, char: s, keycode: 16777331
 INFO - Current text: 'sh'
 INFO - Getting suggestions for text: 'sh'
@@ -61,7 +11,7 @@ INFO - Final suggestions: ['ssh', 'ps', 'ls', 'svn', 'sed']
 INFO - Got suggestions: ['ssh', 'ps', 'ls', 'svn', 'sed']
 INFO - Showing dropdown at position (134, 672)
 INFO - Showing dropdown with 5 suggestions at (134, 672)
-INFO - Setting geometry to: 404x184+134+672
+INFO - Setting geometry to: 1x1+34+59
 INFO - Dropdown shown and configured
 INFO - Dropdown visible: True
 INFO - Dropdown geometry: 404x184+134+672
@@ -143,96 +93,125 @@ INFO - Got suggestions: []
 INFO - No suggestions, hiding dropdown
 INFO - Hiding dropdown
 INFO - Key release event - keysym: s, char: s, keycode: 16777331
-INFO - Current text: 'show las'
+INFO - Current text: 'show last'
 INFO - Getting suggestions for text: 'show'
-INFO - Trying path completion for: ./las*
-INFO - Final suggestions: []
-INFO - Got suggestions: []
-INFO - No suggestions, hiding dropdown
+INFO - Got suggestions: ['show commits', 'show changes']
+INFO - Showing dropdown at position (134, 672)
+INFO - Showing dropdown with 2 suggestions at (134, 672)
+INFO - Setting geometry to: 404x184+134+672
+INFO - Dropdown shown and configured
+INFO - Dropdown visible: True
+INFO - Dropdown geometry: 404x184+134+672
 INFO - Key release event - keysym: t, char: t, keycode: 285212788
 INFO - Current text: 'show last'
 INFO - Getting suggestions for text: 'show'
-INFO - Trying path completion for: ./last*
-INFO - Final suggestions: []
-INFO - Got suggestions: []
-INFO - No suggestions, hiding dropdown
+INFO - Got suggestions: ['show commits', 'show changes']
+INFO - Showing dropdown at position (134, 672)
+INFO - Showing dropdown with 2 suggestions at (134, 672)
+INFO - Setting geometry to: 404x184+134+672
+INFO - Dropdown shown and configured
+INFO - Dropdown visible: True
+INFO - Dropdown geometry: 404x184+134+672
 INFO - Key release event - keysym: space, char:  , keycode: 822083616
-INFO - Current text: 'show last '
+INFO - Current text: 'show last 2'
 INFO - Getting suggestions for text: 'show'
-INFO - Trying path completion for: ./last*
-INFO - Final suggestions: []
-INFO - Got suggestions: []
-INFO - No suggestions, hiding dropdown
+INFO - Got suggestions: ['show commits', 'show changes']
+INFO - Showing dropdown at position (134, 672)
+INFO - Showing dropdown with 2 suggestions at (134, 672)
+INFO - Setting geometry to: 404x184+134+672
+INFO - Dropdown shown and configured
+INFO - Dropdown visible: True
+INFO - Dropdown geometry: 404x184+134+672
 INFO - Key release event - keysym: 2, char: 2, keycode: 318767154
 INFO - Current text: 'show last 2'
 INFO - Getting suggestions for text: 'show'
-INFO - Trying path completion for: ./2*
-INFO - Final suggestions: []
-INFO - Got suggestions: []
-INFO - No suggestions, hiding dropdown
+INFO - Got suggestions: ['show commits', 'show changes']
+INFO - Showing dropdown at position (134, 672)
+INFO - Showing dropdown with 2 suggestions at (134, 672)
+INFO - Setting geometry to: 404x184+134+672
+INFO - Dropdown shown and configured
+INFO - Dropdown visible: True
+INFO - Dropdown geometry: 404x184+134+672
 INFO - Key release event - keysym: space, char:  , keycode: 822083616
 INFO - Current text: 'show last 2 '
 INFO - Getting suggestions for text: 'show'
-INFO - Trying path completion for: ./2*
-INFO - Final suggestions: []
-INFO - Got suggestions: []
-INFO - No suggestions, hiding dropdown
-INFO - Key release event - keysym: c, char: c, keycode: 134217827
-INFO - Current text: 'show last 2 co'
-INFO - Getting suggestions for text: 'show'
-INFO - Trying path completion for: ./co*
-INFO - Path suggestions: ['show last 2 ./config.py']
-INFO - Final suggestions: ['show last 2 ./config.py']
-INFO - Got suggestions: ['show last 2 ./config.py']
+INFO - Got suggestions: ['show commits', 'show changes']
 INFO - Showing dropdown at position (134, 672)
-INFO - Showing dropdown with 1 suggestions at (134, 672)
+INFO - Showing dropdown with 2 suggestions at (134, 672)
+INFO - Setting geometry to: 404x184+134+672
+INFO - Dropdown shown and configured
+INFO - Dropdown visible: True
+INFO - Dropdown geometry: 404x184+134+672
+INFO - Key release event - keysym: c, char: c, keycode: 134217827
+INFO - Current text: 'show last 2 c'
+INFO - Getting suggestions for text: 'show'
+INFO - Got suggestions: ['show commits', 'show changes']
+INFO - Showing dropdown at position (134, 672)
+INFO - Showing dropdown with 2 suggestions at (134, 672)
 INFO - Setting geometry to: 404x184+134+672
 INFO - Dropdown shown and configured
 INFO - Dropdown visible: True
 INFO - Dropdown geometry: 404x184+134+672
 INFO - Key release event - keysym: o, char: o, keycode: 520093807
-INFO - Current text: 'show last 2 com'
+INFO - Current text: 'show last 2 co'
 INFO - Getting suggestions for text: 'show'
-INFO - Trying path completion for: ./com*
-INFO - Final suggestions: []
-INFO - Got suggestions: []
-INFO - No suggestions, hiding dropdown
-INFO - Hiding dropdown
+INFO - Got suggestions: ['show commits', 'show changes']
+INFO - Showing dropdown at position (134, 672)
+INFO - Showing dropdown with 2 suggestions at (134, 672)
+INFO - Setting geometry to: 404x184+134+672
+INFO - Dropdown shown and configured
+INFO - Dropdown visible: True
+INFO - Dropdown geometry: 404x184+134+672
 INFO - Key release event - keysym: m, char: m, keycode: 771752045
 INFO - Current text: 'show last 2 com'
 INFO - Getting suggestions for text: 'show'
-INFO - Trying path completion for: ./com*
-INFO - Final suggestions: []
-INFO - Got suggestions: []
-INFO - No suggestions, hiding dropdown
+INFO - Got suggestions: ['show commits', 'show changes']
+INFO - Showing dropdown at position (134, 672)
+INFO - Showing dropdown with 2 suggestions at (134, 672)
+INFO - Setting geometry to: 404x184+134+672
+INFO - Dropdown shown and configured
+INFO - Dropdown visible: True
+INFO - Dropdown geometry: 404x184+134+672
 INFO - Key release event - keysym: m, char: m, keycode: 771752045
+INFO - Current text: 'show last 2 comm'
+INFO - Getting suggestions for text: 'show'
+INFO - Got suggestions: ['show commits', 'show changes']
+INFO - Showing dropdown at position (134, 672)
+INFO - Showing dropdown with 2 suggestions at (134, 672)
+INFO - Setting geometry to: 404x184+134+672
+INFO - Dropdown shown and configured
+INFO - Dropdown visible: True
+INFO - Dropdown geometry: 404x184+134+672
+INFO - Key release event - keysym: i, char: i, keycode: 570425449
 INFO - Current text: 'show last 2 commi'
 INFO - Getting suggestions for text: 'show'
-INFO - Trying path completion for: ./commi*
-INFO - Final suggestions: []
-INFO - Got suggestions: []
-INFO - No suggestions, hiding dropdown
-INFO - Key release event - keysym: i, char: i, keycode: 570425449
-INFO - Current text: 'show last 2 commit'
-INFO - Getting suggestions for text: 'show'
-INFO - Trying path completion for: ./commit*
-INFO - Final suggestions: []
-INFO - Got suggestions: []
-INFO - No suggestions, hiding dropdown
+INFO - Got suggestions: ['show commits', 'show changes']
+INFO - Showing dropdown at position (134, 672)
+INFO - Showing dropdown with 2 suggestions at (134, 672)
+INFO - Setting geometry to: 404x184+134+672
+INFO - Dropdown shown and configured
+INFO - Dropdown visible: True
+INFO - Dropdown geometry: 404x184+134+672
 INFO - Key release event - keysym: t, char: t, keycode: 285212788
 INFO - Current text: 'show last 2 commits'
 INFO - Getting suggestions for text: 'show'
-INFO - Trying path completion for: ./commits*
-INFO - Final suggestions: []
-INFO - Got suggestions: []
-INFO - No suggestions, hiding dropdown
+INFO - Got suggestions: ['show commits', 'show changes']
+INFO - Showing dropdown at position (134, 672)
+INFO - Showing dropdown with 2 suggestions at (134, 672)
+INFO - Setting geometry to: 404x184+134+672
+INFO - Dropdown shown and configured
+INFO - Dropdown visible: True
+INFO - Dropdown geometry: 404x184+134+672
 INFO - Key release event - keysym: s, char: s, keycode: 16777331
 INFO - Current text: 'show last 2 commits'
 INFO - Getting suggestions for text: 'show'
-INFO - Trying path completion for: ./commits*
-INFO - Final suggestions: []
-INFO - Got suggestions: []
-INFO - No suggestions, hiding dropdown
+INFO - Got suggestions: ['show commits', 'show changes']
+INFO - Showing dropdown at position (134, 672)
+INFO - Showing dropdown with 2 suggestions at (134, 672)
+INFO - Setting geometry to: 404x184+134+672
+INFO - Dropdown shown and configured
+INFO - Dropdown visible: True
+INFO - Dropdown geometry: 404x184+134+672
 INFO - Hiding dropdown
 INFO - Executing command: show last 2 commits
 INFO - Key release event - keysym: Return, char: , keycode: 603979789
@@ -266,7 +245,7 @@ INFO - Dropdown shown and configured
 INFO - Dropdown visible: True
 INFO - Dropdown geometry: 404x184+134+672
 INFO - Key release event - keysym: t, char: t, keycode: 285212788
-INFO - Current text: 'git'
+INFO - Current text: 'git '
 INFO - Getting suggestions for text: 'git'
 INFO - Prefix matches for 'git': ['git']
 INFO - Fuzzy matches for 'git': ['git', 'wget', 'gzip', 'zip']
@@ -309,35 +288,41 @@ INFO - Final suggestions: []
 INFO - Got suggestions: []
 INFO - No suggestions, hiding dropdown
 INFO - Key release event - keysym: o, char: o, keycode: 520093807
-INFO - Current text: 'git sho'
+INFO - Current text: 'git show'
 INFO - Getting suggestions for text: 'git'
-INFO - Trying path completion for: ./sho*
-INFO - Final suggestions: []
-INFO - Got suggestions: []
-INFO - No suggestions, hiding dropdown
+INFO - Got suggestions: ['git last', 'git HEAD', 'git master']
+INFO - Showing dropdown at position (134, 672)
+INFO - Showing dropdown with 3 suggestions at (134, 672)
+INFO - Setting geometry to: 404x184+134+672
+INFO - Dropdown shown and configured
+INFO - Dropdown visible: True
+INFO - Dropdown geometry: 404x184+134+672
 INFO - Key release event - keysym: w, char: w, keycode: 218103927
 INFO - Current text: 'git show'
 INFO - Getting suggestions for text: 'git'
-INFO - Trying path completion for: ./show*
-INFO - Final suggestions: []
-INFO - Got suggestions: []
-INFO - No suggestions, hiding dropdown
+INFO - Got suggestions: ['git last', 'git HEAD', 'git master']
+INFO - Showing dropdown at position (134, 672)
+INFO - Showing dropdown with 3 suggestions at (134, 672)
+INFO - Setting geometry to: 404x184+134+672
+INFO - Dropdown shown and configured
+INFO - Dropdown visible: True
+INFO - Dropdown geometry: 404x184+134+672
 INFO - Key release event - keysym: space, char:  , keycode: 822083616
 INFO - Current text: 'git show '
 INFO - Getting suggestions for text: 'git'
-INFO - Trying path completion for: ./show*
-INFO - Final suggestions: []
-INFO - Got suggestions: []
-INFO - No suggestions, hiding dropdown
+INFO - Got suggestions: ['git last', 'git HEAD', 'git master']
+INFO - Showing dropdown at position (134, 672)
+INFO - Showing dropdown with 3 suggestions at (134, 672)
+INFO - Setting geometry to: 404x184+134+672
+INFO - Dropdown shown and configured
+INFO - Dropdown visible: True
+INFO - Dropdown geometry: 404x184+134+672
 INFO - Key release event - keysym: l, char: l, keycode: 620757100
 INFO - Current text: 'git show l'
 INFO - Getting suggestions for text: 'git'
-INFO - Trying path completion for: ./l*
-INFO - Path suggestions: ['git show ./logs/']
-INFO - Final suggestions: ['git show ./logs/']
-INFO - Got suggestions: ['git show ./logs/']
+INFO - Got suggestions: ['git last', 'git HEAD', 'git master']
 INFO - Showing dropdown at position (134, 672)
-INFO - Showing dropdown with 1 suggestions at (134, 672)
+INFO - Showing dropdown with 3 suggestions at (134, 672)
 INFO - Setting geometry to: 404x184+134+672
 INFO - Dropdown shown and configured
 INFO - Dropdown visible: True
@@ -345,102 +330,133 @@ INFO - Dropdown geometry: 404x184+134+672
 INFO - Key release event - keysym: a, char: a, keycode: 97
 INFO - Current text: 'git show las'
 INFO - Getting suggestions for text: 'git'
-INFO - Trying path completion for: ./las*
-INFO - Final suggestions: []
-INFO - Got suggestions: []
-INFO - No suggestions, hiding dropdown
-INFO - Hiding dropdown
+INFO - Got suggestions: ['git last', 'git HEAD', 'git master']
+INFO - Showing dropdown at position (134, 672)
+INFO - Showing dropdown with 3 suggestions at (134, 672)
+INFO - Setting geometry to: 404x184+134+672
+INFO - Dropdown shown and configured
+INFO - Dropdown visible: True
+INFO - Dropdown geometry: 404x184+134+672
 INFO - Key release event - keysym: s, char: s, keycode: 16777331
 INFO - Current text: 'git show las'
 INFO - Getting suggestions for text: 'git'
-INFO - Trying path completion for: ./las*
-INFO - Final suggestions: []
-INFO - Got suggestions: []
-INFO - No suggestions, hiding dropdown
+INFO - Got suggestions: ['git last', 'git HEAD', 'git master']
+INFO - Showing dropdown at position (134, 672)
+INFO - Showing dropdown with 3 suggestions at (134, 672)
+INFO - Setting geometry to: 404x184+134+672
+INFO - Dropdown shown and configured
+INFO - Dropdown visible: True
+INFO - Dropdown geometry: 404x184+134+672
 INFO - Key release event - keysym: t, char: t, keycode: 285212788
-INFO - Current text: 'git show last'
+INFO - Current text: 'git show last '
 INFO - Getting suggestions for text: 'git'
-INFO - Trying path completion for: ./last*
-INFO - Final suggestions: []
-INFO - Got suggestions: []
-INFO - No suggestions, hiding dropdown
+INFO - Got suggestions: ['git last', 'git HEAD', 'git master']
+INFO - Showing dropdown at position (134, 672)
+INFO - Showing dropdown with 3 suggestions at (134, 672)
+INFO - Setting geometry to: 404x184+134+672
+INFO - Dropdown shown and configured
+INFO - Dropdown visible: True
+INFO - Dropdown geometry: 404x184+134+672
 INFO - Key release event - keysym: space, char:  , keycode: 822083616
 INFO - Current text: 'git show last '
 INFO - Getting suggestions for text: 'git'
-INFO - Trying path completion for: ./last*
-INFO - Final suggestions: []
-INFO - Got suggestions: []
-INFO - No suggestions, hiding dropdown
+INFO - Got suggestions: ['git last', 'git HEAD', 'git master']
+INFO - Showing dropdown at position (134, 672)
+INFO - Showing dropdown with 3 suggestions at (134, 672)
+INFO - Setting geometry to: 404x184+134+672
+INFO - Dropdown shown and configured
+INFO - Dropdown visible: True
+INFO - Dropdown geometry: 404x184+134+672
 INFO - Key release event - keysym: 2, char: 2, keycode: 318767154
 INFO - Current text: 'git show last 2'
 INFO - Getting suggestions for text: 'git'
-INFO - Trying path completion for: ./2*
-INFO - Final suggestions: []
-INFO - Got suggestions: []
-INFO - No suggestions, hiding dropdown
+INFO - Got suggestions: ['git last', 'git HEAD', 'git master']
+INFO - Showing dropdown at position (134, 672)
+INFO - Showing dropdown with 3 suggestions at (134, 672)
+INFO - Setting geometry to: 404x184+134+672
+INFO - Dropdown shown and configured
+INFO - Dropdown visible: True
+INFO - Dropdown geometry: 404x184+134+672
 INFO - Key release event - keysym: space, char:  , keycode: 822083616
 INFO - Current text: 'git show last 2 '
 INFO - Getting suggestions for text: 'git'
-INFO - Trying path completion for: ./2*
-INFO - Final suggestions: []
-INFO - Got suggestions: []
-INFO - No suggestions, hiding dropdown
+INFO - Got suggestions: ['git last', 'git HEAD', 'git master']
+INFO - Showing dropdown at position (134, 672)
+INFO - Showing dropdown with 3 suggestions at (134, 672)
+INFO - Setting geometry to: 404x184+134+672
+INFO - Dropdown shown and configured
+INFO - Dropdown visible: True
+INFO - Dropdown geometry: 404x184+134+672
 INFO - Key release event - keysym: c, char: c, keycode: 134217827
 INFO - Current text: 'git show last 2 co'
 INFO - Getting suggestions for text: 'git'
-INFO - Trying path completion for: ./co*
-INFO - Path suggestions: ['git show last 2 ./config.py']
-INFO - Final suggestions: ['git show last 2 ./config.py']
-INFO - Got suggestions: ['git show last 2 ./config.py']
+INFO - Got suggestions: ['git last', 'git HEAD', 'git master']
 INFO - Showing dropdown at position (134, 672)
-INFO - Showing dropdown with 1 suggestions at (134, 672)
+INFO - Showing dropdown with 3 suggestions at (134, 672)
 INFO - Setting geometry to: 404x184+134+672
 INFO - Dropdown shown and configured
 INFO - Dropdown visible: True
 INFO - Dropdown geometry: 404x184+134+672
 INFO - Key release event - keysym: o, char: o, keycode: 520093807
-INFO - Current text: 'git show last 2 com'
+INFO - Current text: 'git show last 2 co'
 INFO - Getting suggestions for text: 'git'
-INFO - Trying path completion for: ./com*
-INFO - Final suggestions: []
-INFO - Got suggestions: []
-INFO - No suggestions, hiding dropdown
-INFO - Hiding dropdown
+INFO - Got suggestions: ['git last', 'git HEAD', 'git master']
+INFO - Showing dropdown at position (134, 672)
+INFO - Showing dropdown with 3 suggestions at (134, 672)
+INFO - Setting geometry to: 404x184+134+672
+INFO - Dropdown shown and configured
+INFO - Dropdown visible: True
+INFO - Dropdown geometry: 404x184+134+672
 INFO - Key release event - keysym: m, char: m, keycode: 771752045
 INFO - Current text: 'git show last 2 com'
 INFO - Getting suggestions for text: 'git'
-INFO - Trying path completion for: ./com*
-INFO - Final suggestions: []
-INFO - Got suggestions: []
-INFO - No suggestions, hiding dropdown
+INFO - Got suggestions: ['git last', 'git HEAD', 'git master']
+INFO - Showing dropdown at position (134, 672)
+INFO - Showing dropdown with 3 suggestions at (134, 672)
+INFO - Setting geometry to: 404x184+134+672
+INFO - Dropdown shown and configured
+INFO - Dropdown visible: True
+INFO - Dropdown geometry: 404x184+134+672
 INFO - Key release event - keysym: m, char: m, keycode: 771752045
 INFO - Current text: 'git show last 2 commi'
 INFO - Getting suggestions for text: 'git'
-INFO - Trying path completion for: ./commi*
-INFO - Final suggestions: []
-INFO - Got suggestions: []
-INFO - No suggestions, hiding dropdown
+INFO - Got suggestions: ['git last', 'git HEAD', 'git master']
+INFO - Showing dropdown at position (134, 672)
+INFO - Showing dropdown with 3 suggestions at (134, 672)
+INFO - Setting geometry to: 404x184+134+672
+INFO - Dropdown shown and configured
+INFO - Dropdown visible: True
+INFO - Dropdown geometry: 404x184+134+672
 INFO - Key release event - keysym: i, char: i, keycode: 570425449
-INFO - Current text: 'git show last 2 commi'
-INFO - Getting suggestions for text: 'git'
-INFO - Trying path completion for: ./commi*
-INFO - Final suggestions: []
-INFO - Got suggestions: []
-INFO - No suggestions, hiding dropdown
-INFO - Key release event - keysym: t, char: t, keycode: 285212788
 INFO - Current text: 'git show last 2 commit'
 INFO - Getting suggestions for text: 'git'
-INFO - Trying path completion for: ./commit*
-INFO - Final suggestions: []
-INFO - Got suggestions: []
-INFO - No suggestions, hiding dropdown
+INFO - Got suggestions: ['git last', 'git HEAD', 'git master']
+INFO - Showing dropdown at position (134, 672)
+INFO - Showing dropdown with 3 suggestions at (134, 672)
+INFO - Setting geometry to: 404x184+134+672
+INFO - Dropdown shown and configured
+INFO - Dropdown visible: True
+INFO - Dropdown geometry: 404x184+134+672
+INFO - Key release event - keysym: t, char: t, keycode: 285212788
+INFO - Current text: 'git show last 2 commits'
+INFO - Getting suggestions for text: 'git'
+INFO - Got suggestions: ['git last', 'git HEAD', 'git master']
+INFO - Showing dropdown at position (134, 672)
+INFO - Showing dropdown with 3 suggestions at (134, 672)
+INFO - Setting geometry to: 404x184+134+672
+INFO - Dropdown shown and configured
+INFO - Dropdown visible: True
+INFO - Dropdown geometry: 404x184+134+672
 INFO - Key release event - keysym: s, char: s, keycode: 16777331
 INFO - Current text: 'git show last 2 commits'
 INFO - Getting suggestions for text: 'git'
-INFO - Trying path completion for: ./commits*
-INFO - Final suggestions: []
-INFO - Got suggestions: []
-INFO - No suggestions, hiding dropdown
+INFO - Got suggestions: ['git last', 'git HEAD', 'git master']
+INFO - Showing dropdown at position (134, 672)
+INFO - Showing dropdown with 3 suggestions at (134, 672)
+INFO - Setting geometry to: 404x184+134+672
+INFO - Dropdown shown and configured
+INFO - Dropdown visible: True
+INFO - Dropdown geometry: 404x184+134+672
 INFO - Hiding dropdown
 INFO - Executing command: git show last 2 commits
 INFO - Key release event - keysym: Return, char: , keycode: 603979789
