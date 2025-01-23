@@ -1,0 +1,65 @@
+2025-01-23 17:36:43,580 - AITerm - INFO - logger:48 - Logger initialized. Log file: logs/aiterm_20250123_173643.log
+2025-01-23 17:36:57,679 - AITerm - INFO - logger:54 - Executing command: ls
+2025-01-23 17:36:57,680 - AITerm - DEBUG - logger:51 - Added command to history. Total commands: 1
+2025-01-23 17:37:07,343 - AITerm - INFO - logger:54 - Executing command: tail -f test.txt
+2025-01-23 17:37:07,343 - AITerm - DEBUG - logger:51 - Added command to history. Total commands: 2
+2025-01-23 17:37:07,344 - AITerm - DEBUG - logger:51 - Detected tail -f command
+2025-01-23 17:37:07,344 - AITerm - INFO - logger:54 - Starting interactive mode for command: tail -f test.txt
+2025-01-23 17:37:07,344 - AITerm - INFO - logger:54 - Initializing PseudoTerminal
+2025-01-23 17:37:10,089 - AITerm - DEBUG - logger:51 - Key event - keysym: Control_L, state: 4, char: ''
+2025-01-23 17:37:11,067 - AITerm - DEBUG - logger:51 - Key event - keysym: c, state: 4, char: ''
+2025-01-23 17:37:11,067 - AITerm - INFO - logger:54 - Sending SIGINT (Ctrl+C)
+2025-01-23 17:37:35,029 - AITerm - DEBUG - logger:51 - Key event - keysym: Control_L, state: 4, char: ''
+2025-01-23 17:37:36,504 - AITerm - DEBUG - logger:51 - Key event - keysym: c, state: 4, char: ''
+2025-01-23 17:37:36,505 - AITerm - INFO - logger:54 - Sending SIGINT (Ctrl+C)
+2025-01-23 17:37:39,236 - AITerm - INFO - logger:54 - Executing command: ls
+2025-01-23 17:37:39,236 - AITerm - DEBUG - logger:51 - Added command to history. Total commands: 3
+2025-01-23 17:37:54,357 - AITerm - INFO - logger:54 - Executing command: tail -f ./test.txt
+2025-01-23 17:37:54,357 - AITerm - DEBUG - logger:51 - Added command to history. Total commands: 4
+2025-01-23 17:37:54,358 - AITerm - DEBUG - logger:51 - Detected tail -f command
+2025-01-23 17:37:54,358 - AITerm - INFO - logger:54 - Starting interactive mode for command: tail -f ./test.txt
+2025-01-23 17:37:54,358 - AITerm - DEBUG - logger:51 - Stopping pseudo-terminal
+2025-01-23 17:37:54,358 - AITerm - DEBUG - logger:51 - Attempting graceful process termination
+2025-01-23 17:37:54,359 - AITerm - DEBUG - logger:51 - Stopping pseudo-terminal
+2025-01-23 17:37:54,359 - AITerm - DEBUG - logger:51 - Attempting graceful process termination
+2025-01-23 17:37:54,359 - AITerm - DEBUG - logger:51 - Process terminated gracefully
+2025-01-23 17:37:54,359 - AITerm - DEBUG - logger:51 - Closed master file descriptor
+2025-01-23 17:37:54,360 - AITerm - DEBUG - logger:51 - Process terminated gracefully
+2025-01-23 17:37:54,360 - AITerm - ERROR - logger:60 - Error closing master fd: [Errno 9] Bad file descriptor
+2025-01-23 17:37:54,360 - AITerm - INFO - logger:54 - Initializing PseudoTerminal
+2025-01-23 17:37:57,202 - AITerm - INFO - logger:54 - Executing command: ls
+2025-01-23 17:37:57,202 - AITerm - DEBUG - logger:51 - Added command to history. Total commands: 5
+2025-01-23 17:38:03,266 - AITerm - INFO - logger:54 - Executing command: pwd
+2025-01-23 17:38:03,266 - AITerm - DEBUG - logger:51 - Added command to history. Total commands: 6
+2025-01-23 17:38:05,549 - AITerm - INFO - logger:54 - Executing command: ls
+2025-01-23 17:38:05,549 - AITerm - DEBUG - logger:51 - Added command to history. Total commands: 7
+2025-01-23 17:38:08,766 - AITerm - INFO - logger:54 - Executing command: more ./test.txt
+2025-01-23 17:38:08,766 - AITerm - DEBUG - logger:51 - Added command to history. Total commands: 8
+2025-01-23 17:38:08,768 - AITerm - INFO - logger:54 - Starting interactive mode for command: more ./test.txt
+2025-01-23 17:38:08,768 - AITerm - DEBUG - logger:51 - Stopping pseudo-terminal
+2025-01-23 17:38:08,768 - AITerm - DEBUG - logger:51 - Attempting graceful process termination
+2025-01-23 17:38:08,768 - AITerm - DEBUG - logger:51 - Stopping pseudo-terminal
+2025-01-23 17:38:08,768 - AITerm - DEBUG - logger:51 - Attempting graceful process termination
+2025-01-23 17:38:08,768 - AITerm - DEBUG - logger:51 - Process terminated gracefully
+2025-01-23 17:38:08,769 - AITerm - DEBUG - logger:51 - Closed master file descriptor
+2025-01-23 17:38:08,769 - AITerm - DEBUG - logger:51 - Process terminated gracefully
+2025-01-23 17:38:08,769 - AITerm - ERROR - logger:60 - Error closing master fd: [Errno 9] Bad file descriptor
+2025-01-23 17:38:08,770 - AITerm - INFO - logger:54 - Initializing PseudoTerminal
+2025-01-23 17:38:17,700 - AITerm - DEBUG - logger:51 - Key event - keysym: Control_L, state: 4, char: ''
+2025-01-23 17:38:18,480 - AITerm - DEBUG - logger:51 - Key event - keysym: c, state: 4, char: ''
+2025-01-23 17:38:18,480 - AITerm - INFO - logger:54 - Sending SIGINT (Ctrl+C)
+2025-01-23 17:38:20,185 - AITerm - DEBUG - logger:51 - Key event - keysym: ', state: 0, char: "'"
+2025-01-23 17:38:25,844 - AITerm - INFO - logger:54 - Executing command: ls
+2025-01-23 17:38:25,844 - AITerm - DEBUG - logger:51 - Added command to history. Total commands: 9
+2025-01-23 17:38:38,331 - AITerm - INFO - logger:54 - Executing command: more ./requirements.txt
+2025-01-23 17:38:38,331 - AITerm - DEBUG - logger:51 - Added command to history. Total commands: 10
+2025-01-23 17:38:38,332 - AITerm - INFO - logger:54 - Starting interactive mode for command: more ./requirements.txt
+2025-01-23 17:38:38,332 - AITerm - DEBUG - logger:51 - Stopping pseudo-terminal
+2025-01-23 17:38:38,332 - AITerm - DEBUG - logger:51 - Attempting graceful process termination
+2025-01-23 17:38:38,336 - AITerm - DEBUG - logger:51 - Process terminated gracefully
+2025-01-23 17:38:38,336 - AITerm - DEBUG - logger:51 - Closed master file descriptor
+2025-01-23 17:38:38,336 - AITerm - INFO - logger:54 - Initializing PseudoTerminal
+2025-01-23 17:38:38,356 - AITerm - DEBUG - logger:51 - Stopping pseudo-terminal
+2025-01-23 17:38:38,356 - AITerm - DEBUG - logger:51 - Attempting graceful process termination
+2025-01-23 17:38:38,357 - AITerm - DEBUG - logger:51 - Process terminated gracefully
+2025-01-23 17:38:38,357 - AITerm - DEBUG - logger:51 - Closed master file descriptor

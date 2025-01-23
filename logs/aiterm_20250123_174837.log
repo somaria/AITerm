@@ -1,0 +1,38 @@
+2025-01-23 17:48:37,650 - AITerm - INFO - logger:48 - Logger initialized. Log file: logs/aiterm_20250123_174837.log
+2025-01-23 17:48:43,388 - AITerm - INFO - logger:54 - Executing command: ls
+2025-01-23 17:48:43,388 - AITerm - DEBUG - logger:51 - Added command to history. Total commands: 1
+2025-01-23 17:48:50,126 - AITerm - INFO - logger:54 - Executing command: more ./requirements.txt
+2025-01-23 17:48:50,126 - AITerm - DEBUG - logger:51 - Added command to history. Total commands: 2
+2025-01-23 17:48:50,127 - AITerm - INFO - logger:54 - Starting interactive mode for command: more ./requirements.txt
+2025-01-23 17:48:50,127 - AITerm - DEBUG - logger:51 - Starting PTY mode with command: more ./requirements.txt
+2025-01-23 17:48:50,127 - AITerm - INFO - logger:54 - Initializing PseudoTerminal
+2025-01-23 17:48:50,127 - AITerm - DEBUG - logger:51 - Starting PTY with command: more ./requirements.txt
+2025-01-23 17:48:50,140 - AITerm - DEBUG - logger:51 - PTY started successfully
+2025-01-23 17:48:51,603 - AITerm - DEBUG - logger:51 - Key event - keysym: Return, state: 0, char: ''
+2025-01-23 17:48:51,603 - AITerm - DEBUG - logger:51 - Sending return
+2025-01-23 17:48:51,649 - AITerm - DEBUG - logger:51 - Stopping pseudo-terminal
+2025-01-23 17:48:51,649 - AITerm - DEBUG - logger:51 - Attempting graceful process termination
+2025-01-23 17:48:51,649 - AITerm - DEBUG - logger:51 - Process terminated gracefully
+2025-01-23 17:48:51,649 - AITerm - DEBUG - logger:51 - Closed master file descriptor
+2025-01-23 17:48:51,649 - AITerm - DEBUG - logger:51 - PTY process exited
+2025-01-23 17:48:57,608 - AITerm - INFO - logger:54 - Executing command: ls
+2025-01-23 17:48:57,608 - AITerm - DEBUG - logger:51 - Added command to history. Total commands: 3
+2025-01-23 17:49:03,986 - AITerm - INFO - logger:54 - Executing command: tail -f ./test.txt
+2025-01-23 17:49:03,987 - AITerm - DEBUG - logger:51 - Added command to history. Total commands: 4
+2025-01-23 17:49:03,988 - AITerm - DEBUG - logger:51 - Detected tail -f command
+2025-01-23 17:49:03,988 - AITerm - INFO - logger:54 - Starting interactive mode for command: tail -f ./test.txt
+2025-01-23 17:49:03,988 - AITerm - DEBUG - logger:51 - Starting PTY mode with command: tail -f ./test.txt
+2025-01-23 17:49:03,988 - AITerm - INFO - logger:54 - Initializing PseudoTerminal
+2025-01-23 17:49:03,989 - AITerm - DEBUG - logger:51 - Starting PTY with command: tail -f ./test.txt
+2025-01-23 17:49:03,999 - AITerm - DEBUG - logger:51 - PTY started successfully
+2025-01-23 17:49:07,834 - AITerm - DEBUG - logger:51 - Key event - keysym: Return, state: 0, char: ''
+2025-01-23 17:49:07,835 - AITerm - DEBUG - logger:51 - Sending return
+2025-01-23 17:49:10,197 - AITerm - DEBUG - logger:51 - Key event - keysym: Shift_L, state: 1, char: ''
+2025-01-23 17:49:12,020 - AITerm - DEBUG - logger:51 - Key event - keysym: Control_L, state: 4, char: ''
+2025-01-23 17:49:12,850 - AITerm - DEBUG - logger:51 - Key event - keysym: c, state: 4, char: ''
+2025-01-23 17:49:12,851 - AITerm - INFO - logger:54 - Sending SIGINT (Ctrl+C)
+2025-01-23 17:49:15,778 - AITerm - DEBUG - logger:51 - Key event - keysym: Tab, state: 0, char: ''
+2025-01-23 17:49:15,778 - AITerm - DEBUG - logger:51 - Sending tab
+2025-01-23 17:49:20,152 - AITerm - INFO - logger:54 - Executing command: ls
+2025-01-23 17:49:20,153 - AITerm - DEBUG - logger:51 - Added command to history. Total commands: 5
+2025-01-23 17:49:23,797 - AITerm - INFO - logger:54 - Executing command: ls

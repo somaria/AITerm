@@ -17,11 +17,13 @@ import queue
 import subprocess
 import re
 import math
-
 from ..commands.interpreter import CommandInterpreter, CommandInterpretationError
 from ..commands.executor import CommandExecutor
 from ..utils.formatter import OutputFormatter
 from ..utils.completer import TerminalCompleter
+from ..utils.logger import get_logger
+
+logger = get_logger()
 
 class RoundedFrame(tk.Canvas):
     def __init__(self, parent, bg='black', height=32, corner_radius=16, **kwargs):
@@ -76,8 +78,16 @@ class PseudoTerminal:
         self.saved_cursor = (0, 0)
         self.alternate_screen = False
         
+        # Environment variables
+        self.env = os.environ.copy()
+        self.env['TERM'] = 'xterm-256color'  # Set terminal type
+        self.env['PAGER'] = 'more'  # Set default pager
+        self.env['LESS'] = '-R'  # Make less behave more like more
+        self.env['MORE'] = '-d'  # Enable user-friendly mode for more
+        
         # Initialize empty screen
         self._init_screen()
+        logger.info("Initializing PseudoTerminal")
 
     def _init_screen(self):
         """Initialize empty screen buffer"""
@@ -171,69 +181,91 @@ class PseudoTerminal:
 
     def start(self, command):
         """Start the pseudo-terminal with the given command"""
-        import subprocess
-
-        # Open PTY
-        self.master_fd, self.slave_fd = pty.openpty()
+        logger.debug(f"Starting PTY with command: {command}")
         
-        # Set terminal size
-        self._set_window_size(self.slave_fd)
-        
-        # Set raw mode properly for vi
-        mode = termios.tcgetattr(self.slave_fd)
-        mode[0] &= ~(termios.BRKINT | termios.ICRNL | termios.INPCK | termios.ISTRIP | termios.IXON)  # Input modes
-        mode[1] &= ~(termios.OPOST)  # Output modes
-        mode[2] &= ~(termios.CSIZE | termios.PARENB)  # Control modes
-        mode[2] |= termios.CS8
-        mode[3] &= ~(termios.ECHO | termios.ICANON | termios.IEXTEN | termios.ISIG)  # Local modes
-        mode[6][termios.VMIN] = 1
-        mode[6][termios.VTIME] = 0
-        termios.tcsetattr(self.slave_fd, termios.TCSAFLUSH, mode)
-        
-        # Prepare environment
-        env = dict(os.environ)
-        env['TERM'] = 'xterm'
-        env['COLUMNS'] = str(self.cols)
-        env['LINES'] = str(self.rows)
-        
-        # Split command if it's a string
-        if isinstance(command, str):
-            import shlex
-            command = shlex.split(command)
-        
-        # Start process with Popen
-        self.process = subprocess.Popen(
-            command,
-            stdin=self.slave_fd,
-            stdout=self.slave_fd,
-            stderr=self.slave_fd,
-            env=env,
-            preexec_fn=os.setsid  # Create new process group
-        )
-        
-        # Close slave fd in parent
-        os.close(self.slave_fd)
-        
-        # Start read thread
-        self.running = True
-        self.read_thread = threading.Thread(target=self._read_loop)
-        self.read_thread.daemon = True
-        self.read_thread.start()
+        try:
+            # Create PTY
+            self.master_fd, self.slave_fd = os.openpty()
+            
+            # Set terminal size
+            self._set_window_size(self.slave_fd)
+            
+            # Split command and handle shell built-ins
+            if isinstance(command, str):
+                import shlex
+                command = shlex.split(command)
+            
+            # Get environment
+            env = os.environ.copy()
+            env.update(self.env)
+            
+            # Start process with Popen
+            self.process = subprocess.Popen(
+                command,
+                stdin=self.slave_fd,
+                stdout=self.slave_fd,
+                stderr=self.slave_fd,
+                env=env,
+                preexec_fn=os.setsid  # Create new process group
+            )
+            
+            # Close slave fd in parent
+            os.close(self.slave_fd)
+            
+            # Start read thread
+            self.running = True
+            self.read_thread = threading.Thread(target=self._read_loop)
+            self.read_thread.daemon = True
+            self.read_thread.start()
+            
+            logger.debug("PTY started successfully")
+            
+        except Exception as e:
+            logger.error(f"Failed to start PTY: {e}")
+            if self.master_fd:
+                os.close(self.master_fd)
+            if self.slave_fd:
+                os.close(self.slave_fd)
+            raise
 
     def stop(self):
         """Stop the pseudo-terminal"""
+        logger.debug("Stopping pseudo-terminal")
+        
+        # Set running to False first to prevent race conditions
         self.running = False
+        
         if hasattr(self, 'process') and self.process:
             try:
-                os.killpg(os.getpgid(self.process.pid), signal.SIGTERM)
-                self.process.wait()
-            except (OSError, ProcessLookupError):
-                pass
-        if self.master_fd:
+                # Try graceful termination first
+                logger.debug("Attempting graceful process termination")
+                self.process.terminate()
+                
+                # Wait a bit for the process to terminate
+                try:
+                    self.process.wait(timeout=1)
+                    logger.debug("Process terminated gracefully")
+                except subprocess.TimeoutExpired:
+                    # If process doesn't terminate gracefully, force kill
+                    logger.warning("Process did not terminate gracefully, forcing kill")
+                    self.process.kill()
+                    self.process.wait()
+                    logger.debug("Process killed")
+            except (OSError, ProcessLookupError) as e:
+                logger.error(f"Error stopping process: {e}")
+            finally:
+                self.process = None
+        
+        # Close master fd if it exists
+        if self.master_fd is not None:
             try:
                 os.close(self.master_fd)
-            except OSError:
-                pass
+                logger.debug("Closed master file descriptor")
+            except OSError as e:
+                if e.errno != errno.EBADF:  # Ignore "Bad file descriptor" errors
+                    logger.error(f"Error closing master fd: {e}")
+            finally:
+                self.master_fd = None
 
     def _read_loop(self):
         """Read loop for the pseudo-terminal"""
@@ -482,31 +514,28 @@ class TerminalGUI:
     def execute_command(self, event=None):
         """Execute the entered command"""
         command = self.command_entry.get().strip()
-        self.command_entry.delete(0, tk.END)
-        
         if not command:
             return
-
-        # If we're in PTY mode, send directly to PTY
-        if self.in_pty_mode:
-            self.pty.write(command + '\n')
-            return
-
-        # Reset completion state
-        self.current_completions = []
-        self.completion_index = 0
-
-        # Add command to history
+            
+        logger.info(f"Executing command: {command}")
+        
+        # Clear command entry
+        self.command_entry.delete(0, tk.END)
+        
+        # Add to history
         if not self.command_history or command != self.command_history[-1]:
             self.command_history.append(command)
             self.history_index = len(self.command_history)
+            logger.debug(f"Added command to history. Total commands: {len(self.command_history)}")
 
         # Show command in output area
         self.append_output(f"\n{self.command_executor.working_directory}$ {command}")
         
         # Handle exit command
         if command == 'exit':
+            logger.info("Exit command received")
             if self.pty:
+                logger.debug("Stopping PTY before exit")
                 self.pty.stop()
                 self.pty = None
                 self.in_pty_mode = False
@@ -516,21 +545,11 @@ class TerminalGUI:
 
         # Handle history command directly
         if command.strip() == 'history':
+            logger.debug("Showing command history")
             for i, cmd in enumerate(self.command_history, 1):
                 self.append_output(f"\n{i:4d}  {cmd}")
             return
 
-        # If AI mode is enabled and it's not a built-in command, interpret it
-        if self.ai_mode.get() and not any(command.startswith(cmd) for cmd in ['cd', 'pwd', 'exit', 'clear', 'history', 'tail']):
-            try:
-                interpreted_command = CommandInterpreter.interpret(command)
-                if interpreted_command:
-                    self.append_output(f"\nInterpreted as: {interpreted_command}\n", 'cyan')
-                    command = interpreted_command
-            except Exception as e:
-                self.append_output(f"\nError interpreting command: {str(e)}\n", 'red')
-                return
-        
         try:
             # Get the command without arguments
             command_name = command.split()[0]
@@ -558,11 +577,24 @@ class TerminalGUI:
             # Special case for tail -f
             if command_name == 'tail' and '-f' in command.split():
                 is_interactive = True
+                logger.debug("Detected tail -f command")
             
             if is_interactive:
+                logger.info(f"Starting interactive mode for command: {command}")
                 self.start_pty_mode(command)
                 return
                 
+            # If AI mode is enabled and it's not a built-in command, interpret it
+            if self.ai_mode.get() and not any(command.startswith(cmd) for cmd in ['cd', 'pwd', 'exit', 'clear', 'history', 'tail']):
+                try:
+                    interpreted_command = CommandInterpreter.interpret(command)
+                    if interpreted_command:
+                        self.append_output(f"\nInterpreted as: {interpreted_command}\n", 'cyan')
+                        command = interpreted_command
+                except Exception as e:
+                    self.append_output(f"\nError interpreting command: {str(e)}\n", 'red')
+                    return
+        
             # Handle built-in commands
             if command == 'pwd':
                 self.append_output(self.command_executor.working_directory)
@@ -601,39 +633,38 @@ class TerminalGUI:
 
     def start_pty_mode(self, command):
         """Start PTY mode with the given command"""
-        if self.pty:
-            self.pty.stop()
+        logger.debug(f"Starting PTY mode with command: {command}")
         
-        def pty_callback(data):
-            # Clear and update the output area
-            self.output_area.delete(1.0, tk.END)
-            self.output_area.insert(tk.END, data)
-            
-            # Ensure cursor is visible
-            self.output_area.see(tk.END)
-            
-            # Update the display immediately
-            self.output_area.update_idletasks()
-            
-            # Ensure cursor is visible
-            self.output_area.see(tk.END)
-
-        def pty_exit_callback():
-            self.in_pty_mode = False
+        # Stop existing PTY if any
+        if self.pty:
+            logger.debug("Stopping existing PTY")
+            self.pty.stop()
             self.pty = None
-            self.append_output("\nInteractive program exited. You can now use normal commands.\n", 'cyan')
-            self.command_entry.focus_set()
         
         # Create new PTY
-        self.pty = PseudoTerminal(pty_callback, pty_exit_callback, rows=self.term_rows, cols=self.term_cols)
+        self.pty = PseudoTerminal(self.pty_callback, self.pty_exit_callback, rows=self.term_rows, cols=self.term_cols)
         
-        # Start PTY with command
-        self.pty.start(command)
-        self.in_pty_mode = True
-        
-        # Bind key events for PTY input
-        self.output_area.bind('<Key>', self.handle_key)
-        self.output_area.focus_set()
+        try:
+            # Start PTY with command
+            self.pty.start(command)
+            self.in_pty_mode = True
+            
+            # Show help message for interactive mode
+            self.append_output("\nEntered interactive mode. Use Ctrl+C to exit, Ctrl+D for EOF, Ctrl+Z to suspend.\n", 'cyan')
+            
+            # Bind key events for PTY input
+            self.output_area.bind('<Key>', self.handle_key)
+            self.output_area.bind('<Control-c>', lambda e: self.handle_key(e))
+            self.output_area.bind('<Control-d>', lambda e: self.handle_key(e))
+            self.output_area.bind('<Control-z>', lambda e: self.handle_key(e))
+            self.output_area.focus_set()
+            
+        except Exception as e:
+            logger.error(f"Failed to start PTY mode: {e}")
+            self.pty = None
+            self.in_pty_mode = False
+            self.append_output(f"\nError starting interactive mode: {e}\n", 'red')
+            return
     
     def update_prompt(self):
         """Update the prompt with current working directory"""
@@ -642,28 +673,53 @@ class TerminalGUI:
     def handle_key(self, event):
         """Handle key events in interactive mode"""
         if not self.in_pty_mode or not self.pty:
+            logger.debug("Key event ignored - not in PTY mode")
             return
         
+        # Debug logging
+        logger.debug(f"Key event - keysym: {event.keysym}, state: {event.state}, char: {repr(event.char)}")
+        
         # Handle special keys
-        if event.keysym == 'c' and event.state & 0x4:  # Ctrl+C
-            self.pty.write('\x03')  # Send SIGINT
+        if event.state & 0x4:  # Control key is pressed
+            if event.keysym in ['c', 'C']:  # Ctrl+C
+                logger.info("Sending SIGINT (Ctrl+C)")
+                self.pty.write('\x03')  # Send SIGINT
+                return "break"
+            elif event.keysym in ['d', 'D']:  # Ctrl+D
+                logger.info("Sending EOF (Ctrl+D)")
+                self.pty.write('\x04')  # Send EOF
+                return "break"
+            elif event.keysym in ['z', 'Z']:  # Ctrl+Z
+                logger.info("Sending SIGTSTP (Ctrl+Z)")
+                self.pty.write('\x1A')  # Send SIGTSTP
+                return "break"
+        # Handle pager keys
+        elif event.keysym == 'q':  # Quit
+            logger.info("Sending quit command (q)")
+            self.pty.write('q')
             return "break"
-        elif event.keysym == 'd' and event.state & 0x4:  # Ctrl+D
-            self.pty.write('\x04')  # Send EOF
+        elif event.keysym == 'space':  # Next page
+            logger.info("Sending next page command (space)")
+            self.pty.write(' ')
             return "break"
-        elif event.keysym == 'z' and event.state & 0x4:  # Ctrl+Z
-            self.pty.write('\x1A')  # Send SIGTSTP
+        elif event.keysym == 'b':  # Previous page
+            logger.info("Sending previous page command (b)")
+            self.pty.write('b')
             return "break"
         elif event.keysym == 'Return':
+            logger.debug("Sending return")
             self.pty.write('\r')
             return "break"
         elif event.keysym == 'BackSpace':
+            logger.debug("Sending backspace")
             self.pty.write('\x7f')  # Send backspace
             return "break"
         elif event.keysym == 'Tab':
+            logger.debug("Sending tab")
             self.pty.write('\t')
             return "break"
         elif len(event.char) > 0:
+            logger.debug(f"Sending character: {repr(event.char)}")
             self.pty.write(event.char)
             return "break"
     
@@ -727,3 +783,33 @@ class TerminalGUI:
         if self.pty:
             self.pty.stop()
         super().destroy()
+
+    def pty_callback(self, data):
+        """Callback for PTY output"""
+        try:
+            # Clear and update the output area
+            self.output_area.delete(1.0, tk.END)
+            self.output_area.insert(tk.END, data)
+            
+            # Ensure cursor is visible
+            self.output_area.see(tk.END)
+            
+            # Update the display immediately
+            self.output_area.update_idletasks()
+            
+            # Ensure cursor is visible again after update
+            self.output_area.see(tk.END)
+            
+        except Exception as e:
+            logger.error(f"Error in PTY callback: {e}")
+            
+    def pty_exit_callback(self):
+        """Callback for PTY exit"""
+        try:
+            logger.debug("PTY process exited")
+            self.in_pty_mode = False
+            self.pty = None
+            self.append_output("\nInteractive program exited. You can now use normal commands.\n", 'cyan')
+            self.command_entry.focus_set()
+        except Exception as e:
+            logger.error(f"Error in PTY exit callback: {e}")

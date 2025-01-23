@@ -1,0 +1,17 @@
+2025-01-23 17:46:17,328 - AITerm - INFO - logger:48 - Logger initialized. Log file: logs/aiterm_20250123_174617.log
+2025-01-23 17:46:44,300 - AITerm - INFO - logger:54 - Executing command: ls
+2025-01-23 17:46:44,300 - AITerm - DEBUG - logger:51 - Added command to history. Total commands: 1
+2025-01-23 17:46:50,544 - AITerm - INFO - logger:54 - Executing command: more ./requirements.txt
+2025-01-23 17:46:50,544 - AITerm - DEBUG - logger:51 - Added command to history. Total commands: 2
+2025-01-23 17:46:50,544 - AITerm - INFO - logger:54 - Starting interactive mode for command: more ./requirements.txt
+2025-01-23 17:46:50,545 - AITerm - DEBUG - logger:51 - Starting PTY mode with command: more ./requirements.txt
+2025-01-23 17:46:50,545 - AITerm - INFO - logger:54 - Initializing PseudoTerminal
+2025-01-23 17:46:50,545 - AITerm - DEBUG - logger:51 - Starting PTY with command: more ./requirements.txt
+2025-01-23 17:46:50,556 - AITerm - DEBUG - logger:51 - PTY started successfully
+2025-01-23 17:47:08,723 - AITerm - DEBUG - logger:51 - Key event - keysym: Return, state: 0, char: ''
+2025-01-23 17:47:08,723 - AITerm - DEBUG - logger:51 - Sending return
+2025-01-23 17:47:08,820 - AITerm - DEBUG - logger:51 - Stopping pseudo-terminal
+2025-01-23 17:47:08,820 - AITerm - DEBUG - logger:51 - Attempting graceful process termination
+2025-01-23 17:47:08,820 - AITerm - DEBUG - logger:51 - Process terminated gracefully
+2025-01-23 17:47:08,820 - AITerm - DEBUG - logger:51 - Closed master file descriptor
+2025-01-23 17:47:08,820 - AITerm - DEBUG - logger:51 - PTY process exited
