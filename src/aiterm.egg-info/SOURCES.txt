@@ -2,6 +2,7 @@ README.md
 setup.py
 src/aiterm/__init__.py
 src/aiterm/config.py
+src/aiterm/main.py
 src/aiterm.egg-info/PKG-INFO
 src/aiterm.egg-info/SOURCES.txt
 src/aiterm.egg-info/dependency_links.txt
@@ -9,9 +10,12 @@ src/aiterm.egg-info/entry_points.txt
 src/aiterm.egg-info/requires.txt
 src/aiterm.egg-info/top_level.txt
 src/aiterm/commands/__init__.py
+src/aiterm/commands/ai_processor.py
 src/aiterm/commands/errors.py
 src/aiterm/commands/executor.py
+src/aiterm/commands/git_command.py
 src/aiterm/commands/interpreter.py
+src/aiterm/commands/models.py
 src/aiterm/gui/__init__.py
 src/aiterm/gui/suggestion_dropdown.py
 src/aiterm/gui/terminal.py

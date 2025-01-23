@@ -4,13 +4,33 @@ import os
 import sys
 from aiterm.gui.window_manager import WindowManager
 from aiterm.commands.git_command import GitCommand
+from aiterm.commands.executor import CommandExecutor
 from aiterm.utils.logger import cleanup_logs
+from aiterm.config import OPENAI_API_KEY, OPENAI_MODEL  # Import OpenAI config
+import openai
 
-def handle_git_command(args):
-    """Handle Git command execution."""
-    git_handler = GitCommand()
+# Initialize OpenAI configuration
+openai.api_key = OPENAI_API_KEY
+
+def handle_command(args):
+    """Handle command execution."""
     command_str = " ".join(args).strip()
-    return git_handler.execute(command_str)
+    
+    # Create command handlers
+    git_handler = GitCommand()
+    cmd_executor = CommandExecutor()
+    
+    # Check if it's a git command
+    if command_str.startswith('git ') or any(word in command_str.lower() for word in ['commit', 'push', 'pull', 'branch', 'status']):
+        return git_handler.execute(command_str)
+        
+    # Handle standard shell commands
+    stdout, stderr = cmd_executor.execute(command_str)
+    if stderr:
+        return stderr
+    if stdout is None:
+        return "No results found"  # Return a meaningful message when no results found
+    return stdout
 
 def main():
     """Main entry point."""
@@ -21,7 +41,7 @@ def main():
             return
 
         command = sys.argv[1:]
-        result = handle_git_command(command)
+        result = handle_command(command)
         print(result)
         return
 

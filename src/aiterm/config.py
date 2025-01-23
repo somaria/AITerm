@@ -2,14 +2,34 @@
 Configuration module for AITerm
 """
 import os
-from dotenv import load_dotenv
+from dotenv import load_dotenv, find_dotenv
+import openai
+from .utils.logger import get_logger
 
-# Load environment variables
-load_dotenv()
+# Initialize logger
+logger = get_logger(__name__)
+
+# Find and load .env file
+env_path = find_dotenv()
+logger.info(f"Found .env file at: {env_path}")
+load_dotenv(env_path)
 
 # OpenAI configuration
 OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
+if not OPENAI_API_KEY:
+    logger.error("OpenAI API key not found in environment variables")
+    raise ValueError("OpenAI API key not found in environment variables")
+
+# Print masked API key for debugging
+masked_key = f"{OPENAI_API_KEY[:8]}...{OPENAI_API_KEY[-4:]}"
+logger.info(f"Loaded OpenAI API key (masked): {masked_key}")
+
+# Set OpenAI API key globally
+openai.api_key = OPENAI_API_KEY
+
+# Get model name
 OPENAI_MODEL = os.getenv('OPENAI_MODEL_NAME', 'gpt-4')
+logger.info(f"Using OpenAI model: {OPENAI_MODEL}")
 
 # Terminal configuration
 TERMINAL_FONT = ('Menlo', 12)  # Default monospace font for macOS

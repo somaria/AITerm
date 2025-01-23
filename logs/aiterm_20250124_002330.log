@@ -1,0 +1,557 @@
+INFO - Found .env file at: /Volumes/wd/code/Python/AITerm/.env
+INFO - Loaded OpenAI API key (masked): sk-proj-...M9gA
+INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:23:30,639 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:23:30,639 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:23:30,695 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:23:30,695 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:23:30,751 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:23:30,752 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:23:30,808 - aiterm.utils.logger - INFO - Initialized TerminalCompleter with 46 commands
+INFO - Initialized TerminalCompleter with 46 commands
+2025-01-24 00:23:30,809 - aiterm.utils.logger - INFO - Initializing SuggestionDropdown
+INFO - Initializing SuggestionDropdown
+2025-01-24 00:23:30,847 - aiterm.utils.logger - INFO - SuggestionDropdown initialized and hidden
+INFO - SuggestionDropdown initialized and hidden
+2025-01-24 00:23:34,892 - aiterm.utils.logger - INFO - Key release event - keysym: f, char: f, keycode: 50331750
+INFO - Key release event - keysym: f, char: f, keycode: 50331750
+2025-01-24 00:23:34,892 - aiterm.utils.logger - INFO - Current text: 'fin'
+INFO - Current text: 'fin'
+2025-01-24 00:23:34,892 - aiterm.utils.logger - INFO - Getting suggestions for text: 'fin'
+INFO - Getting suggestions for text: 'fin'
+2025-01-24 00:23:34,892 - aiterm.utils.logger - INFO - Prefix matches for 'fin': ['find']
+INFO - Prefix matches for 'fin': ['find']
+2025-01-24 00:23:34,892 - aiterm.utils.logger - INFO - Fuzzy matches for 'fin': ['find', 'ping', 'df', 'zip']
+INFO - Fuzzy matches for 'fin': ['find', 'ping', 'df', 'zip']
+2025-01-24 00:23:34,892 - aiterm.utils.logger - INFO - New fuzzy matches: ['ping', 'df', 'zip']
+INFO - New fuzzy matches: ['ping', 'df', 'zip']
+2025-01-24 00:23:34,893 - aiterm.utils.logger - INFO - Final suggestions: ['find', 'ping', 'df', 'zip']
+INFO - Final suggestions: ['find', 'ping', 'df', 'zip']
+2025-01-24 00:23:34,893 - aiterm.utils.logger - INFO - Got suggestions: ['find', 'ping', 'df', 'zip']
+INFO - Got suggestions: ['find', 'ping', 'df', 'zip']
+2025-01-24 00:23:34,893 - aiterm.utils.logger - INFO - Showing dropdown at position (127, 631)
+INFO - Showing dropdown at position (127, 631)
+2025-01-24 00:23:34,893 - aiterm.utils.logger - INFO - Showing dropdown with 4 suggestions at (127, 631)
+INFO - Showing dropdown with 4 suggestions at (127, 631)
+2025-01-24 00:23:34,893 - aiterm.utils.logger - INFO - Setting geometry to: 1x1+34+59
+INFO - Setting geometry to: 1x1+34+59
+2025-01-24 00:23:34,898 - aiterm.utils.logger - INFO - Dropdown shown and configured
+INFO - Dropdown shown and configured
+2025-01-24 00:23:34,898 - aiterm.utils.logger - INFO - Dropdown visible: True
+INFO - Dropdown visible: True
+2025-01-24 00:23:34,898 - aiterm.utils.logger - INFO - Dropdown geometry: 404x184+127+631
+INFO - Dropdown geometry: 404x184+127+631
+2025-01-24 00:23:34,902 - aiterm.utils.logger - INFO - Key release event - keysym: i, char: i, keycode: 570425449
+INFO - Key release event - keysym: i, char: i, keycode: 570425449
+2025-01-24 00:23:34,902 - aiterm.utils.logger - INFO - Current text: 'fin'
+INFO - Current text: 'fin'
+2025-01-24 00:23:34,902 - aiterm.utils.logger - INFO - Getting suggestions for text: 'fin'
+INFO - Getting suggestions for text: 'fin'
+2025-01-24 00:23:34,903 - aiterm.utils.logger - INFO - Prefix matches for 'fin': ['find']
+INFO - Prefix matches for 'fin': ['find']
+2025-01-24 00:23:34,903 - aiterm.utils.logger - INFO - Fuzzy matches for 'fin': ['find', 'ping', 'df', 'zip']
+INFO - Fuzzy matches for 'fin': ['find', 'ping', 'df', 'zip']
+2025-01-24 00:23:34,903 - aiterm.utils.logger - INFO - New fuzzy matches: ['ping', 'df', 'zip']
+INFO - New fuzzy matches: ['ping', 'df', 'zip']
+2025-01-24 00:23:34,903 - aiterm.utils.logger - INFO - Final suggestions: ['find', 'ping', 'df', 'zip']
+INFO - Final suggestions: ['find', 'ping', 'df', 'zip']
+2025-01-24 00:23:34,903 - aiterm.utils.logger - INFO - Got suggestions: ['find', 'ping', 'df', 'zip']
+INFO - Got suggestions: ['find', 'ping', 'df', 'zip']
+2025-01-24 00:23:34,903 - aiterm.utils.logger - INFO - Showing dropdown at position (127, 631)
+INFO - Showing dropdown at position (127, 631)
+2025-01-24 00:23:34,903 - aiterm.utils.logger - INFO - Showing dropdown with 4 suggestions at (127, 631)
+INFO - Showing dropdown with 4 suggestions at (127, 631)
+2025-01-24 00:23:34,905 - aiterm.utils.logger - INFO - Setting geometry to: 404x184+127+631
+INFO - Setting geometry to: 404x184+127+631
+2025-01-24 00:23:34,906 - aiterm.utils.logger - INFO - Dropdown shown and configured
+INFO - Dropdown shown and configured
+2025-01-24 00:23:34,906 - aiterm.utils.logger - INFO - Dropdown visible: True
+INFO - Dropdown visible: True
+2025-01-24 00:23:34,906 - aiterm.utils.logger - INFO - Dropdown geometry: 404x184+127+631
+INFO - Dropdown geometry: 404x184+127+631
+2025-01-24 00:23:34,993 - aiterm.utils.logger - INFO - Key release event - keysym: n, char: n, keycode: 754974830
+INFO - Key release event - keysym: n, char: n, keycode: 754974830
+2025-01-24 00:23:34,993 - aiterm.utils.logger - INFO - Current text: 'fin'
+INFO - Current text: 'fin'
+2025-01-24 00:23:34,993 - aiterm.utils.logger - INFO - Getting suggestions for text: 'fin'
+INFO - Getting suggestions for text: 'fin'
+2025-01-24 00:23:34,993 - aiterm.utils.logger - INFO - Prefix matches for 'fin': ['find']
+INFO - Prefix matches for 'fin': ['find']
+2025-01-24 00:23:34,993 - aiterm.utils.logger - INFO - Fuzzy matches for 'fin': ['find', 'ping', 'df', 'zip']
+INFO - Fuzzy matches for 'fin': ['find', 'ping', 'df', 'zip']
+2025-01-24 00:23:34,993 - aiterm.utils.logger - INFO - New fuzzy matches: ['ping', 'df', 'zip']
+INFO - New fuzzy matches: ['ping', 'df', 'zip']
+2025-01-24 00:23:34,993 - aiterm.utils.logger - INFO - Final suggestions: ['find', 'ping', 'df', 'zip']
+INFO - Final suggestions: ['find', 'ping', 'df', 'zip']
+2025-01-24 00:23:34,994 - aiterm.utils.logger - INFO - Got suggestions: ['find', 'ping', 'df', 'zip']
+INFO - Got suggestions: ['find', 'ping', 'df', 'zip']
+2025-01-24 00:23:34,994 - aiterm.utils.logger - INFO - Showing dropdown at position (127, 631)
+INFO - Showing dropdown at position (127, 631)
+2025-01-24 00:23:34,994 - aiterm.utils.logger - INFO - Showing dropdown with 4 suggestions at (127, 631)
+INFO - Showing dropdown with 4 suggestions at (127, 631)
+2025-01-24 00:23:34,995 - aiterm.utils.logger - INFO - Setting geometry to: 404x184+127+631
+INFO - Setting geometry to: 404x184+127+631
+2025-01-24 00:23:34,996 - aiterm.utils.logger - INFO - Dropdown shown and configured
+INFO - Dropdown shown and configured
+2025-01-24 00:23:34,996 - aiterm.utils.logger - INFO - Dropdown visible: True
+INFO - Dropdown visible: True
+2025-01-24 00:23:34,996 - aiterm.utils.logger - INFO - Dropdown geometry: 404x184+127+631
+INFO - Dropdown geometry: 404x184+127+631
+2025-01-24 00:23:35,184 - aiterm.utils.logger - INFO - Key release event - keysym: a, char: a, keycode: 97
+INFO - Key release event - keysym: a, char: a, keycode: 97
+2025-01-24 00:23:35,184 - aiterm.utils.logger - INFO - Current text: 'fina'
+INFO - Current text: 'fina'
+2025-01-24 00:23:35,184 - aiterm.utils.logger - INFO - Getting suggestions for text: 'fina'
+INFO - Getting suggestions for text: 'fina'
+2025-01-24 00:23:35,185 - aiterm.utils.logger - INFO - Prefix matches for 'fina': []
+INFO - Prefix matches for 'fina': []
+2025-01-24 00:23:35,185 - aiterm.utils.logger - INFO - Fuzzy matches for 'fina': ['find', 'ping', 'nano', 'df']
+INFO - Fuzzy matches for 'fina': ['find', 'ping', 'nano', 'df']
+2025-01-24 00:23:35,185 - aiterm.utils.logger - INFO - New fuzzy matches: ['find', 'ping', 'nano', 'df']
+INFO - New fuzzy matches: ['find', 'ping', 'nano', 'df']
+2025-01-24 00:23:35,185 - aiterm.utils.logger - INFO - Final suggestions: ['find', 'ping', 'nano', 'df']
+INFO - Final suggestions: ['find', 'ping', 'nano', 'df']
+2025-01-24 00:23:35,185 - aiterm.utils.logger - INFO - Got suggestions: ['find', 'ping', 'nano', 'df']
+INFO - Got suggestions: ['find', 'ping', 'nano', 'df']
+2025-01-24 00:23:35,185 - aiterm.utils.logger - INFO - Showing dropdown at position (127, 631)
+INFO - Showing dropdown at position (127, 631)
+2025-01-24 00:23:35,185 - aiterm.utils.logger - INFO - Showing dropdown with 4 suggestions at (127, 631)
+INFO - Showing dropdown with 4 suggestions at (127, 631)
+2025-01-24 00:23:35,186 - aiterm.utils.logger - INFO - Setting geometry to: 404x184+127+631
+INFO - Setting geometry to: 404x184+127+631
+2025-01-24 00:23:35,187 - aiterm.utils.logger - INFO - Dropdown shown and configured
+INFO - Dropdown shown and configured
+2025-01-24 00:23:35,187 - aiterm.utils.logger - INFO - Dropdown visible: True
+INFO - Dropdown visible: True
+2025-01-24 00:23:35,187 - aiterm.utils.logger - INFO - Dropdown geometry: 404x184+127+631
+INFO - Dropdown geometry: 404x184+127+631
+2025-01-24 00:23:35,477 - aiterm.utils.logger - INFO - Key release event - keysym: space, char:  , keycode: 822083616
+INFO - Key release event - keysym: space, char:  , keycode: 822083616
+2025-01-24 00:23:35,477 - aiterm.utils.logger - INFO - Current text: 'fina '
+INFO - Current text: 'fina '
+2025-01-24 00:23:35,477 - aiterm.utils.logger - INFO - Getting suggestions for text: 'fina'
+INFO - Getting suggestions for text: 'fina'
+2025-01-24 00:23:35,477 - aiterm.utils.logger - INFO - Prefix matches for 'fina': []
+INFO - Prefix matches for 'fina': []
+2025-01-24 00:23:35,478 - aiterm.utils.logger - INFO - Fuzzy matches for 'fina': ['find', 'ping', 'nano', 'df']
+INFO - Fuzzy matches for 'fina': ['find', 'ping', 'nano', 'df']
+2025-01-24 00:23:35,478 - aiterm.utils.logger - INFO - New fuzzy matches: ['find', 'ping', 'nano', 'df']
+INFO - New fuzzy matches: ['find', 'ping', 'nano', 'df']
+2025-01-24 00:23:35,478 - aiterm.utils.logger - INFO - Final suggestions: ['find', 'ping', 'nano', 'df']
+INFO - Final suggestions: ['find', 'ping', 'nano', 'df']
+2025-01-24 00:23:35,478 - aiterm.utils.logger - INFO - Got suggestions: ['find', 'ping', 'nano', 'df']
+INFO - Got suggestions: ['find', 'ping', 'nano', 'df']
+2025-01-24 00:23:35,478 - aiterm.utils.logger - INFO - Showing dropdown at position (127, 631)
+INFO - Showing dropdown at position (127, 631)
+2025-01-24 00:23:35,478 - aiterm.utils.logger - INFO - Showing dropdown with 4 suggestions at (127, 631)
+INFO - Showing dropdown with 4 suggestions at (127, 631)
+2025-01-24 00:23:35,479 - aiterm.utils.logger - INFO - Setting geometry to: 404x184+127+631
+INFO - Setting geometry to: 404x184+127+631
+2025-01-24 00:23:35,480 - aiterm.utils.logger - INFO - Dropdown shown and configured
+INFO - Dropdown shown and configured
+2025-01-24 00:23:35,480 - aiterm.utils.logger - INFO - Dropdown visible: True
+INFO - Dropdown visible: True
+2025-01-24 00:23:35,480 - aiterm.utils.logger - INFO - Dropdown geometry: 404x184+127+631
+INFO - Dropdown geometry: 404x184+127+631
+2025-01-24 00:23:35,814 - aiterm.utils.logger - INFO - Key release event - keysym: BackSpace, char: , keycode: 855638143
+INFO - Key release event - keysym: BackSpace, char: , keycode: 855638143
+2025-01-24 00:23:35,815 - aiterm.utils.logger - INFO - Current text: 'fina'
+INFO - Current text: 'fina'
+2025-01-24 00:23:35,815 - aiterm.utils.logger - INFO - Getting suggestions for text: 'fina'
+INFO - Getting suggestions for text: 'fina'
+2025-01-24 00:23:35,815 - aiterm.utils.logger - INFO - Prefix matches for 'fina': []
+INFO - Prefix matches for 'fina': []
+2025-01-24 00:23:35,815 - aiterm.utils.logger - INFO - Fuzzy matches for 'fina': ['find', 'ping', 'nano', 'df']
+INFO - Fuzzy matches for 'fina': ['find', 'ping', 'nano', 'df']
+2025-01-24 00:23:35,815 - aiterm.utils.logger - INFO - New fuzzy matches: ['find', 'ping', 'nano', 'df']
+INFO - New fuzzy matches: ['find', 'ping', 'nano', 'df']
+2025-01-24 00:23:35,815 - aiterm.utils.logger - INFO - Final suggestions: ['find', 'ping', 'nano', 'df']
+INFO - Final suggestions: ['find', 'ping', 'nano', 'df']
+2025-01-24 00:23:35,815 - aiterm.utils.logger - INFO - Got suggestions: ['find', 'ping', 'nano', 'df']
+INFO - Got suggestions: ['find', 'ping', 'nano', 'df']
+2025-01-24 00:23:35,815 - aiterm.utils.logger - INFO - Showing dropdown at position (127, 631)
+INFO - Showing dropdown at position (127, 631)
+2025-01-24 00:23:35,815 - aiterm.utils.logger - INFO - Showing dropdown with 4 suggestions at (127, 631)
+INFO - Showing dropdown with 4 suggestions at (127, 631)
+2025-01-24 00:23:35,817 - aiterm.utils.logger - INFO - Setting geometry to: 404x184+127+631
+INFO - Setting geometry to: 404x184+127+631
+2025-01-24 00:23:35,817 - aiterm.utils.logger - INFO - Dropdown shown and configured
+INFO - Dropdown shown and configured
+2025-01-24 00:23:35,817 - aiterm.utils.logger - INFO - Dropdown visible: True
+INFO - Dropdown visible: True
+2025-01-24 00:23:35,818 - aiterm.utils.logger - INFO - Dropdown geometry: 404x184+127+631
+INFO - Dropdown geometry: 404x184+127+631
+2025-01-24 00:23:35,971 - aiterm.utils.logger - INFO - Key release event - keysym: BackSpace, char: , keycode: 855638143
+INFO - Key release event - keysym: BackSpace, char: , keycode: 855638143
+2025-01-24 00:23:35,972 - aiterm.utils.logger - INFO - Current text: 'fin'
+INFO - Current text: 'fin'
+2025-01-24 00:23:35,972 - aiterm.utils.logger - INFO - Getting suggestions for text: 'fin'
+INFO - Getting suggestions for text: 'fin'
+2025-01-24 00:23:35,972 - aiterm.utils.logger - INFO - Prefix matches for 'fin': ['find']
+INFO - Prefix matches for 'fin': ['find']
+2025-01-24 00:23:35,972 - aiterm.utils.logger - INFO - Fuzzy matches for 'fin': ['find', 'ping', 'df', 'zip']
+INFO - Fuzzy matches for 'fin': ['find', 'ping', 'df', 'zip']
+2025-01-24 00:23:35,972 - aiterm.utils.logger - INFO - New fuzzy matches: ['ping', 'df', 'zip']
+INFO - New fuzzy matches: ['ping', 'df', 'zip']
+2025-01-24 00:23:35,972 - aiterm.utils.logger - INFO - Final suggestions: ['find', 'ping', 'df', 'zip']
+INFO - Final suggestions: ['find', 'ping', 'df', 'zip']
+2025-01-24 00:23:35,972 - aiterm.utils.logger - INFO - Got suggestions: ['find', 'ping', 'df', 'zip']
+INFO - Got suggestions: ['find', 'ping', 'df', 'zip']
+2025-01-24 00:23:35,972 - aiterm.utils.logger - INFO - Showing dropdown at position (127, 631)
+INFO - Showing dropdown at position (127, 631)
+2025-01-24 00:23:35,972 - aiterm.utils.logger - INFO - Showing dropdown with 4 suggestions at (127, 631)
+INFO - Showing dropdown with 4 suggestions at (127, 631)
+2025-01-24 00:23:35,973 - aiterm.utils.logger - INFO - Setting geometry to: 404x184+127+631
+INFO - Setting geometry to: 404x184+127+631
+2025-01-24 00:23:35,974 - aiterm.utils.logger - INFO - Dropdown shown and configured
+INFO - Dropdown shown and configured
+2025-01-24 00:23:35,975 - aiterm.utils.logger - INFO - Dropdown visible: True
+INFO - Dropdown visible: True
+2025-01-24 00:23:35,975 - aiterm.utils.logger - INFO - Dropdown geometry: 404x184+127+631
+INFO - Dropdown geometry: 404x184+127+631
+2025-01-24 00:23:36,162 - aiterm.utils.logger - INFO - Key release event - keysym: d, char: d, keycode: 33554532
+INFO - Key release event - keysym: d, char: d, keycode: 33554532
+2025-01-24 00:23:36,162 - aiterm.utils.logger - INFO - Current text: 'find'
+INFO - Current text: 'find'
+2025-01-24 00:23:36,162 - aiterm.utils.logger - INFO - Getting suggestions for text: 'find'
+INFO - Getting suggestions for text: 'find'
+2025-01-24 00:23:36,163 - aiterm.utils.logger - INFO - Prefix matches for 'find': ['find']
+INFO - Prefix matches for 'find': ['find']
+2025-01-24 00:23:36,163 - aiterm.utils.logger - INFO - Fuzzy matches for 'find': ['find', 'ping', 'node', 'du']
+INFO - Fuzzy matches for 'find': ['find', 'ping', 'node', 'du']
+2025-01-24 00:23:36,163 - aiterm.utils.logger - INFO - New fuzzy matches: ['ping', 'node', 'du']
+INFO - New fuzzy matches: ['ping', 'node', 'du']
+2025-01-24 00:23:36,163 - aiterm.utils.logger - INFO - Final suggestions: ['find', 'ping', 'node', 'du']
+INFO - Final suggestions: ['find', 'ping', 'node', 'du']
+2025-01-24 00:23:36,163 - aiterm.utils.logger - INFO - Got suggestions: ['find', 'ping', 'node', 'du']
+INFO - Got suggestions: ['find', 'ping', 'node', 'du']
+2025-01-24 00:23:36,163 - aiterm.utils.logger - INFO - Showing dropdown at position (127, 631)
+INFO - Showing dropdown at position (127, 631)
+2025-01-24 00:23:36,163 - aiterm.utils.logger - INFO - Showing dropdown with 4 suggestions at (127, 631)
+INFO - Showing dropdown with 4 suggestions at (127, 631)
+2025-01-24 00:23:36,164 - aiterm.utils.logger - INFO - Setting geometry to: 404x184+127+631
+INFO - Setting geometry to: 404x184+127+631
+2025-01-24 00:23:36,165 - aiterm.utils.logger - INFO - Dropdown shown and configured
+INFO - Dropdown shown and configured
+2025-01-24 00:23:36,165 - aiterm.utils.logger - INFO - Dropdown visible: True
+INFO - Dropdown visible: True
+2025-01-24 00:23:36,165 - aiterm.utils.logger - INFO - Dropdown geometry: 404x184+127+631
+INFO - Dropdown geometry: 404x184+127+631
+2025-01-24 00:23:36,332 - aiterm.utils.logger - INFO - Key release event - keysym: space, char:  , keycode: 822083616
+INFO - Key release event - keysym: space, char:  , keycode: 822083616
+2025-01-24 00:23:36,332 - aiterm.utils.logger - INFO - Current text: 'find '
+INFO - Current text: 'find '
+2025-01-24 00:23:36,332 - aiterm.utils.logger - INFO - Getting suggestions for text: 'find'
+INFO - Getting suggestions for text: 'find'
+2025-01-24 00:23:36,332 - aiterm.utils.logger - INFO - Prefix matches for 'find': ['find']
+INFO - Prefix matches for 'find': ['find']
+2025-01-24 00:23:36,333 - aiterm.utils.logger - INFO - Fuzzy matches for 'find': ['find', 'ping', 'node', 'du']
+INFO - Fuzzy matches for 'find': ['find', 'ping', 'node', 'du']
+2025-01-24 00:23:36,333 - aiterm.utils.logger - INFO - New fuzzy matches: ['ping', 'node', 'du']
+INFO - New fuzzy matches: ['ping', 'node', 'du']
+2025-01-24 00:23:36,333 - aiterm.utils.logger - INFO - Final suggestions: ['find', 'ping', 'node', 'du']
+INFO - Final suggestions: ['find', 'ping', 'node', 'du']
+2025-01-24 00:23:36,333 - aiterm.utils.logger - INFO - Got suggestions: ['find', 'ping', 'node', 'du']
+INFO - Got suggestions: ['find', 'ping', 'node', 'du']
+2025-01-24 00:23:36,333 - aiterm.utils.logger - INFO - Showing dropdown at position (127, 631)
+INFO - Showing dropdown at position (127, 631)
+2025-01-24 00:23:36,333 - aiterm.utils.logger - INFO - Showing dropdown with 4 suggestions at (127, 631)
+INFO - Showing dropdown with 4 suggestions at (127, 631)
+2025-01-24 00:23:36,334 - aiterm.utils.logger - INFO - Setting geometry to: 404x184+127+631
+INFO - Setting geometry to: 404x184+127+631
+2025-01-24 00:23:36,335 - aiterm.utils.logger - INFO - Dropdown shown and configured
+INFO - Dropdown shown and configured
+2025-01-24 00:23:36,335 - aiterm.utils.logger - INFO - Dropdown visible: True
+INFO - Dropdown visible: True
+2025-01-24 00:23:36,335 - aiterm.utils.logger - INFO - Dropdown geometry: 404x184+127+631
+INFO - Dropdown geometry: 404x184+127+631
+2025-01-24 00:23:36,501 - aiterm.utils.logger - INFO - Key release event - keysym: a, char: a, keycode: 97
+INFO - Key release event - keysym: a, char: a, keycode: 97
+2025-01-24 00:23:36,501 - aiterm.utils.logger - INFO - Current text: 'find a '
+INFO - Current text: 'find a '
+2025-01-24 00:23:36,501 - aiterm.utils.logger - INFO - Getting suggestions for text: 'find'
+INFO - Getting suggestions for text: 'find'
+2025-01-24 00:23:36,502 - aiterm.utils.logger - INFO - Trying path completion for: ./a*
+INFO - Trying path completion for: ./a*
+2025-01-24 00:23:36,502 - aiterm.utils.logger - INFO - Final suggestions: []
+INFO - Final suggestions: []
+2025-01-24 00:23:36,502 - aiterm.utils.logger - INFO - Got suggestions: []
+INFO - Got suggestions: []
+2025-01-24 00:23:36,502 - aiterm.utils.logger - INFO - No suggestions, hiding dropdown
+INFO - No suggestions, hiding dropdown
+2025-01-24 00:23:36,502 - aiterm.utils.logger - INFO - Hiding dropdown
+INFO - Hiding dropdown
+2025-01-24 00:23:36,579 - aiterm.utils.logger - INFO - Key release event - keysym: space, char:  , keycode: 822083616
+INFO - Key release event - keysym: space, char:  , keycode: 822083616
+2025-01-24 00:23:36,579 - aiterm.utils.logger - INFO - Current text: 'find a '
+INFO - Current text: 'find a '
+2025-01-24 00:23:36,579 - aiterm.utils.logger - INFO - Getting suggestions for text: 'find'
+INFO - Getting suggestions for text: 'find'
+2025-01-24 00:23:36,579 - aiterm.utils.logger - INFO - Trying path completion for: ./a*
+INFO - Trying path completion for: ./a*
+2025-01-24 00:23:36,580 - aiterm.utils.logger - INFO - Final suggestions: []
+INFO - Final suggestions: []
+2025-01-24 00:23:36,580 - aiterm.utils.logger - INFO - Got suggestions: []
+INFO - Got suggestions: []
+2025-01-24 00:23:36,580 - aiterm.utils.logger - INFO - No suggestions, hiding dropdown
+INFO - No suggestions, hiding dropdown
+2025-01-24 00:23:36,804 - aiterm.utils.logger - INFO - Key release event - keysym: f, char: f, keycode: 50331750
+INFO - Key release event - keysym: f, char: f, keycode: 50331750
+2025-01-24 00:23:36,804 - aiterm.utils.logger - INFO - Current text: 'find a fi'
+INFO - Current text: 'find a fi'
+2025-01-24 00:23:36,804 - aiterm.utils.logger - INFO - Getting suggestions for text: 'find'
+INFO - Getting suggestions for text: 'find'
+2025-01-24 00:23:36,805 - aiterm.utils.logger - INFO - Trying path completion for: ./fi*
+INFO - Trying path completion for: ./fi*
+2025-01-24 00:23:36,805 - aiterm.utils.logger - INFO - Final suggestions: []
+INFO - Final suggestions: []
+2025-01-24 00:23:36,805 - aiterm.utils.logger - INFO - Got suggestions: []
+INFO - Got suggestions: []
+2025-01-24 00:23:36,805 - aiterm.utils.logger - INFO - No suggestions, hiding dropdown
+INFO - No suggestions, hiding dropdown
+2025-01-24 00:23:36,861 - aiterm.utils.logger - INFO - Key release event - keysym: i, char: i, keycode: 570425449
+INFO - Key release event - keysym: i, char: i, keycode: 570425449
+2025-01-24 00:23:36,861 - aiterm.utils.logger - INFO - Current text: 'find a fil'
+INFO - Current text: 'find a fil'
+2025-01-24 00:23:36,861 - aiterm.utils.logger - INFO - Getting suggestions for text: 'find'
+INFO - Getting suggestions for text: 'find'
+2025-01-24 00:23:36,861 - aiterm.utils.logger - INFO - Trying path completion for: ./fil*
+INFO - Trying path completion for: ./fil*
+2025-01-24 00:23:36,862 - aiterm.utils.logger - INFO - Final suggestions: []
+INFO - Final suggestions: []
+2025-01-24 00:23:36,862 - aiterm.utils.logger - INFO - Got suggestions: []
+INFO - Got suggestions: []
+2025-01-24 00:23:36,862 - aiterm.utils.logger - INFO - No suggestions, hiding dropdown
+INFO - No suggestions, hiding dropdown
+2025-01-24 00:23:36,951 - aiterm.utils.logger - INFO - Key release event - keysym: l, char: l, keycode: 620757100
+INFO - Key release event - keysym: l, char: l, keycode: 620757100
+2025-01-24 00:23:36,951 - aiterm.utils.logger - INFO - Current text: 'find a file'
+INFO - Current text: 'find a file'
+2025-01-24 00:23:36,952 - aiterm.utils.logger - INFO - Getting suggestions for text: 'find'
+INFO - Getting suggestions for text: 'find'
+2025-01-24 00:23:36,952 - aiterm.utils.logger - INFO - Trying path completion for: ./file*
+INFO - Trying path completion for: ./file*
+2025-01-24 00:23:36,952 - aiterm.utils.logger - INFO - Final suggestions: []
+INFO - Final suggestions: []
+2025-01-24 00:23:36,952 - aiterm.utils.logger - INFO - Got suggestions: []
+INFO - Got suggestions: []
+2025-01-24 00:23:36,952 - aiterm.utils.logger - INFO - No suggestions, hiding dropdown
+INFO - No suggestions, hiding dropdown
+2025-01-24 00:23:37,052 - aiterm.utils.logger - INFO - Key release event - keysym: e, char: e, keycode: 234881125
+INFO - Key release event - keysym: e, char: e, keycode: 234881125
+2025-01-24 00:23:37,052 - aiterm.utils.logger - INFO - Current text: 'find a file'
+INFO - Current text: 'find a file'
+2025-01-24 00:23:37,052 - aiterm.utils.logger - INFO - Getting suggestions for text: 'find'
+INFO - Getting suggestions for text: 'find'
+2025-01-24 00:23:37,052 - aiterm.utils.logger - INFO - Trying path completion for: ./file*
+INFO - Trying path completion for: ./file*
+2025-01-24 00:23:37,052 - aiterm.utils.logger - INFO - Final suggestions: []
+INFO - Final suggestions: []
+2025-01-24 00:23:37,052 - aiterm.utils.logger - INFO - Got suggestions: []
+INFO - Got suggestions: []
+2025-01-24 00:23:37,052 - aiterm.utils.logger - INFO - No suggestions, hiding dropdown
+INFO - No suggestions, hiding dropdown
+2025-01-24 00:23:37,164 - aiterm.utils.logger - INFO - Key release event - keysym: space, char:  , keycode: 822083616
+INFO - Key release event - keysym: space, char:  , keycode: 822083616
+2025-01-24 00:23:37,164 - aiterm.utils.logger - INFO - Current text: 'find a file '
+INFO - Current text: 'find a file '
+2025-01-24 00:23:37,164 - aiterm.utils.logger - INFO - Getting suggestions for text: 'find'
+INFO - Getting suggestions for text: 'find'
+2025-01-24 00:23:37,164 - aiterm.utils.logger - INFO - Trying path completion for: ./file*
+INFO - Trying path completion for: ./file*
+2025-01-24 00:23:37,165 - aiterm.utils.logger - INFO - Final suggestions: []
+INFO - Final suggestions: []
+2025-01-24 00:23:37,165 - aiterm.utils.logger - INFO - Got suggestions: []
+INFO - Got suggestions: []
+2025-01-24 00:23:37,165 - aiterm.utils.logger - INFO - No suggestions, hiding dropdown
+INFO - No suggestions, hiding dropdown
+2025-01-24 00:23:37,546 - aiterm.utils.logger - INFO - Key release event - keysym: n, char: n, keycode: 754974830
+INFO - Key release event - keysym: n, char: n, keycode: 754974830
+2025-01-24 00:23:37,546 - aiterm.utils.logger - INFO - Current text: 'find a file na'
+INFO - Current text: 'find a file na'
+2025-01-24 00:23:37,546 - aiterm.utils.logger - INFO - Getting suggestions for text: 'find'
+INFO - Getting suggestions for text: 'find'
+2025-01-24 00:23:37,546 - aiterm.utils.logger - INFO - Trying path completion for: ./na*
+INFO - Trying path completion for: ./na*
+2025-01-24 00:23:37,546 - aiterm.utils.logger - INFO - Final suggestions: []
+INFO - Final suggestions: []
+2025-01-24 00:23:37,546 - aiterm.utils.logger - INFO - Got suggestions: []
+INFO - Got suggestions: []
+2025-01-24 00:23:37,546 - aiterm.utils.logger - INFO - No suggestions, hiding dropdown
+INFO - No suggestions, hiding dropdown
+2025-01-24 00:23:37,693 - aiterm.utils.logger - INFO - Key release event - keysym: a, char: a, keycode: 97
+INFO - Key release event - keysym: a, char: a, keycode: 97
+2025-01-24 00:23:37,693 - aiterm.utils.logger - INFO - Current text: 'find a file nam'
+INFO - Current text: 'find a file nam'
+2025-01-24 00:23:37,693 - aiterm.utils.logger - INFO - Getting suggestions for text: 'find'
+INFO - Getting suggestions for text: 'find'
+2025-01-24 00:23:37,693 - aiterm.utils.logger - INFO - Trying path completion for: ./nam*
+INFO - Trying path completion for: ./nam*
+2025-01-24 00:23:37,694 - aiterm.utils.logger - INFO - Final suggestions: []
+INFO - Final suggestions: []
+2025-01-24 00:23:37,694 - aiterm.utils.logger - INFO - Got suggestions: []
+INFO - Got suggestions: []
+2025-01-24 00:23:37,694 - aiterm.utils.logger - INFO - No suggestions, hiding dropdown
+INFO - No suggestions, hiding dropdown
+2025-01-24 00:23:37,772 - aiterm.utils.logger - INFO - Key release event - keysym: m, char: m, keycode: 771752045
+INFO - Key release event - keysym: m, char: m, keycode: 771752045
+2025-01-24 00:23:37,772 - aiterm.utils.logger - INFO - Current text: 'find a file nam'
+INFO - Current text: 'find a file nam'
+2025-01-24 00:23:37,772 - aiterm.utils.logger - INFO - Getting suggestions for text: 'find'
+INFO - Getting suggestions for text: 'find'
+2025-01-24 00:23:37,772 - aiterm.utils.logger - INFO - Trying path completion for: ./nam*
+INFO - Trying path completion for: ./nam*
+2025-01-24 00:23:37,773 - aiterm.utils.logger - INFO - Final suggestions: []
+INFO - Final suggestions: []
+2025-01-24 00:23:37,773 - aiterm.utils.logger - INFO - Got suggestions: []
+INFO - Got suggestions: []
+2025-01-24 00:23:37,773 - aiterm.utils.logger - INFO - No suggestions, hiding dropdown
+INFO - No suggestions, hiding dropdown
+2025-01-24 00:23:37,895 - aiterm.utils.logger - INFO - Key release event - keysym: e, char: e, keycode: 234881125
+INFO - Key release event - keysym: e, char: e, keycode: 234881125
+2025-01-24 00:23:37,895 - aiterm.utils.logger - INFO - Current text: 'find a file name '
+INFO - Current text: 'find a file name '
+2025-01-24 00:23:37,895 - aiterm.utils.logger - INFO - Getting suggestions for text: 'find'
+INFO - Getting suggestions for text: 'find'
+2025-01-24 00:23:37,895 - aiterm.utils.logger - INFO - Trying path completion for: ./name*
+INFO - Trying path completion for: ./name*
+2025-01-24 00:23:37,896 - aiterm.utils.logger - INFO - Final suggestions: []
+INFO - Final suggestions: []
+2025-01-24 00:23:37,896 - aiterm.utils.logger - INFO - Got suggestions: []
+INFO - Got suggestions: []
+2025-01-24 00:23:37,896 - aiterm.utils.logger - INFO - No suggestions, hiding dropdown
+INFO - No suggestions, hiding dropdown
+2025-01-24 00:23:37,954 - aiterm.utils.logger - INFO - Key release event - keysym: space, char:  , keycode: 822083616
+INFO - Key release event - keysym: space, char:  , keycode: 822083616
+2025-01-24 00:23:37,954 - aiterm.utils.logger - INFO - Current text: 'find a file name '
+INFO - Current text: 'find a file name '
+2025-01-24 00:23:37,954 - aiterm.utils.logger - INFO - Getting suggestions for text: 'find'
+INFO - Getting suggestions for text: 'find'
+2025-01-24 00:23:37,954 - aiterm.utils.logger - INFO - Trying path completion for: ./name*
+INFO - Trying path completion for: ./name*
+2025-01-24 00:23:37,954 - aiterm.utils.logger - INFO - Final suggestions: []
+INFO - Final suggestions: []
+2025-01-24 00:23:37,955 - aiterm.utils.logger - INFO - Got suggestions: []
+INFO - Got suggestions: []
+2025-01-24 00:23:37,955 - aiterm.utils.logger - INFO - No suggestions, hiding dropdown
+INFO - No suggestions, hiding dropdown
+2025-01-24 00:23:38,515 - aiterm.utils.logger - INFO - Key release event - keysym: a, char: a, keycode: 97
+INFO - Key release event - keysym: a, char: a, keycode: 97
+2025-01-24 00:23:38,515 - aiterm.utils.logger - INFO - Current text: 'find a file name a'
+INFO - Current text: 'find a file name a'
+2025-01-24 00:23:38,515 - aiterm.utils.logger - INFO - Getting suggestions for text: 'find'
+INFO - Getting suggestions for text: 'find'
+2025-01-24 00:23:38,515 - aiterm.utils.logger - INFO - Trying path completion for: ./a*
+INFO - Trying path completion for: ./a*
+2025-01-24 00:23:38,515 - aiterm.utils.logger - INFO - Final suggestions: []
+INFO - Final suggestions: []
+2025-01-24 00:23:38,515 - aiterm.utils.logger - INFO - Got suggestions: []
+INFO - Got suggestions: []
+2025-01-24 00:23:38,516 - aiterm.utils.logger - INFO - No suggestions, hiding dropdown
+INFO - No suggestions, hiding dropdown
+2025-01-24 00:23:38,728 - aiterm.utils.logger - INFO - Key release event - keysym: b, char: b, keycode: 184549474
+INFO - Key release event - keysym: b, char: b, keycode: 184549474
+2025-01-24 00:23:38,729 - aiterm.utils.logger - INFO - Current text: 'find a file name ab'
+INFO - Current text: 'find a file name ab'
+2025-01-24 00:23:38,729 - aiterm.utils.logger - INFO - Getting suggestions for text: 'find'
+INFO - Getting suggestions for text: 'find'
+2025-01-24 00:23:38,729 - aiterm.utils.logger - INFO - Trying path completion for: ./ab*
+INFO - Trying path completion for: ./ab*
+2025-01-24 00:23:38,729 - aiterm.utils.logger - INFO - Final suggestions: []
+INFO - Final suggestions: []
+2025-01-24 00:23:38,729 - aiterm.utils.logger - INFO - Got suggestions: []
+INFO - Got suggestions: []
+2025-01-24 00:23:38,729 - aiterm.utils.logger - INFO - No suggestions, hiding dropdown
+INFO - No suggestions, hiding dropdown
+2025-01-24 00:23:38,885 - aiterm.utils.logger - INFO - Key release event - keysym: c, char: c, keycode: 134217827
+INFO - Key release event - keysym: c, char: c, keycode: 134217827
+2025-01-24 00:23:38,886 - aiterm.utils.logger - INFO - Current text: 'find a file name abc'
+INFO - Current text: 'find a file name abc'
+2025-01-24 00:23:38,886 - aiterm.utils.logger - INFO - Getting suggestions for text: 'find'
+INFO - Getting suggestions for text: 'find'
+2025-01-24 00:23:38,886 - aiterm.utils.logger - INFO - Trying path completion for: ./abc*
+INFO - Trying path completion for: ./abc*
+2025-01-24 00:23:38,886 - aiterm.utils.logger - INFO - Final suggestions: []
+INFO - Final suggestions: []
+2025-01-24 00:23:38,886 - aiterm.utils.logger - INFO - Got suggestions: []
+INFO - Got suggestions: []
+2025-01-24 00:23:38,886 - aiterm.utils.logger - INFO - No suggestions, hiding dropdown
+INFO - No suggestions, hiding dropdown
+2025-01-24 00:23:39,122 - aiterm.utils.logger - INFO - Key release event - keysym: d, char: d, keycode: 33554532
+INFO - Key release event - keysym: d, char: d, keycode: 33554532
+2025-01-24 00:23:39,122 - aiterm.utils.logger - INFO - Current text: 'find a file name abcd'
+INFO - Current text: 'find a file name abcd'
+2025-01-24 00:23:39,122 - aiterm.utils.logger - INFO - Getting suggestions for text: 'find'
+INFO - Getting suggestions for text: 'find'
+2025-01-24 00:23:39,122 - aiterm.utils.logger - INFO - Trying path completion for: ./abcd*
+INFO - Trying path completion for: ./abcd*
+2025-01-24 00:23:39,123 - aiterm.utils.logger - INFO - Final suggestions: []
+INFO - Final suggestions: []
+2025-01-24 00:23:39,123 - aiterm.utils.logger - INFO - Got suggestions: []
+INFO - Got suggestions: []
+2025-01-24 00:23:39,123 - aiterm.utils.logger - INFO - No suggestions, hiding dropdown
+INFO - No suggestions, hiding dropdown
+2025-01-24 00:23:40,180 - aiterm.utils.logger - INFO - Key release event - keysym: e, char: e, keycode: 234881125
+INFO - Key release event - keysym: e, char: e, keycode: 234881125
+2025-01-24 00:23:40,180 - aiterm.utils.logger - INFO - Current text: 'find a file name abcde'
+INFO - Current text: 'find a file name abcde'
+2025-01-24 00:23:40,180 - aiterm.utils.logger - INFO - Getting suggestions for text: 'find'
+INFO - Getting suggestions for text: 'find'
+2025-01-24 00:23:40,180 - aiterm.utils.logger - INFO - Trying path completion for: ./abcde*
+INFO - Trying path completion for: ./abcde*
+2025-01-24 00:23:40,180 - aiterm.utils.logger - INFO - Final suggestions: []
+INFO - Final suggestions: []
+2025-01-24 00:23:40,180 - aiterm.utils.logger - INFO - Got suggestions: []
+INFO - Got suggestions: []
+2025-01-24 00:23:40,181 - aiterm.utils.logger - INFO - No suggestions, hiding dropdown
+INFO - No suggestions, hiding dropdown
+2025-01-24 00:23:40,494 - aiterm.utils.logger - INFO - Key release event - keysym: f, char: f, keycode: 50331750
+INFO - Key release event - keysym: f, char: f, keycode: 50331750
+2025-01-24 00:23:40,494 - aiterm.utils.logger - INFO - Current text: 'find a file name abcdef'
+INFO - Current text: 'find a file name abcdef'
+2025-01-24 00:23:40,494 - aiterm.utils.logger - INFO - Getting suggestions for text: 'find'
+INFO - Getting suggestions for text: 'find'
+2025-01-24 00:23:40,495 - aiterm.utils.logger - INFO - Trying path completion for: ./abcdef*
+INFO - Trying path completion for: ./abcdef*
+2025-01-24 00:23:40,495 - aiterm.utils.logger - INFO - Final suggestions: []
+INFO - Final suggestions: []
+2025-01-24 00:23:40,495 - aiterm.utils.logger - INFO - Got suggestions: []
+INFO - Got suggestions: []
+2025-01-24 00:23:40,495 - aiterm.utils.logger - INFO - No suggestions, hiding dropdown
+INFO - No suggestions, hiding dropdown
+2025-01-24 00:23:40,820 - aiterm.utils.logger - INFO - Key release event - keysym: g, char: g, keycode: 83886183
+INFO - Key release event - keysym: g, char: g, keycode: 83886183
+2025-01-24 00:23:40,820 - aiterm.utils.logger - INFO - Current text: 'find a file name abcdefg'
+INFO - Current text: 'find a file name abcdefg'
+2025-01-24 00:23:40,820 - aiterm.utils.logger - INFO - Getting suggestions for text: 'find'
+INFO - Getting suggestions for text: 'find'
+2025-01-24 00:23:40,820 - aiterm.utils.logger - INFO - Trying path completion for: ./abcdefg*
+INFO - Trying path completion for: ./abcdefg*
+2025-01-24 00:23:40,821 - aiterm.utils.logger - INFO - Final suggestions: []
+INFO - Final suggestions: []
+2025-01-24 00:23:40,821 - aiterm.utils.logger - INFO - Got suggestions: []
+INFO - Got suggestions: []
+2025-01-24 00:23:40,821 - aiterm.utils.logger - INFO - No suggestions, hiding dropdown
+INFO - No suggestions, hiding dropdown
+2025-01-24 00:23:41,405 - aiterm.utils.logger - INFO - Hiding dropdown
+INFO - Hiding dropdown
+2025-01-24 00:23:41,405 - aiterm.utils.logger - INFO - Executing command: find a file name abcdefg
+INFO - Executing command: find a file name abcdefg
+2025-01-24 00:23:41,405 - aiterm.utils.logger - DEBUG - Added command to history. Total commands: 1
+DEBUG - Added command to history. Total commands: 1
+2025-01-24 00:23:41,406 - aiterm.commands.ai_command_processor - INFO - Processing command: find a file name abcdefg
+INFO - Processing command: find a file name abcdefg
+2025-01-24 00:23:42,303 - aiterm.commands.ai_command_processor - INFO - AI interpreted command 'find a file name abcdefg' as: find . -name "abcdefg"
+INFO - AI interpreted command 'find a file name abcdefg' as: find . -name "abcdefg"
+2025-01-24 00:23:42,303 - aiterm - DEBUG - Processed command 'find a file name abcdefg' to 'find . -name "abcdefg"'
+DEBUG - Processed command 'find a file name abcdefg' to 'find . -name "abcdefg"'
+2025-01-24 00:23:42,431 - aiterm.utils.logger - INFO - Key release event - keysym: Return, char: , keycode: 603979789
+INFO - Key release event - keysym: Return, char: , keycode: 603979789
+2025-01-24 00:23:42,431 - aiterm.utils.logger - INFO - Ignoring special key: Return
+INFO - Ignoring special key: Return

@@ -1,0 +1,10 @@
+INFO - Found .env file at: /Volumes/wd/code/Python/AITerm/.env
+INFO - Loaded OpenAI API key (masked): sk-proj-...M9gA
+INFO - Using OpenAI model: gpt-4o-mini
+INFO - Setting up OpenAI with API key (masked): sk-proj-...M9gA
+INFO - OpenAI API test successful. Found 48 models
+INFO - Command arguments: ['ls', 'show', 'files']
+INFO - Received command: ls show files
+INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+INFO - Using OpenAI model: gpt-4o-mini
+INFO - Executing command directly: ls show files

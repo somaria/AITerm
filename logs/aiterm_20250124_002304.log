@@ -1,0 +1,17 @@
+INFO - Found .env file at: /Volumes/wd/code/Python/AITerm/.env
+INFO - Loaded OpenAI API key (masked): sk-proj-...M9gA
+INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:23:04,621 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:23:04,621 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:23:04,686 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:23:04,686 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:23:04,742 - aiterm.commands.ai_command_processor - INFO - Processing command: find a file name abcdefg
+INFO - Processing command: find a file name abcdefg
+2025-01-24 00:23:05,694 - aiterm.commands.ai_command_processor - INFO - AI interpreted command 'find a file name abcdefg' as: find . -name "abcdefg"
+INFO - AI interpreted command 'find a file name abcdefg' as: find . -name "abcdefg"
+2025-01-24 00:23:05,695 - aiterm - DEBUG - Processed command 'find a file name abcdefg' to 'find . -name "abcdefg"'
+DEBUG - Processed command 'find a file name abcdefg' to 'find . -name "abcdefg"'

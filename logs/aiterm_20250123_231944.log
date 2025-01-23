@@ -1,3 +1,6 @@
+INFO - Found .env file at: /Volumes/wd/code/Python/AITerm/.env
+INFO - Loaded OpenAI API key (masked): sk-proj-...M9gA
+INFO - Using OpenAI model: gpt-4o-mini
 INFO - Initialized TerminalCompleter with 46 commands
 INFO - Initializing SuggestionDropdown
 INFO - SuggestionDropdown initialized and hidden
@@ -93,17 +96,14 @@ INFO - Got suggestions: []
 INFO - No suggestions, hiding dropdown
 INFO - Hiding dropdown
 INFO - Key release event - keysym: s, char: s, keycode: 16777331
-INFO - Current text: 'show last'
+INFO - Current text: 'show las'
 INFO - Getting suggestions for text: 'show'
-INFO - Got suggestions: ['show commits', 'show changes']
-INFO - Showing dropdown at position (134, 672)
-INFO - Showing dropdown with 2 suggestions at (134, 672)
-INFO - Setting geometry to: 404x184+134+672
-INFO - Dropdown shown and configured
-INFO - Dropdown visible: True
-INFO - Dropdown geometry: 404x184+134+672
+INFO - Trying path completion for: ./las*
+INFO - Final suggestions: []
+INFO - Got suggestions: []
+INFO - No suggestions, hiding dropdown
 INFO - Key release event - keysym: t, char: t, keycode: 285212788
-INFO - Current text: 'show last'
+INFO - Current text: 'show last '
 INFO - Getting suggestions for text: 'show'
 INFO - Got suggestions: ['show commits', 'show changes']
 INFO - Showing dropdown at position (134, 672)
@@ -113,7 +113,7 @@ INFO - Dropdown shown and configured
 INFO - Dropdown visible: True
 INFO - Dropdown geometry: 404x184+134+672
 INFO - Key release event - keysym: space, char:  , keycode: 822083616
-INFO - Current text: 'show last 2'
+INFO - Current text: 'show last '
 INFO - Getting suggestions for text: 'show'
 INFO - Got suggestions: ['show commits', 'show changes']
 INFO - Showing dropdown at position (134, 672)
@@ -143,7 +143,7 @@ INFO - Dropdown shown and configured
 INFO - Dropdown visible: True
 INFO - Dropdown geometry: 404x184+134+672
 INFO - Key release event - keysym: c, char: c, keycode: 134217827
-INFO - Current text: 'show last 2 c'
+INFO - Current text: 'show last 2 co'
 INFO - Getting suggestions for text: 'show'
 INFO - Got suggestions: ['show commits', 'show changes']
 INFO - Showing dropdown at position (134, 672)
@@ -163,6 +163,26 @@ INFO - Dropdown shown and configured
 INFO - Dropdown visible: True
 INFO - Dropdown geometry: 404x184+134+672
 INFO - Key release event - keysym: m, char: m, keycode: 771752045
+INFO - Current text: 'show last 2 com'
+INFO - Getting suggestions for text: 'show'
+INFO - Got suggestions: ['show commits', 'show changes']
+INFO - Showing dropdown at position (134, 672)
+INFO - Showing dropdown with 2 suggestions at (134, 672)
+INFO - Setting geometry to: 404x184+134+672
+INFO - Dropdown shown and configured
+INFO - Dropdown visible: True
+INFO - Dropdown geometry: 404x184+134+672
+INFO - Key release event - keysym: i, char: i, keycode: 570425449
+INFO - Current text: 'show last 2 comi'
+INFO - Getting suggestions for text: 'show'
+INFO - Got suggestions: ['show commits', 'show changes']
+INFO - Showing dropdown at position (134, 672)
+INFO - Showing dropdown with 2 suggestions at (134, 672)
+INFO - Setting geometry to: 404x184+134+672
+INFO - Dropdown shown and configured
+INFO - Dropdown visible: True
+INFO - Dropdown geometry: 404x184+134+672
+INFO - Key release event - keysym: BackSpace, char: , keycode: 855638143
 INFO - Current text: 'show last 2 com'
 INFO - Getting suggestions for text: 'show'
 INFO - Got suggestions: ['show commits', 'show changes']
@@ -193,7 +213,7 @@ INFO - Dropdown shown and configured
 INFO - Dropdown visible: True
 INFO - Dropdown geometry: 404x184+134+672
 INFO - Key release event - keysym: t, char: t, keycode: 285212788
-INFO - Current text: 'show last 2 commits'
+INFO - Current text: 'show last 2 commit'
 INFO - Getting suggestions for text: 'show'
 INFO - Got suggestions: ['show commits', 'show changes']
 INFO - Showing dropdown at position (134, 672)
@@ -216,7 +236,7 @@ INFO - Hiding dropdown
 INFO - Executing command: show last 2 commits
 INFO - Key release event - keysym: Return, char: , keycode: 603979789
 INFO - Ignoring special key: Return
-INFO - Key release event - keysym: g, char: g, keycode: 83886183
+INFO - Key release event - keysym: i, char: i, keycode: 570425449
 INFO - Current text: 'gi'
 INFO - Getting suggestions for text: 'gi'
 INFO - Prefix matches for 'gi': ['git']
@@ -230,7 +250,7 @@ INFO - Setting geometry to: 404x184+134+672
 INFO - Dropdown shown and configured
 INFO - Dropdown visible: True
 INFO - Dropdown geometry: 404x184+134+672
-INFO - Key release event - keysym: i, char: i, keycode: 570425449
+INFO - Key release event - keysym: g, char: g, keycode: 83886183
 INFO - Current text: 'gi'
 INFO - Getting suggestions for text: 'gi'
 INFO - Prefix matches for 'gi': ['git']
@@ -398,7 +418,7 @@ INFO - Dropdown shown and configured
 INFO - Dropdown visible: True
 INFO - Dropdown geometry: 404x184+134+672
 INFO - Key release event - keysym: o, char: o, keycode: 520093807
-INFO - Current text: 'git show last 2 co'
+INFO - Current text: 'git show last 2 com'
 INFO - Getting suggestions for text: 'git'
 INFO - Got suggestions: ['git last', 'git HEAD', 'git master']
 INFO - Showing dropdown at position (134, 672)
@@ -428,7 +448,7 @@ INFO - Dropdown shown and configured
 INFO - Dropdown visible: True
 INFO - Dropdown geometry: 404x184+134+672
 INFO - Key release event - keysym: i, char: i, keycode: 570425449
-INFO - Current text: 'git show last 2 commit'
+INFO - Current text: 'git show last 2 commi'
 INFO - Getting suggestions for text: 'git'
 INFO - Got suggestions: ['git last', 'git HEAD', 'git master']
 INFO - Showing dropdown at position (134, 672)

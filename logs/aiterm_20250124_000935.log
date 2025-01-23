@@ -1,0 +1,448 @@
+2025-01-24 00:09:35,767 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:35,768 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:35,829 - aiterm - DEBUG - Processed command 'show current directory' to 'pwd'
+2025-01-24 00:09:35,831 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:35,831 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:35,907 - aiterm - DEBUG - Processed command 'display working folder' to 'pwd'
+2025-01-24 00:09:35,908 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:35,908 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:35,986 - aiterm - DEBUG - Processed command 'print current path' to 'pwd'
+2025-01-24 00:09:35,987 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:35,988 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:36,060 - aiterm - DEBUG - Processed command 'where am i' to 'pwd'
+2025-01-24 00:09:36,062 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:36,062 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:36,134 - aiterm - DEBUG - Processed command 'what directory' to 'pwd'
+2025-01-24 00:09:36,136 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:36,136 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:36,203 - aiterm - DEBUG - Processed command 'show folder' to 'pwd'
+2025-01-24 00:09:36,206 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:36,206 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:36,315 - aiterm - DEBUG - Processed command 'which directory' to 'pwd'
+2025-01-24 00:09:36,316 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:36,317 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:36,450 - aiterm - DEBUG - Processed command 'what is my current directory' to 'pwd'
+2025-01-24 00:09:36,453 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:36,453 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:36,521 - aiterm - DEBUG - Processed command 'show me where i am' to 'pwd'
+2025-01-24 00:09:36,523 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:36,523 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:36,602 - aiterm - DEBUG - Processed command 'print working directory' to 'pwd'
+2025-01-24 00:09:36,604 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:36,604 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:36,687 - aiterm - DEBUG - Processed command 'display current location' to 'pwd'
+2025-01-24 00:09:36,691 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:36,692 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:36,757 - aiterm - DEBUG - Processed command 'what's my current directory' to 'pwd'
+2025-01-24 00:09:36,759 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:36,759 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:36,822 - aiterm - DEBUG - Processed command 'tell me where i am' to 'pwd'
+2025-01-24 00:09:36,824 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:36,824 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:36,896 - aiterm - DEBUG - Processed command 'show current path' to 'pwd'
+2025-01-24 00:09:36,898 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:36,898 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:36,977 - aiterm - DEBUG - Processed command 'show files' to 'ls -F'
+2025-01-24 00:09:36,980 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:36,980 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:37,065 - aiterm - DEBUG - Processed command 'list directory' to 'ls -F'
+2025-01-24 00:09:37,067 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:37,067 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:37,174 - aiterm - DEBUG - Processed command 'display files' to 'ls -F'
+2025-01-24 00:09:37,175 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:37,175 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:37,238 - aiterm - DEBUG - Processed command 'show python files' to 'ls -F *.py'
+2025-01-24 00:09:37,240 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:37,240 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:37,310 - aiterm - DEBUG - Processed command 'list javascript files' to 'ls -F *.js'
+2025-01-24 00:09:37,313 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:37,314 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:37,387 - aiterm - DEBUG - Processed command 'show text files' to 'ls -F *.txt'
+2025-01-24 00:09:37,389 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:37,389 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:37,450 - aiterm - DEBUG - Processed command 'show hidden files' to 'ls -a'
+2025-01-24 00:09:37,452 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:37,452 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:37,561 - aiterm - DEBUG - Processed command 'list all files with details' to 'ls -la'
+2025-01-24 00:09:37,563 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:37,563 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:37,622 - aiterm - DEBUG - Processed command 'show files with details' to 'ls -l'
+2025-01-24 00:09:37,623 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:37,623 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:37,687 - aiterm - DEBUG - Processed command 'display all files' to 'ls -F'
+2025-01-24 00:09:37,689 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:37,689 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:37,761 - aiterm - DEBUG - Processed command 'list everything' to 'ls -F'
+2025-01-24 00:09:37,763 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:37,763 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:37,824 - aiterm - DEBUG - Processed command 'show all python files' to 'ls -F *.py'
+2025-01-24 00:09:37,825 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:37,826 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:37,896 - aiterm - DEBUG - Processed command 'list all javascript files' to 'ls -F *.js'
+2025-01-24 00:09:37,897 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:37,898 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:38,001 - aiterm - DEBUG - Processed command 'show all text files' to 'ls -F *.txt'
+2025-01-24 00:09:38,003 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:38,003 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:38,065 - aiterm - DEBUG - Processed command 'display hidden files' to 'ls -a'
+2025-01-24 00:09:38,067 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:38,067 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:38,137 - aiterm - DEBUG - Processed command 'list files with permissions' to 'ls -l'
+2025-01-24 00:09:38,138 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:38,139 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:38,206 - aiterm - DEBUG - Processed command 'cd to src' to 'cd src'
+2025-01-24 00:09:38,207 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:38,208 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:38,279 - aiterm - DEBUG - Processed command 'cd into documents' to 'cd documents'
+2025-01-24 00:09:38,281 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:38,281 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:38,340 - aiterm - DEBUG - Processed command 'cd src/aiterm folder' to 'cd src/aiterm'
+2025-01-24 00:09:38,341 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:38,342 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:38,440 - aiterm - DEBUG - Processed command 'cd to the home directory' to 'cd'
+2025-01-24 00:09:38,441 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:38,442 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:38,510 - aiterm - DEBUG - Processed command 'cd into the src directory' to 'cd src'
+2025-01-24 00:09:38,513 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:38,513 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:38,577 - aiterm - DEBUG - Processed command 'cd /absolute/path folder' to 'cd /absolute/path'
+2025-01-24 00:09:38,579 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:38,579 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:38,655 - aiterm - DEBUG - Processed command 'change to documents' to 'cd documents'
+2025-01-24 00:09:38,657 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:38,657 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:38,715 - aiterm - DEBUG - Processed command 'switch to home directory' to 'cd'
+2025-01-24 00:09:38,717 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:38,717 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:38,777 - aiterm - DEBUG - Processed command 'go to src folder' to 'cd src'
+2025-01-24 00:09:38,778 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:38,779 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:38,887 - aiterm - DEBUG - Processed command 'move to parent directory' to 'cd ..'
+2025-01-24 00:09:38,889 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:38,889 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:38,947 - aiterm - DEBUG - Processed command 'change directory to downloads' to 'cd downloads'
+2025-01-24 00:09:38,949 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:38,949 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:39,011 - aiterm - DEBUG - Processed command 'cd back' to 'cd ..'
+2025-01-24 00:09:39,013 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:39,014 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:39,099 - aiterm - DEBUG - Processed command 'cd up' to 'cd ..'
+2025-01-24 00:09:39,101 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:39,101 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:39,167 - aiterm - DEBUG - Processed command 'cd home' to 'cd'
+2025-01-24 00:09:39,168 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:39,169 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:39,228 - aiterm - DEBUG - Processed command 'go back' to 'cd ..'
+2025-01-24 00:09:39,230 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:39,230 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:39,325 - aiterm - DEBUG - Processed command 'return to previous directory' to 'cd ..'
+2025-01-24 00:09:39,327 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:39,327 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:39,395 - aiterm - DEBUG - Processed command 'change to parent' to 'cd ..'
+2025-01-24 00:09:39,397 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:39,397 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:39,470 - aiterm - DEBUG - Processed command 'go to home' to 'cd'
+2025-01-24 00:09:39,471 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:39,472 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:39,540 - aiterm - DEBUG - Processed command 'switch to downloads' to 'cd downloads'
+2025-01-24 00:09:39,541 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:39,542 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:39,601 - aiterm - DEBUG - Processed command 'pwd' to 'pwd'
+2025-01-24 00:09:39,657 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:39,657 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:39,757 - aiterm - DEBUG - Processed command 'ls -F' to 'ls -F'
+2025-01-24 00:09:39,759 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:39,759 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:39,832 - aiterm - DEBUG - Processed command 'ls -l' to 'ls -l'
+2025-01-24 00:09:39,833 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:39,833 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:39,894 - aiterm - DEBUG - Processed command 'cd /path' to 'cd /path'
+2025-01-24 00:09:39,896 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:39,896 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:39,962 - aiterm - DEBUG - Processed command 'cd invalid' to 'cd invalid'
+2025-01-24 00:09:39,965 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:39,965 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:40,031 - aiterm - DEBUG - Processed command 'show current directory' to 'pwd'
+2025-01-24 00:09:40,040 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:40,040 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:40,140 - aiterm - DEBUG - Processed command 'where am i' to 'pwd'
+2025-01-24 00:09:40,149 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:40,149 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:40,213 - aiterm - DEBUG - Processed command 'list files' to 'ls -F'
+2025-01-24 00:09:40,215 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:40,215 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:40,286 - aiterm - DEBUG - Processed command 'show python files' to 'ls -F *.py'
+2025-01-24 00:09:40,288 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:40,289 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:40,361 - aiterm - DEBUG - Processed command 'cd to home' to 'cd to home'
+2025-01-24 00:09:40,444 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:40,444 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:40,526 - aiterm - DEBUG - Processed command 'change to invalid folder' to 'cd invalid folder'
+2025-01-24 00:09:40,538 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:40,538 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:40,640 - aiterm - DEBUG - Processed command 'display all files' to 'ls -F'
+2025-01-24 00:09:40,642 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:40,642 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:40,708 - aiterm - DEBUG - Processed command 'show hidden files' to 'ls -a'
+2025-01-24 00:09:40,710 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:40,710 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:40,776 - aiterm - DEBUG - Processed command 'go to src folder' to 'cd src'
+2025-01-24 00:09:40,788 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:40,788 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:40,853 - aiterm - DEBUG - Processed command 'move to parent directory' to 'pwd'
+2025-01-24 00:09:40,863 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:40,863 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:40,933 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:40,933 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:41,044 - aiterm.commands.git_command - INFO - Processing command: show last 2 commits
+2025-01-24 00:09:41,044 - aiterm.commands.git_command - INFO - AI interpreted command 'show last 2 commits' as: git log -n 2
+2025-01-24 00:09:41,046 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:41,047 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:41,124 - aiterm.commands.git_command - INFO - Processing command: display recent commits
+2025-01-24 00:09:41,124 - aiterm.commands.git_command - INFO - AI interpreted command 'display recent commits' as: git log -n 5
+2025-01-24 00:09:41,126 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:41,126 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:41,200 - aiterm.commands.git_command - INFO - Processing command: show commit history
+2025-01-24 00:09:41,200 - aiterm.commands.git_command - INFO - AI interpreted command 'show commit history' as: git log
+2025-01-24 00:09:41,201 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:41,202 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:41,282 - aiterm.commands.git_command - INFO - Processing command: what were the recent changes
+2025-01-24 00:09:41,282 - aiterm.commands.git_command - INFO - AI interpreted command 'what were the recent changes' as: git log -n 3
+2025-01-24 00:09:41,284 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:41,284 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:41,362 - aiterm.commands.git_command - INFO - Processing command: display commit log
+2025-01-24 00:09:41,362 - aiterm.commands.git_command - INFO - AI interpreted command 'display commit log' as: git log
+2025-01-24 00:09:41,364 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:41,364 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:41,437 - aiterm.commands.git_command - INFO - Processing command: show me the last commit
+2025-01-24 00:09:41,437 - aiterm.commands.git_command - INFO - AI interpreted command 'show me the last commit' as: git log -n 1
+2025-01-24 00:09:41,439 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:41,439 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:41,542 - aiterm.commands.git_command - INFO - Processing command: view commit details
+2025-01-24 00:09:41,542 - aiterm.commands.git_command - INFO - AI interpreted command 'view commit details' as: git log --stat
+2025-01-24 00:09:41,544 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:41,544 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:41,617 - aiterm.commands.git_command - INFO - Processing command: who made recent changes
+2025-01-24 00:09:41,618 - aiterm.commands.git_command - INFO - AI interpreted command 'who made recent changes' as: git log --author
+2025-01-24 00:09:41,620 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:41,620 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:41,691 - aiterm.commands.git_command - INFO - Processing command: show status
+2025-01-24 00:09:41,692 - aiterm.commands.git_command - INFO - AI interpreted command 'show status' as: git status
+2025-01-24 00:09:41,693 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:41,693 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:41,771 - aiterm.commands.git_command - INFO - Processing command: what changed
+2025-01-24 00:09:41,771 - aiterm.commands.git_command - INFO - AI interpreted command 'what changed' as: git status
+2025-01-24 00:09:41,772 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:41,773 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:41,850 - aiterm.commands.git_command - INFO - Processing command: show changes
+2025-01-24 00:09:41,850 - aiterm.commands.git_command - INFO - AI interpreted command 'show changes' as: git status
+2025-01-24 00:09:41,852 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:41,852 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:41,953 - aiterm.commands.git_command - INFO - Processing command: what's modified
+2025-01-24 00:09:41,954 - aiterm.commands.git_command - INFO - AI interpreted command 'what's modified' as: git status
+2025-01-24 00:09:41,955 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:41,955 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:42,018 - aiterm.commands.git_command - INFO - Processing command: check repository status
+2025-01-24 00:09:42,019 - aiterm.commands.git_command - INFO - AI interpreted command 'check repository status' as: git status
+2025-01-24 00:09:42,020 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:42,020 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:42,089 - aiterm.commands.git_command - INFO - Processing command: any pending changes
+2025-01-24 00:09:42,090 - aiterm.commands.git_command - INFO - AI interpreted command 'any pending changes' as: git status
+2025-01-24 00:09:42,091 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:42,091 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:42,157 - aiterm.commands.git_command - INFO - Processing command: what files changed
+2025-01-24 00:09:42,158 - aiterm.commands.git_command - INFO - AI interpreted command 'what files changed' as: git status
+2025-01-24 00:09:42,159 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:42,159 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:42,224 - aiterm.commands.git_command - INFO - Processing command: show unstaged changes
+2025-01-24 00:09:42,225 - aiterm.commands.git_command - INFO - AI interpreted command 'show unstaged changes' as: git status
+2025-01-24 00:09:42,228 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:42,228 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:42,343 - aiterm.commands.git_command - INFO - Processing command: show branches
+2025-01-24 00:09:42,343 - aiterm.commands.git_command - INFO - AI interpreted command 'show branches' as: git branch
+2025-01-24 00:09:42,345 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:42,345 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:42,406 - aiterm.commands.git_command - INFO - Processing command: list all branches
+2025-01-24 00:09:42,407 - aiterm.commands.git_command - INFO - AI interpreted command 'list all branches' as: git branch -a
+2025-01-24 00:09:42,408 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:42,408 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:42,473 - aiterm.commands.git_command - INFO - Processing command: display current branch
+2025-01-24 00:09:42,473 - aiterm.commands.git_command - INFO - AI interpreted command 'display current branch' as: git branch --show-current
+2025-01-24 00:09:42,474 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:42,474 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:42,541 - aiterm.commands.git_command - INFO - Processing command: what branch am i on
+2025-01-24 00:09:42,541 - aiterm.commands.git_command - INFO - AI interpreted command 'what branch am i on' as: git branch --show-current
+2025-01-24 00:09:42,543 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:42,543 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:42,602 - aiterm.commands.git_command - INFO - Processing command: show remote branches
+2025-01-24 00:09:42,603 - aiterm.commands.git_command - INFO - AI interpreted command 'show remote branches' as: git branch -r
+2025-01-24 00:09:42,604 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:42,604 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:42,674 - aiterm.commands.git_command - INFO - Processing command: display all branches
+2025-01-24 00:09:42,700 - aiterm.commands.git_command - INFO - AI interpreted command 'display all branches' as: git branch -a
+2025-01-24 00:09:42,703 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:42,703 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:42,783 - aiterm.commands.git_command - INFO - Processing command: list local branches
+2025-01-24 00:09:42,783 - aiterm.commands.git_command - INFO - AI interpreted command 'list local branches' as: git branch
+2025-01-24 00:09:42,785 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:42,785 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:42,850 - aiterm.commands.git_command - INFO - Processing command: which branch
+2025-01-24 00:09:42,851 - aiterm.commands.git_command - INFO - AI interpreted command 'which branch' as: git branch --show-current
+2025-01-24 00:09:42,853 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:42,853 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:42,926 - aiterm.commands.git_command - INFO - Processing command: commit changes with message 'test'
+2025-01-24 00:09:42,927 - aiterm.commands.git_command - INFO - AI interpreted command 'commit changes with message 'test'' as: git commit -m "test"
+2025-01-24 00:09:42,929 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:42,930 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:42,988 - aiterm.commands.git_command - INFO - Processing command: commit all with message 'update'
+2025-01-24 00:09:42,989 - aiterm.commands.git_command - INFO - AI interpreted command 'commit all with message 'update'' as: git commit -am "update"
+2025-01-24 00:09:42,990 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:42,990 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:43,055 - aiterm.commands.git_command - INFO - Processing command: save changes with message 'fix bug'
+2025-01-24 00:09:43,056 - aiterm.commands.git_command - INFO - AI interpreted command 'save changes with message 'fix bug'' as: git commit -m "fix bug"
+2025-01-24 00:09:43,057 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:43,057 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:43,163 - aiterm.commands.git_command - INFO - Processing command: commit everything
+2025-01-24 00:09:43,163 - aiterm.commands.git_command - INFO - AI interpreted command 'commit everything' as: git commit -a
+2025-01-24 00:09:43,165 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:43,165 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:43,230 - aiterm.commands.git_command - INFO - Processing command: stage and commit all changes
+2025-01-24 00:09:43,230 - aiterm.commands.git_command - INFO - AI interpreted command 'stage and commit all changes' as: git commit -am "update"
+2025-01-24 00:09:43,231 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:43,231 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:43,293 - aiterm.commands.git_command - INFO - Processing command: commit with message
+2025-01-24 00:09:43,294 - aiterm.commands.git_command - INFO - AI interpreted command 'commit with message' as: git commit -m "update"
+2025-01-24 00:09:43,296 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:43,296 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:43,373 - aiterm.commands.git_command - INFO - Processing command: save all modifications
+2025-01-24 00:09:43,373 - aiterm.commands.git_command - INFO - AI interpreted command 'save all modifications' as: git commit -am "update"
+2025-01-24 00:09:43,375 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:43,375 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:43,437 - aiterm.commands.git_command - INFO - Processing command: push changes
+2025-01-24 00:09:43,438 - aiterm.commands.git_command - INFO - AI interpreted command 'push changes' as: git push
+2025-01-24 00:09:43,439 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:43,439 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:43,539 - aiterm.commands.git_command - INFO - Processing command: push to origin
+2025-01-24 00:09:43,539 - aiterm.commands.git_command - INFO - AI interpreted command 'push to origin' as: git push origin
+2025-01-24 00:09:43,540 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:43,540 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:43,602 - aiterm.commands.git_command - INFO - Processing command: pull updates
+2025-01-24 00:09:43,602 - aiterm.commands.git_command - INFO - AI interpreted command 'pull updates' as: git pull
+2025-01-24 00:09:43,604 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:43,604 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:43,685 - aiterm.commands.git_command - INFO - Processing command: pull from origin
+2025-01-24 00:09:43,685 - aiterm.commands.git_command - INFO - AI interpreted command 'pull from origin' as: git pull origin
+2025-01-24 00:09:43,687 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:43,688 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:43,754 - aiterm.commands.git_command - INFO - Processing command: upload changes
+2025-01-24 00:09:43,754 - aiterm.commands.git_command - INFO - AI interpreted command 'upload changes' as: git push
+2025-01-24 00:09:43,755 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:43,756 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:43,812 - aiterm.commands.git_command - INFO - Processing command: download updates
+2025-01-24 00:09:43,812 - aiterm.commands.git_command - INFO - AI interpreted command 'download updates' as: git pull
+2025-01-24 00:09:43,814 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:43,814 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:43,916 - aiterm.commands.git_command - INFO - Processing command: sync with remote
+2025-01-24 00:09:43,917 - aiterm.commands.git_command - INFO - AI interpreted command 'sync with remote' as: git pull && git push
+2025-01-24 00:09:43,918 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:43,918 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:43,985 - aiterm.commands.git_command - INFO - Processing command: update from remote
+2025-01-24 00:09:43,986 - aiterm.commands.git_command - INFO - AI interpreted command 'update from remote' as: git pull
+2025-01-24 00:09:43,987 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:43,988 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:44,076 - aiterm.commands.git_command - INFO - Processing command: push to remote
+2025-01-24 00:09:44,096 - aiterm.commands.git_command - INFO - AI interpreted command 'push to remote' as: git push
+2025-01-24 00:09:44,124 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:44,125 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:44,242 - aiterm.commands.git_command - INFO - Processing command: get latest changes
+2025-01-24 00:09:44,243 - aiterm.commands.git_command - INFO - AI interpreted command 'get latest changes' as: git pull
+2025-01-24 00:09:44,244 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:44,245 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:44,350 - aiterm.commands.git_command - INFO - Processing command: show differences
+2025-01-24 00:09:44,350 - aiterm.commands.git_command - INFO - AI interpreted command 'show differences' as: git diff
+2025-01-24 00:09:44,352 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:44,352 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:44,416 - aiterm.commands.git_command - INFO - Processing command: what did i change
+2025-01-24 00:09:44,416 - aiterm.commands.git_command - INFO - AI interpreted command 'what did i change' as: git diff
+2025-01-24 00:09:44,418 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:44,418 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:44,493 - aiterm.commands.git_command - INFO - Processing command: show file changes
+2025-01-24 00:09:44,493 - aiterm.commands.git_command - INFO - AI interpreted command 'show file changes' as: git diff
+2025-01-24 00:09:44,496 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:44,497 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:44,561 - aiterm.commands.git_command - INFO - Processing command: display modifications
+2025-01-24 00:09:44,562 - aiterm.commands.git_command - INFO - AI interpreted command 'display modifications' as: git diff
+2025-01-24 00:09:44,563 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:44,564 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:44,629 - aiterm.commands.git_command - INFO - Processing command: what's different
+2025-01-24 00:09:44,630 - aiterm.commands.git_command - INFO - AI interpreted command 'what's different' as: git diff
+2025-01-24 00:09:44,632 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:44,632 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:44,743 - aiterm.commands.git_command - INFO - Processing command: show staged changes
+2025-01-24 00:09:44,744 - aiterm.commands.git_command - INFO - AI interpreted command 'show staged changes' as: git diff --staged
+2025-01-24 00:09:44,745 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:44,746 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:44,812 - aiterm.commands.git_command - INFO - Processing command: stage all changes
+2025-01-24 00:09:44,813 - aiterm.commands.git_command - INFO - AI interpreted command 'stage all changes' as: git add .
+2025-01-24 00:09:44,814 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:44,814 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:44,873 - aiterm.commands.git_command - INFO - Processing command: add modified files
+2025-01-24 00:09:44,874 - aiterm.commands.git_command - INFO - AI interpreted command 'add modified files' as: git add -u
+2025-01-24 00:09:44,875 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:44,875 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:44,947 - aiterm.commands.git_command - INFO - Processing command: stage this file
+2025-01-24 00:09:44,948 - aiterm.commands.git_command - INFO - AI interpreted command 'stage this file' as: git add
+2025-01-24 00:09:44,950 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:44,950 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:45,021 - aiterm.commands.git_command - INFO - Processing command: add all files
+2025-01-24 00:09:45,021 - aiterm.commands.git_command - INFO - AI interpreted command 'add all files' as: git add .
+2025-01-24 00:09:45,023 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:45,023 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:45,136 - aiterm.commands.git_command - INFO - Processing command: stage everything
+2025-01-24 00:09:45,136 - aiterm.commands.git_command - INFO - AI interpreted command 'stage everything' as: git add -A
+2025-01-24 00:09:45,138 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:45,138 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:45,200 - aiterm.commands.git_command - INFO - Processing command: prepare for commit
+2025-01-24 00:09:45,200 - aiterm.commands.git_command - INFO - AI interpreted command 'prepare for commit' as: git add .
+2025-01-24 00:09:45,202 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:45,202 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:45,258 - aiterm.commands.git_command - INFO - Processing command: save my changes
+2025-01-24 00:09:45,258 - aiterm.commands.git_command - INFO - AI interpreted command 'save my changes' as: git stash
+2025-01-24 00:09:45,260 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:45,260 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:45,326 - aiterm.commands.git_command - INFO - Processing command: stash modifications
+2025-01-24 00:09:45,327 - aiterm.commands.git_command - INFO - AI interpreted command 'stash modifications' as: git stash
+2025-01-24 00:09:45,328 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:45,328 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:45,397 - aiterm.commands.git_command - INFO - Processing command: temporarily store changes
+2025-01-24 00:09:45,397 - aiterm.commands.git_command - INFO - AI interpreted command 'temporarily store changes' as: git stash
+2025-01-24 00:09:45,399 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:45,399 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:45,457 - aiterm.commands.git_command - INFO - Processing command: apply stashed changes
+2025-01-24 00:09:45,458 - aiterm.commands.git_command - INFO - AI interpreted command 'apply stashed changes' as: git stash pop
+2025-01-24 00:09:45,459 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:45,459 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:45,581 - aiterm.commands.git_command - INFO - Processing command: restore stashed work
+2025-01-24 00:09:45,581 - aiterm.commands.git_command - INFO - AI interpreted command 'restore stashed work' as: git stash apply
+2025-01-24 00:09:45,583 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:45,583 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:45,679 - aiterm.commands.git_command - INFO - Processing command: show stashed changes
+2025-01-24 00:09:45,679 - aiterm.commands.git_command - INFO - AI interpreted command 'show stashed changes' as: git stash list
+2025-01-24 00:09:45,681 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:45,681 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:45,769 - aiterm.commands.git_command - INFO - Processing command: show commits
+2025-01-24 00:09:45,770 - aiterm.commands.git_command - ERROR - Error executing git command: AI processing failed
+2025-01-24 00:09:45,770 - aiterm.commands.git_command - INFO - Processing command: show commits
+2025-01-24 00:09:45,770 - aiterm.commands.git_command - INFO - AI interpreted command 'show commits' as: git log
+2025-01-24 00:09:45,771 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:45,772 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:45,837 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:45,838 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:45,912 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:45,913 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:46,029 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:46,030 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:46,117 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:46,118 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini
+2025-01-24 00:09:46,193 - aiterm.commands.ai_command_processor - INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
+2025-01-24 00:09:46,193 - aiterm.commands.ai_command_processor - INFO - Using OpenAI model: gpt-4o-mini

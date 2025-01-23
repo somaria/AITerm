@@ -327,6 +327,7 @@ class TerminalGUI:
         
         # Initialize components
         self.command_executor = CommandExecutor()
+        self.command_interpreter = CommandInterpreter()
         self.command_history = []
         self.history_index = 0
         self.current_completions = []
@@ -575,7 +576,7 @@ class TerminalGUI:
         if command_name == 'cd':
             try:
                 original_args = command[2:].strip() if len(command) > 2 else ""
-                interpreted_command = CommandInterpreter.interpret(command)
+                interpreted_command = self.command_interpreter.interpret(command)
                 if interpreted_command:
                     logger.debug(f"Interpreted cd command: {interpreted_command}")
                     
@@ -612,7 +613,7 @@ class TerminalGUI:
         # If AI mode is enabled and it's not a built-in command, interpret it
         if self.ai_mode.get() and not any(command.startswith(cmd) for cmd in ['cd', 'pwd', 'exit', 'clear', 'history', 'tail']):
             try:
-                interpreted_command = CommandInterpreter.interpret(command)
+                interpreted_command = self.command_interpreter.interpret(command)
                 if interpreted_command:
                     self.append_output(f"\nInterpreted as: {interpreted_command}\n", 'cyan')
                     command = interpreted_command

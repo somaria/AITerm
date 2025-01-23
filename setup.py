@@ -16,4 +16,9 @@ setup(
         "macos": ["pyobjc-framework-Cocoa>=9.0"],
     },
     python_requires=">=3.8",
+    entry_points={
+        'console_scripts': [
+            'aiterm=aiterm.main:main',
+        ],
+    },
 )
