@@ -1,0 +1,1376 @@
+2025-01-23 19:38:56,900 - AITerm - INFO - logger:48 - Logger initialized. Log file: logs/aiterm_20250123_193856.log
+2025-01-23 19:38:57,162 - AITerm - INFO - logger:54 - Initialized TerminalCompleter with 46 commands
+2025-01-23 19:38:57,162 - AITerm - INFO - logger:54 - Initializing SuggestionDropdown
+2025-01-23 19:38:57,196 - AITerm - INFO - logger:54 - SuggestionDropdown initialized and hidden
+2025-01-23 19:39:00,104 - AITerm - DEBUG - logger:51 - Key released: l, current text: ls
+2025-01-23 19:39:00,105 - AITerm - INFO - logger:54 - Updating suggestions for text: 'ls'
+2025-01-23 19:39:00,105 - AITerm - INFO - logger:54 - Getting suggestions for text: 'ls'
+2025-01-23 19:39:00,105 - AITerm - INFO - logger:54 - Prefix matches for 'ls': ['ls']
+2025-01-23 19:39:00,105 - AITerm - INFO - logger:54 - Fuzzy matches for 'ls': ['ls', 'less', 'ps', 'svn']
+2025-01-23 19:39:00,105 - AITerm - INFO - logger:54 - New fuzzy matches: ['less', 'ps', 'svn']
+2025-01-23 19:39:00,105 - AITerm - INFO - logger:54 - Final suggestions: ['ls', 'less', 'ps', 'svn']
+2025-01-23 19:39:00,105 - AITerm - INFO - logger:54 - Got suggestions: ['ls', 'less', 'ps', 'svn']
+2025-01-23 19:39:00,105 - AITerm - INFO - logger:54 - Showing dropdown with 4 suggestions at (134, 672)
+2025-01-23 19:39:00,106 - AITerm - INFO - logger:54 - Setting geometry to: 1x1+34+59
+2025-01-23 19:39:00,112 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 19:39:00,251 - AITerm - DEBUG - logger:51 - Key released: s, current text: ls
+2025-01-23 19:39:00,251 - AITerm - INFO - logger:54 - Updating suggestions for text: 'ls'
+2025-01-23 19:39:00,251 - AITerm - INFO - logger:54 - Getting suggestions for text: 'ls'
+2025-01-23 19:39:00,251 - AITerm - INFO - logger:54 - Prefix matches for 'ls': ['ls']
+2025-01-23 19:39:00,252 - AITerm - INFO - logger:54 - Fuzzy matches for 'ls': ['ls', 'less', 'ps', 'svn']
+2025-01-23 19:39:00,252 - AITerm - INFO - logger:54 - New fuzzy matches: ['less', 'ps', 'svn']
+2025-01-23 19:39:00,252 - AITerm - INFO - logger:54 - Final suggestions: ['ls', 'less', 'ps', 'svn']
+2025-01-23 19:39:00,252 - AITerm - INFO - logger:54 - Got suggestions: ['ls', 'less', 'ps', 'svn']
+2025-01-23 19:39:00,252 - AITerm - INFO - logger:54 - Showing dropdown with 4 suggestions at (134, 672)
+2025-01-23 19:39:00,253 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 19:39:00,254 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 19:39:00,330 - AITerm - INFO - logger:54 - Hiding dropdown
+2025-01-23 19:39:01,014 - AITerm - INFO - logger:54 - Interpreted command 'ls' as 'ls -F'
+2025-01-23 19:39:01,014 - AITerm - INFO - logger:54 - Executing command: ls -F in /Volumes/wd/code/Python/AITerm
+2025-01-23 19:39:01,040 - AITerm - DEBUG - logger:51 - Command stdout: Info.plist
+README.md
+aiterm_env/
+config.py
+logs/
+main.py
+requirements.txt
+setup.py
+src/
+test.txt
+
+2025-01-23 19:39:01,040 - AITerm - DEBUG - logger:51 - Command stderr: 
+2025-01-23 19:39:01,042 - AITerm - DEBUG - logger:51 - Key released: Return, current text: 
+2025-01-23 19:39:01,042 - AITerm - INFO - logger:54 - Updating suggestions for text: ''
+2025-01-23 19:39:01,042 - AITerm - INFO - logger:54 - No text to get suggestions for
+2025-01-23 19:39:01,042 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:02,016 - AITerm - DEBUG - logger:51 - Key released: p, current text: pw
+2025-01-23 19:39:02,017 - AITerm - INFO - logger:54 - Updating suggestions for text: 'pw'
+2025-01-23 19:39:02,017 - AITerm - INFO - logger:54 - Getting suggestions for text: 'pw'
+2025-01-23 19:39:02,017 - AITerm - INFO - logger:54 - Prefix matches for 'pw': ['pwd']
+2025-01-23 19:39:02,017 - AITerm - INFO - logger:54 - Fuzzy matches for 'pw': ['pwd', 'wc', 'ps', 'cp']
+2025-01-23 19:39:02,017 - AITerm - INFO - logger:54 - New fuzzy matches: ['wc', 'ps', 'cp']
+2025-01-23 19:39:02,017 - AITerm - INFO - logger:54 - Final suggestions: ['pwd', 'wc', 'ps', 'cp']
+2025-01-23 19:39:02,017 - AITerm - INFO - logger:54 - Got suggestions: ['pwd', 'wc', 'ps', 'cp']
+2025-01-23 19:39:02,017 - AITerm - INFO - logger:54 - Showing dropdown with 4 suggestions at (134, 672)
+2025-01-23 19:39:02,018 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 19:39:02,021 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 19:39:02,164 - AITerm - DEBUG - logger:51 - Key released: w, current text: pwd
+2025-01-23 19:39:02,164 - AITerm - INFO - logger:54 - Updating suggestions for text: 'pwd'
+2025-01-23 19:39:02,164 - AITerm - INFO - logger:54 - Getting suggestions for text: 'pwd'
+2025-01-23 19:39:02,164 - AITerm - INFO - logger:54 - Prefix matches for 'pwd': ['pwd']
+2025-01-23 19:39:02,164 - AITerm - INFO - logger:54 - Fuzzy matches for 'pwd': ['pwd', 'wc', 'ps', 'du']
+2025-01-23 19:39:02,164 - AITerm - INFO - logger:54 - New fuzzy matches: ['wc', 'ps', 'du']
+2025-01-23 19:39:02,164 - AITerm - INFO - logger:54 - Final suggestions: ['pwd', 'wc', 'ps', 'du']
+2025-01-23 19:39:02,164 - AITerm - INFO - logger:54 - Got suggestions: ['pwd', 'wc', 'ps', 'du']
+2025-01-23 19:39:02,164 - AITerm - INFO - logger:54 - Showing dropdown with 4 suggestions at (134, 672)
+2025-01-23 19:39:02,166 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 19:39:02,166 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 19:39:02,242 - AITerm - DEBUG - logger:51 - Key released: d, current text: pwd
+2025-01-23 19:39:02,242 - AITerm - INFO - logger:54 - Updating suggestions for text: 'pwd'
+2025-01-23 19:39:02,242 - AITerm - INFO - logger:54 - Getting suggestions for text: 'pwd'
+2025-01-23 19:39:02,242 - AITerm - INFO - logger:54 - Prefix matches for 'pwd': ['pwd']
+2025-01-23 19:39:02,243 - AITerm - INFO - logger:54 - Fuzzy matches for 'pwd': ['pwd', 'wc', 'ps', 'du']
+2025-01-23 19:39:02,243 - AITerm - INFO - logger:54 - New fuzzy matches: ['wc', 'ps', 'du']
+2025-01-23 19:39:02,243 - AITerm - INFO - logger:54 - Final suggestions: ['pwd', 'wc', 'ps', 'du']
+2025-01-23 19:39:02,243 - AITerm - INFO - logger:54 - Got suggestions: ['pwd', 'wc', 'ps', 'du']
+2025-01-23 19:39:02,243 - AITerm - INFO - logger:54 - Showing dropdown with 4 suggestions at (134, 672)
+2025-01-23 19:39:02,244 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 19:39:02,245 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 19:39:02,276 - AITerm - INFO - logger:54 - Hiding dropdown
+2025-01-23 19:39:02,854 - AITerm - INFO - logger:54 - Interpreted command 'pwd' as 'pwd'
+2025-01-23 19:39:02,854 - AITerm - INFO - logger:54 - Executing command: pwd in /Volumes/wd/code/Python/AITerm
+2025-01-23 19:39:02,871 - AITerm - DEBUG - logger:51 - Command stdout: /Volumes/wd/code/Python/AITerm
+
+2025-01-23 19:39:02,871 - AITerm - DEBUG - logger:51 - Command stderr: 
+2025-01-23 19:39:02,873 - AITerm - DEBUG - logger:51 - Key released: Return, current text: 
+2025-01-23 19:39:02,873 - AITerm - INFO - logger:54 - Updating suggestions for text: ''
+2025-01-23 19:39:02,873 - AITerm - INFO - logger:54 - No text to get suggestions for
+2025-01-23 19:39:02,874 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:03,704 - AITerm - DEBUG - logger:51 - Key released: h, current text: his
+2025-01-23 19:39:03,704 - AITerm - INFO - logger:54 - Updating suggestions for text: 'his'
+2025-01-23 19:39:03,704 - AITerm - INFO - logger:54 - Getting suggestions for text: 'his'
+2025-01-23 19:39:03,704 - AITerm - INFO - logger:54 - Prefix matches for 'his': []
+2025-01-23 19:39:03,704 - AITerm - INFO - logger:54 - Fuzzy matches for 'his': ['which', 'ps', 'ls', 'zip', 'vim']
+2025-01-23 19:39:03,705 - AITerm - INFO - logger:54 - New fuzzy matches: ['which', 'ps', 'ls', 'zip', 'vim']
+2025-01-23 19:39:03,705 - AITerm - INFO - logger:54 - Final suggestions: ['which', 'ps', 'ls', 'zip', 'vim']
+2025-01-23 19:39:03,705 - AITerm - INFO - logger:54 - Got suggestions: ['which', 'ps', 'ls', 'zip', 'vim']
+2025-01-23 19:39:03,705 - AITerm - INFO - logger:54 - Showing dropdown with 5 suggestions at (134, 672)
+2025-01-23 19:39:03,705 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 19:39:03,708 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 19:39:03,738 - AITerm - DEBUG - logger:51 - Key released: i, current text: his
+2025-01-23 19:39:03,738 - AITerm - INFO - logger:54 - Updating suggestions for text: 'his'
+2025-01-23 19:39:03,738 - AITerm - INFO - logger:54 - Getting suggestions for text: 'his'
+2025-01-23 19:39:03,738 - AITerm - INFO - logger:54 - Prefix matches for 'his': []
+2025-01-23 19:39:03,739 - AITerm - INFO - logger:54 - Fuzzy matches for 'his': ['which', 'ps', 'ls', 'zip', 'vim']
+2025-01-23 19:39:03,739 - AITerm - INFO - logger:54 - New fuzzy matches: ['which', 'ps', 'ls', 'zip', 'vim']
+2025-01-23 19:39:03,739 - AITerm - INFO - logger:54 - Final suggestions: ['which', 'ps', 'ls', 'zip', 'vim']
+2025-01-23 19:39:03,739 - AITerm - INFO - logger:54 - Got suggestions: ['which', 'ps', 'ls', 'zip', 'vim']
+2025-01-23 19:39:03,739 - AITerm - INFO - logger:54 - Showing dropdown with 5 suggestions at (134, 672)
+2025-01-23 19:39:03,740 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 19:39:03,741 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 19:39:03,817 - AITerm - DEBUG - logger:51 - Key released: s, current text: hist
+2025-01-23 19:39:03,817 - AITerm - INFO - logger:54 - Updating suggestions for text: 'hist'
+2025-01-23 19:39:03,817 - AITerm - INFO - logger:54 - Getting suggestions for text: 'hist'
+2025-01-23 19:39:03,817 - AITerm - INFO - logger:54 - Prefix matches for 'hist': []
+2025-01-23 19:39:03,817 - AITerm - INFO - logger:54 - Fuzzy matches for 'hist': ['git', 'sort', 'which', 'ps', 'ls']
+2025-01-23 19:39:03,817 - AITerm - INFO - logger:54 - New fuzzy matches: ['git', 'sort', 'which', 'ps', 'ls']
+2025-01-23 19:39:03,817 - AITerm - INFO - logger:54 - Final suggestions: ['git', 'sort', 'which', 'ps', 'ls']
+2025-01-23 19:39:03,817 - AITerm - INFO - logger:54 - Got suggestions: ['git', 'sort', 'which', 'ps', 'ls']
+2025-01-23 19:39:03,817 - AITerm - INFO - logger:54 - Showing dropdown with 5 suggestions at (134, 672)
+2025-01-23 19:39:03,819 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 19:39:03,820 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 19:39:03,907 - AITerm - DEBUG - logger:51 - Key released: t, current text: histo
+2025-01-23 19:39:03,907 - AITerm - INFO - logger:54 - Updating suggestions for text: 'histo'
+2025-01-23 19:39:03,907 - AITerm - INFO - logger:54 - Getting suggestions for text: 'histo'
+2025-01-23 19:39:03,908 - AITerm - INFO - logger:54 - Prefix matches for 'histo': []
+2025-01-23 19:39:03,908 - AITerm - INFO - logger:54 - Fuzzy matches for 'histo': ['top', 'git', 'sort', 'echo', 'which']
+2025-01-23 19:39:03,908 - AITerm - INFO - logger:54 - New fuzzy matches: ['top', 'git', 'sort', 'echo', 'which']
+2025-01-23 19:39:03,908 - AITerm - INFO - logger:54 - Final suggestions: ['top', 'git', 'sort', 'echo', 'which']
+2025-01-23 19:39:03,908 - AITerm - INFO - logger:54 - Got suggestions: ['top', 'git', 'sort', 'echo', 'which']
+2025-01-23 19:39:03,908 - AITerm - INFO - logger:54 - Showing dropdown with 5 suggestions at (134, 672)
+2025-01-23 19:39:03,910 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 19:39:03,910 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 19:39:03,986 - AITerm - DEBUG - logger:51 - Key released: o, current text: histo
+2025-01-23 19:39:03,986 - AITerm - INFO - logger:54 - Updating suggestions for text: 'histo'
+2025-01-23 19:39:03,986 - AITerm - INFO - logger:54 - Getting suggestions for text: 'histo'
+2025-01-23 19:39:03,986 - AITerm - INFO - logger:54 - Prefix matches for 'histo': []
+2025-01-23 19:39:03,986 - AITerm - INFO - logger:54 - Fuzzy matches for 'histo': ['top', 'git', 'sort', 'echo', 'which']
+2025-01-23 19:39:03,986 - AITerm - INFO - logger:54 - New fuzzy matches: ['top', 'git', 'sort', 'echo', 'which']
+2025-01-23 19:39:03,986 - AITerm - INFO - logger:54 - Final suggestions: ['top', 'git', 'sort', 'echo', 'which']
+2025-01-23 19:39:03,986 - AITerm - INFO - logger:54 - Got suggestions: ['top', 'git', 'sort', 'echo', 'which']
+2025-01-23 19:39:03,986 - AITerm - INFO - logger:54 - Showing dropdown with 5 suggestions at (134, 672)
+2025-01-23 19:39:03,988 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 19:39:03,988 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 19:39:04,154 - AITerm - DEBUG - logger:51 - Key released: r, current text: history
+2025-01-23 19:39:04,154 - AITerm - INFO - logger:54 - Updating suggestions for text: 'history'
+2025-01-23 19:39:04,155 - AITerm - INFO - logger:54 - Getting suggestions for text: 'history'
+2025-01-23 19:39:04,155 - AITerm - INFO - logger:54 - Prefix matches for 'history': []
+2025-01-23 19:39:04,155 - AITerm - INFO - logger:54 - Fuzzy matches for 'history': ['sort', 'top', 'tar', 'git', 'more']
+2025-01-23 19:39:04,155 - AITerm - INFO - logger:54 - New fuzzy matches: ['sort', 'top', 'tar', 'git', 'more']
+2025-01-23 19:39:04,155 - AITerm - INFO - logger:54 - Final suggestions: ['sort', 'top', 'tar', 'git', 'more']
+2025-01-23 19:39:04,155 - AITerm - INFO - logger:54 - Got suggestions: ['sort', 'top', 'tar', 'git', 'more']
+2025-01-23 19:39:04,155 - AITerm - INFO - logger:54 - Showing dropdown with 5 suggestions at (134, 672)
+2025-01-23 19:39:04,156 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 19:39:04,157 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 19:39:04,256 - AITerm - DEBUG - logger:51 - Key released: y, current text: history
+2025-01-23 19:39:04,256 - AITerm - INFO - logger:54 - Updating suggestions for text: 'history'
+2025-01-23 19:39:04,256 - AITerm - INFO - logger:54 - Getting suggestions for text: 'history'
+2025-01-23 19:39:04,256 - AITerm - INFO - logger:54 - Prefix matches for 'history': []
+2025-01-23 19:39:04,256 - AITerm - INFO - logger:54 - Fuzzy matches for 'history': ['sort', 'top', 'tar', 'git', 'more']
+2025-01-23 19:39:04,256 - AITerm - INFO - logger:54 - New fuzzy matches: ['sort', 'top', 'tar', 'git', 'more']
+2025-01-23 19:39:04,256 - AITerm - INFO - logger:54 - Final suggestions: ['sort', 'top', 'tar', 'git', 'more']
+2025-01-23 19:39:04,256 - AITerm - INFO - logger:54 - Got suggestions: ['sort', 'top', 'tar', 'git', 'more']
+2025-01-23 19:39:04,256 - AITerm - INFO - logger:54 - Showing dropdown with 5 suggestions at (134, 672)
+2025-01-23 19:39:04,258 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 19:39:04,258 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 19:39:04,469 - AITerm - INFO - logger:54 - Hiding dropdown
+2025-01-23 19:39:04,593 - AITerm - DEBUG - logger:51 - Key released: Return, current text: 
+2025-01-23 19:39:04,593 - AITerm - INFO - logger:54 - Updating suggestions for text: ''
+2025-01-23 19:39:04,593 - AITerm - INFO - logger:54 - No text to get suggestions for
+2025-01-23 19:39:04,593 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:07,194 - AITerm - DEBUG - logger:51 - Key released: s, current text: sh
+2025-01-23 19:39:07,195 - AITerm - INFO - logger:54 - Updating suggestions for text: 'sh'
+2025-01-23 19:39:07,195 - AITerm - INFO - logger:54 - Getting suggestions for text: 'sh'
+2025-01-23 19:39:07,195 - AITerm - INFO - logger:54 - Prefix matches for 'sh': []
+2025-01-23 19:39:07,195 - AITerm - INFO - logger:54 - Fuzzy matches for 'sh': ['ssh', 'ps', 'ls', 'svn', 'sed']
+2025-01-23 19:39:07,195 - AITerm - INFO - logger:54 - New fuzzy matches: ['ssh', 'ps', 'ls', 'svn', 'sed']
+2025-01-23 19:39:07,195 - AITerm - INFO - logger:54 - Final suggestions: ['ssh', 'ps', 'ls', 'svn', 'sed']
+2025-01-23 19:39:07,195 - AITerm - INFO - logger:54 - Got suggestions: ['ssh', 'ps', 'ls', 'svn', 'sed']
+2025-01-23 19:39:07,195 - AITerm - INFO - logger:54 - Showing dropdown with 5 suggestions at (134, 672)
+2025-01-23 19:39:07,196 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 19:39:07,202 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 19:39:07,304 - AITerm - DEBUG - logger:51 - Key released: h, current text: show
+2025-01-23 19:39:07,304 - AITerm - INFO - logger:54 - Updating suggestions for text: 'show'
+2025-01-23 19:39:07,304 - AITerm - INFO - logger:54 - Getting suggestions for text: 'show'
+2025-01-23 19:39:07,304 - AITerm - INFO - logger:54 - Prefix matches for 'show': []
+2025-01-23 19:39:07,304 - AITerm - INFO - logger:54 - Fuzzy matches for 'show': ['ssh', 'sort', 'echo', 'python', 'wc']
+2025-01-23 19:39:07,304 - AITerm - INFO - logger:54 - New fuzzy matches: ['ssh', 'sort', 'echo', 'python', 'wc']
+2025-01-23 19:39:07,304 - AITerm - INFO - logger:54 - Final suggestions: ['ssh', 'sort', 'echo', 'python', 'wc']
+2025-01-23 19:39:07,304 - AITerm - INFO - logger:54 - Got suggestions: ['ssh', 'sort', 'echo', 'python', 'wc']
+2025-01-23 19:39:07,305 - AITerm - INFO - logger:54 - Showing dropdown with 5 suggestions at (134, 672)
+2025-01-23 19:39:07,306 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 19:39:07,307 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 19:39:07,349 - AITerm - DEBUG - logger:51 - Key released: o, current text: show
+2025-01-23 19:39:07,349 - AITerm - INFO - logger:54 - Updating suggestions for text: 'show'
+2025-01-23 19:39:07,349 - AITerm - INFO - logger:54 - Getting suggestions for text: 'show'
+2025-01-23 19:39:07,349 - AITerm - INFO - logger:54 - Prefix matches for 'show': []
+2025-01-23 19:39:07,350 - AITerm - INFO - logger:54 - Fuzzy matches for 'show': ['ssh', 'sort', 'echo', 'python', 'wc']
+2025-01-23 19:39:07,350 - AITerm - INFO - logger:54 - New fuzzy matches: ['ssh', 'sort', 'echo', 'python', 'wc']
+2025-01-23 19:39:07,350 - AITerm - INFO - logger:54 - Final suggestions: ['ssh', 'sort', 'echo', 'python', 'wc']
+2025-01-23 19:39:07,350 - AITerm - INFO - logger:54 - Got suggestions: ['ssh', 'sort', 'echo', 'python', 'wc']
+2025-01-23 19:39:07,350 - AITerm - INFO - logger:54 - Showing dropdown with 5 suggestions at (134, 672)
+2025-01-23 19:39:07,351 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 19:39:07,352 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 19:39:07,427 - AITerm - DEBUG - logger:51 - Key released: w, current text: show
+2025-01-23 19:39:07,427 - AITerm - INFO - logger:54 - Updating suggestions for text: 'show'
+2025-01-23 19:39:07,427 - AITerm - INFO - logger:54 - Getting suggestions for text: 'show'
+2025-01-23 19:39:07,427 - AITerm - INFO - logger:54 - Prefix matches for 'show': []
+2025-01-23 19:39:07,428 - AITerm - INFO - logger:54 - Fuzzy matches for 'show': ['ssh', 'sort', 'echo', 'python', 'wc']
+2025-01-23 19:39:07,428 - AITerm - INFO - logger:54 - New fuzzy matches: ['ssh', 'sort', 'echo', 'python', 'wc']
+2025-01-23 19:39:07,428 - AITerm - INFO - logger:54 - Final suggestions: ['ssh', 'sort', 'echo', 'python', 'wc']
+2025-01-23 19:39:07,428 - AITerm - INFO - logger:54 - Got suggestions: ['ssh', 'sort', 'echo', 'python', 'wc']
+2025-01-23 19:39:07,428 - AITerm - INFO - logger:54 - Showing dropdown with 5 suggestions at (134, 672)
+2025-01-23 19:39:07,429 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 19:39:07,430 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 19:39:07,552 - AITerm - DEBUG - logger:51 - Key released: space, current text: show 
+2025-01-23 19:39:07,552 - AITerm - INFO - logger:54 - Updating suggestions for text: 'show '
+2025-01-23 19:39:07,552 - AITerm - INFO - logger:54 - Getting suggestions for text: 'show'
+2025-01-23 19:39:07,552 - AITerm - INFO - logger:54 - Prefix matches for 'show': []
+2025-01-23 19:39:07,553 - AITerm - INFO - logger:54 - Fuzzy matches for 'show': ['ssh', 'sort', 'echo', 'python', 'wc']
+2025-01-23 19:39:07,553 - AITerm - INFO - logger:54 - New fuzzy matches: ['ssh', 'sort', 'echo', 'python', 'wc']
+2025-01-23 19:39:07,553 - AITerm - INFO - logger:54 - Final suggestions: ['ssh', 'sort', 'echo', 'python', 'wc']
+2025-01-23 19:39:07,553 - AITerm - INFO - logger:54 - Got suggestions: ['ssh', 'sort', 'echo', 'python', 'wc']
+2025-01-23 19:39:07,553 - AITerm - INFO - logger:54 - Showing dropdown with 5 suggestions at (134, 672)
+2025-01-23 19:39:07,554 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 19:39:07,555 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 19:39:07,731 - AITerm - DEBUG - logger:51 - Key released: l, current text: show l
+2025-01-23 19:39:07,731 - AITerm - INFO - logger:54 - Updating suggestions for text: 'show l'
+2025-01-23 19:39:07,731 - AITerm - INFO - logger:54 - Getting suggestions for text: 'show'
+2025-01-23 19:39:07,731 - AITerm - INFO - logger:54 - Trying path completion for: ./l*
+2025-01-23 19:39:07,731 - AITerm - INFO - logger:54 - Path suggestions: ['show ./logs/']
+2025-01-23 19:39:07,731 - AITerm - INFO - logger:54 - Final suggestions: ['show ./logs/']
+2025-01-23 19:39:07,732 - AITerm - INFO - logger:54 - Got suggestions: ['show ./logs/']
+2025-01-23 19:39:07,732 - AITerm - INFO - logger:54 - Showing dropdown with 1 suggestions at (134, 672)
+2025-01-23 19:39:07,732 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 19:39:07,733 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 19:39:07,844 - AITerm - DEBUG - logger:51 - Key released: a, current text: show las
+2025-01-23 19:39:07,844 - AITerm - INFO - logger:54 - Updating suggestions for text: 'show las'
+2025-01-23 19:39:07,844 - AITerm - INFO - logger:54 - Getting suggestions for text: 'show'
+2025-01-23 19:39:07,844 - AITerm - INFO - logger:54 - Trying path completion for: ./las*
+2025-01-23 19:39:07,844 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:39:07,844 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:07,844 - AITerm - INFO - logger:54 - Hiding dropdown
+2025-01-23 19:39:07,923 - AITerm - DEBUG - logger:51 - Key released: s, current text: show las
+2025-01-23 19:39:07,923 - AITerm - INFO - logger:54 - Updating suggestions for text: 'show las'
+2025-01-23 19:39:07,923 - AITerm - INFO - logger:54 - Getting suggestions for text: 'show'
+2025-01-23 19:39:07,923 - AITerm - INFO - logger:54 - Trying path completion for: ./las*
+2025-01-23 19:39:07,924 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:39:07,924 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:08,103 - AITerm - DEBUG - logger:51 - Key released: t, current text: show last 
+2025-01-23 19:39:08,103 - AITerm - INFO - logger:54 - Updating suggestions for text: 'show last '
+2025-01-23 19:39:08,103 - AITerm - INFO - logger:54 - Getting suggestions for text: 'show'
+2025-01-23 19:39:08,103 - AITerm - INFO - logger:54 - Trying path completion for: ./last*
+2025-01-23 19:39:08,103 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:39:08,103 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:08,193 - AITerm - DEBUG - logger:51 - Key released: space, current text: show last 
+2025-01-23 19:39:08,193 - AITerm - INFO - logger:54 - Updating suggestions for text: 'show last '
+2025-01-23 19:39:08,193 - AITerm - INFO - logger:54 - Getting suggestions for text: 'show'
+2025-01-23 19:39:08,193 - AITerm - INFO - logger:54 - Trying path completion for: ./last*
+2025-01-23 19:39:08,193 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:39:08,193 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:08,440 - AITerm - DEBUG - logger:51 - Key released: c, current text: show last com
+2025-01-23 19:39:08,440 - AITerm - INFO - logger:54 - Updating suggestions for text: 'show last com'
+2025-01-23 19:39:08,440 - AITerm - INFO - logger:54 - Getting suggestions for text: 'show'
+2025-01-23 19:39:08,440 - AITerm - INFO - logger:54 - Trying path completion for: ./com*
+2025-01-23 19:39:08,441 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:39:08,441 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:08,452 - AITerm - DEBUG - logger:51 - Key released: o, current text: show last com
+2025-01-23 19:39:08,452 - AITerm - INFO - logger:54 - Updating suggestions for text: 'show last com'
+2025-01-23 19:39:08,452 - AITerm - INFO - logger:54 - Getting suggestions for text: 'show'
+2025-01-23 19:39:08,452 - AITerm - INFO - logger:54 - Trying path completion for: ./com*
+2025-01-23 19:39:08,453 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:39:08,453 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:08,508 - AITerm - DEBUG - logger:51 - Key released: m, current text: show last com
+2025-01-23 19:39:08,508 - AITerm - INFO - logger:54 - Updating suggestions for text: 'show last com'
+2025-01-23 19:39:08,508 - AITerm - INFO - logger:54 - Getting suggestions for text: 'show'
+2025-01-23 19:39:08,508 - AITerm - INFO - logger:54 - Trying path completion for: ./com*
+2025-01-23 19:39:08,509 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:39:08,509 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:08,743 - AITerm - DEBUG - logger:51 - Key released: m, current text: show last commi
+2025-01-23 19:39:08,743 - AITerm - INFO - logger:54 - Updating suggestions for text: 'show last commi'
+2025-01-23 19:39:08,743 - AITerm - INFO - logger:54 - Getting suggestions for text: 'show'
+2025-01-23 19:39:08,743 - AITerm - INFO - logger:54 - Trying path completion for: ./commi*
+2025-01-23 19:39:08,744 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:39:08,744 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:08,834 - AITerm - DEBUG - logger:51 - Key released: i, current text: show last commi
+2025-01-23 19:39:08,834 - AITerm - INFO - logger:54 - Updating suggestions for text: 'show last commi'
+2025-01-23 19:39:08,834 - AITerm - INFO - logger:54 - Getting suggestions for text: 'show'
+2025-01-23 19:39:08,834 - AITerm - INFO - logger:54 - Trying path completion for: ./commi*
+2025-01-23 19:39:08,835 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:39:08,835 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:09,025 - AITerm - DEBUG - logger:51 - Key released: t, current text: show last commit
+2025-01-23 19:39:09,025 - AITerm - INFO - logger:54 - Updating suggestions for text: 'show last commit'
+2025-01-23 19:39:09,025 - AITerm - INFO - logger:54 - Getting suggestions for text: 'show'
+2025-01-23 19:39:09,025 - AITerm - INFO - logger:54 - Trying path completion for: ./commit*
+2025-01-23 19:39:09,025 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:39:09,025 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:09,038 - AITerm - INFO - logger:54 - Interpreted command 'show last commit' as 'git show HEAD'
+2025-01-23 19:39:09,038 - AITerm - DEBUG - logger:51 - Starting PTY mode with command: git show HEAD
+2025-01-23 19:39:09,038 - AITerm - INFO - logger:54 - Initializing PseudoTerminal
+2025-01-23 19:39:09,038 - AITerm - DEBUG - logger:51 - Starting PTY with command: git show HEAD
+2025-01-23 19:39:09,051 - AITerm - DEBUG - logger:51 - PTY started successfully
+2025-01-23 19:39:12,187 - AITerm - INFO - logger:54 - Key event - keysym: q, state: 0, char: 'q'
+2025-01-23 19:39:12,187 - AITerm - INFO - logger:54 - Sending quit command (q)
+2025-01-23 19:39:12,226 - AITerm - DEBUG - logger:51 - Stopping pseudo-terminal
+2025-01-23 19:39:12,227 - AITerm - DEBUG - logger:51 - Attempting graceful process termination
+2025-01-23 19:39:12,227 - AITerm - DEBUG - logger:51 - Process terminated gracefully
+2025-01-23 19:39:12,227 - AITerm - DEBUG - logger:51 - Closed master file descriptor
+2025-01-23 19:39:12,227 - AITerm - DEBUG - logger:51 - PTY process exited
+2025-01-23 19:39:19,161 - AITerm - DEBUG - logger:51 - Key released: s, current text: sh
+2025-01-23 19:39:19,161 - AITerm - INFO - logger:54 - Updating suggestions for text: 'sh'
+2025-01-23 19:39:19,161 - AITerm - INFO - logger:54 - Getting suggestions for text: 'sh'
+2025-01-23 19:39:19,161 - AITerm - INFO - logger:54 - Prefix matches for 'sh': []
+2025-01-23 19:39:19,161 - AITerm - INFO - logger:54 - Fuzzy matches for 'sh': ['ssh', 'ps', 'ls', 'svn', 'sed']
+2025-01-23 19:39:19,162 - AITerm - INFO - logger:54 - New fuzzy matches: ['ssh', 'ps', 'ls', 'svn', 'sed']
+2025-01-23 19:39:19,162 - AITerm - INFO - logger:54 - Final suggestions: ['ssh', 'ps', 'ls', 'svn', 'sed']
+2025-01-23 19:39:19,162 - AITerm - INFO - logger:54 - Got suggestions: ['ssh', 'ps', 'ls', 'svn', 'sed']
+2025-01-23 19:39:19,162 - AITerm - INFO - logger:54 - Showing dropdown with 5 suggestions at (134, 672)
+2025-01-23 19:39:19,162 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 19:39:19,165 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 19:39:19,273 - AITerm - DEBUG - logger:51 - Key released: h, current text: show
+2025-01-23 19:39:19,273 - AITerm - INFO - logger:54 - Updating suggestions for text: 'show'
+2025-01-23 19:39:19,273 - AITerm - INFO - logger:54 - Getting suggestions for text: 'show'
+2025-01-23 19:39:19,273 - AITerm - INFO - logger:54 - Prefix matches for 'show': []
+2025-01-23 19:39:19,273 - AITerm - INFO - logger:54 - Fuzzy matches for 'show': ['ssh', 'sort', 'echo', 'python', 'wc']
+2025-01-23 19:39:19,273 - AITerm - INFO - logger:54 - New fuzzy matches: ['ssh', 'sort', 'echo', 'python', 'wc']
+2025-01-23 19:39:19,273 - AITerm - INFO - logger:54 - Final suggestions: ['ssh', 'sort', 'echo', 'python', 'wc']
+2025-01-23 19:39:19,273 - AITerm - INFO - logger:54 - Got suggestions: ['ssh', 'sort', 'echo', 'python', 'wc']
+2025-01-23 19:39:19,273 - AITerm - INFO - logger:54 - Showing dropdown with 5 suggestions at (134, 672)
+2025-01-23 19:39:19,275 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 19:39:19,276 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 19:39:19,294 - AITerm - DEBUG - logger:51 - Key released: o, current text: show
+2025-01-23 19:39:19,294 - AITerm - INFO - logger:54 - Updating suggestions for text: 'show'
+2025-01-23 19:39:19,295 - AITerm - INFO - logger:54 - Getting suggestions for text: 'show'
+2025-01-23 19:39:19,295 - AITerm - INFO - logger:54 - Prefix matches for 'show': []
+2025-01-23 19:39:19,295 - AITerm - INFO - logger:54 - Fuzzy matches for 'show': ['ssh', 'sort', 'echo', 'python', 'wc']
+2025-01-23 19:39:19,295 - AITerm - INFO - logger:54 - New fuzzy matches: ['ssh', 'sort', 'echo', 'python', 'wc']
+2025-01-23 19:39:19,295 - AITerm - INFO - logger:54 - Final suggestions: ['ssh', 'sort', 'echo', 'python', 'wc']
+2025-01-23 19:39:19,295 - AITerm - INFO - logger:54 - Got suggestions: ['ssh', 'sort', 'echo', 'python', 'wc']
+2025-01-23 19:39:19,295 - AITerm - INFO - logger:54 - Showing dropdown with 5 suggestions at (134, 672)
+2025-01-23 19:39:19,296 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 19:39:19,297 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 19:39:19,364 - AITerm - DEBUG - logger:51 - Key released: w, current text: show
+2025-01-23 19:39:19,364 - AITerm - INFO - logger:54 - Updating suggestions for text: 'show'
+2025-01-23 19:39:19,364 - AITerm - INFO - logger:54 - Getting suggestions for text: 'show'
+2025-01-23 19:39:19,364 - AITerm - INFO - logger:54 - Prefix matches for 'show': []
+2025-01-23 19:39:19,365 - AITerm - INFO - logger:54 - Fuzzy matches for 'show': ['ssh', 'sort', 'echo', 'python', 'wc']
+2025-01-23 19:39:19,365 - AITerm - INFO - logger:54 - New fuzzy matches: ['ssh', 'sort', 'echo', 'python', 'wc']
+2025-01-23 19:39:19,365 - AITerm - INFO - logger:54 - Final suggestions: ['ssh', 'sort', 'echo', 'python', 'wc']
+2025-01-23 19:39:19,365 - AITerm - INFO - logger:54 - Got suggestions: ['ssh', 'sort', 'echo', 'python', 'wc']
+2025-01-23 19:39:19,365 - AITerm - INFO - logger:54 - Showing dropdown with 5 suggestions at (134, 672)
+2025-01-23 19:39:19,366 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 19:39:19,367 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 19:39:19,499 - AITerm - DEBUG - logger:51 - Key released: space, current text: show 
+2025-01-23 19:39:19,499 - AITerm - INFO - logger:54 - Updating suggestions for text: 'show '
+2025-01-23 19:39:19,499 - AITerm - INFO - logger:54 - Getting suggestions for text: 'show'
+2025-01-23 19:39:19,499 - AITerm - INFO - logger:54 - Prefix matches for 'show': []
+2025-01-23 19:39:19,499 - AITerm - INFO - logger:54 - Fuzzy matches for 'show': ['ssh', 'sort', 'echo', 'python', 'wc']
+2025-01-23 19:39:19,499 - AITerm - INFO - logger:54 - New fuzzy matches: ['ssh', 'sort', 'echo', 'python', 'wc']
+2025-01-23 19:39:19,500 - AITerm - INFO - logger:54 - Final suggestions: ['ssh', 'sort', 'echo', 'python', 'wc']
+2025-01-23 19:39:19,500 - AITerm - INFO - logger:54 - Got suggestions: ['ssh', 'sort', 'echo', 'python', 'wc']
+2025-01-23 19:39:19,500 - AITerm - INFO - logger:54 - Showing dropdown with 5 suggestions at (134, 672)
+2025-01-23 19:39:19,501 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 19:39:19,502 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 19:39:19,859 - AITerm - DEBUG - logger:51 - Key released: l, current text: show l
+2025-01-23 19:39:19,859 - AITerm - INFO - logger:54 - Updating suggestions for text: 'show l'
+2025-01-23 19:39:19,859 - AITerm - INFO - logger:54 - Getting suggestions for text: 'show'
+2025-01-23 19:39:19,859 - AITerm - INFO - logger:54 - Trying path completion for: ./l*
+2025-01-23 19:39:19,859 - AITerm - INFO - logger:54 - Path suggestions: ['show ./logs/']
+2025-01-23 19:39:19,860 - AITerm - INFO - logger:54 - Final suggestions: ['show ./logs/']
+2025-01-23 19:39:19,860 - AITerm - INFO - logger:54 - Got suggestions: ['show ./logs/']
+2025-01-23 19:39:19,860 - AITerm - INFO - logger:54 - Showing dropdown with 1 suggestions at (134, 672)
+2025-01-23 19:39:19,860 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 19:39:19,861 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 19:39:20,015 - AITerm - DEBUG - logger:51 - Key released: a, current text: show las
+2025-01-23 19:39:20,015 - AITerm - INFO - logger:54 - Updating suggestions for text: 'show las'
+2025-01-23 19:39:20,015 - AITerm - INFO - logger:54 - Getting suggestions for text: 'show'
+2025-01-23 19:39:20,015 - AITerm - INFO - logger:54 - Trying path completion for: ./las*
+2025-01-23 19:39:20,015 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:39:20,015 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:20,015 - AITerm - INFO - logger:54 - Hiding dropdown
+2025-01-23 19:39:20,131 - AITerm - DEBUG - logger:51 - Key released: s, current text: show las
+2025-01-23 19:39:20,131 - AITerm - INFO - logger:54 - Updating suggestions for text: 'show las'
+2025-01-23 19:39:20,131 - AITerm - INFO - logger:54 - Getting suggestions for text: 'show'
+2025-01-23 19:39:20,131 - AITerm - INFO - logger:54 - Trying path completion for: ./las*
+2025-01-23 19:39:20,131 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:39:20,131 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:20,331 - AITerm - DEBUG - logger:51 - Key released: t, current text: show last
+2025-01-23 19:39:20,331 - AITerm - INFO - logger:54 - Updating suggestions for text: 'show last'
+2025-01-23 19:39:20,331 - AITerm - INFO - logger:54 - Getting suggestions for text: 'show'
+2025-01-23 19:39:20,331 - AITerm - INFO - logger:54 - Trying path completion for: ./last*
+2025-01-23 19:39:20,332 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:39:20,332 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:20,466 - AITerm - DEBUG - logger:51 - Key released: space, current text: show last 
+2025-01-23 19:39:20,467 - AITerm - INFO - logger:54 - Updating suggestions for text: 'show last '
+2025-01-23 19:39:20,467 - AITerm - INFO - logger:54 - Getting suggestions for text: 'show'
+2025-01-23 19:39:20,467 - AITerm - INFO - logger:54 - Trying path completion for: ./last*
+2025-01-23 19:39:20,467 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:39:20,467 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:21,636 - AITerm - DEBUG - logger:51 - Key released: 2, current text: show last 2
+2025-01-23 19:39:21,636 - AITerm - INFO - logger:54 - Updating suggestions for text: 'show last 2'
+2025-01-23 19:39:21,636 - AITerm - INFO - logger:54 - Getting suggestions for text: 'show'
+2025-01-23 19:39:21,637 - AITerm - INFO - logger:54 - Trying path completion for: ./2*
+2025-01-23 19:39:21,637 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:39:21,637 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:21,816 - AITerm - DEBUG - logger:51 - Key released: space, current text: show last 2 
+2025-01-23 19:39:21,816 - AITerm - INFO - logger:54 - Updating suggestions for text: 'show last 2 '
+2025-01-23 19:39:21,816 - AITerm - INFO - logger:54 - Getting suggestions for text: 'show'
+2025-01-23 19:39:21,816 - AITerm - INFO - logger:54 - Trying path completion for: ./2*
+2025-01-23 19:39:21,816 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:39:21,817 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:22,075 - AITerm - DEBUG - logger:51 - Key released: c, current text: show last 2 co
+2025-01-23 19:39:22,075 - AITerm - INFO - logger:54 - Updating suggestions for text: 'show last 2 co'
+2025-01-23 19:39:22,075 - AITerm - INFO - logger:54 - Getting suggestions for text: 'show'
+2025-01-23 19:39:22,075 - AITerm - INFO - logger:54 - Trying path completion for: ./co*
+2025-01-23 19:39:22,076 - AITerm - INFO - logger:54 - Path suggestions: ['show last 2 ./config.py']
+2025-01-23 19:39:22,076 - AITerm - INFO - logger:54 - Final suggestions: ['show last 2 ./config.py']
+2025-01-23 19:39:22,076 - AITerm - INFO - logger:54 - Got suggestions: ['show last 2 ./config.py']
+2025-01-23 19:39:22,076 - AITerm - INFO - logger:54 - Showing dropdown with 1 suggestions at (134, 672)
+2025-01-23 19:39:22,076 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 19:39:22,079 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 19:39:22,164 - AITerm - DEBUG - logger:51 - Key released: o, current text: show last 2 co
+2025-01-23 19:39:22,164 - AITerm - INFO - logger:54 - Updating suggestions for text: 'show last 2 co'
+2025-01-23 19:39:22,164 - AITerm - INFO - logger:54 - Getting suggestions for text: 'show'
+2025-01-23 19:39:22,164 - AITerm - INFO - logger:54 - Trying path completion for: ./co*
+2025-01-23 19:39:22,165 - AITerm - INFO - logger:54 - Path suggestions: ['show last 2 ./config.py']
+2025-01-23 19:39:22,165 - AITerm - INFO - logger:54 - Final suggestions: ['show last 2 ./config.py']
+2025-01-23 19:39:22,165 - AITerm - INFO - logger:54 - Got suggestions: ['show last 2 ./config.py']
+2025-01-23 19:39:22,165 - AITerm - INFO - logger:54 - Showing dropdown with 1 suggestions at (134, 672)
+2025-01-23 19:39:22,166 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 19:39:22,166 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 19:39:22,593 - AITerm - DEBUG - logger:51 - Key released: m, current text: show last 2 com
+2025-01-23 19:39:22,593 - AITerm - INFO - logger:54 - Updating suggestions for text: 'show last 2 com'
+2025-01-23 19:39:22,593 - AITerm - INFO - logger:54 - Getting suggestions for text: 'show'
+2025-01-23 19:39:22,593 - AITerm - INFO - logger:54 - Trying path completion for: ./com*
+2025-01-23 19:39:22,593 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:39:22,593 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:22,593 - AITerm - INFO - logger:54 - Hiding dropdown
+2025-01-23 19:39:22,997 - AITerm - DEBUG - logger:51 - Key released: m, current text: show last 2 comm
+2025-01-23 19:39:22,997 - AITerm - INFO - logger:54 - Updating suggestions for text: 'show last 2 comm'
+2025-01-23 19:39:22,997 - AITerm - INFO - logger:54 - Getting suggestions for text: 'show'
+2025-01-23 19:39:22,998 - AITerm - INFO - logger:54 - Trying path completion for: ./comm*
+2025-01-23 19:39:22,998 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:39:22,998 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:23,136 - AITerm - DEBUG - logger:51 - Key released: i, current text: show last 2 commi
+2025-01-23 19:39:23,136 - AITerm - INFO - logger:54 - Updating suggestions for text: 'show last 2 commi'
+2025-01-23 19:39:23,136 - AITerm - INFO - logger:54 - Getting suggestions for text: 'show'
+2025-01-23 19:39:23,136 - AITerm - INFO - logger:54 - Trying path completion for: ./commi*
+2025-01-23 19:39:23,136 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:39:23,136 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:23,279 - AITerm - DEBUG - logger:51 - Key released: t, current text: show last 2 commit
+2025-01-23 19:39:23,279 - AITerm - INFO - logger:54 - Updating suggestions for text: 'show last 2 commit'
+2025-01-23 19:39:23,279 - AITerm - INFO - logger:54 - Getting suggestions for text: 'show'
+2025-01-23 19:39:23,279 - AITerm - INFO - logger:54 - Trying path completion for: ./commit*
+2025-01-23 19:39:23,279 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:39:23,279 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:23,515 - AITerm - DEBUG - logger:51 - Key released: s, current text: show last 2 commits
+2025-01-23 19:39:23,515 - AITerm - INFO - logger:54 - Updating suggestions for text: 'show last 2 commits'
+2025-01-23 19:39:23,515 - AITerm - INFO - logger:54 - Getting suggestions for text: 'show'
+2025-01-23 19:39:23,515 - AITerm - INFO - logger:54 - Trying path completion for: ./commits*
+2025-01-23 19:39:23,516 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:39:23,516 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:24,360 - AITerm - INFO - logger:54 - Interpreted command 'show last 2 commits' as 'git log -n 2'
+2025-01-23 19:39:24,360 - AITerm - DEBUG - logger:51 - Starting PTY mode with command: git log -n 2
+2025-01-23 19:39:24,360 - AITerm - INFO - logger:54 - Initializing PseudoTerminal
+2025-01-23 19:39:24,360 - AITerm - DEBUG - logger:51 - Starting PTY with command: git log -n 2
+2025-01-23 19:39:24,373 - AITerm - DEBUG - logger:51 - PTY started successfully
+2025-01-23 19:39:28,993 - AITerm - INFO - logger:54 - Key event - keysym: q, state: 0, char: 'q'
+2025-01-23 19:39:28,994 - AITerm - INFO - logger:54 - Sending quit command (q)
+2025-01-23 19:39:29,058 - AITerm - DEBUG - logger:51 - Stopping pseudo-terminal
+2025-01-23 19:39:29,058 - AITerm - DEBUG - logger:51 - Attempting graceful process termination
+2025-01-23 19:39:29,058 - AITerm - DEBUG - logger:51 - Process terminated gracefully
+2025-01-23 19:39:29,058 - AITerm - DEBUG - logger:51 - Closed master file descriptor
+2025-01-23 19:39:29,059 - AITerm - DEBUG - logger:51 - PTY process exited
+2025-01-23 19:39:29,229 - AITerm - DEBUG - logger:51 - Key released: q, current text: 
+2025-01-23 19:39:29,229 - AITerm - INFO - logger:54 - Updating suggestions for text: ''
+2025-01-23 19:39:29,229 - AITerm - INFO - logger:54 - No text to get suggestions for
+2025-01-23 19:39:29,229 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:33,155 - AITerm - DEBUG - logger:51 - Key released: s, current text: sh
+2025-01-23 19:39:33,155 - AITerm - INFO - logger:54 - Updating suggestions for text: 'sh'
+2025-01-23 19:39:33,155 - AITerm - INFO - logger:54 - Getting suggestions for text: 'sh'
+2025-01-23 19:39:33,155 - AITerm - INFO - logger:54 - Prefix matches for 'sh': []
+2025-01-23 19:39:33,156 - AITerm - INFO - logger:54 - Fuzzy matches for 'sh': ['ssh', 'ps', 'ls', 'svn', 'sed']
+2025-01-23 19:39:33,156 - AITerm - INFO - logger:54 - New fuzzy matches: ['ssh', 'ps', 'ls', 'svn', 'sed']
+2025-01-23 19:39:33,156 - AITerm - INFO - logger:54 - Final suggestions: ['ssh', 'ps', 'ls', 'svn', 'sed']
+2025-01-23 19:39:33,156 - AITerm - INFO - logger:54 - Got suggestions: ['ssh', 'ps', 'ls', 'svn', 'sed']
+2025-01-23 19:39:33,156 - AITerm - INFO - logger:54 - Showing dropdown with 5 suggestions at (134, 672)
+2025-01-23 19:39:33,157 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 19:39:33,160 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 19:39:33,302 - AITerm - DEBUG - logger:51 - Key released: h, current text: show
+2025-01-23 19:39:33,302 - AITerm - INFO - logger:54 - Updating suggestions for text: 'show'
+2025-01-23 19:39:33,302 - AITerm - INFO - logger:54 - Getting suggestions for text: 'show'
+2025-01-23 19:39:33,302 - AITerm - INFO - logger:54 - Prefix matches for 'show': []
+2025-01-23 19:39:33,302 - AITerm - INFO - logger:54 - Fuzzy matches for 'show': ['ssh', 'sort', 'echo', 'python', 'wc']
+2025-01-23 19:39:33,302 - AITerm - INFO - logger:54 - New fuzzy matches: ['ssh', 'sort', 'echo', 'python', 'wc']
+2025-01-23 19:39:33,302 - AITerm - INFO - logger:54 - Final suggestions: ['ssh', 'sort', 'echo', 'python', 'wc']
+2025-01-23 19:39:33,303 - AITerm - INFO - logger:54 - Got suggestions: ['ssh', 'sort', 'echo', 'python', 'wc']
+2025-01-23 19:39:33,303 - AITerm - INFO - logger:54 - Showing dropdown with 5 suggestions at (134, 672)
+2025-01-23 19:39:33,304 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 19:39:33,305 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 19:39:33,347 - AITerm - DEBUG - logger:51 - Key released: o, current text: show
+2025-01-23 19:39:33,347 - AITerm - INFO - logger:54 - Updating suggestions for text: 'show'
+2025-01-23 19:39:33,347 - AITerm - INFO - logger:54 - Getting suggestions for text: 'show'
+2025-01-23 19:39:33,347 - AITerm - INFO - logger:54 - Prefix matches for 'show': []
+2025-01-23 19:39:33,348 - AITerm - INFO - logger:54 - Fuzzy matches for 'show': ['ssh', 'sort', 'echo', 'python', 'wc']
+2025-01-23 19:39:33,348 - AITerm - INFO - logger:54 - New fuzzy matches: ['ssh', 'sort', 'echo', 'python', 'wc']
+2025-01-23 19:39:33,348 - AITerm - INFO - logger:54 - Final suggestions: ['ssh', 'sort', 'echo', 'python', 'wc']
+2025-01-23 19:39:33,348 - AITerm - INFO - logger:54 - Got suggestions: ['ssh', 'sort', 'echo', 'python', 'wc']
+2025-01-23 19:39:33,348 - AITerm - INFO - logger:54 - Showing dropdown with 5 suggestions at (134, 672)
+2025-01-23 19:39:33,350 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 19:39:33,350 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 19:39:33,403 - AITerm - DEBUG - logger:51 - Key released: w, current text: show
+2025-01-23 19:39:33,403 - AITerm - INFO - logger:54 - Updating suggestions for text: 'show'
+2025-01-23 19:39:33,403 - AITerm - INFO - logger:54 - Getting suggestions for text: 'show'
+2025-01-23 19:39:33,404 - AITerm - INFO - logger:54 - Prefix matches for 'show': []
+2025-01-23 19:39:33,404 - AITerm - INFO - logger:54 - Fuzzy matches for 'show': ['ssh', 'sort', 'echo', 'python', 'wc']
+2025-01-23 19:39:33,404 - AITerm - INFO - logger:54 - New fuzzy matches: ['ssh', 'sort', 'echo', 'python', 'wc']
+2025-01-23 19:39:33,404 - AITerm - INFO - logger:54 - Final suggestions: ['ssh', 'sort', 'echo', 'python', 'wc']
+2025-01-23 19:39:33,404 - AITerm - INFO - logger:54 - Got suggestions: ['ssh', 'sort', 'echo', 'python', 'wc']
+2025-01-23 19:39:33,404 - AITerm - INFO - logger:54 - Showing dropdown with 5 suggestions at (134, 672)
+2025-01-23 19:39:33,406 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 19:39:33,406 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 19:39:33,550 - AITerm - DEBUG - logger:51 - Key released: space, current text: show 
+2025-01-23 19:39:33,550 - AITerm - INFO - logger:54 - Updating suggestions for text: 'show '
+2025-01-23 19:39:33,550 - AITerm - INFO - logger:54 - Getting suggestions for text: 'show'
+2025-01-23 19:39:33,550 - AITerm - INFO - logger:54 - Prefix matches for 'show': []
+2025-01-23 19:39:33,550 - AITerm - INFO - logger:54 - Fuzzy matches for 'show': ['ssh', 'sort', 'echo', 'python', 'wc']
+2025-01-23 19:39:33,550 - AITerm - INFO - logger:54 - New fuzzy matches: ['ssh', 'sort', 'echo', 'python', 'wc']
+2025-01-23 19:39:33,550 - AITerm - INFO - logger:54 - Final suggestions: ['ssh', 'sort', 'echo', 'python', 'wc']
+2025-01-23 19:39:33,550 - AITerm - INFO - logger:54 - Got suggestions: ['ssh', 'sort', 'echo', 'python', 'wc']
+2025-01-23 19:39:33,550 - AITerm - INFO - logger:54 - Showing dropdown with 5 suggestions at (134, 672)
+2025-01-23 19:39:33,552 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 19:39:33,552 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 19:39:33,763 - AITerm - DEBUG - logger:51 - Key released: l, current text: show l
+2025-01-23 19:39:33,763 - AITerm - INFO - logger:54 - Updating suggestions for text: 'show l'
+2025-01-23 19:39:33,763 - AITerm - INFO - logger:54 - Getting suggestions for text: 'show'
+2025-01-23 19:39:33,763 - AITerm - INFO - logger:54 - Trying path completion for: ./l*
+2025-01-23 19:39:33,764 - AITerm - INFO - logger:54 - Path suggestions: ['show ./logs/']
+2025-01-23 19:39:33,764 - AITerm - INFO - logger:54 - Final suggestions: ['show ./logs/']
+2025-01-23 19:39:33,764 - AITerm - INFO - logger:54 - Got suggestions: ['show ./logs/']
+2025-01-23 19:39:33,764 - AITerm - INFO - logger:54 - Showing dropdown with 1 suggestions at (134, 672)
+2025-01-23 19:39:33,765 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 19:39:33,766 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 19:39:33,898 - AITerm - DEBUG - logger:51 - Key released: a, current text: show las
+2025-01-23 19:39:33,899 - AITerm - INFO - logger:54 - Updating suggestions for text: 'show las'
+2025-01-23 19:39:33,899 - AITerm - INFO - logger:54 - Getting suggestions for text: 'show'
+2025-01-23 19:39:33,899 - AITerm - INFO - logger:54 - Trying path completion for: ./las*
+2025-01-23 19:39:33,899 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:39:33,899 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:33,899 - AITerm - INFO - logger:54 - Hiding dropdown
+2025-01-23 19:39:34,022 - AITerm - DEBUG - logger:51 - Key released: s, current text: show las
+2025-01-23 19:39:34,022 - AITerm - INFO - logger:54 - Updating suggestions for text: 'show las'
+2025-01-23 19:39:34,023 - AITerm - INFO - logger:54 - Getting suggestions for text: 'show'
+2025-01-23 19:39:34,023 - AITerm - INFO - logger:54 - Trying path completion for: ./las*
+2025-01-23 19:39:34,023 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:39:34,023 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:34,191 - AITerm - DEBUG - logger:51 - Key released: t, current text: show last 
+2025-01-23 19:39:34,191 - AITerm - INFO - logger:54 - Updating suggestions for text: 'show last '
+2025-01-23 19:39:34,191 - AITerm - INFO - logger:54 - Getting suggestions for text: 'show'
+2025-01-23 19:39:34,191 - AITerm - INFO - logger:54 - Trying path completion for: ./last*
+2025-01-23 19:39:34,192 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:39:34,192 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:34,247 - AITerm - DEBUG - logger:51 - Key released: space, current text: show last 
+2025-01-23 19:39:34,247 - AITerm - INFO - logger:54 - Updating suggestions for text: 'show last '
+2025-01-23 19:39:34,247 - AITerm - INFO - logger:54 - Getting suggestions for text: 'show'
+2025-01-23 19:39:34,247 - AITerm - INFO - logger:54 - Trying path completion for: ./last*
+2025-01-23 19:39:34,247 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:39:34,247 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:34,697 - AITerm - DEBUG - logger:51 - Key released: 5, current text: show last 5
+2025-01-23 19:39:34,697 - AITerm - INFO - logger:54 - Updating suggestions for text: 'show last 5'
+2025-01-23 19:39:34,697 - AITerm - INFO - logger:54 - Getting suggestions for text: 'show'
+2025-01-23 19:39:34,697 - AITerm - INFO - logger:54 - Trying path completion for: ./5*
+2025-01-23 19:39:34,698 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:39:34,698 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:35,046 - AITerm - DEBUG - logger:51 - Key released: space, current text: show last 5 
+2025-01-23 19:39:35,046 - AITerm - INFO - logger:54 - Updating suggestions for text: 'show last 5 '
+2025-01-23 19:39:35,046 - AITerm - INFO - logger:54 - Getting suggestions for text: 'show'
+2025-01-23 19:39:35,046 - AITerm - INFO - logger:54 - Trying path completion for: ./5*
+2025-01-23 19:39:35,046 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:39:35,047 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:35,979 - AITerm - DEBUG - logger:51 - Key released: c, current text: show last 5 co
+2025-01-23 19:39:35,979 - AITerm - INFO - logger:54 - Updating suggestions for text: 'show last 5 co'
+2025-01-23 19:39:35,979 - AITerm - INFO - logger:54 - Getting suggestions for text: 'show'
+2025-01-23 19:39:35,979 - AITerm - INFO - logger:54 - Trying path completion for: ./co*
+2025-01-23 19:39:35,980 - AITerm - INFO - logger:54 - Path suggestions: ['show last 5 ./config.py']
+2025-01-23 19:39:35,980 - AITerm - INFO - logger:54 - Final suggestions: ['show last 5 ./config.py']
+2025-01-23 19:39:35,980 - AITerm - INFO - logger:54 - Got suggestions: ['show last 5 ./config.py']
+2025-01-23 19:39:35,980 - AITerm - INFO - logger:54 - Showing dropdown with 1 suggestions at (134, 672)
+2025-01-23 19:39:35,980 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 19:39:35,983 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 19:39:36,025 - AITerm - DEBUG - logger:51 - Key released: o, current text: show last 5 com
+2025-01-23 19:39:36,025 - AITerm - INFO - logger:54 - Updating suggestions for text: 'show last 5 com'
+2025-01-23 19:39:36,025 - AITerm - INFO - logger:54 - Getting suggestions for text: 'show'
+2025-01-23 19:39:36,026 - AITerm - INFO - logger:54 - Trying path completion for: ./com*
+2025-01-23 19:39:36,026 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:39:36,026 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:36,026 - AITerm - INFO - logger:54 - Hiding dropdown
+2025-01-23 19:39:36,091 - AITerm - DEBUG - logger:51 - Key released: m, current text: show last 5 com
+2025-01-23 19:39:36,091 - AITerm - INFO - logger:54 - Updating suggestions for text: 'show last 5 com'
+2025-01-23 19:39:36,091 - AITerm - INFO - logger:54 - Getting suggestions for text: 'show'
+2025-01-23 19:39:36,091 - AITerm - INFO - logger:54 - Trying path completion for: ./com*
+2025-01-23 19:39:36,091 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:39:36,091 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:36,363 - AITerm - DEBUG - logger:51 - Key released: m, current text: show last 5 commi
+2025-01-23 19:39:36,363 - AITerm - INFO - logger:54 - Updating suggestions for text: 'show last 5 commi'
+2025-01-23 19:39:36,363 - AITerm - INFO - logger:54 - Getting suggestions for text: 'show'
+2025-01-23 19:39:36,363 - AITerm - INFO - logger:54 - Trying path completion for: ./commi*
+2025-01-23 19:39:36,363 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:39:36,363 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:36,441 - AITerm - DEBUG - logger:51 - Key released: i, current text: show last 5 commi
+2025-01-23 19:39:36,441 - AITerm - INFO - logger:54 - Updating suggestions for text: 'show last 5 commi'
+2025-01-23 19:39:36,441 - AITerm - INFO - logger:54 - Getting suggestions for text: 'show'
+2025-01-23 19:39:36,442 - AITerm - INFO - logger:54 - Trying path completion for: ./commi*
+2025-01-23 19:39:36,442 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:39:36,442 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:36,575 - AITerm - DEBUG - logger:51 - Key released: t, current text: show last 5 commit
+2025-01-23 19:39:36,575 - AITerm - INFO - logger:54 - Updating suggestions for text: 'show last 5 commit'
+2025-01-23 19:39:36,575 - AITerm - INFO - logger:54 - Getting suggestions for text: 'show'
+2025-01-23 19:39:36,575 - AITerm - INFO - logger:54 - Trying path completion for: ./commit*
+2025-01-23 19:39:36,576 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:39:36,576 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:36,767 - AITerm - DEBUG - logger:51 - Key released: s, current text: show last 5 commits
+2025-01-23 19:39:36,767 - AITerm - INFO - logger:54 - Updating suggestions for text: 'show last 5 commits'
+2025-01-23 19:39:36,767 - AITerm - INFO - logger:54 - Getting suggestions for text: 'show'
+2025-01-23 19:39:36,767 - AITerm - INFO - logger:54 - Trying path completion for: ./commits*
+2025-01-23 19:39:36,768 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:39:36,768 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:37,420 - AITerm - INFO - logger:54 - Interpreted command 'show last 5 commits' as 'git log -n 5'
+2025-01-23 19:39:37,420 - AITerm - DEBUG - logger:51 - Starting PTY mode with command: git log -n 5
+2025-01-23 19:39:37,420 - AITerm - INFO - logger:54 - Initializing PseudoTerminal
+2025-01-23 19:39:37,420 - AITerm - DEBUG - logger:51 - Starting PTY with command: git log -n 5
+2025-01-23 19:39:37,433 - AITerm - DEBUG - logger:51 - PTY started successfully
+2025-01-23 19:39:39,400 - AITerm - INFO - logger:54 - Key event - keysym: q, state: 0, char: 'q'
+2025-01-23 19:39:39,400 - AITerm - INFO - logger:54 - Sending quit command (q)
+2025-01-23 19:39:39,474 - AITerm - DEBUG - logger:51 - Stopping pseudo-terminal
+2025-01-23 19:39:39,474 - AITerm - DEBUG - logger:51 - Attempting graceful process termination
+2025-01-23 19:39:39,474 - AITerm - DEBUG - logger:51 - Process terminated gracefully
+2025-01-23 19:39:39,474 - AITerm - DEBUG - logger:51 - Closed master file descriptor
+2025-01-23 19:39:39,474 - AITerm - DEBUG - logger:51 - PTY process exited
+2025-01-23 19:39:41,267 - AITerm - DEBUG - logger:51 - Key released: g, current text: gi
+2025-01-23 19:39:41,267 - AITerm - INFO - logger:54 - Updating suggestions for text: 'gi'
+2025-01-23 19:39:41,267 - AITerm - INFO - logger:54 - Getting suggestions for text: 'gi'
+2025-01-23 19:39:41,268 - AITerm - INFO - logger:54 - Prefix matches for 'gi': ['git']
+2025-01-23 19:39:41,268 - AITerm - INFO - logger:54 - Fuzzy matches for 'gi': ['git', 'gzip', 'zip', 'vim']
+2025-01-23 19:39:41,268 - AITerm - INFO - logger:54 - New fuzzy matches: ['gzip', 'zip', 'vim']
+2025-01-23 19:39:41,268 - AITerm - INFO - logger:54 - Final suggestions: ['git', 'gzip', 'zip', 'vim']
+2025-01-23 19:39:41,268 - AITerm - INFO - logger:54 - Got suggestions: ['git', 'gzip', 'zip', 'vim']
+2025-01-23 19:39:41,268 - AITerm - INFO - logger:54 - Showing dropdown with 4 suggestions at (134, 672)
+2025-01-23 19:39:41,269 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 19:39:41,272 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 19:39:41,301 - AITerm - DEBUG - logger:51 - Key released: i, current text: gi
+2025-01-23 19:39:41,301 - AITerm - INFO - logger:54 - Updating suggestions for text: 'gi'
+2025-01-23 19:39:41,301 - AITerm - INFO - logger:54 - Getting suggestions for text: 'gi'
+2025-01-23 19:39:41,301 - AITerm - INFO - logger:54 - Prefix matches for 'gi': ['git']
+2025-01-23 19:39:41,301 - AITerm - INFO - logger:54 - Fuzzy matches for 'gi': ['git', 'gzip', 'zip', 'vim']
+2025-01-23 19:39:41,301 - AITerm - INFO - logger:54 - New fuzzy matches: ['gzip', 'zip', 'vim']
+2025-01-23 19:39:41,301 - AITerm - INFO - logger:54 - Final suggestions: ['git', 'gzip', 'zip', 'vim']
+2025-01-23 19:39:41,301 - AITerm - INFO - logger:54 - Got suggestions: ['git', 'gzip', 'zip', 'vim']
+2025-01-23 19:39:41,301 - AITerm - INFO - logger:54 - Showing dropdown with 4 suggestions at (134, 672)
+2025-01-23 19:39:41,303 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 19:39:41,303 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 19:39:41,491 - AITerm - DEBUG - logger:51 - Key released: t, current text: git 
+2025-01-23 19:39:41,491 - AITerm - INFO - logger:54 - Updating suggestions for text: 'git '
+2025-01-23 19:39:41,491 - AITerm - INFO - logger:54 - Getting suggestions for text: 'git'
+2025-01-23 19:39:41,491 - AITerm - INFO - logger:54 - Prefix matches for 'git': ['git']
+2025-01-23 19:39:41,491 - AITerm - INFO - logger:54 - Fuzzy matches for 'git': ['git', 'wget', 'gzip', 'zip']
+2025-01-23 19:39:41,492 - AITerm - INFO - logger:54 - New fuzzy matches: ['wget', 'gzip', 'zip']
+2025-01-23 19:39:41,492 - AITerm - INFO - logger:54 - Final suggestions: ['git', 'wget', 'gzip', 'zip']
+2025-01-23 19:39:41,492 - AITerm - INFO - logger:54 - Got suggestions: ['git', 'wget', 'gzip', 'zip']
+2025-01-23 19:39:41,492 - AITerm - INFO - logger:54 - Showing dropdown with 4 suggestions at (134, 672)
+2025-01-23 19:39:41,493 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 19:39:41,494 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 19:39:41,571 - AITerm - DEBUG - logger:51 - Key released: space, current text: git 
+2025-01-23 19:39:41,571 - AITerm - INFO - logger:54 - Updating suggestions for text: 'git '
+2025-01-23 19:39:41,571 - AITerm - INFO - logger:54 - Getting suggestions for text: 'git'
+2025-01-23 19:39:41,571 - AITerm - INFO - logger:54 - Prefix matches for 'git': ['git']
+2025-01-23 19:39:41,571 - AITerm - INFO - logger:54 - Fuzzy matches for 'git': ['git', 'wget', 'gzip', 'zip']
+2025-01-23 19:39:41,571 - AITerm - INFO - logger:54 - New fuzzy matches: ['wget', 'gzip', 'zip']
+2025-01-23 19:39:41,571 - AITerm - INFO - logger:54 - Final suggestions: ['git', 'wget', 'gzip', 'zip']
+2025-01-23 19:39:41,571 - AITerm - INFO - logger:54 - Got suggestions: ['git', 'wget', 'gzip', 'zip']
+2025-01-23 19:39:41,571 - AITerm - INFO - logger:54 - Showing dropdown with 4 suggestions at (134, 672)
+2025-01-23 19:39:41,573 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 19:39:41,573 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 19:39:41,751 - AITerm - DEBUG - logger:51 - Key released: s, current text: git sh
+2025-01-23 19:39:41,751 - AITerm - INFO - logger:54 - Updating suggestions for text: 'git sh'
+2025-01-23 19:39:41,751 - AITerm - INFO - logger:54 - Getting suggestions for text: 'git'
+2025-01-23 19:39:41,751 - AITerm - INFO - logger:54 - Trying path completion for: ./sh*
+2025-01-23 19:39:41,752 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:39:41,752 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:41,752 - AITerm - INFO - logger:54 - Hiding dropdown
+2025-01-23 19:39:41,840 - AITerm - DEBUG - logger:51 - Key released: h, current text: git sho
+2025-01-23 19:39:41,840 - AITerm - INFO - logger:54 - Updating suggestions for text: 'git sho'
+2025-01-23 19:39:41,841 - AITerm - INFO - logger:54 - Getting suggestions for text: 'git'
+2025-01-23 19:39:41,841 - AITerm - INFO - logger:54 - Trying path completion for: ./sho*
+2025-01-23 19:39:41,841 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:39:41,841 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:41,886 - AITerm - DEBUG - logger:51 - Key released: o, current text: git show
+2025-01-23 19:39:41,886 - AITerm - INFO - logger:54 - Updating suggestions for text: 'git show'
+2025-01-23 19:39:41,886 - AITerm - INFO - logger:54 - Getting suggestions for text: 'git'
+2025-01-23 19:39:41,886 - AITerm - INFO - logger:54 - Trying path completion for: ./show*
+2025-01-23 19:39:41,886 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:39:41,886 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:41,956 - AITerm - DEBUG - logger:51 - Key released: w, current text: git show
+2025-01-23 19:39:41,956 - AITerm - INFO - logger:54 - Updating suggestions for text: 'git show'
+2025-01-23 19:39:41,956 - AITerm - INFO - logger:54 - Getting suggestions for text: 'git'
+2025-01-23 19:39:41,956 - AITerm - INFO - logger:54 - Trying path completion for: ./show*
+2025-01-23 19:39:41,956 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:39:41,957 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:42,065 - AITerm - DEBUG - logger:51 - Key released: space, current text: git show 
+2025-01-23 19:39:42,065 - AITerm - INFO - logger:54 - Updating suggestions for text: 'git show '
+2025-01-23 19:39:42,065 - AITerm - INFO - logger:54 - Getting suggestions for text: 'git'
+2025-01-23 19:39:42,065 - AITerm - INFO - logger:54 - Trying path completion for: ./show*
+2025-01-23 19:39:42,066 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:39:42,066 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:42,235 - AITerm - DEBUG - logger:51 - Key released: l, current text: git show l
+2025-01-23 19:39:42,235 - AITerm - INFO - logger:54 - Updating suggestions for text: 'git show l'
+2025-01-23 19:39:42,235 - AITerm - INFO - logger:54 - Getting suggestions for text: 'git'
+2025-01-23 19:39:42,235 - AITerm - INFO - logger:54 - Trying path completion for: ./l*
+2025-01-23 19:39:42,236 - AITerm - INFO - logger:54 - Path suggestions: ['git show ./logs/']
+2025-01-23 19:39:42,236 - AITerm - INFO - logger:54 - Final suggestions: ['git show ./logs/']
+2025-01-23 19:39:42,236 - AITerm - INFO - logger:54 - Got suggestions: ['git show ./logs/']
+2025-01-23 19:39:42,236 - AITerm - INFO - logger:54 - Showing dropdown with 1 suggestions at (134, 672)
+2025-01-23 19:39:42,236 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 19:39:42,239 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 19:39:42,369 - AITerm - DEBUG - logger:51 - Key released: a, current text: git show las
+2025-01-23 19:39:42,369 - AITerm - INFO - logger:54 - Updating suggestions for text: 'git show las'
+2025-01-23 19:39:42,370 - AITerm - INFO - logger:54 - Getting suggestions for text: 'git'
+2025-01-23 19:39:42,370 - AITerm - INFO - logger:54 - Trying path completion for: ./las*
+2025-01-23 19:39:42,370 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:39:42,370 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:42,370 - AITerm - INFO - logger:54 - Hiding dropdown
+2025-01-23 19:39:42,516 - AITerm - DEBUG - logger:51 - Key released: s, current text: git show last
+2025-01-23 19:39:42,516 - AITerm - INFO - logger:54 - Updating suggestions for text: 'git show last'
+2025-01-23 19:39:42,516 - AITerm - INFO - logger:54 - Getting suggestions for text: 'git'
+2025-01-23 19:39:42,516 - AITerm - INFO - logger:54 - Trying path completion for: ./last*
+2025-01-23 19:39:42,516 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:39:42,516 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:42,628 - AITerm - DEBUG - logger:51 - Key released: t, current text: git show last 
+2025-01-23 19:39:42,628 - AITerm - INFO - logger:54 - Updating suggestions for text: 'git show last '
+2025-01-23 19:39:42,628 - AITerm - INFO - logger:54 - Getting suggestions for text: 'git'
+2025-01-23 19:39:42,628 - AITerm - INFO - logger:54 - Trying path completion for: ./last*
+2025-01-23 19:39:42,629 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:39:42,629 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:42,707 - AITerm - DEBUG - logger:51 - Key released: space, current text: git show last 
+2025-01-23 19:39:42,707 - AITerm - INFO - logger:54 - Updating suggestions for text: 'git show last '
+2025-01-23 19:39:42,707 - AITerm - INFO - logger:54 - Getting suggestions for text: 'git'
+2025-01-23 19:39:42,707 - AITerm - INFO - logger:54 - Trying path completion for: ./last*
+2025-01-23 19:39:42,707 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:39:42,707 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:43,179 - AITerm - DEBUG - logger:51 - Key released: 5, current text: git show last 5
+2025-01-23 19:39:43,179 - AITerm - INFO - logger:54 - Updating suggestions for text: 'git show last 5'
+2025-01-23 19:39:43,179 - AITerm - INFO - logger:54 - Getting suggestions for text: 'git'
+2025-01-23 19:39:43,179 - AITerm - INFO - logger:54 - Trying path completion for: ./5*
+2025-01-23 19:39:43,180 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:39:43,180 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:43,337 - AITerm - DEBUG - logger:51 - Key released: space, current text: git show last 5 
+2025-01-23 19:39:43,337 - AITerm - INFO - logger:54 - Updating suggestions for text: 'git show last 5 '
+2025-01-23 19:39:43,337 - AITerm - INFO - logger:54 - Getting suggestions for text: 'git'
+2025-01-23 19:39:43,337 - AITerm - INFO - logger:54 - Trying path completion for: ./5*
+2025-01-23 19:39:43,337 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:39:43,337 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:43,843 - AITerm - DEBUG - logger:51 - Key released: c, current text: git show last 5 co
+2025-01-23 19:39:43,843 - AITerm - INFO - logger:54 - Updating suggestions for text: 'git show last 5 co'
+2025-01-23 19:39:43,843 - AITerm - INFO - logger:54 - Getting suggestions for text: 'git'
+2025-01-23 19:39:43,843 - AITerm - INFO - logger:54 - Trying path completion for: ./co*
+2025-01-23 19:39:43,844 - AITerm - INFO - logger:54 - Path suggestions: ['git show last 5 ./config.py']
+2025-01-23 19:39:43,844 - AITerm - INFO - logger:54 - Final suggestions: ['git show last 5 ./config.py']
+2025-01-23 19:39:43,844 - AITerm - INFO - logger:54 - Got suggestions: ['git show last 5 ./config.py']
+2025-01-23 19:39:43,844 - AITerm - INFO - logger:54 - Showing dropdown with 1 suggestions at (134, 672)
+2025-01-23 19:39:43,844 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 19:39:43,847 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 19:39:43,876 - AITerm - DEBUG - logger:51 - Key released: o, current text: git show last 5 com
+2025-01-23 19:39:43,876 - AITerm - INFO - logger:54 - Updating suggestions for text: 'git show last 5 com'
+2025-01-23 19:39:43,876 - AITerm - INFO - logger:54 - Getting suggestions for text: 'git'
+2025-01-23 19:39:43,876 - AITerm - INFO - logger:54 - Trying path completion for: ./com*
+2025-01-23 19:39:43,876 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:39:43,877 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:43,877 - AITerm - INFO - logger:54 - Hiding dropdown
+2025-01-23 19:39:43,944 - AITerm - DEBUG - logger:51 - Key released: m, current text: git show last 5 com
+2025-01-23 19:39:43,944 - AITerm - INFO - logger:54 - Updating suggestions for text: 'git show last 5 com'
+2025-01-23 19:39:43,944 - AITerm - INFO - logger:54 - Getting suggestions for text: 'git'
+2025-01-23 19:39:43,945 - AITerm - INFO - logger:54 - Trying path completion for: ./com*
+2025-01-23 19:39:43,945 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:39:43,945 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:44,180 - AITerm - DEBUG - logger:51 - Key released: m, current text: git show last 5 commi
+2025-01-23 19:39:44,180 - AITerm - INFO - logger:54 - Updating suggestions for text: 'git show last 5 commi'
+2025-01-23 19:39:44,180 - AITerm - INFO - logger:54 - Getting suggestions for text: 'git'
+2025-01-23 19:39:44,180 - AITerm - INFO - logger:54 - Trying path completion for: ./commi*
+2025-01-23 19:39:44,181 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:39:44,181 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:44,293 - AITerm - DEBUG - logger:51 - Key released: i, current text: git show last 5 commit
+2025-01-23 19:39:44,293 - AITerm - INFO - logger:54 - Updating suggestions for text: 'git show last 5 commit'
+2025-01-23 19:39:44,293 - AITerm - INFO - logger:54 - Getting suggestions for text: 'git'
+2025-01-23 19:39:44,293 - AITerm - INFO - logger:54 - Trying path completion for: ./commit*
+2025-01-23 19:39:44,293 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:39:44,293 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:44,417 - AITerm - DEBUG - logger:51 - Key released: t, current text: git show last 5 commit
+2025-01-23 19:39:44,417 - AITerm - INFO - logger:54 - Updating suggestions for text: 'git show last 5 commit'
+2025-01-23 19:39:44,417 - AITerm - INFO - logger:54 - Getting suggestions for text: 'git'
+2025-01-23 19:39:44,417 - AITerm - INFO - logger:54 - Trying path completion for: ./commit*
+2025-01-23 19:39:44,417 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:39:44,418 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:44,619 - AITerm - DEBUG - logger:51 - Key released: s, current text: git show last 5 commits
+2025-01-23 19:39:44,619 - AITerm - INFO - logger:54 - Updating suggestions for text: 'git show last 5 commits'
+2025-01-23 19:39:44,619 - AITerm - INFO - logger:54 - Getting suggestions for text: 'git'
+2025-01-23 19:39:44,619 - AITerm - INFO - logger:54 - Trying path completion for: ./commits*
+2025-01-23 19:39:44,619 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:39:44,619 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:45,343 - AITerm - INFO - logger:54 - Interpreted command 'git show last 5 commits' as 'git log -n 5'
+2025-01-23 19:39:45,343 - AITerm - DEBUG - logger:51 - Starting PTY mode with command: git log -n 5
+2025-01-23 19:39:45,344 - AITerm - INFO - logger:54 - Initializing PseudoTerminal
+2025-01-23 19:39:45,344 - AITerm - DEBUG - logger:51 - Starting PTY with command: git log -n 5
+2025-01-23 19:39:45,359 - AITerm - DEBUG - logger:51 - PTY started successfully
+2025-01-23 19:39:47,432 - AITerm - INFO - logger:54 - Key event - keysym: space, state: 0, char: ' '
+2025-01-23 19:39:47,432 - AITerm - INFO - logger:54 - Sending next page command (space)
+2025-01-23 19:39:48,962 - AITerm - INFO - logger:54 - Key event - keysym: q, state: 0, char: 'q'
+2025-01-23 19:39:48,962 - AITerm - INFO - logger:54 - Sending quit command (q)
+2025-01-23 19:39:49,063 - AITerm - DEBUG - logger:51 - Stopping pseudo-terminal
+2025-01-23 19:39:49,063 - AITerm - DEBUG - logger:51 - Attempting graceful process termination
+2025-01-23 19:39:49,063 - AITerm - DEBUG - logger:51 - Process terminated gracefully
+2025-01-23 19:39:49,063 - AITerm - DEBUG - logger:51 - Closed master file descriptor
+2025-01-23 19:39:49,063 - AITerm - DEBUG - logger:51 - PTY process exited
+2025-01-23 19:39:50,411 - AITerm - DEBUG - logger:51 - Key released: g, current text: gi
+2025-01-23 19:39:50,411 - AITerm - INFO - logger:54 - Updating suggestions for text: 'gi'
+2025-01-23 19:39:50,412 - AITerm - INFO - logger:54 - Getting suggestions for text: 'gi'
+2025-01-23 19:39:50,412 - AITerm - INFO - logger:54 - Prefix matches for 'gi': ['git']
+2025-01-23 19:39:50,412 - AITerm - INFO - logger:54 - Fuzzy matches for 'gi': ['git', 'gzip', 'zip', 'vim']
+2025-01-23 19:39:50,412 - AITerm - INFO - logger:54 - New fuzzy matches: ['gzip', 'zip', 'vim']
+2025-01-23 19:39:50,412 - AITerm - INFO - logger:54 - Final suggestions: ['git', 'gzip', 'zip', 'vim']
+2025-01-23 19:39:50,412 - AITerm - INFO - logger:54 - Got suggestions: ['git', 'gzip', 'zip', 'vim']
+2025-01-23 19:39:50,412 - AITerm - INFO - logger:54 - Showing dropdown with 4 suggestions at (134, 672)
+2025-01-23 19:39:50,412 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 19:39:50,416 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 19:39:50,468 - AITerm - DEBUG - logger:51 - Key released: i, current text: gi
+2025-01-23 19:39:50,468 - AITerm - INFO - logger:54 - Updating suggestions for text: 'gi'
+2025-01-23 19:39:50,468 - AITerm - INFO - logger:54 - Getting suggestions for text: 'gi'
+2025-01-23 19:39:50,468 - AITerm - INFO - logger:54 - Prefix matches for 'gi': ['git']
+2025-01-23 19:39:50,469 - AITerm - INFO - logger:54 - Fuzzy matches for 'gi': ['git', 'gzip', 'zip', 'vim']
+2025-01-23 19:39:50,469 - AITerm - INFO - logger:54 - New fuzzy matches: ['gzip', 'zip', 'vim']
+2025-01-23 19:39:50,469 - AITerm - INFO - logger:54 - Final suggestions: ['git', 'gzip', 'zip', 'vim']
+2025-01-23 19:39:50,469 - AITerm - INFO - logger:54 - Got suggestions: ['git', 'gzip', 'zip', 'vim']
+2025-01-23 19:39:50,469 - AITerm - INFO - logger:54 - Showing dropdown with 4 suggestions at (134, 672)
+2025-01-23 19:39:50,470 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 19:39:50,472 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 19:39:50,615 - AITerm - DEBUG - logger:51 - Key released: t, current text: git
+2025-01-23 19:39:50,615 - AITerm - INFO - logger:54 - Updating suggestions for text: 'git'
+2025-01-23 19:39:50,615 - AITerm - INFO - logger:54 - Getting suggestions for text: 'git'
+2025-01-23 19:39:50,615 - AITerm - INFO - logger:54 - Prefix matches for 'git': ['git']
+2025-01-23 19:39:50,616 - AITerm - INFO - logger:54 - Fuzzy matches for 'git': ['git', 'wget', 'gzip', 'zip']
+2025-01-23 19:39:50,616 - AITerm - INFO - logger:54 - New fuzzy matches: ['wget', 'gzip', 'zip']
+2025-01-23 19:39:50,616 - AITerm - INFO - logger:54 - Final suggestions: ['git', 'wget', 'gzip', 'zip']
+2025-01-23 19:39:50,616 - AITerm - INFO - logger:54 - Got suggestions: ['git', 'wget', 'gzip', 'zip']
+2025-01-23 19:39:50,616 - AITerm - INFO - logger:54 - Showing dropdown with 4 suggestions at (134, 672)
+2025-01-23 19:39:50,617 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 19:39:50,618 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 19:39:50,739 - AITerm - DEBUG - logger:51 - Key released: space, current text: git 
+2025-01-23 19:39:50,739 - AITerm - INFO - logger:54 - Updating suggestions for text: 'git '
+2025-01-23 19:39:50,739 - AITerm - INFO - logger:54 - Getting suggestions for text: 'git'
+2025-01-23 19:39:50,739 - AITerm - INFO - logger:54 - Prefix matches for 'git': ['git']
+2025-01-23 19:39:50,739 - AITerm - INFO - logger:54 - Fuzzy matches for 'git': ['git', 'wget', 'gzip', 'zip']
+2025-01-23 19:39:50,739 - AITerm - INFO - logger:54 - New fuzzy matches: ['wget', 'gzip', 'zip']
+2025-01-23 19:39:50,739 - AITerm - INFO - logger:54 - Final suggestions: ['git', 'wget', 'gzip', 'zip']
+2025-01-23 19:39:50,739 - AITerm - INFO - logger:54 - Got suggestions: ['git', 'wget', 'gzip', 'zip']
+2025-01-23 19:39:50,740 - AITerm - INFO - logger:54 - Showing dropdown with 4 suggestions at (134, 672)
+2025-01-23 19:39:50,741 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 19:39:50,741 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 19:39:50,908 - AITerm - DEBUG - logger:51 - Key released: s, current text: git sh
+2025-01-23 19:39:50,908 - AITerm - INFO - logger:54 - Updating suggestions for text: 'git sh'
+2025-01-23 19:39:50,908 - AITerm - INFO - logger:54 - Getting suggestions for text: 'git'
+2025-01-23 19:39:50,908 - AITerm - INFO - logger:54 - Trying path completion for: ./sh*
+2025-01-23 19:39:50,908 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:39:50,908 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:50,908 - AITerm - INFO - logger:54 - Hiding dropdown
+2025-01-23 19:39:51,064 - AITerm - DEBUG - logger:51 - Key released: h, current text: git shwo
+2025-01-23 19:39:51,064 - AITerm - INFO - logger:54 - Updating suggestions for text: 'git shwo'
+2025-01-23 19:39:51,064 - AITerm - INFO - logger:54 - Getting suggestions for text: 'git'
+2025-01-23 19:39:51,064 - AITerm - INFO - logger:54 - Trying path completion for: ./shwo*
+2025-01-23 19:39:51,064 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:39:51,064 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:51,109 - AITerm - DEBUG - logger:51 - Key released: o, current text: git shwo
+2025-01-23 19:39:51,109 - AITerm - INFO - logger:54 - Updating suggestions for text: 'git shwo'
+2025-01-23 19:39:51,109 - AITerm - INFO - logger:54 - Getting suggestions for text: 'git'
+2025-01-23 19:39:51,109 - AITerm - INFO - logger:54 - Trying path completion for: ./shwo*
+2025-01-23 19:39:51,109 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:39:51,109 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:51,142 - AITerm - DEBUG - logger:51 - Key released: w, current text: git shwo
+2025-01-23 19:39:51,142 - AITerm - INFO - logger:54 - Updating suggestions for text: 'git shwo'
+2025-01-23 19:39:51,142 - AITerm - INFO - logger:54 - Getting suggestions for text: 'git'
+2025-01-23 19:39:51,142 - AITerm - INFO - logger:54 - Trying path completion for: ./shwo*
+2025-01-23 19:39:51,143 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:39:51,143 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:51,301 - AITerm - DEBUG - logger:51 - Key released: space, current text: git shwo 
+2025-01-23 19:39:51,302 - AITerm - INFO - logger:54 - Updating suggestions for text: 'git shwo '
+2025-01-23 19:39:51,302 - AITerm - INFO - logger:54 - Getting suggestions for text: 'git'
+2025-01-23 19:39:51,302 - AITerm - INFO - logger:54 - Trying path completion for: ./shwo*
+2025-01-23 19:39:51,302 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:39:51,302 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:51,571 - AITerm - DEBUG - logger:51 - Key released: l, current text: git shwo l
+2025-01-23 19:39:51,572 - AITerm - INFO - logger:54 - Updating suggestions for text: 'git shwo l'
+2025-01-23 19:39:51,572 - AITerm - INFO - logger:54 - Getting suggestions for text: 'git'
+2025-01-23 19:39:51,572 - AITerm - INFO - logger:54 - Trying path completion for: ./l*
+2025-01-23 19:39:51,572 - AITerm - INFO - logger:54 - Path suggestions: ['git shwo ./logs/']
+2025-01-23 19:39:51,572 - AITerm - INFO - logger:54 - Final suggestions: ['git shwo ./logs/']
+2025-01-23 19:39:51,572 - AITerm - INFO - logger:54 - Got suggestions: ['git shwo ./logs/']
+2025-01-23 19:39:51,572 - AITerm - INFO - logger:54 - Showing dropdown with 1 suggestions at (134, 672)
+2025-01-23 19:39:51,573 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 19:39:51,575 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 19:39:51,695 - AITerm - DEBUG - logger:51 - Key released: a, current text: git shwo la
+2025-01-23 19:39:51,695 - AITerm - INFO - logger:54 - Updating suggestions for text: 'git shwo la'
+2025-01-23 19:39:51,695 - AITerm - INFO - logger:54 - Getting suggestions for text: 'git'
+2025-01-23 19:39:51,695 - AITerm - INFO - logger:54 - Trying path completion for: ./la*
+2025-01-23 19:39:51,696 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:39:51,696 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:51,696 - AITerm - INFO - logger:54 - Hiding dropdown
+2025-01-23 19:39:51,943 - AITerm - DEBUG - logger:51 - Key released: BackSpace, current text: git shwo l
+2025-01-23 19:39:51,943 - AITerm - INFO - logger:54 - Updating suggestions for text: 'git shwo l'
+2025-01-23 19:39:51,943 - AITerm - INFO - logger:54 - Getting suggestions for text: 'git'
+2025-01-23 19:39:51,943 - AITerm - INFO - logger:54 - Trying path completion for: ./l*
+2025-01-23 19:39:51,943 - AITerm - INFO - logger:54 - Path suggestions: ['git shwo ./logs/']
+2025-01-23 19:39:51,943 - AITerm - INFO - logger:54 - Final suggestions: ['git shwo ./logs/']
+2025-01-23 19:39:51,943 - AITerm - INFO - logger:54 - Got suggestions: ['git shwo ./logs/']
+2025-01-23 19:39:51,944 - AITerm - INFO - logger:54 - Showing dropdown with 1 suggestions at (134, 672)
+2025-01-23 19:39:51,944 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 19:39:51,946 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 19:39:52,078 - AITerm - DEBUG - logger:51 - Key released: BackSpace, current text: git shwo 
+2025-01-23 19:39:52,078 - AITerm - INFO - logger:54 - Updating suggestions for text: 'git shwo '
+2025-01-23 19:39:52,078 - AITerm - INFO - logger:54 - Getting suggestions for text: 'git'
+2025-01-23 19:39:52,078 - AITerm - INFO - logger:54 - Trying path completion for: ./shwo*
+2025-01-23 19:39:52,078 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:39:52,078 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:52,078 - AITerm - INFO - logger:54 - Hiding dropdown
+2025-01-23 19:39:52,224 - AITerm - DEBUG - logger:51 - Key released: BackSpace, current text: git shwo
+2025-01-23 19:39:52,224 - AITerm - INFO - logger:54 - Updating suggestions for text: 'git shwo'
+2025-01-23 19:39:52,224 - AITerm - INFO - logger:54 - Getting suggestions for text: 'git'
+2025-01-23 19:39:52,224 - AITerm - INFO - logger:54 - Trying path completion for: ./shwo*
+2025-01-23 19:39:52,225 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:39:52,225 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:52,370 - AITerm - DEBUG - logger:51 - Key released: BackSpace, current text: git shw
+2025-01-23 19:39:52,370 - AITerm - INFO - logger:54 - Updating suggestions for text: 'git shw'
+2025-01-23 19:39:52,370 - AITerm - INFO - logger:54 - Getting suggestions for text: 'git'
+2025-01-23 19:39:52,370 - AITerm - INFO - logger:54 - Trying path completion for: ./shw*
+2025-01-23 19:39:52,370 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:39:52,371 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:52,527 - AITerm - DEBUG - logger:51 - Key released: BackSpace, current text: git sh
+2025-01-23 19:39:52,527 - AITerm - INFO - logger:54 - Updating suggestions for text: 'git sh'
+2025-01-23 19:39:52,528 - AITerm - INFO - logger:54 - Getting suggestions for text: 'git'
+2025-01-23 19:39:52,528 - AITerm - INFO - logger:54 - Trying path completion for: ./sh*
+2025-01-23 19:39:52,528 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:39:52,528 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:52,854 - AITerm - DEBUG - logger:51 - Key released: o, current text: git sho
+2025-01-23 19:39:52,854 - AITerm - INFO - logger:54 - Updating suggestions for text: 'git sho'
+2025-01-23 19:39:52,854 - AITerm - INFO - logger:54 - Getting suggestions for text: 'git'
+2025-01-23 19:39:52,854 - AITerm - INFO - logger:54 - Trying path completion for: ./sho*
+2025-01-23 19:39:52,854 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:39:52,854 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:53,057 - AITerm - DEBUG - logger:51 - Key released: w, current text: git show
+2025-01-23 19:39:53,057 - AITerm - INFO - logger:54 - Updating suggestions for text: 'git show'
+2025-01-23 19:39:53,057 - AITerm - INFO - logger:54 - Getting suggestions for text: 'git'
+2025-01-23 19:39:53,057 - AITerm - INFO - logger:54 - Trying path completion for: ./show*
+2025-01-23 19:39:53,057 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:39:53,057 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:53,203 - AITerm - DEBUG - logger:51 - Key released: space, current text: git show 
+2025-01-23 19:39:53,203 - AITerm - INFO - logger:54 - Updating suggestions for text: 'git show '
+2025-01-23 19:39:53,203 - AITerm - INFO - logger:54 - Getting suggestions for text: 'git'
+2025-01-23 19:39:53,203 - AITerm - INFO - logger:54 - Trying path completion for: ./show*
+2025-01-23 19:39:53,204 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:39:53,204 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:53,495 - AITerm - DEBUG - logger:51 - Key released: l, current text: git show l
+2025-01-23 19:39:53,495 - AITerm - INFO - logger:54 - Updating suggestions for text: 'git show l'
+2025-01-23 19:39:53,495 - AITerm - INFO - logger:54 - Getting suggestions for text: 'git'
+2025-01-23 19:39:53,495 - AITerm - INFO - logger:54 - Trying path completion for: ./l*
+2025-01-23 19:39:53,496 - AITerm - INFO - logger:54 - Path suggestions: ['git show ./logs/']
+2025-01-23 19:39:53,496 - AITerm - INFO - logger:54 - Final suggestions: ['git show ./logs/']
+2025-01-23 19:39:53,496 - AITerm - INFO - logger:54 - Got suggestions: ['git show ./logs/']
+2025-01-23 19:39:53,496 - AITerm - INFO - logger:54 - Showing dropdown with 1 suggestions at (134, 672)
+2025-01-23 19:39:53,496 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 19:39:53,499 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 19:39:54,587 - AITerm - DEBUG - logger:51 - Key released: a, current text: git show las
+2025-01-23 19:39:54,587 - AITerm - INFO - logger:54 - Updating suggestions for text: 'git show las'
+2025-01-23 19:39:54,587 - AITerm - INFO - logger:54 - Getting suggestions for text: 'git'
+2025-01-23 19:39:54,587 - AITerm - INFO - logger:54 - Trying path completion for: ./las*
+2025-01-23 19:39:54,588 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:39:54,588 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:54,588 - AITerm - INFO - logger:54 - Hiding dropdown
+2025-01-23 19:39:54,733 - AITerm - DEBUG - logger:51 - Key released: s, current text: git show las
+2025-01-23 19:39:54,733 - AITerm - INFO - logger:54 - Updating suggestions for text: 'git show las'
+2025-01-23 19:39:54,733 - AITerm - INFO - logger:54 - Getting suggestions for text: 'git'
+2025-01-23 19:39:54,733 - AITerm - INFO - logger:54 - Trying path completion for: ./las*
+2025-01-23 19:39:54,733 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:39:54,733 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:54,924 - AITerm - DEBUG - logger:51 - Key released: t, current text: git show last
+2025-01-23 19:39:54,924 - AITerm - INFO - logger:54 - Updating suggestions for text: 'git show last'
+2025-01-23 19:39:54,924 - AITerm - INFO - logger:54 - Getting suggestions for text: 'git'
+2025-01-23 19:39:54,924 - AITerm - INFO - logger:54 - Trying path completion for: ./last*
+2025-01-23 19:39:54,924 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:39:54,924 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:55,070 - AITerm - DEBUG - logger:51 - Key released: space, current text: git show last 
+2025-01-23 19:39:55,070 - AITerm - INFO - logger:54 - Updating suggestions for text: 'git show last '
+2025-01-23 19:39:55,070 - AITerm - INFO - logger:54 - Getting suggestions for text: 'git'
+2025-01-23 19:39:55,070 - AITerm - INFO - logger:54 - Trying path completion for: ./last*
+2025-01-23 19:39:55,071 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:39:55,071 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:55,948 - AITerm - DEBUG - logger:51 - Key released: 2, current text: git show last 2
+2025-01-23 19:39:55,948 - AITerm - INFO - logger:54 - Updating suggestions for text: 'git show last 2'
+2025-01-23 19:39:55,948 - AITerm - INFO - logger:54 - Getting suggestions for text: 'git'
+2025-01-23 19:39:55,948 - AITerm - INFO - logger:54 - Trying path completion for: ./2*
+2025-01-23 19:39:55,948 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:39:55,948 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:56,115 - AITerm - DEBUG - logger:51 - Key released: space, current text: git show last 2 
+2025-01-23 19:39:56,115 - AITerm - INFO - logger:54 - Updating suggestions for text: 'git show last 2 '
+2025-01-23 19:39:56,115 - AITerm - INFO - logger:54 - Getting suggestions for text: 'git'
+2025-01-23 19:39:56,115 - AITerm - INFO - logger:54 - Trying path completion for: ./2*
+2025-01-23 19:39:56,116 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:39:56,116 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:56,353 - AITerm - DEBUG - logger:51 - Key released: c, current text: git show last 2 co
+2025-01-23 19:39:56,353 - AITerm - INFO - logger:54 - Updating suggestions for text: 'git show last 2 co'
+2025-01-23 19:39:56,353 - AITerm - INFO - logger:54 - Getting suggestions for text: 'git'
+2025-01-23 19:39:56,353 - AITerm - INFO - logger:54 - Trying path completion for: ./co*
+2025-01-23 19:39:56,353 - AITerm - INFO - logger:54 - Path suggestions: ['git show last 2 ./config.py']
+2025-01-23 19:39:56,353 - AITerm - INFO - logger:54 - Final suggestions: ['git show last 2 ./config.py']
+2025-01-23 19:39:56,353 - AITerm - INFO - logger:54 - Got suggestions: ['git show last 2 ./config.py']
+2025-01-23 19:39:56,353 - AITerm - INFO - logger:54 - Showing dropdown with 1 suggestions at (134, 672)
+2025-01-23 19:39:56,354 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 19:39:56,357 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 19:39:56,397 - AITerm - DEBUG - logger:51 - Key released: o, current text: git show last 2 co
+2025-01-23 19:39:56,397 - AITerm - INFO - logger:54 - Updating suggestions for text: 'git show last 2 co'
+2025-01-23 19:39:56,398 - AITerm - INFO - logger:54 - Getting suggestions for text: 'git'
+2025-01-23 19:39:56,398 - AITerm - INFO - logger:54 - Trying path completion for: ./co*
+2025-01-23 19:39:56,398 - AITerm - INFO - logger:54 - Path suggestions: ['git show last 2 ./config.py']
+2025-01-23 19:39:56,398 - AITerm - INFO - logger:54 - Final suggestions: ['git show last 2 ./config.py']
+2025-01-23 19:39:56,398 - AITerm - INFO - logger:54 - Got suggestions: ['git show last 2 ./config.py']
+2025-01-23 19:39:56,398 - AITerm - INFO - logger:54 - Showing dropdown with 1 suggestions at (134, 672)
+2025-01-23 19:39:56,399 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 19:39:56,400 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 19:39:56,645 - AITerm - DEBUG - logger:51 - Key released: m, current text: git show last 2 com
+2025-01-23 19:39:56,645 - AITerm - INFO - logger:54 - Updating suggestions for text: 'git show last 2 com'
+2025-01-23 19:39:56,645 - AITerm - INFO - logger:54 - Getting suggestions for text: 'git'
+2025-01-23 19:39:56,645 - AITerm - INFO - logger:54 - Trying path completion for: ./com*
+2025-01-23 19:39:56,646 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:39:56,646 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:56,646 - AITerm - INFO - logger:54 - Hiding dropdown
+2025-01-23 19:39:56,859 - AITerm - DEBUG - logger:51 - Key released: m, current text: git show last 2 commi
+2025-01-23 19:39:56,859 - AITerm - INFO - logger:54 - Updating suggestions for text: 'git show last 2 commi'
+2025-01-23 19:39:56,859 - AITerm - INFO - logger:54 - Getting suggestions for text: 'git'
+2025-01-23 19:39:56,859 - AITerm - INFO - logger:54 - Trying path completion for: ./commi*
+2025-01-23 19:39:56,859 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:39:56,859 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:56,971 - AITerm - DEBUG - logger:51 - Key released: i, current text: git show last 2 commi
+2025-01-23 19:39:56,971 - AITerm - INFO - logger:54 - Updating suggestions for text: 'git show last 2 commi'
+2025-01-23 19:39:56,972 - AITerm - INFO - logger:54 - Getting suggestions for text: 'git'
+2025-01-23 19:39:56,972 - AITerm - INFO - logger:54 - Trying path completion for: ./commi*
+2025-01-23 19:39:56,972 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:39:56,972 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:57,106 - AITerm - DEBUG - logger:51 - Key released: t, current text: git show last 2 commits
+2025-01-23 19:39:57,106 - AITerm - INFO - logger:54 - Updating suggestions for text: 'git show last 2 commits'
+2025-01-23 19:39:57,106 - AITerm - INFO - logger:54 - Getting suggestions for text: 'git'
+2025-01-23 19:39:57,106 - AITerm - INFO - logger:54 - Trying path completion for: ./commits*
+2025-01-23 19:39:57,106 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:39:57,106 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:57,298 - AITerm - DEBUG - logger:51 - Key released: s, current text: git show last 2 commits
+2025-01-23 19:39:57,298 - AITerm - INFO - logger:54 - Updating suggestions for text: 'git show last 2 commits'
+2025-01-23 19:39:57,298 - AITerm - INFO - logger:54 - Getting suggestions for text: 'git'
+2025-01-23 19:39:57,298 - AITerm - INFO - logger:54 - Trying path completion for: ./commits*
+2025-01-23 19:39:57,298 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:39:57,298 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:39:57,908 - AITerm - INFO - logger:54 - Interpreted command 'git show last 2 commits' as 'git log -n 2'
+2025-01-23 19:39:57,908 - AITerm - DEBUG - logger:51 - Starting PTY mode with command: git log -n 2
+2025-01-23 19:39:57,908 - AITerm - INFO - logger:54 - Initializing PseudoTerminal
+2025-01-23 19:39:57,908 - AITerm - DEBUG - logger:51 - Starting PTY with command: git log -n 2
+2025-01-23 19:39:57,924 - AITerm - DEBUG - logger:51 - PTY started successfully
+2025-01-23 19:40:01,472 - AITerm - INFO - logger:54 - Key event - keysym: q, state: 0, char: 'q'
+2025-01-23 19:40:01,472 - AITerm - INFO - logger:54 - Sending quit command (q)
+2025-01-23 19:40:01,556 - AITerm - DEBUG - logger:51 - Stopping pseudo-terminal
+2025-01-23 19:40:01,556 - AITerm - DEBUG - logger:51 - Attempting graceful process termination
+2025-01-23 19:40:01,556 - AITerm - DEBUG - logger:51 - Process terminated gracefully
+2025-01-23 19:40:01,556 - AITerm - DEBUG - logger:51 - Closed master file descriptor
+2025-01-23 19:40:01,556 - AITerm - DEBUG - logger:51 - PTY process exited
+2025-01-23 19:40:07,467 - AITerm - DEBUG - logger:51 - Key released: g, current text: gi
+2025-01-23 19:40:07,467 - AITerm - INFO - logger:54 - Updating suggestions for text: 'gi'
+2025-01-23 19:40:07,467 - AITerm - INFO - logger:54 - Getting suggestions for text: 'gi'
+2025-01-23 19:40:07,467 - AITerm - INFO - logger:54 - Prefix matches for 'gi': ['git']
+2025-01-23 19:40:07,468 - AITerm - INFO - logger:54 - Fuzzy matches for 'gi': ['git', 'gzip', 'zip', 'vim']
+2025-01-23 19:40:07,468 - AITerm - INFO - logger:54 - New fuzzy matches: ['gzip', 'zip', 'vim']
+2025-01-23 19:40:07,468 - AITerm - INFO - logger:54 - Final suggestions: ['git', 'gzip', 'zip', 'vim']
+2025-01-23 19:40:07,468 - AITerm - INFO - logger:54 - Got suggestions: ['git', 'gzip', 'zip', 'vim']
+2025-01-23 19:40:07,468 - AITerm - INFO - logger:54 - Showing dropdown with 4 suggestions at (134, 672)
+2025-01-23 19:40:07,468 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 19:40:07,472 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 19:40:07,545 - AITerm - DEBUG - logger:51 - Key released: i, current text: gi
+2025-01-23 19:40:07,545 - AITerm - INFO - logger:54 - Updating suggestions for text: 'gi'
+2025-01-23 19:40:07,545 - AITerm - INFO - logger:54 - Getting suggestions for text: 'gi'
+2025-01-23 19:40:07,546 - AITerm - INFO - logger:54 - Prefix matches for 'gi': ['git']
+2025-01-23 19:40:07,546 - AITerm - INFO - logger:54 - Fuzzy matches for 'gi': ['git', 'gzip', 'zip', 'vim']
+2025-01-23 19:40:07,546 - AITerm - INFO - logger:54 - New fuzzy matches: ['gzip', 'zip', 'vim']
+2025-01-23 19:40:07,546 - AITerm - INFO - logger:54 - Final suggestions: ['git', 'gzip', 'zip', 'vim']
+2025-01-23 19:40:07,546 - AITerm - INFO - logger:54 - Got suggestions: ['git', 'gzip', 'zip', 'vim']
+2025-01-23 19:40:07,546 - AITerm - INFO - logger:54 - Showing dropdown with 4 suggestions at (134, 672)
+2025-01-23 19:40:07,548 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 19:40:07,549 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 19:40:07,703 - AITerm - DEBUG - logger:51 - Key released: t, current text: git
+2025-01-23 19:40:07,703 - AITerm - INFO - logger:54 - Updating suggestions for text: 'git'
+2025-01-23 19:40:07,703 - AITerm - INFO - logger:54 - Getting suggestions for text: 'git'
+2025-01-23 19:40:07,703 - AITerm - INFO - logger:54 - Prefix matches for 'git': ['git']
+2025-01-23 19:40:07,704 - AITerm - INFO - logger:54 - Fuzzy matches for 'git': ['git', 'wget', 'gzip', 'zip']
+2025-01-23 19:40:07,704 - AITerm - INFO - logger:54 - New fuzzy matches: ['wget', 'gzip', 'zip']
+2025-01-23 19:40:07,704 - AITerm - INFO - logger:54 - Final suggestions: ['git', 'wget', 'gzip', 'zip']
+2025-01-23 19:40:07,704 - AITerm - INFO - logger:54 - Got suggestions: ['git', 'wget', 'gzip', 'zip']
+2025-01-23 19:40:07,704 - AITerm - INFO - logger:54 - Showing dropdown with 4 suggestions at (134, 672)
+2025-01-23 19:40:07,705 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 19:40:07,706 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 19:40:07,838 - AITerm - DEBUG - logger:51 - Key released: space, current text: git 
+2025-01-23 19:40:07,839 - AITerm - INFO - logger:54 - Updating suggestions for text: 'git '
+2025-01-23 19:40:07,839 - AITerm - INFO - logger:54 - Getting suggestions for text: 'git'
+2025-01-23 19:40:07,839 - AITerm - INFO - logger:54 - Prefix matches for 'git': ['git']
+2025-01-23 19:40:07,839 - AITerm - INFO - logger:54 - Fuzzy matches for 'git': ['git', 'wget', 'gzip', 'zip']
+2025-01-23 19:40:07,839 - AITerm - INFO - logger:54 - New fuzzy matches: ['wget', 'gzip', 'zip']
+2025-01-23 19:40:07,839 - AITerm - INFO - logger:54 - Final suggestions: ['git', 'wget', 'gzip', 'zip']
+2025-01-23 19:40:07,839 - AITerm - INFO - logger:54 - Got suggestions: ['git', 'wget', 'gzip', 'zip']
+2025-01-23 19:40:07,839 - AITerm - INFO - logger:54 - Showing dropdown with 4 suggestions at (134, 672)
+2025-01-23 19:40:07,840 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 19:40:07,841 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 19:40:08,255 - AITerm - DEBUG - logger:51 - Key released: s, current text: git sh
+2025-01-23 19:40:08,255 - AITerm - INFO - logger:54 - Updating suggestions for text: 'git sh'
+2025-01-23 19:40:08,255 - AITerm - INFO - logger:54 - Getting suggestions for text: 'git'
+2025-01-23 19:40:08,255 - AITerm - INFO - logger:54 - Trying path completion for: ./sh*
+2025-01-23 19:40:08,255 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:40:08,255 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:40:08,255 - AITerm - INFO - logger:54 - Hiding dropdown
+2025-01-23 19:40:08,377 - AITerm - DEBUG - logger:51 - Key released: h, current text: git sho
+2025-01-23 19:40:08,377 - AITerm - INFO - logger:54 - Updating suggestions for text: 'git sho'
+2025-01-23 19:40:08,377 - AITerm - INFO - logger:54 - Getting suggestions for text: 'git'
+2025-01-23 19:40:08,377 - AITerm - INFO - logger:54 - Trying path completion for: ./sho*
+2025-01-23 19:40:08,378 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:40:08,378 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:40:08,435 - AITerm - DEBUG - logger:51 - Key released: o, current text: git show
+2025-01-23 19:40:08,435 - AITerm - INFO - logger:54 - Updating suggestions for text: 'git show'
+2025-01-23 19:40:08,435 - AITerm - INFO - logger:54 - Getting suggestions for text: 'git'
+2025-01-23 19:40:08,435 - AITerm - INFO - logger:54 - Trying path completion for: ./show*
+2025-01-23 19:40:08,435 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:40:08,435 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:40:08,503 - AITerm - DEBUG - logger:51 - Key released: w, current text: git show
+2025-01-23 19:40:08,503 - AITerm - INFO - logger:54 - Updating suggestions for text: 'git show'
+2025-01-23 19:40:08,503 - AITerm - INFO - logger:54 - Getting suggestions for text: 'git'
+2025-01-23 19:40:08,503 - AITerm - INFO - logger:54 - Trying path completion for: ./show*
+2025-01-23 19:40:08,503 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:40:08,503 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:40:09,346 - AITerm - DEBUG - logger:51 - Key released: space, current text: git show 
+2025-01-23 19:40:09,346 - AITerm - INFO - logger:54 - Updating suggestions for text: 'git show '
+2025-01-23 19:40:09,346 - AITerm - INFO - logger:54 - Getting suggestions for text: 'git'
+2025-01-23 19:40:09,346 - AITerm - INFO - logger:54 - Trying path completion for: ./show*
+2025-01-23 19:40:09,346 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:40:09,346 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:40:09,695 - AITerm - DEBUG - logger:51 - Key released: r, current text: git show re
+2025-01-23 19:40:09,695 - AITerm - INFO - logger:54 - Updating suggestions for text: 'git show re'
+2025-01-23 19:40:09,695 - AITerm - INFO - logger:54 - Getting suggestions for text: 'git'
+2025-01-23 19:40:09,695 - AITerm - INFO - logger:54 - Trying path completion for: ./re*
+2025-01-23 19:40:09,695 - AITerm - INFO - logger:54 - Path suggestions: ['git show ./requirements.txt']
+2025-01-23 19:40:09,695 - AITerm - INFO - logger:54 - Final suggestions: ['git show ./requirements.txt']
+2025-01-23 19:40:09,695 - AITerm - INFO - logger:54 - Got suggestions: ['git show ./requirements.txt']
+2025-01-23 19:40:09,696 - AITerm - INFO - logger:54 - Showing dropdown with 1 suggestions at (134, 672)
+2025-01-23 19:40:09,696 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 19:40:09,699 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 19:40:09,762 - AITerm - DEBUG - logger:51 - Key released: e, current text: git show re
+2025-01-23 19:40:09,762 - AITerm - INFO - logger:54 - Updating suggestions for text: 'git show re'
+2025-01-23 19:40:09,762 - AITerm - INFO - logger:54 - Getting suggestions for text: 'git'
+2025-01-23 19:40:09,762 - AITerm - INFO - logger:54 - Trying path completion for: ./re*
+2025-01-23 19:40:09,763 - AITerm - INFO - logger:54 - Path suggestions: ['git show ./requirements.txt']
+2025-01-23 19:40:09,763 - AITerm - INFO - logger:54 - Final suggestions: ['git show ./requirements.txt']
+2025-01-23 19:40:09,763 - AITerm - INFO - logger:54 - Got suggestions: ['git show ./requirements.txt']
+2025-01-23 19:40:09,763 - AITerm - INFO - logger:54 - Showing dropdown with 1 suggestions at (134, 672)
+2025-01-23 19:40:09,764 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 19:40:09,765 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 19:40:12,878 - AITerm - DEBUG - logger:51 - Key released: m, current text: git show remo
+2025-01-23 19:40:12,878 - AITerm - INFO - logger:54 - Updating suggestions for text: 'git show remo'
+2025-01-23 19:40:12,878 - AITerm - INFO - logger:54 - Getting suggestions for text: 'git'
+2025-01-23 19:40:12,878 - AITerm - INFO - logger:54 - Trying path completion for: ./remo*
+2025-01-23 19:40:12,879 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:40:12,879 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:40:12,879 - AITerm - INFO - logger:54 - Hiding dropdown
+2025-01-23 19:40:13,001 - AITerm - DEBUG - logger:51 - Key released: o, current text: git show remo
+2025-01-23 19:40:13,001 - AITerm - INFO - logger:54 - Updating suggestions for text: 'git show remo'
+2025-01-23 19:40:13,001 - AITerm - INFO - logger:54 - Getting suggestions for text: 'git'
+2025-01-23 19:40:13,001 - AITerm - INFO - logger:54 - Trying path completion for: ./remo*
+2025-01-23 19:40:13,002 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:40:13,002 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:40:13,339 - AITerm - DEBUG - logger:51 - Key released: t, current text: git show remote
+2025-01-23 19:40:13,340 - AITerm - INFO - logger:54 - Updating suggestions for text: 'git show remote'
+2025-01-23 19:40:13,340 - AITerm - INFO - logger:54 - Getting suggestions for text: 'git'
+2025-01-23 19:40:13,340 - AITerm - INFO - logger:54 - Trying path completion for: ./remote*
+2025-01-23 19:40:13,340 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:40:13,340 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:40:13,418 - AITerm - DEBUG - logger:51 - Key released: e, current text: git show remote
+2025-01-23 19:40:13,418 - AITerm - INFO - logger:54 - Updating suggestions for text: 'git show remote'
+2025-01-23 19:40:13,418 - AITerm - INFO - logger:54 - Getting suggestions for text: 'git'
+2025-01-23 19:40:13,418 - AITerm - INFO - logger:54 - Trying path completion for: ./remote*
+2025-01-23 19:40:13,419 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:40:13,419 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:40:13,542 - AITerm - DEBUG - logger:51 - Key released: space, current text: git show remote 
+2025-01-23 19:40:13,542 - AITerm - INFO - logger:54 - Updating suggestions for text: 'git show remote '
+2025-01-23 19:40:13,542 - AITerm - INFO - logger:54 - Getting suggestions for text: 'git'
+2025-01-23 19:40:13,543 - AITerm - INFO - logger:54 - Trying path completion for: ./remote*
+2025-01-23 19:40:13,543 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:40:13,543 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:40:13,767 - AITerm - DEBUG - logger:51 - Key released: s, current text: git show remote s
+2025-01-23 19:40:13,767 - AITerm - INFO - logger:54 - Updating suggestions for text: 'git show remote s'
+2025-01-23 19:40:13,767 - AITerm - INFO - logger:54 - Getting suggestions for text: 'git'
+2025-01-23 19:40:13,767 - AITerm - INFO - logger:54 - Trying path completion for: ./s*
+2025-01-23 19:40:13,768 - AITerm - INFO - logger:54 - Path suggestions: ['git show remote ./setup.py', 'git show remote ./src/']
+2025-01-23 19:40:13,768 - AITerm - INFO - logger:54 - Final suggestions: ['git show remote ./setup.py', 'git show remote ./src/']
+2025-01-23 19:40:13,768 - AITerm - INFO - logger:54 - Got suggestions: ['git show remote ./setup.py', 'git show remote ./src/']
+2025-01-23 19:40:13,768 - AITerm - INFO - logger:54 - Showing dropdown with 2 suggestions at (134, 672)
+2025-01-23 19:40:13,768 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 19:40:13,771 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 19:40:13,903 - AITerm - DEBUG - logger:51 - Key released: t, current text: git show remote sta
+2025-01-23 19:40:13,904 - AITerm - INFO - logger:54 - Updating suggestions for text: 'git show remote sta'
+2025-01-23 19:40:13,904 - AITerm - INFO - logger:54 - Getting suggestions for text: 'git'
+2025-01-23 19:40:13,904 - AITerm - INFO - logger:54 - Trying path completion for: ./sta*
+2025-01-23 19:40:13,904 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:40:13,904 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:40:13,904 - AITerm - INFO - logger:54 - Hiding dropdown
+2025-01-23 19:40:13,991 - AITerm - DEBUG - logger:51 - Key released: a, current text: git show remote stat
+2025-01-23 19:40:13,991 - AITerm - INFO - logger:54 - Updating suggestions for text: 'git show remote stat'
+2025-01-23 19:40:13,991 - AITerm - INFO - logger:54 - Getting suggestions for text: 'git'
+2025-01-23 19:40:13,991 - AITerm - INFO - logger:54 - Trying path completion for: ./stat*
+2025-01-23 19:40:13,992 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:40:13,992 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:40:14,104 - AITerm - DEBUG - logger:51 - Key released: t, current text: git show remote statu
+2025-01-23 19:40:14,104 - AITerm - INFO - logger:54 - Updating suggestions for text: 'git show remote statu'
+2025-01-23 19:40:14,104 - AITerm - INFO - logger:54 - Getting suggestions for text: 'git'
+2025-01-23 19:40:14,104 - AITerm - INFO - logger:54 - Trying path completion for: ./statu*
+2025-01-23 19:40:14,105 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:40:14,105 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:40:14,193 - AITerm - DEBUG - logger:51 - Key released: u, current text: git show remote status
+2025-01-23 19:40:14,193 - AITerm - INFO - logger:54 - Updating suggestions for text: 'git show remote status'
+2025-01-23 19:40:14,193 - AITerm - INFO - logger:54 - Getting suggestions for text: 'git'
+2025-01-23 19:40:14,193 - AITerm - INFO - logger:54 - Trying path completion for: ./status*
+2025-01-23 19:40:14,194 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:40:14,194 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:40:14,352 - AITerm - DEBUG - logger:51 - Key released: s, current text: git show remote status
+2025-01-23 19:40:14,352 - AITerm - INFO - logger:54 - Updating suggestions for text: 'git show remote status'
+2025-01-23 19:40:14,352 - AITerm - INFO - logger:54 - Getting suggestions for text: 'git'
+2025-01-23 19:40:14,352 - AITerm - INFO - logger:54 - Trying path completion for: ./status*
+2025-01-23 19:40:14,352 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 19:40:14,352 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:40:14,984 - AITerm - INFO - logger:54 - Interpreted command 'git show remote status' as 'git remote -v'
+2025-01-23 19:40:14,984 - AITerm - INFO - logger:54 - Executing command: git remote -v in /Volumes/wd/code/Python/AITerm
+2025-01-23 19:40:15,044 - AITerm - DEBUG - logger:51 - Command stdout: origin	https://github.com/somaria/AITerm.git (fetch)
+origin	https://github.com/somaria/AITerm.git (push)
+
+2025-01-23 19:40:15,044 - AITerm - DEBUG - logger:51 - Command stderr: 
+2025-01-23 19:40:15,049 - AITerm - DEBUG - logger:51 - Key released: Return, current text: 
+2025-01-23 19:40:15,049 - AITerm - INFO - logger:54 - Updating suggestions for text: ''
+2025-01-23 19:40:15,049 - AITerm - INFO - logger:54 - No text to get suggestions for
+2025-01-23 19:40:15,049 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:40:24,857 - AITerm - DEBUG - logger:51 - Key released: c, current text: cl
+2025-01-23 19:40:24,857 - AITerm - INFO - logger:54 - Updating suggestions for text: 'cl'
+2025-01-23 19:40:24,857 - AITerm - INFO - logger:54 - Getting suggestions for text: 'cl'
+2025-01-23 19:40:24,857 - AITerm - INFO - logger:54 - Prefix matches for 'cl': ['clear']
+2025-01-23 19:40:24,857 - AITerm - INFO - logger:54 - Fuzzy matches for 'cl': ['curl', 'clear', 'wc', 'ls']
+2025-01-23 19:40:24,857 - AITerm - INFO - logger:54 - New fuzzy matches: ['curl', 'wc', 'ls']
+2025-01-23 19:40:24,858 - AITerm - INFO - logger:54 - Final suggestions: ['clear', 'curl', 'wc', 'ls']
+2025-01-23 19:40:24,858 - AITerm - INFO - logger:54 - Got suggestions: ['clear', 'curl', 'wc', 'ls']
+2025-01-23 19:40:24,858 - AITerm - INFO - logger:54 - Showing dropdown with 4 suggestions at (134, 672)
+2025-01-23 19:40:24,858 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 19:40:24,861 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 19:40:24,937 - AITerm - DEBUG - logger:51 - Key released: l, current text: cl
+2025-01-23 19:40:24,937 - AITerm - INFO - logger:54 - Updating suggestions for text: 'cl'
+2025-01-23 19:40:24,937 - AITerm - INFO - logger:54 - Getting suggestions for text: 'cl'
+2025-01-23 19:40:24,937 - AITerm - INFO - logger:54 - Prefix matches for 'cl': ['clear']
+2025-01-23 19:40:24,937 - AITerm - INFO - logger:54 - Fuzzy matches for 'cl': ['curl', 'clear', 'wc', 'ls']
+2025-01-23 19:40:24,937 - AITerm - INFO - logger:54 - New fuzzy matches: ['curl', 'wc', 'ls']
+2025-01-23 19:40:24,937 - AITerm - INFO - logger:54 - Final suggestions: ['clear', 'curl', 'wc', 'ls']
+2025-01-23 19:40:24,937 - AITerm - INFO - logger:54 - Got suggestions: ['clear', 'curl', 'wc', 'ls']
+2025-01-23 19:40:24,937 - AITerm - INFO - logger:54 - Showing dropdown with 4 suggestions at (134, 672)
+2025-01-23 19:40:24,938 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 19:40:24,939 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 19:40:25,106 - AITerm - DEBUG - logger:51 - Key released: e, current text: cle
+2025-01-23 19:40:25,106 - AITerm - INFO - logger:54 - Updating suggestions for text: 'cle'
+2025-01-23 19:40:25,106 - AITerm - INFO - logger:54 - Getting suggestions for text: 'cle'
+2025-01-23 19:40:25,106 - AITerm - INFO - logger:54 - Prefix matches for 'cle': ['clear']
+2025-01-23 19:40:25,106 - AITerm - INFO - logger:54 - Fuzzy matches for 'cle': ['clear', 'less', 'curl', 'locate']
+2025-01-23 19:40:25,106 - AITerm - INFO - logger:54 - New fuzzy matches: ['less', 'curl', 'locate']
+2025-01-23 19:40:25,106 - AITerm - INFO - logger:54 - Final suggestions: ['clear', 'less', 'curl', 'locate']
+2025-01-23 19:40:25,106 - AITerm - INFO - logger:54 - Got suggestions: ['clear', 'less', 'curl', 'locate']
+2025-01-23 19:40:25,106 - AITerm - INFO - logger:54 - Showing dropdown with 4 suggestions at (134, 672)
+2025-01-23 19:40:25,108 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 19:40:25,108 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 19:40:25,251 - AITerm - DEBUG - logger:51 - Key released: a, current text: clea
+2025-01-23 19:40:25,251 - AITerm - INFO - logger:54 - Updating suggestions for text: 'clea'
+2025-01-23 19:40:25,251 - AITerm - INFO - logger:54 - Getting suggestions for text: 'clea'
+2025-01-23 19:40:25,251 - AITerm - INFO - logger:54 - Prefix matches for 'clea': ['clear']
+2025-01-23 19:40:25,252 - AITerm - INFO - logger:54 - Fuzzy matches for 'clea': ['clear', 'cat', 'less', 'head']
+2025-01-23 19:40:25,252 - AITerm - INFO - logger:54 - New fuzzy matches: ['cat', 'less', 'head']
+2025-01-23 19:40:25,252 - AITerm - INFO - logger:54 - Final suggestions: ['clear', 'cat', 'less', 'head']
+2025-01-23 19:40:25,252 - AITerm - INFO - logger:54 - Got suggestions: ['clear', 'cat', 'less', 'head']
+2025-01-23 19:40:25,252 - AITerm - INFO - logger:54 - Showing dropdown with 4 suggestions at (134, 672)
+2025-01-23 19:40:25,253 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 19:40:25,254 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 19:40:25,431 - AITerm - INFO - logger:54 - Hiding dropdown
+2025-01-23 19:40:26,104 - AITerm - INFO - logger:54 - Interpreted command 'clear' as 'clear'
+2025-01-23 19:40:26,104 - AITerm - INFO - logger:54 - Executing command: clear in /Volumes/wd/code/Python/AITerm
+2025-01-23 19:40:26,130 - AITerm - DEBUG - logger:51 - Command stdout: [3J[H[2J
+2025-01-23 19:40:26,130 - AITerm - DEBUG - logger:51 - Command stderr: 
+2025-01-23 19:40:26,136 - AITerm - DEBUG - logger:51 - Key released: r, current text: 
+2025-01-23 19:40:26,136 - AITerm - INFO - logger:54 - Updating suggestions for text: ''
+2025-01-23 19:40:26,136 - AITerm - INFO - logger:54 - No text to get suggestions for
+2025-01-23 19:40:26,136 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:40:26,136 - AITerm - DEBUG - logger:51 - Key released: Return, current text: 
+2025-01-23 19:40:26,136 - AITerm - INFO - logger:54 - Updating suggestions for text: ''
+2025-01-23 19:40:26,136 - AITerm - INFO - logger:54 - No text to get suggestions for
+2025-01-23 19:40:26,136 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:40:28,178 - AITerm - DEBUG - logger:51 - Key released: c, current text: cl
+2025-01-23 19:40:28,178 - AITerm - INFO - logger:54 - Updating suggestions for text: 'cl'
+2025-01-23 19:40:28,178 - AITerm - INFO - logger:54 - Getting suggestions for text: 'cl'
+2025-01-23 19:40:28,178 - AITerm - INFO - logger:54 - Prefix matches for 'cl': ['clear']
+2025-01-23 19:40:28,179 - AITerm - INFO - logger:54 - Fuzzy matches for 'cl': ['curl', 'clear', 'wc', 'ls']
+2025-01-23 19:40:28,179 - AITerm - INFO - logger:54 - New fuzzy matches: ['curl', 'wc', 'ls']
+2025-01-23 19:40:28,179 - AITerm - INFO - logger:54 - Final suggestions: ['clear', 'curl', 'wc', 'ls']
+2025-01-23 19:40:28,179 - AITerm - INFO - logger:54 - Got suggestions: ['clear', 'curl', 'wc', 'ls']
+2025-01-23 19:40:28,179 - AITerm - INFO - logger:54 - Showing dropdown with 4 suggestions at (134, 672)
+2025-01-23 19:40:28,180 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 19:40:28,188 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 19:40:28,290 - AITerm - DEBUG - logger:51 - Key released: l, current text: cl
+2025-01-23 19:40:28,290 - AITerm - INFO - logger:54 - Updating suggestions for text: 'cl'
+2025-01-23 19:40:28,290 - AITerm - INFO - logger:54 - Getting suggestions for text: 'cl'
+2025-01-23 19:40:28,290 - AITerm - INFO - logger:54 - Prefix matches for 'cl': ['clear']
+2025-01-23 19:40:28,291 - AITerm - INFO - logger:54 - Fuzzy matches for 'cl': ['curl', 'clear', 'wc', 'ls']
+2025-01-23 19:40:28,291 - AITerm - INFO - logger:54 - New fuzzy matches: ['curl', 'wc', 'ls']
+2025-01-23 19:40:28,291 - AITerm - INFO - logger:54 - Final suggestions: ['clear', 'curl', 'wc', 'ls']
+2025-01-23 19:40:28,291 - AITerm - INFO - logger:54 - Got suggestions: ['clear', 'curl', 'wc', 'ls']
+2025-01-23 19:40:28,291 - AITerm - INFO - logger:54 - Showing dropdown with 4 suggestions at (134, 672)
+2025-01-23 19:40:28,292 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 19:40:28,293 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 19:40:28,469 - AITerm - DEBUG - logger:51 - Key released: e, current text: clea
+2025-01-23 19:40:28,469 - AITerm - INFO - logger:54 - Updating suggestions for text: 'clea'
+2025-01-23 19:40:28,469 - AITerm - INFO - logger:54 - Getting suggestions for text: 'clea'
+2025-01-23 19:40:28,469 - AITerm - INFO - logger:54 - Prefix matches for 'clea': ['clear']
+2025-01-23 19:40:28,469 - AITerm - INFO - logger:54 - Fuzzy matches for 'clea': ['clear', 'cat', 'less', 'head']
+2025-01-23 19:40:28,469 - AITerm - INFO - logger:54 - New fuzzy matches: ['cat', 'less', 'head']
+2025-01-23 19:40:28,469 - AITerm - INFO - logger:54 - Final suggestions: ['clear', 'cat', 'less', 'head']
+2025-01-23 19:40:28,469 - AITerm - INFO - logger:54 - Got suggestions: ['clear', 'cat', 'less', 'head']
+2025-01-23 19:40:28,469 - AITerm - INFO - logger:54 - Showing dropdown with 4 suggestions at (134, 672)
+2025-01-23 19:40:28,470 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 19:40:28,471 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 19:40:28,604 - AITerm - DEBUG - logger:51 - Key released: a, current text: clear
+2025-01-23 19:40:28,604 - AITerm - INFO - logger:54 - Updating suggestions for text: 'clear'
+2025-01-23 19:40:28,604 - AITerm - INFO - logger:54 - Getting suggestions for text: 'clear'
+2025-01-23 19:40:28,604 - AITerm - INFO - logger:54 - Prefix matches for 'clear': ['clear']
+2025-01-23 19:40:28,604 - AITerm - INFO - logger:54 - Fuzzy matches for 'clear': ['clear', 'tar', 'cat', 'less']
+2025-01-23 19:40:28,604 - AITerm - INFO - logger:54 - New fuzzy matches: ['tar', 'cat', 'less']
+2025-01-23 19:40:28,605 - AITerm - INFO - logger:54 - Final suggestions: ['clear', 'tar', 'cat', 'less']
+2025-01-23 19:40:28,605 - AITerm - INFO - logger:54 - Got suggestions: ['clear', 'tar', 'cat', 'less']
+2025-01-23 19:40:28,605 - AITerm - INFO - logger:54 - Showing dropdown with 4 suggestions at (134, 672)
+2025-01-23 19:40:28,606 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 19:40:28,606 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 19:40:28,774 - AITerm - DEBUG - logger:51 - Key released: r, current text: clear
+2025-01-23 19:40:28,774 - AITerm - INFO - logger:54 - Updating suggestions for text: 'clear'
+2025-01-23 19:40:28,774 - AITerm - INFO - logger:54 - Getting suggestions for text: 'clear'
+2025-01-23 19:40:28,774 - AITerm - INFO - logger:54 - Prefix matches for 'clear': ['clear']
+2025-01-23 19:40:28,774 - AITerm - INFO - logger:54 - Fuzzy matches for 'clear': ['clear', 'tar', 'cat', 'less']
+2025-01-23 19:40:28,774 - AITerm - INFO - logger:54 - New fuzzy matches: ['tar', 'cat', 'less']
+2025-01-23 19:40:28,775 - AITerm - INFO - logger:54 - Final suggestions: ['clear', 'tar', 'cat', 'less']
+2025-01-23 19:40:28,775 - AITerm - INFO - logger:54 - Got suggestions: ['clear', 'tar', 'cat', 'less']
+2025-01-23 19:40:28,775 - AITerm - INFO - logger:54 - Showing dropdown with 4 suggestions at (134, 672)
+2025-01-23 19:40:28,776 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 19:40:28,777 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 19:40:28,785 - AITerm - INFO - logger:54 - Hiding dropdown
+2025-01-23 19:40:29,379 - AITerm - INFO - logger:54 - Interpreted command 'clear' as 'clear'
+2025-01-23 19:40:29,380 - AITerm - INFO - logger:54 - Executing command: clear in /Volumes/wd/code/Python/AITerm
+2025-01-23 19:40:29,409 - AITerm - DEBUG - logger:51 - Command stdout: [3J[H[2J
+2025-01-23 19:40:29,409 - AITerm - DEBUG - logger:51 - Command stderr: 
+2025-01-23 19:40:29,414 - AITerm - DEBUG - logger:51 - Key released: Return, current text: 
+2025-01-23 19:40:29,414 - AITerm - INFO - logger:54 - Updating suggestions for text: ''
+2025-01-23 19:40:29,414 - AITerm - INFO - logger:54 - No text to get suggestions for
+2025-01-23 19:40:29,414 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:40:36,007 - AITerm - DEBUG - logger:51 - Key event ignored - not in PTY mode
+2025-01-23 19:40:36,210 - AITerm - DEBUG - logger:51 - Key event ignored - not in PTY mode

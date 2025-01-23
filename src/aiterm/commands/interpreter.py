@@ -4,153 +4,80 @@ Command interpreter for AITerm
 
 import os
 import openai
+import logging
 from ..config import OPENAI_API_KEY, OPENAI_MODEL
 from .errors import CommandInterpretationError
 
 # Configure OpenAI
 openai.api_key = OPENAI_API_KEY
 
+# Get logger
+logger = logging.getLogger(__name__)
+
 class CommandInterpreter:
-    # Standard Unix/macOS commands that should bypass AI interpretation
-    STANDARD_COMMANDS = {
-        # File operations
-        'ls', 'cp', 'mv', 'rm', 'mkdir', 'rmdir', 'touch', 'chmod', 'chown',
-        # File viewing/editing
-        'cat', 'more', 'less', 'vim', 'vi', 'nano', 'tail', 'head', 'diff',
-        # Text processing
-        'grep', 'sed', 'awk', 'sort', 'uniq', 'wc', 'cut', 'paste',
-        # File search
-        'find', 'locate', 'which', 'whereis',
-        # Process management
-        'ps', 'kill', 'killall', 'top', 'htop',
-        # System info
-        'df', 'du', 'free', 'mount', 'umount', 'lsof',
-        # Network
-        'ping', 'netstat', 'curl', 'wget', 'ssh', 'telnet', 'nc',
-        # Archive
-        'tar', 'gzip', 'gunzip', 'zip', 'unzip',
-        # Shell built-ins
-        'pwd', 'echo', 'export', 'source', 'alias', 'unalias',
-        # Package management
-        'brew', 'port',
-        # Git commands
-        'git', 'svn',
-        # Others
-        'man', 'history', 'clear', 'exit', 'sudo', 'su', 'whoami', 'open'
-    }
-
-    # Common paths and their mappings
-    CD_PATHS = {
-        'home': '~',
-        'downloads': '~/Downloads',
-        'download': '~/Downloads',
-        'documents': '~/Documents',
-        'docs': '~/Documents',
-        'desktop': '~/Desktop',
-        'pictures': '~/Pictures',
-        'music': '~/Music',
-        'movies': '~/Movies',
-        'applications': '/Applications',
-        'apps': '/Applications',
-        'root': '/',
-        'tmp': '/tmp',
-        'temp': '/tmp'
-    }
-
     @staticmethod
     def interpret(user_input):
         """
         Interpret natural language input into terminal commands
         """
-        # Get the first word (command)
-        parts = user_input.split(maxsplit=1)
-        command = parts[0] if parts else ""
-
-        # If it's a standard command with proper syntax, use it directly
-        if command in CommandInterpreter.STANDARD_COMMANDS:
-            # Check if it's a complete command (has expected syntax)
-            if CommandInterpreter._is_valid_command(user_input):
-                return user_input
-
-        # Special handling for cd command to maintain directory navigation
-        if command == 'cd':
-            args = parts[1] if len(parts) > 1 else ""
-            # If no arguments or just 'cd', go to home directory
-            if not args:
-                return 'cd ~'
-                
-            # Clean up the argument
-            args = args.strip()
-            if args.startswith('cd '):  # Remove duplicate cd if present
-                args = args[3:].strip()
-                
-            # Check if the argument matches any special paths
-            arg_lower = args.lower().strip()
-            if arg_lower in CommandInterpreter.CD_PATHS:
-                return f'cd {CommandInterpreter.CD_PATHS[arg_lower]}'
-                
-            # Handle special cases
-            if arg_lower in ['~', '/', '.', '..', '-']:
-                return f'cd {arg_lower}'
-                
-            # Handle ... as ../..
-            if arg_lower == '...':
-                return 'cd ../..'
-            elif arg_lower == '....':
-                return 'cd ../../..'
-            elif arg_lower == '.....':
-                return 'cd ../../../..'
-                
-            # If it's already a path starting with standard markers, use it as is
-            if args.startswith(('~', '/', '.')):
-                return f'cd {args}'
-
-        # Use AI to interpret the command
+        logger.info(f"Interpreting command: {user_input}")
+        
+        # Handle git show commands directly without AI
+        lower_input = user_input.lower()
+        if any(phrase in lower_input for phrase in ['show last commit', 'show latest commit', 'show current commit']):
+            logger.info("Directly interpreting as 'git show HEAD'")
+            return 'git show HEAD'
+        elif any(phrase in lower_input for phrase in ['show previous commit', 'show earlier commit']):
+            logger.info("Directly interpreting as 'git show HEAD^'")
+            return 'git show HEAD^'
+        
+        # Use AI to interpret other commands
         try:
             response = openai.ChatCompletion.create(
                 model=OPENAI_MODEL,
                 messages=[
                     {"role": "system", "content": """You are a terminal command interpreter. Convert natural language into appropriate Unix/Linux terminal commands.
-                     - Respond with ONLY the command, no explanations
-                     - For git log commands, always include -n to limit output
-                     - For ls commands, prefer -F to show file types
-                     - Never use cd - in git commands
-                     - Keep commands simple and direct"""},
+                     Rules:
+                     1. Respond with ONLY the command, no explanations
+                     2. For git commands:
+                        - Use 'git show HEAD' for showing the latest/current/last commit
+                        - Use 'git show HEAD^' for showing the previous/earlier commit
+                        - Use 'git show HEAD~N' for showing N commits ago
+                        - Use 'git log -n X' to show last X commits
+                        - Use 'git status' to show current status
+                        - Use 'git diff' to show uncommitted changes
+                     3. For directory navigation:
+                        - Use 'pwd' to show current directory
+                        - Use 'ls -F' to show files with type indicators
+                        - Use 'ls -la' to show all files including hidden
+                     4. Keep commands simple and direct
+                     5. Use standard Unix commands when possible
+                     6. NEVER use ambiguous arguments like 'last' or 'previous' directly - always translate to proper git references like HEAD, HEAD^, etc."""},
                     {"role": "user", "content": user_input}
                 ],
-                temperature=0.3,
+                temperature=0.1,  # Lower temperature for more consistent output
                 max_tokens=50
             )
-            return response.choices[0].message['content'].strip()
+            interpreted = response.choices[0].message['content'].strip()
+            logger.info(f"AI interpreted command as: {interpreted}")
+            
+            # Special handling for cd to maintain directory navigation
+            if interpreted.startswith('cd '):
+                path = interpreted[3:].strip()
+                # Expand home directory
+                if path == '~' or path.startswith('~/'):
+                    path = os.path.expanduser(path)
+                # Handle relative paths
+                elif not path.startswith('/'):
+                    path = os.path.abspath(os.path.join(os.getcwd(), path))
+                return f'cd {path}'
+            
+            logger.info(f"Final command: {interpreted}")
+            return interpreted
+            
         except Exception as e:
+            logger.error(f"Error interpreting command: {str(e)}")
             raise CommandInterpretationError(str(e))
-
-    @staticmethod
-    def _is_valid_command(command_str):
-        """Check if the command string has valid syntax for standard commands"""
-        parts = command_str.split()
-        if not parts:
-            return False
-            
-        base_cmd = parts[0]
-        
-        # Common command patterns
-        if base_cmd == 'ls' and len(parts) <= 2:  # ls or ls <dir>
-            return True
-        if base_cmd == 'cd' and len(parts) <= 2:  # cd or cd <dir>
-            return True
-        if base_cmd == 'git' and len(parts) >= 2:  # git <subcommand> [args]
-            return True
-        if base_cmd in ['pwd', 'clear']:  # Commands with no args
-            return len(parts) == 1
-            
-        # For other commands, require proper flag syntax
-        for part in parts[1:]:
-            if part.startswith('-') and not part.startswith('--'):
-                if not all(c.isalpha() for c in part[1:]):
-                    return False
-                    
-        return True
 
 class CommandInterpretationError(Exception):
     """Exception raised when command interpretation fails"""

@@ -556,6 +556,17 @@ class TerminalGUI:
             # Show command in output
             self.append_output(f"\n{self.command_executor.working_directory}$ {command}")
             
+            # Handle built-in commands
+            if command == "history":
+                # Show command history with numbers
+                for i, cmd in enumerate(self.command_history[:-1], 1):  # Skip current history command
+                    self.append_output(f"{i:4d}  {cmd}")
+                return 'break'
+            elif command == "clear":
+                # Clear the output area
+                self.output_area.delete(1.0, tk.END)
+                return 'break'
+            
             # Execute command
             if self.in_pty_mode:
                 # In PTY mode, send command directly to PTY
@@ -563,22 +574,40 @@ class TerminalGUI:
             else:
                 # Use command interpreter in AI mode
                 if self.ai_mode.get():
-                    from ..commands.interpreter import CommandInterpreter
                     try:
                         interpreted_command = CommandInterpreter.interpret(command)
                         logger.info(f"Interpreted command '{command}' as '{interpreted_command}'")
-                        stdout, stderr = self.command_executor.execute(interpreted_command)
+                        
+                        # Check if command needs PTY mode
+                        needs_pty = any(cmd in interpreted_command for cmd in ['git show', 'git log', 'less', 'more', 'man'])
+                        
+                        if needs_pty:
+                            # Start PTY mode for the command
+                            self.start_pty_mode(interpreted_command)
+                        else:
+                            # Execute command directly
+                            stdout, stderr = self.command_executor.execute(interpreted_command)
+                            if stdout:
+                                self.append_output(stdout)
+                            if stderr:
+                                self.append_output(f"Error: {stderr}", 'red')
                     except Exception as e:
                         self.append_output(f"Error interpreting command: {str(e)}", 'red')
                         return 'break'
                 else:
                     # Execute command directly in non-AI mode
-                    stdout, stderr = self.command_executor.execute(command)
-                
-                if stdout:
-                    self.append_output(stdout)
-                if stderr:
-                    self.append_output(f"Error: {stderr}", 'red')
+                    needs_pty = any(cmd in command for cmd in ['git show', 'git log', 'less', 'more', 'man'])
+                    
+                    if needs_pty:
+                        # Start PTY mode for the command
+                        self.start_pty_mode(command)
+                    else:
+                        # Execute command directly
+                        stdout, stderr = self.command_executor.execute(command)
+                        if stdout:
+                            self.append_output(stdout)
+                        if stderr:
+                            self.append_output(f"Error: {stderr}", 'red')
                 
                 # Update prompt if directory changed
                 self.update_prompt()

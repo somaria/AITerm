@@ -6,11 +6,15 @@ from typing import List, Tuple
 
 class OutputFormatter:
     @staticmethod
-    def colorize_ls_output(output: str) -> List[Tuple[str, str]]:
+    def colorize_ls_output(output: str | Tuple[str, str]) -> List[Tuple[str, str]]:
         """
         Colorize ls command output based on file types
         Returns a list of (line, color) tuples
         """
+        # Handle tuple input (stdout, stderr)
+        if isinstance(output, tuple):
+            output = output[0]  # Use stdout
+            
         lines = output.split('\n')
         result = []
         for line in lines:
