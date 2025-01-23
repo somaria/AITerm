@@ -1,0 +1,259 @@
+2025-01-23 20:38:04,448 - AITerm - INFO - logger:48 - Logger initialized. Log file: logs/aiterm_20250123_203804.log
+2025-01-23 20:38:04,651 - AITerm - INFO - logger:54 - Initialized TerminalCompleter with 46 commands
+2025-01-23 20:38:04,651 - AITerm - INFO - logger:54 - Initializing SuggestionDropdown
+2025-01-23 20:38:04,676 - AITerm - INFO - logger:54 - SuggestionDropdown initialized and hidden
+2025-01-23 20:38:07,996 - AITerm - DEBUG - logger:51 - Key released: p, current text: pw
+2025-01-23 20:38:07,996 - AITerm - INFO - logger:54 - Updating suggestions for text: 'pw'
+2025-01-23 20:38:07,996 - AITerm - INFO - logger:54 - Getting suggestions for text: 'pw'
+2025-01-23 20:38:07,996 - AITerm - INFO - logger:54 - Prefix matches for 'pw': ['pwd']
+2025-01-23 20:38:07,997 - AITerm - INFO - logger:54 - Fuzzy matches for 'pw': ['pwd', 'wc', 'ps', 'cp']
+2025-01-23 20:38:07,997 - AITerm - INFO - logger:54 - New fuzzy matches: ['wc', 'ps', 'cp']
+2025-01-23 20:38:07,997 - AITerm - INFO - logger:54 - Final suggestions: ['pwd', 'wc', 'ps', 'cp']
+2025-01-23 20:38:07,997 - AITerm - INFO - logger:54 - Got suggestions: ['pwd', 'wc', 'ps', 'cp']
+2025-01-23 20:38:07,997 - AITerm - INFO - logger:54 - Showing dropdown with 4 suggestions at (134, 672)
+2025-01-23 20:38:07,997 - AITerm - INFO - logger:54 - Setting geometry to: 1x1+34+59
+2025-01-23 20:38:08,002 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 20:38:08,117 - AITerm - DEBUG - logger:51 - Key released: w, current text: pwd
+2025-01-23 20:38:08,117 - AITerm - INFO - logger:54 - Updating suggestions for text: 'pwd'
+2025-01-23 20:38:08,117 - AITerm - INFO - logger:54 - Getting suggestions for text: 'pwd'
+2025-01-23 20:38:08,117 - AITerm - INFO - logger:54 - Prefix matches for 'pwd': ['pwd']
+2025-01-23 20:38:08,117 - AITerm - INFO - logger:54 - Fuzzy matches for 'pwd': ['pwd', 'wc', 'ps', 'du']
+2025-01-23 20:38:08,117 - AITerm - INFO - logger:54 - New fuzzy matches: ['wc', 'ps', 'du']
+2025-01-23 20:38:08,117 - AITerm - INFO - logger:54 - Final suggestions: ['pwd', 'wc', 'ps', 'du']
+2025-01-23 20:38:08,117 - AITerm - INFO - logger:54 - Got suggestions: ['pwd', 'wc', 'ps', 'du']
+2025-01-23 20:38:08,118 - AITerm - INFO - logger:54 - Showing dropdown with 4 suggestions at (134, 672)
+2025-01-23 20:38:08,119 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 20:38:08,119 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 20:38:08,231 - AITerm - DEBUG - logger:51 - Key released: d, current text: pwd
+2025-01-23 20:38:08,231 - AITerm - INFO - logger:54 - Updating suggestions for text: 'pwd'
+2025-01-23 20:38:08,231 - AITerm - INFO - logger:54 - Getting suggestions for text: 'pwd'
+2025-01-23 20:38:08,231 - AITerm - INFO - logger:54 - Prefix matches for 'pwd': ['pwd']
+2025-01-23 20:38:08,231 - AITerm - INFO - logger:54 - Fuzzy matches for 'pwd': ['pwd', 'wc', 'ps', 'du']
+2025-01-23 20:38:08,231 - AITerm - INFO - logger:54 - New fuzzy matches: ['wc', 'ps', 'du']
+2025-01-23 20:38:08,231 - AITerm - INFO - logger:54 - Final suggestions: ['pwd', 'wc', 'ps', 'du']
+2025-01-23 20:38:08,231 - AITerm - INFO - logger:54 - Got suggestions: ['pwd', 'wc', 'ps', 'du']
+2025-01-23 20:38:08,232 - AITerm - INFO - logger:54 - Showing dropdown with 4 suggestions at (134, 672)
+2025-01-23 20:38:08,233 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 20:38:08,234 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 20:38:08,276 - AITerm - INFO - logger:54 - Hiding dropdown
+2025-01-23 20:38:08,793 - AITerm - INFO - logger:54 - Interpreted command 'pwd' as 'pwd'
+2025-01-23 20:38:08,793 - AITerm - INFO - logger:54 - Executing command: pwd in /Volumes/wd/code/Python/AITerm
+2025-01-23 20:38:08,811 - AITerm - DEBUG - logger:51 - Command stdout: /Volumes/wd/code/Python/AITerm
+
+2025-01-23 20:38:08,811 - AITerm - DEBUG - logger:51 - Command stderr: 
+2025-01-23 20:38:08,813 - AITerm - DEBUG - logger:51 - Key released: Return, current text: 
+2025-01-23 20:38:08,813 - AITerm - INFO - logger:54 - Updating suggestions for text: ''
+2025-01-23 20:38:08,813 - AITerm - INFO - logger:54 - No text to get suggestions for
+2025-01-23 20:38:08,813 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 20:38:10,481 - AITerm - DEBUG - logger:51 - Key released: c, current text: c
+2025-01-23 20:38:10,481 - AITerm - INFO - logger:54 - Updating suggestions for text: 'c'
+2025-01-23 20:38:10,481 - AITerm - INFO - logger:54 - Getting suggestions for text: 'c'
+2025-01-23 20:38:10,481 - AITerm - INFO - logger:54 - Prefix matches for 'c': ['cat', 'cd', 'clear', 'cp', 'curl']
+2025-01-23 20:38:10,481 - AITerm - INFO - logger:54 - Final suggestions: ['cat', 'cd', 'clear', 'cp', 'curl']
+2025-01-23 20:38:10,481 - AITerm - INFO - logger:54 - Got suggestions: ['cat', 'cd', 'clear', 'cp', 'curl']
+2025-01-23 20:38:10,481 - AITerm - INFO - logger:54 - Showing dropdown with 5 suggestions at (134, 672)
+2025-01-23 20:38:10,482 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 20:38:10,485 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 20:38:10,694 - AITerm - DEBUG - logger:51 - Key released: d, current text: cd
+2025-01-23 20:38:10,694 - AITerm - INFO - logger:54 - Updating suggestions for text: 'cd'
+2025-01-23 20:38:10,694 - AITerm - INFO - logger:54 - Getting suggestions for text: 'cd'
+2025-01-23 20:38:10,694 - AITerm - INFO - logger:54 - Prefix matches for 'cd': ['cd']
+2025-01-23 20:38:10,694 - AITerm - INFO - logger:54 - Fuzzy matches for 'cd': ['cd', 'wc', 'du', 'df']
+2025-01-23 20:38:10,694 - AITerm - INFO - logger:54 - New fuzzy matches: ['wc', 'du', 'df']
+2025-01-23 20:38:10,695 - AITerm - INFO - logger:54 - Final suggestions: ['cd', 'wc', 'du', 'df']
+2025-01-23 20:38:10,695 - AITerm - INFO - logger:54 - Got suggestions: ['cd', 'wc', 'du', 'df']
+2025-01-23 20:38:10,695 - AITerm - INFO - logger:54 - Showing dropdown with 4 suggestions at (134, 672)
+2025-01-23 20:38:10,696 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 20:38:10,697 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 20:38:10,819 - AITerm - DEBUG - logger:51 - Key released: space, current text: cd 
+2025-01-23 20:38:10,819 - AITerm - INFO - logger:54 - Updating suggestions for text: 'cd '
+2025-01-23 20:38:10,819 - AITerm - INFO - logger:54 - Getting suggestions for text: 'cd'
+2025-01-23 20:38:10,819 - AITerm - INFO - logger:54 - Prefix matches for 'cd': ['cd']
+2025-01-23 20:38:10,819 - AITerm - INFO - logger:54 - Fuzzy matches for 'cd': ['cd', 'wc', 'du', 'df']
+2025-01-23 20:38:10,819 - AITerm - INFO - logger:54 - New fuzzy matches: ['wc', 'du', 'df']
+2025-01-23 20:38:10,819 - AITerm - INFO - logger:54 - Final suggestions: ['cd', 'wc', 'du', 'df']
+2025-01-23 20:38:10,819 - AITerm - INFO - logger:54 - Got suggestions: ['cd', 'wc', 'du', 'df']
+2025-01-23 20:38:10,820 - AITerm - INFO - logger:54 - Showing dropdown with 4 suggestions at (134, 672)
+2025-01-23 20:38:10,821 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 20:38:10,822 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 20:38:11,009 - AITerm - DEBUG - logger:51 - Key released: ., current text: cd .
+2025-01-23 20:38:11,009 - AITerm - INFO - logger:54 - Updating suggestions for text: 'cd .'
+2025-01-23 20:38:11,009 - AITerm - INFO - logger:54 - Getting suggestions for text: 'cd'
+2025-01-23 20:38:11,009 - AITerm - INFO - logger:54 - Trying path completion for: ./.*
+2025-01-23 20:38:11,009 - AITerm - INFO - logger:54 - Path suggestions: ['cd ./.gitignore', 'cd ./.env', 'cd ./.venv/', 'cd ./.git/']
+2025-01-23 20:38:11,010 - AITerm - INFO - logger:54 - Final suggestions: ['cd ./.gitignore', 'cd ./.env', 'cd ./.venv/', 'cd ./.git/']
+2025-01-23 20:38:11,010 - AITerm - INFO - logger:54 - Got suggestions: ['cd ./.gitignore', 'cd ./.env', 'cd ./.venv/', 'cd ./.git/']
+2025-01-23 20:38:11,010 - AITerm - INFO - logger:54 - Showing dropdown with 4 suggestions at (134, 672)
+2025-01-23 20:38:11,011 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 20:38:11,012 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 20:38:11,156 - AITerm - DEBUG - logger:51 - Key released: ., current text: cd ..
+2025-01-23 20:38:11,156 - AITerm - INFO - logger:54 - Updating suggestions for text: 'cd ..'
+2025-01-23 20:38:11,156 - AITerm - INFO - logger:54 - Getting suggestions for text: 'cd'
+2025-01-23 20:38:11,156 - AITerm - INFO - logger:54 - Trying path completion for: ./..*
+2025-01-23 20:38:11,156 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 20:38:11,156 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 20:38:11,156 - AITerm - INFO - logger:54 - Hiding dropdown
+2025-01-23 20:38:11,761 - AITerm - INFO - logger:54 - Interpreted command 'cd ..' as 'cd /Volumes/wd/code/Python'
+2025-01-23 20:38:11,761 - AITerm - INFO - logger:54 - Executing command: cd /Volumes/wd/code/Python in /Volumes/wd/code/Python/AITerm
+2025-01-23 20:38:11,779 - AITerm - DEBUG - logger:51 - Command stdout: 
+2025-01-23 20:38:11,779 - AITerm - DEBUG - logger:51 - Command stderr: 
+2025-01-23 20:38:11,781 - AITerm - DEBUG - logger:51 - Key released: Return, current text: 
+2025-01-23 20:38:11,781 - AITerm - INFO - logger:54 - Updating suggestions for text: ''
+2025-01-23 20:38:11,781 - AITerm - INFO - logger:54 - No text to get suggestions for
+2025-01-23 20:38:11,781 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 20:38:14,756 - AITerm - DEBUG - logger:51 - Key released: g, current text: go
+2025-01-23 20:38:14,756 - AITerm - INFO - logger:54 - Updating suggestions for text: 'go'
+2025-01-23 20:38:14,756 - AITerm - INFO - logger:54 - Getting suggestions for text: 'go'
+2025-01-23 20:38:14,756 - AITerm - INFO - logger:54 - Prefix matches for 'go': []
+2025-01-23 20:38:14,756 - AITerm - INFO - logger:54 - Fuzzy matches for 'go': ['top', 'git', 'wget', 'sort', 'ping']
+2025-01-23 20:38:14,756 - AITerm - INFO - logger:54 - New fuzzy matches: ['top', 'git', 'wget', 'sort', 'ping']
+2025-01-23 20:38:14,756 - AITerm - INFO - logger:54 - Final suggestions: ['top', 'git', 'wget', 'sort', 'ping']
+2025-01-23 20:38:14,757 - AITerm - INFO - logger:54 - Got suggestions: ['top', 'git', 'wget', 'sort', 'ping']
+2025-01-23 20:38:14,757 - AITerm - INFO - logger:54 - Showing dropdown with 5 suggestions at (134, 672)
+2025-01-23 20:38:14,757 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 20:38:14,761 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 20:38:14,801 - AITerm - DEBUG - logger:51 - Key released: o, current text: go
+2025-01-23 20:38:14,801 - AITerm - INFO - logger:54 - Updating suggestions for text: 'go'
+2025-01-23 20:38:14,801 - AITerm - INFO - logger:54 - Getting suggestions for text: 'go'
+2025-01-23 20:38:14,801 - AITerm - INFO - logger:54 - Prefix matches for 'go': []
+2025-01-23 20:38:14,801 - AITerm - INFO - logger:54 - Fuzzy matches for 'go': ['top', 'git', 'wget', 'sort', 'ping']
+2025-01-23 20:38:14,801 - AITerm - INFO - logger:54 - New fuzzy matches: ['top', 'git', 'wget', 'sort', 'ping']
+2025-01-23 20:38:14,801 - AITerm - INFO - logger:54 - Final suggestions: ['top', 'git', 'wget', 'sort', 'ping']
+2025-01-23 20:38:14,802 - AITerm - INFO - logger:54 - Got suggestions: ['top', 'git', 'wget', 'sort', 'ping']
+2025-01-23 20:38:14,802 - AITerm - INFO - logger:54 - Showing dropdown with 5 suggestions at (134, 672)
+2025-01-23 20:38:14,803 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 20:38:14,804 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 20:38:15,161 - AITerm - DEBUG - logger:51 - Key released: space, current text: go 
+2025-01-23 20:38:15,161 - AITerm - INFO - logger:54 - Updating suggestions for text: 'go '
+2025-01-23 20:38:15,161 - AITerm - INFO - logger:54 - Getting suggestions for text: 'go'
+2025-01-23 20:38:15,161 - AITerm - INFO - logger:54 - Prefix matches for 'go': []
+2025-01-23 20:38:15,161 - AITerm - INFO - logger:54 - Fuzzy matches for 'go': ['top', 'git', 'wget', 'sort', 'ping']
+2025-01-23 20:38:15,162 - AITerm - INFO - logger:54 - New fuzzy matches: ['top', 'git', 'wget', 'sort', 'ping']
+2025-01-23 20:38:15,162 - AITerm - INFO - logger:54 - Final suggestions: ['top', 'git', 'wget', 'sort', 'ping']
+2025-01-23 20:38:15,162 - AITerm - INFO - logger:54 - Got suggestions: ['top', 'git', 'wget', 'sort', 'ping']
+2025-01-23 20:38:15,162 - AITerm - INFO - logger:54 - Showing dropdown with 5 suggestions at (134, 672)
+2025-01-23 20:38:15,163 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 20:38:15,164 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 20:38:15,352 - AITerm - DEBUG - logger:51 - Key released: t, current text: go to
+2025-01-23 20:38:15,352 - AITerm - INFO - logger:54 - Updating suggestions for text: 'go to'
+2025-01-23 20:38:15,352 - AITerm - INFO - logger:54 - Getting suggestions for text: 'go'
+2025-01-23 20:38:15,352 - AITerm - INFO - logger:54 - Trying path completion for: ./to*
+2025-01-23 20:38:15,353 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 20:38:15,353 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 20:38:15,353 - AITerm - INFO - logger:54 - Hiding dropdown
+2025-01-23 20:38:15,398 - AITerm - DEBUG - logger:51 - Key released: o, current text: go to
+2025-01-23 20:38:15,398 - AITerm - INFO - logger:54 - Updating suggestions for text: 'go to'
+2025-01-23 20:38:15,398 - AITerm - INFO - logger:54 - Getting suggestions for text: 'go'
+2025-01-23 20:38:15,398 - AITerm - INFO - logger:54 - Trying path completion for: ./to*
+2025-01-23 20:38:15,398 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 20:38:15,398 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 20:38:15,690 - AITerm - DEBUG - logger:51 - Key released: space, current text: go to 
+2025-01-23 20:38:15,690 - AITerm - INFO - logger:54 - Updating suggestions for text: 'go to '
+2025-01-23 20:38:15,690 - AITerm - INFO - logger:54 - Getting suggestions for text: 'go'
+2025-01-23 20:38:15,690 - AITerm - INFO - logger:54 - Trying path completion for: ./to*
+2025-01-23 20:38:15,690 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 20:38:15,690 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 20:38:15,959 - AITerm - DEBUG - logger:51 - Key released: h, current text: go to ho
+2025-01-23 20:38:15,959 - AITerm - INFO - logger:54 - Updating suggestions for text: 'go to ho'
+2025-01-23 20:38:15,959 - AITerm - INFO - logger:54 - Getting suggestions for text: 'go'
+2025-01-23 20:38:15,959 - AITerm - INFO - logger:54 - Trying path completion for: ./ho*
+2025-01-23 20:38:15,960 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 20:38:15,960 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 20:38:16,094 - AITerm - DEBUG - logger:51 - Key released: o, current text: go to hom
+2025-01-23 20:38:16,094 - AITerm - INFO - logger:54 - Updating suggestions for text: 'go to hom'
+2025-01-23 20:38:16,094 - AITerm - INFO - logger:54 - Getting suggestions for text: 'go'
+2025-01-23 20:38:16,094 - AITerm - INFO - logger:54 - Trying path completion for: ./hom*
+2025-01-23 20:38:16,094 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 20:38:16,095 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 20:38:16,206 - AITerm - DEBUG - logger:51 - Key released: m, current text: go to hom
+2025-01-23 20:38:16,207 - AITerm - INFO - logger:54 - Updating suggestions for text: 'go to hom'
+2025-01-23 20:38:16,207 - AITerm - INFO - logger:54 - Getting suggestions for text: 'go'
+2025-01-23 20:38:16,207 - AITerm - INFO - logger:54 - Trying path completion for: ./hom*
+2025-01-23 20:38:16,207 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 20:38:16,207 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 20:38:16,375 - AITerm - DEBUG - logger:51 - Key released: e, current text: go to home
+2025-01-23 20:38:16,375 - AITerm - INFO - logger:54 - Updating suggestions for text: 'go to home'
+2025-01-23 20:38:16,375 - AITerm - INFO - logger:54 - Getting suggestions for text: 'go'
+2025-01-23 20:38:16,375 - AITerm - INFO - logger:54 - Trying path completion for: ./home*
+2025-01-23 20:38:16,375 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 20:38:16,375 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 20:38:17,017 - AITerm - DEBUG - logger:51 - Key released: d, current text: go to homed
+2025-01-23 20:38:17,017 - AITerm - INFO - logger:54 - Updating suggestions for text: 'go to homed'
+2025-01-23 20:38:17,017 - AITerm - INFO - logger:54 - Getting suggestions for text: 'go'
+2025-01-23 20:38:17,017 - AITerm - INFO - logger:54 - Trying path completion for: ./homed*
+2025-01-23 20:38:17,017 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 20:38:17,017 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 20:38:17,354 - AITerm - DEBUG - logger:51 - Key released: BackSpace, current text: go to home
+2025-01-23 20:38:17,354 - AITerm - INFO - logger:54 - Updating suggestions for text: 'go to home'
+2025-01-23 20:38:17,354 - AITerm - INFO - logger:54 - Getting suggestions for text: 'go'
+2025-01-23 20:38:17,354 - AITerm - INFO - logger:54 - Trying path completion for: ./home*
+2025-01-23 20:38:17,354 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 20:38:17,355 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 20:38:17,748 - AITerm - DEBUG - logger:51 - Key released: space, current text: go to home 
+2025-01-23 20:38:17,748 - AITerm - INFO - logger:54 - Updating suggestions for text: 'go to home '
+2025-01-23 20:38:17,748 - AITerm - INFO - logger:54 - Getting suggestions for text: 'go'
+2025-01-23 20:38:17,748 - AITerm - INFO - logger:54 - Trying path completion for: ./home*
+2025-01-23 20:38:17,749 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 20:38:17,749 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 20:38:17,974 - AITerm - DEBUG - logger:51 - Key released: d, current text: go to home di
+2025-01-23 20:38:17,974 - AITerm - INFO - logger:54 - Updating suggestions for text: 'go to home di'
+2025-01-23 20:38:17,974 - AITerm - INFO - logger:54 - Getting suggestions for text: 'go'
+2025-01-23 20:38:17,974 - AITerm - INFO - logger:54 - Trying path completion for: ./di*
+2025-01-23 20:38:17,974 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 20:38:17,974 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 20:38:18,007 - AITerm - DEBUG - logger:51 - Key released: i, current text: go to home di
+2025-01-23 20:38:18,007 - AITerm - INFO - logger:54 - Updating suggestions for text: 'go to home di'
+2025-01-23 20:38:18,007 - AITerm - INFO - logger:54 - Getting suggestions for text: 'go'
+2025-01-23 20:38:18,007 - AITerm - INFO - logger:54 - Trying path completion for: ./di*
+2025-01-23 20:38:18,007 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 20:38:18,007 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 20:38:18,255 - AITerm - DEBUG - logger:51 - Key released: r, current text: go to home dire
+2025-01-23 20:38:18,255 - AITerm - INFO - logger:54 - Updating suggestions for text: 'go to home dire'
+2025-01-23 20:38:18,255 - AITerm - INFO - logger:54 - Getting suggestions for text: 'go'
+2025-01-23 20:38:18,255 - AITerm - INFO - logger:54 - Trying path completion for: ./dire*
+2025-01-23 20:38:18,256 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 20:38:18,256 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 20:38:18,300 - AITerm - DEBUG - logger:51 - Key released: e, current text: go to home dire
+2025-01-23 20:38:18,300 - AITerm - INFO - logger:54 - Updating suggestions for text: 'go to home dire'
+2025-01-23 20:38:18,300 - AITerm - INFO - logger:54 - Getting suggestions for text: 'go'
+2025-01-23 20:38:18,300 - AITerm - INFO - logger:54 - Trying path completion for: ./dire*
+2025-01-23 20:38:18,301 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 20:38:18,301 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 20:38:18,502 - AITerm - DEBUG - logger:51 - Key released: c, current text: go to home direc
+2025-01-23 20:38:18,502 - AITerm - INFO - logger:54 - Updating suggestions for text: 'go to home direc'
+2025-01-23 20:38:18,502 - AITerm - INFO - logger:54 - Getting suggestions for text: 'go'
+2025-01-23 20:38:18,502 - AITerm - INFO - logger:54 - Trying path completion for: ./direc*
+2025-01-23 20:38:18,503 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 20:38:18,503 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 20:38:18,696 - AITerm - DEBUG - logger:51 - Key released: t, current text: go to home directo
+2025-01-23 20:38:18,697 - AITerm - INFO - logger:54 - Updating suggestions for text: 'go to home directo'
+2025-01-23 20:38:18,697 - AITerm - INFO - logger:54 - Getting suggestions for text: 'go'
+2025-01-23 20:38:18,697 - AITerm - INFO - logger:54 - Trying path completion for: ./directo*
+2025-01-23 20:38:18,697 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 20:38:18,697 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 20:38:18,783 - AITerm - DEBUG - logger:51 - Key released: o, current text: go to home directo
+2025-01-23 20:38:18,783 - AITerm - INFO - logger:54 - Updating suggestions for text: 'go to home directo'
+2025-01-23 20:38:18,783 - AITerm - INFO - logger:54 - Getting suggestions for text: 'go'
+2025-01-23 20:38:18,783 - AITerm - INFO - logger:54 - Trying path completion for: ./directo*
+2025-01-23 20:38:18,784 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 20:38:18,784 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 20:38:18,928 - AITerm - DEBUG - logger:51 - Key released: r, current text: go to home directory
+2025-01-23 20:38:18,929 - AITerm - INFO - logger:54 - Updating suggestions for text: 'go to home directory'
+2025-01-23 20:38:18,929 - AITerm - INFO - logger:54 - Getting suggestions for text: 'go'
+2025-01-23 20:38:18,929 - AITerm - INFO - logger:54 - Trying path completion for: ./directory*
+2025-01-23 20:38:18,929 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 20:38:18,929 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 20:38:19,019 - AITerm - DEBUG - logger:51 - Key released: y, current text: go to home directory
+2025-01-23 20:38:19,019 - AITerm - INFO - logger:54 - Updating suggestions for text: 'go to home directory'
+2025-01-23 20:38:19,019 - AITerm - INFO - logger:54 - Getting suggestions for text: 'go'
+2025-01-23 20:38:19,019 - AITerm - INFO - logger:54 - Trying path completion for: ./directory*
+2025-01-23 20:38:19,020 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 20:38:19,020 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 20:38:19,748 - AITerm - INFO - logger:54 - Interpreted command 'go to home directory' as 'cd /Users/daryl'
+2025-01-23 20:38:19,748 - AITerm - INFO - logger:54 - Executing command: cd /Users/daryl in /Volumes/wd/code/Python/AITerm
+2025-01-23 20:38:19,765 - AITerm - DEBUG - logger:51 - Command stdout: 
+2025-01-23 20:38:19,765 - AITerm - DEBUG - logger:51 - Command stderr: 
+2025-01-23 20:38:19,766 - AITerm - DEBUG - logger:51 - Key released: Return, current text: 
+2025-01-23 20:38:19,766 - AITerm - INFO - logger:54 - Updating suggestions for text: ''
+2025-01-23 20:38:19,766 - AITerm - INFO - logger:54 - No text to get suggestions for
+2025-01-23 20:38:19,766 - AITerm - INFO - logger:54 - Got suggestions: []

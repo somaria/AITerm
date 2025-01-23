@@ -1,0 +1,39 @@
+2025-01-23 20:48:21,677 - AITerm - INFO - logger:48 - Logger initialized. Log file: logs/aiterm_20250123_204821.log
+2025-01-23 20:48:21,880 - AITerm - INFO - logger:54 - Initialized TerminalCompleter with 46 commands
+2025-01-23 20:48:21,880 - AITerm - INFO - logger:54 - Initializing SuggestionDropdown
+2025-01-23 20:48:21,908 - AITerm - INFO - logger:54 - SuggestionDropdown initialized and hidden
+2025-01-23 20:48:26,827 - AITerm - INFO - logger:54 - Key release event - keysym: Escape, char: , keycode: 889192475
+2025-01-23 20:48:26,827 - AITerm - INFO - logger:54 - Ignoring special key: Escape
+2025-01-23 20:48:30,495 - AITerm - INFO - logger:54 - Key release event - keysym: l, char: l, keycode: 620757100
+2025-01-23 20:48:30,495 - AITerm - INFO - logger:54 - Current text: 'ls'
+2025-01-23 20:48:30,495 - AITerm - INFO - logger:54 - Getting suggestions for text: 'ls'
+2025-01-23 20:48:30,495 - AITerm - INFO - logger:54 - Prefix matches for 'ls': ['ls']
+2025-01-23 20:48:30,496 - AITerm - INFO - logger:54 - Fuzzy matches for 'ls': ['ls', 'less', 'ps', 'svn']
+2025-01-23 20:48:30,496 - AITerm - INFO - logger:54 - New fuzzy matches: ['less', 'ps', 'svn']
+2025-01-23 20:48:30,496 - AITerm - INFO - logger:54 - Final suggestions: ['ls', 'less', 'ps', 'svn']
+2025-01-23 20:48:30,496 - AITerm - INFO - logger:54 - Got suggestions: ['ls', 'less', 'ps', 'svn']
+2025-01-23 20:48:30,496 - AITerm - INFO - logger:54 - Showing dropdown at position (134, 672)
+2025-01-23 20:48:30,496 - AITerm - INFO - logger:54 - Showing dropdown with 4 suggestions at (134, 672)
+2025-01-23 20:48:30,496 - AITerm - INFO - logger:54 - Setting geometry to: 1x1+34+59
+2025-01-23 20:48:30,501 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 20:48:30,501 - AITerm - INFO - logger:54 - Dropdown visible: True
+2025-01-23 20:48:30,501 - AITerm - INFO - logger:54 - Dropdown geometry: 404x184+134+672
+2025-01-23 20:48:30,607 - AITerm - INFO - logger:54 - Key release event - keysym: s, char: s, keycode: 16777331
+2025-01-23 20:48:30,608 - AITerm - INFO - logger:54 - Current text: 'ls'
+2025-01-23 20:48:30,608 - AITerm - INFO - logger:54 - Getting suggestions for text: 'ls'
+2025-01-23 20:48:30,608 - AITerm - INFO - logger:54 - Prefix matches for 'ls': ['ls']
+2025-01-23 20:48:30,608 - AITerm - INFO - logger:54 - Fuzzy matches for 'ls': ['ls', 'less', 'ps', 'svn']
+2025-01-23 20:48:30,608 - AITerm - INFO - logger:54 - New fuzzy matches: ['less', 'ps', 'svn']
+2025-01-23 20:48:30,608 - AITerm - INFO - logger:54 - Final suggestions: ['ls', 'less', 'ps', 'svn']
+2025-01-23 20:48:30,608 - AITerm - INFO - logger:54 - Got suggestions: ['ls', 'less', 'ps', 'svn']
+2025-01-23 20:48:30,608 - AITerm - INFO - logger:54 - Showing dropdown at position (134, 672)
+2025-01-23 20:48:30,608 - AITerm - INFO - logger:54 - Showing dropdown with 4 suggestions at (134, 672)
+2025-01-23 20:48:30,609 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 20:48:30,610 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 20:48:30,610 - AITerm - INFO - logger:54 - Dropdown visible: True
+2025-01-23 20:48:30,610 - AITerm - INFO - logger:54 - Dropdown geometry: 404x184+134+672
+2025-01-23 20:48:30,821 - AITerm - INFO - logger:54 - Hiding dropdown
+2025-01-23 20:48:30,821 - AITerm - INFO - logger:54 - Executing command: ls
+2025-01-23 20:48:30,822 - AITerm - DEBUG - logger:51 - Added command to history. Total commands: 1
+2025-01-23 20:48:30,956 - AITerm - INFO - logger:54 - Key release event - keysym: Return, char: , keycode: 603979789
+2025-01-23 20:48:30,957 - AITerm - INFO - logger:54 - Ignoring special key: Return

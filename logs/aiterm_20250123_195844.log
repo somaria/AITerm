@@ -1,0 +1,23 @@
+2025-01-23 19:58:44,717 - AITerm - INFO - logger:48 - Logger initialized. Log file: logs/aiterm_20250123_195844.log
+2025-01-23 19:58:44,921 - AITerm - INFO - logger:54 - Initialized TerminalCompleter with 46 commands
+2025-01-23 19:58:44,921 - AITerm - INFO - logger:54 - Initializing SuggestionDropdown
+2025-01-23 19:58:44,949 - AITerm - INFO - logger:54 - SuggestionDropdown initialized and hidden
+2025-01-23 19:58:48,580 - AITerm - INFO - logger:54 - Initialized TerminalCompleter with 46 commands
+2025-01-23 19:58:48,581 - AITerm - INFO - logger:54 - Initializing SuggestionDropdown
+2025-01-23 19:58:48,587 - AITerm - INFO - logger:54 - SuggestionDropdown initialized and hidden
+2025-01-23 19:59:12,238 - AITerm - DEBUG - logger:51 - Key released: e, current text: e
+2025-01-23 19:59:12,238 - AITerm - INFO - logger:54 - Updating suggestions for text: 'e'
+2025-01-23 19:59:12,238 - AITerm - INFO - logger:54 - Getting suggestions for text: 'e'
+2025-01-23 19:59:12,238 - AITerm - INFO - logger:54 - Prefix matches for 'e': ['echo']
+2025-01-23 19:59:12,239 - AITerm - INFO - logger:54 - Fuzzy matches for 'e': ['sed', 'wget', 'node', 'more']
+2025-01-23 19:59:12,239 - AITerm - INFO - logger:54 - New fuzzy matches: ['sed', 'wget', 'node', 'more']
+2025-01-23 19:59:12,239 - AITerm - INFO - logger:54 - Final suggestions: ['echo', 'sed', 'wget', 'node', 'more']
+2025-01-23 19:59:12,239 - AITerm - INFO - logger:54 - Got suggestions: ['echo', 'sed', 'wget', 'node', 'more']
+2025-01-23 19:59:12,239 - AITerm - INFO - logger:54 - Showing dropdown with 5 suggestions at (133, 672)
+2025-01-23 19:59:12,239 - AITerm - INFO - logger:54 - Setting geometry to: 1x1+92+117
+2025-01-23 19:59:12,243 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 19:59:13,430 - AITerm - DEBUG - logger:51 - Key released: BackSpace, current text: 
+2025-01-23 19:59:13,430 - AITerm - INFO - logger:54 - Updating suggestions for text: ''
+2025-01-23 19:59:13,430 - AITerm - INFO - logger:54 - No text to get suggestions for
+2025-01-23 19:59:13,430 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 19:59:13,430 - AITerm - INFO - logger:54 - Hiding dropdown

@@ -1,0 +1,399 @@
+2025-01-23 20:40:28,954 - AITerm - INFO - logger:48 - Logger initialized. Log file: logs/aiterm_20250123_204028.log
+2025-01-23 20:40:29,164 - AITerm - INFO - logger:54 - Initialized TerminalCompleter with 46 commands
+2025-01-23 20:40:29,164 - AITerm - INFO - logger:54 - Initializing SuggestionDropdown
+2025-01-23 20:40:29,193 - AITerm - INFO - logger:54 - SuggestionDropdown initialized and hidden
+2025-01-23 20:40:31,805 - AITerm - INFO - logger:54 - Key release event - keysym: p, char: p, keycode: 587202672
+2025-01-23 20:40:31,805 - AITerm - INFO - logger:54 - Current text: 'pw'
+2025-01-23 20:40:31,805 - AITerm - INFO - logger:54 - Getting suggestions for text: 'pw'
+2025-01-23 20:40:31,805 - AITerm - INFO - logger:54 - Prefix matches for 'pw': ['pwd']
+2025-01-23 20:40:31,805 - AITerm - INFO - logger:54 - Fuzzy matches for 'pw': ['pwd', 'wc', 'ps', 'cp']
+2025-01-23 20:40:31,805 - AITerm - INFO - logger:54 - New fuzzy matches: ['wc', 'ps', 'cp']
+2025-01-23 20:40:31,806 - AITerm - INFO - logger:54 - Final suggestions: ['pwd', 'wc', 'ps', 'cp']
+2025-01-23 20:40:31,806 - AITerm - INFO - logger:54 - Got suggestions: ['pwd', 'wc', 'ps', 'cp']
+2025-01-23 20:40:31,806 - AITerm - INFO - logger:54 - Showing dropdown at position (134, 672)
+2025-01-23 20:40:31,806 - AITerm - INFO - logger:54 - Showing dropdown with 4 suggestions at (134, 672)
+2025-01-23 20:40:31,806 - AITerm - INFO - logger:54 - Setting geometry to: 1x1+34+59
+2025-01-23 20:40:31,810 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 20:40:31,810 - AITerm - INFO - logger:54 - Dropdown visible: True
+2025-01-23 20:40:31,811 - AITerm - INFO - logger:54 - Dropdown geometry: 404x184+134+672
+2025-01-23 20:40:31,962 - AITerm - INFO - logger:54 - Key release event - keysym: w, char: w, keycode: 218103927
+2025-01-23 20:40:31,963 - AITerm - INFO - logger:54 - Current text: 'pwd'
+2025-01-23 20:40:31,963 - AITerm - INFO - logger:54 - Getting suggestions for text: 'pwd'
+2025-01-23 20:40:31,963 - AITerm - INFO - logger:54 - Prefix matches for 'pwd': ['pwd']
+2025-01-23 20:40:31,963 - AITerm - INFO - logger:54 - Fuzzy matches for 'pwd': ['pwd', 'wc', 'ps', 'du']
+2025-01-23 20:40:31,963 - AITerm - INFO - logger:54 - New fuzzy matches: ['wc', 'ps', 'du']
+2025-01-23 20:40:31,963 - AITerm - INFO - logger:54 - Final suggestions: ['pwd', 'wc', 'ps', 'du']
+2025-01-23 20:40:31,963 - AITerm - INFO - logger:54 - Got suggestions: ['pwd', 'wc', 'ps', 'du']
+2025-01-23 20:40:31,963 - AITerm - INFO - logger:54 - Showing dropdown at position (134, 672)
+2025-01-23 20:40:31,963 - AITerm - INFO - logger:54 - Showing dropdown with 4 suggestions at (134, 672)
+2025-01-23 20:40:31,964 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 20:40:31,965 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 20:40:31,965 - AITerm - INFO - logger:54 - Dropdown visible: True
+2025-01-23 20:40:31,965 - AITerm - INFO - logger:54 - Dropdown geometry: 404x184+134+672
+2025-01-23 20:40:32,028 - AITerm - INFO - logger:54 - Key release event - keysym: d, char: d, keycode: 33554532
+2025-01-23 20:40:32,028 - AITerm - INFO - logger:54 - Current text: 'pwd'
+2025-01-23 20:40:32,028 - AITerm - INFO - logger:54 - Getting suggestions for text: 'pwd'
+2025-01-23 20:40:32,028 - AITerm - INFO - logger:54 - Prefix matches for 'pwd': ['pwd']
+2025-01-23 20:40:32,029 - AITerm - INFO - logger:54 - Fuzzy matches for 'pwd': ['pwd', 'wc', 'ps', 'du']
+2025-01-23 20:40:32,029 - AITerm - INFO - logger:54 - New fuzzy matches: ['wc', 'ps', 'du']
+2025-01-23 20:40:32,029 - AITerm - INFO - logger:54 - Final suggestions: ['pwd', 'wc', 'ps', 'du']
+2025-01-23 20:40:32,029 - AITerm - INFO - logger:54 - Got suggestions: ['pwd', 'wc', 'ps', 'du']
+2025-01-23 20:40:32,029 - AITerm - INFO - logger:54 - Showing dropdown at position (134, 672)
+2025-01-23 20:40:32,029 - AITerm - INFO - logger:54 - Showing dropdown with 4 suggestions at (134, 672)
+2025-01-23 20:40:32,030 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 20:40:32,031 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 20:40:32,031 - AITerm - INFO - logger:54 - Dropdown visible: True
+2025-01-23 20:40:32,031 - AITerm - INFO - logger:54 - Dropdown geometry: 404x184+134+672
+2025-01-23 20:40:32,054 - AITerm - INFO - logger:54 - Executing command: pwd
+2025-01-23 20:40:32,054 - AITerm - DEBUG - logger:51 - Added command to history. Total commands: 1
+2025-01-23 20:40:32,187 - AITerm - INFO - logger:54 - Key release event - keysym: Return, char: , keycode: 603979789
+2025-01-23 20:40:32,187 - AITerm - INFO - logger:54 - Ignoring special key: Return
+2025-01-23 20:40:34,595 - AITerm - INFO - logger:54 - Key release event - keysym: o, char: o, keycode: 520093807
+2025-01-23 20:40:34,595 - AITerm - INFO - logger:54 - Current text: 'go'
+2025-01-23 20:40:34,595 - AITerm - INFO - logger:54 - Getting suggestions for text: 'go'
+2025-01-23 20:40:34,595 - AITerm - INFO - logger:54 - Prefix matches for 'go': []
+2025-01-23 20:40:34,595 - AITerm - INFO - logger:54 - Fuzzy matches for 'go': ['top', 'git', 'wget', 'sort', 'ping']
+2025-01-23 20:40:34,595 - AITerm - INFO - logger:54 - New fuzzy matches: ['top', 'git', 'wget', 'sort', 'ping']
+2025-01-23 20:40:34,595 - AITerm - INFO - logger:54 - Final suggestions: ['top', 'git', 'wget', 'sort', 'ping']
+2025-01-23 20:40:34,596 - AITerm - INFO - logger:54 - Got suggestions: ['top', 'git', 'wget', 'sort', 'ping']
+2025-01-23 20:40:34,596 - AITerm - INFO - logger:54 - Showing dropdown at position (134, 672)
+2025-01-23 20:40:34,596 - AITerm - INFO - logger:54 - Showing dropdown with 5 suggestions at (134, 672)
+2025-01-23 20:40:34,597 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 20:40:34,598 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 20:40:34,598 - AITerm - INFO - logger:54 - Dropdown visible: True
+2025-01-23 20:40:34,598 - AITerm - INFO - logger:54 - Dropdown geometry: 404x184+134+672
+2025-01-23 20:40:34,605 - AITerm - INFO - logger:54 - Key release event - keysym: g, char: g, keycode: 83886183
+2025-01-23 20:40:34,605 - AITerm - INFO - logger:54 - Current text: 'go'
+2025-01-23 20:40:34,605 - AITerm - INFO - logger:54 - Getting suggestions for text: 'go'
+2025-01-23 20:40:34,605 - AITerm - INFO - logger:54 - Prefix matches for 'go': []
+2025-01-23 20:40:34,605 - AITerm - INFO - logger:54 - Fuzzy matches for 'go': ['top', 'git', 'wget', 'sort', 'ping']
+2025-01-23 20:40:34,606 - AITerm - INFO - logger:54 - New fuzzy matches: ['top', 'git', 'wget', 'sort', 'ping']
+2025-01-23 20:40:34,606 - AITerm - INFO - logger:54 - Final suggestions: ['top', 'git', 'wget', 'sort', 'ping']
+2025-01-23 20:40:34,606 - AITerm - INFO - logger:54 - Got suggestions: ['top', 'git', 'wget', 'sort', 'ping']
+2025-01-23 20:40:34,606 - AITerm - INFO - logger:54 - Showing dropdown at position (134, 672)
+2025-01-23 20:40:34,606 - AITerm - INFO - logger:54 - Showing dropdown with 5 suggestions at (134, 672)
+2025-01-23 20:40:34,607 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 20:40:34,609 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 20:40:34,609 - AITerm - INFO - logger:54 - Dropdown visible: True
+2025-01-23 20:40:34,609 - AITerm - INFO - logger:54 - Dropdown geometry: 404x184+134+672
+2025-01-23 20:40:34,865 - AITerm - INFO - logger:54 - Key release event - keysym: space, char:  , keycode: 822083616
+2025-01-23 20:40:34,865 - AITerm - INFO - logger:54 - Current text: 'go '
+2025-01-23 20:40:34,865 - AITerm - INFO - logger:54 - Getting suggestions for text: 'go'
+2025-01-23 20:40:34,865 - AITerm - INFO - logger:54 - Prefix matches for 'go': []
+2025-01-23 20:40:34,865 - AITerm - INFO - logger:54 - Fuzzy matches for 'go': ['top', 'git', 'wget', 'sort', 'ping']
+2025-01-23 20:40:34,865 - AITerm - INFO - logger:54 - New fuzzy matches: ['top', 'git', 'wget', 'sort', 'ping']
+2025-01-23 20:40:34,865 - AITerm - INFO - logger:54 - Final suggestions: ['top', 'git', 'wget', 'sort', 'ping']
+2025-01-23 20:40:34,865 - AITerm - INFO - logger:54 - Got suggestions: ['top', 'git', 'wget', 'sort', 'ping']
+2025-01-23 20:40:34,865 - AITerm - INFO - logger:54 - Showing dropdown at position (134, 672)
+2025-01-23 20:40:34,866 - AITerm - INFO - logger:54 - Showing dropdown with 5 suggestions at (134, 672)
+2025-01-23 20:40:34,867 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 20:40:34,868 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 20:40:34,868 - AITerm - INFO - logger:54 - Dropdown visible: True
+2025-01-23 20:40:34,868 - AITerm - INFO - logger:54 - Dropdown geometry: 404x184+134+672
+2025-01-23 20:40:35,122 - AITerm - INFO - logger:54 - Key release event - keysym: t, char: t, keycode: 285212788
+2025-01-23 20:40:35,122 - AITerm - INFO - logger:54 - Current text: 'go to'
+2025-01-23 20:40:35,122 - AITerm - INFO - logger:54 - Getting suggestions for text: 'go'
+2025-01-23 20:40:35,122 - AITerm - INFO - logger:54 - Trying path completion for: ./to*
+2025-01-23 20:40:35,122 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 20:40:35,122 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 20:40:35,122 - AITerm - INFO - logger:54 - No suggestions, hiding dropdown
+2025-01-23 20:40:35,122 - AITerm - INFO - logger:54 - Hiding dropdown
+2025-01-23 20:40:35,191 - AITerm - INFO - logger:54 - Key release event - keysym: o, char: o, keycode: 520093807
+2025-01-23 20:40:35,191 - AITerm - INFO - logger:54 - Current text: 'go to'
+2025-01-23 20:40:35,191 - AITerm - INFO - logger:54 - Getting suggestions for text: 'go'
+2025-01-23 20:40:35,191 - AITerm - INFO - logger:54 - Trying path completion for: ./to*
+2025-01-23 20:40:35,192 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 20:40:35,192 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 20:40:35,192 - AITerm - INFO - logger:54 - No suggestions, hiding dropdown
+2025-01-23 20:40:35,438 - AITerm - INFO - logger:54 - Key release event - keysym: space, char:  , keycode: 822083616
+2025-01-23 20:40:35,438 - AITerm - INFO - logger:54 - Current text: 'go to '
+2025-01-23 20:40:35,438 - AITerm - INFO - logger:54 - Getting suggestions for text: 'go'
+2025-01-23 20:40:35,439 - AITerm - INFO - logger:54 - Trying path completion for: ./to*
+2025-01-23 20:40:35,439 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 20:40:35,439 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 20:40:35,439 - AITerm - INFO - logger:54 - No suggestions, hiding dropdown
+2025-01-23 20:40:35,708 - AITerm - INFO - logger:54 - Key release event - keysym: h, char: h, keycode: 67108968
+2025-01-23 20:40:35,708 - AITerm - INFO - logger:54 - Current text: 'go to ho'
+2025-01-23 20:40:35,708 - AITerm - INFO - logger:54 - Getting suggestions for text: 'go'
+2025-01-23 20:40:35,708 - AITerm - INFO - logger:54 - Trying path completion for: ./ho*
+2025-01-23 20:40:35,708 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 20:40:35,708 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 20:40:35,709 - AITerm - INFO - logger:54 - No suggestions, hiding dropdown
+2025-01-23 20:40:35,832 - AITerm - INFO - logger:54 - Key release event - keysym: o, char: o, keycode: 520093807
+2025-01-23 20:40:35,832 - AITerm - INFO - logger:54 - Current text: 'go to ho'
+2025-01-23 20:40:35,832 - AITerm - INFO - logger:54 - Getting suggestions for text: 'go'
+2025-01-23 20:40:35,833 - AITerm - INFO - logger:54 - Trying path completion for: ./ho*
+2025-01-23 20:40:35,833 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 20:40:35,833 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 20:40:35,833 - AITerm - INFO - logger:54 - No suggestions, hiding dropdown
+2025-01-23 20:40:35,988 - AITerm - INFO - logger:54 - Key release event - keysym: m, char: m, keycode: 771752045
+2025-01-23 20:40:35,989 - AITerm - INFO - logger:54 - Current text: 'go to hom'
+2025-01-23 20:40:35,989 - AITerm - INFO - logger:54 - Getting suggestions for text: 'go'
+2025-01-23 20:40:35,989 - AITerm - INFO - logger:54 - Trying path completion for: ./hom*
+2025-01-23 20:40:35,989 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 20:40:35,989 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 20:40:35,989 - AITerm - INFO - logger:54 - No suggestions, hiding dropdown
+2025-01-23 20:40:36,192 - AITerm - INFO - logger:54 - Key release event - keysym: e, char: e, keycode: 234881125
+2025-01-23 20:40:36,192 - AITerm - INFO - logger:54 - Current text: 'go to home'
+2025-01-23 20:40:36,192 - AITerm - INFO - logger:54 - Getting suggestions for text: 'go'
+2025-01-23 20:40:36,192 - AITerm - INFO - logger:54 - Trying path completion for: ./home*
+2025-01-23 20:40:36,192 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 20:40:36,193 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 20:40:36,193 - AITerm - INFO - logger:54 - No suggestions, hiding dropdown
+2025-01-23 20:40:36,395 - AITerm - INFO - logger:54 - Key release event - keysym: space, char:  , keycode: 822083616
+2025-01-23 20:40:36,395 - AITerm - INFO - logger:54 - Current text: 'go to home '
+2025-01-23 20:40:36,395 - AITerm - INFO - logger:54 - Getting suggestions for text: 'go'
+2025-01-23 20:40:36,395 - AITerm - INFO - logger:54 - Trying path completion for: ./home*
+2025-01-23 20:40:36,395 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 20:40:36,395 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 20:40:36,395 - AITerm - INFO - logger:54 - No suggestions, hiding dropdown
+2025-01-23 20:40:36,609 - AITerm - INFO - logger:54 - Key release event - keysym: i, char: i, keycode: 570425449
+2025-01-23 20:40:36,609 - AITerm - INFO - logger:54 - Current text: 'go to home di'
+2025-01-23 20:40:36,609 - AITerm - INFO - logger:54 - Getting suggestions for text: 'go'
+2025-01-23 20:40:36,609 - AITerm - INFO - logger:54 - Trying path completion for: ./di*
+2025-01-23 20:40:36,609 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 20:40:36,609 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 20:40:36,609 - AITerm - INFO - logger:54 - No suggestions, hiding dropdown
+2025-01-23 20:40:36,631 - AITerm - INFO - logger:54 - Key release event - keysym: d, char: d, keycode: 33554532
+2025-01-23 20:40:36,631 - AITerm - INFO - logger:54 - Current text: 'go to home di'
+2025-01-23 20:40:36,631 - AITerm - INFO - logger:54 - Getting suggestions for text: 'go'
+2025-01-23 20:40:36,631 - AITerm - INFO - logger:54 - Trying path completion for: ./di*
+2025-01-23 20:40:36,632 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 20:40:36,632 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 20:40:36,632 - AITerm - INFO - logger:54 - No suggestions, hiding dropdown
+2025-01-23 20:40:37,690 - AITerm - INFO - logger:54 - Key release event - keysym: c, char: c, keycode: 134217827
+2025-01-23 20:40:37,690 - AITerm - INFO - logger:54 - Current text: 'go to home dic'
+2025-01-23 20:40:37,690 - AITerm - INFO - logger:54 - Getting suggestions for text: 'go'
+2025-01-23 20:40:37,690 - AITerm - INFO - logger:54 - Trying path completion for: ./dic*
+2025-01-23 20:40:37,691 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 20:40:37,691 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 20:40:37,691 - AITerm - INFO - logger:54 - No suggestions, hiding dropdown
+2025-01-23 20:40:37,914 - AITerm - INFO - logger:54 - Key release event - keysym: t, char: t, keycode: 285212788
+2025-01-23 20:40:37,914 - AITerm - INFO - logger:54 - Current text: 'go to home dicto'
+2025-01-23 20:40:37,914 - AITerm - INFO - logger:54 - Getting suggestions for text: 'go'
+2025-01-23 20:40:37,914 - AITerm - INFO - logger:54 - Trying path completion for: ./dicto*
+2025-01-23 20:40:37,914 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 20:40:37,914 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 20:40:37,914 - AITerm - INFO - logger:54 - No suggestions, hiding dropdown
+2025-01-23 20:40:38,038 - AITerm - INFO - logger:54 - Key release event - keysym: o, char: o, keycode: 520093807
+2025-01-23 20:40:38,038 - AITerm - INFO - logger:54 - Current text: 'go to home dictor'
+2025-01-23 20:40:38,038 - AITerm - INFO - logger:54 - Getting suggestions for text: 'go'
+2025-01-23 20:40:38,039 - AITerm - INFO - logger:54 - Trying path completion for: ./dictor*
+2025-01-23 20:40:38,039 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 20:40:38,039 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 20:40:38,039 - AITerm - INFO - logger:54 - No suggestions, hiding dropdown
+2025-01-23 20:40:38,150 - AITerm - INFO - logger:54 - Key release event - keysym: r, char: r, keycode: 251658354
+2025-01-23 20:40:38,150 - AITerm - INFO - logger:54 - Current text: 'go to home dictor'
+2025-01-23 20:40:38,150 - AITerm - INFO - logger:54 - Getting suggestions for text: 'go'
+2025-01-23 20:40:38,150 - AITerm - INFO - logger:54 - Trying path completion for: ./dictor*
+2025-01-23 20:40:38,151 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 20:40:38,151 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 20:40:38,151 - AITerm - INFO - logger:54 - No suggestions, hiding dropdown
+2025-01-23 20:40:38,296 - AITerm - INFO - logger:54 - Key release event - keysym: y, char: y, keycode: 268435577
+2025-01-23 20:40:38,296 - AITerm - INFO - logger:54 - Current text: 'go to home dictory'
+2025-01-23 20:40:38,296 - AITerm - INFO - logger:54 - Getting suggestions for text: 'go'
+2025-01-23 20:40:38,296 - AITerm - INFO - logger:54 - Trying path completion for: ./dictory*
+2025-01-23 20:40:38,296 - AITerm - INFO - logger:54 - Final suggestions: []
+2025-01-23 20:40:38,296 - AITerm - INFO - logger:54 - Got suggestions: []
+2025-01-23 20:40:38,296 - AITerm - INFO - logger:54 - No suggestions, hiding dropdown
+2025-01-23 20:40:38,521 - AITerm - INFO - logger:54 - Executing command: go to home dictory
+2025-01-23 20:40:38,521 - AITerm - DEBUG - logger:51 - Added command to history. Total commands: 2
+2025-01-23 20:40:39,531 - AITerm - INFO - logger:54 - Key release event - keysym: Return, char: , keycode: 603979789
+2025-01-23 20:40:39,531 - AITerm - INFO - logger:54 - Ignoring special key: Return
+2025-01-23 20:40:52,099 - AITerm - INFO - logger:54 - Key release event - keysym: p, char: p, keycode: 587202672
+2025-01-23 20:40:52,099 - AITerm - INFO - logger:54 - Current text: 'pw'
+2025-01-23 20:40:52,100 - AITerm - INFO - logger:54 - Getting suggestions for text: 'pw'
+2025-01-23 20:40:52,100 - AITerm - INFO - logger:54 - Prefix matches for 'pw': ['pwd']
+2025-01-23 20:40:52,100 - AITerm - INFO - logger:54 - Fuzzy matches for 'pw': ['pwd', 'wc', 'ps', 'cp']
+2025-01-23 20:40:52,100 - AITerm - INFO - logger:54 - New fuzzy matches: ['wc', 'ps', 'cp']
+2025-01-23 20:40:52,100 - AITerm - INFO - logger:54 - Final suggestions: ['pwd', 'wc', 'ps', 'cp']
+2025-01-23 20:40:52,100 - AITerm - INFO - logger:54 - Got suggestions: ['pwd', 'wc', 'ps', 'cp']
+2025-01-23 20:40:52,100 - AITerm - INFO - logger:54 - Showing dropdown at position (134, 672)
+2025-01-23 20:40:52,100 - AITerm - INFO - logger:54 - Showing dropdown with 4 suggestions at (134, 672)
+2025-01-23 20:40:52,101 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 20:40:52,105 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 20:40:52,105 - AITerm - INFO - logger:54 - Dropdown visible: True
+2025-01-23 20:40:52,105 - AITerm - INFO - logger:54 - Dropdown geometry: 404x184+134+672
+2025-01-23 20:40:52,257 - AITerm - INFO - logger:54 - Key release event - keysym: w, char: w, keycode: 218103927
+2025-01-23 20:40:52,257 - AITerm - INFO - logger:54 - Current text: 'pwd'
+2025-01-23 20:40:52,257 - AITerm - INFO - logger:54 - Getting suggestions for text: 'pwd'
+2025-01-23 20:40:52,257 - AITerm - INFO - logger:54 - Prefix matches for 'pwd': ['pwd']
+2025-01-23 20:40:52,258 - AITerm - INFO - logger:54 - Fuzzy matches for 'pwd': ['pwd', 'wc', 'ps', 'du']
+2025-01-23 20:40:52,258 - AITerm - INFO - logger:54 - New fuzzy matches: ['wc', 'ps', 'du']
+2025-01-23 20:40:52,258 - AITerm - INFO - logger:54 - Final suggestions: ['pwd', 'wc', 'ps', 'du']
+2025-01-23 20:40:52,258 - AITerm - INFO - logger:54 - Got suggestions: ['pwd', 'wc', 'ps', 'du']
+2025-01-23 20:40:52,258 - AITerm - INFO - logger:54 - Showing dropdown at position (134, 672)
+2025-01-23 20:40:52,258 - AITerm - INFO - logger:54 - Showing dropdown with 4 suggestions at (134, 672)
+2025-01-23 20:40:52,259 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 20:40:52,260 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 20:40:52,260 - AITerm - INFO - logger:54 - Dropdown visible: True
+2025-01-23 20:40:52,260 - AITerm - INFO - logger:54 - Dropdown geometry: 404x184+134+672
+2025-01-23 20:40:52,336 - AITerm - INFO - logger:54 - Key release event - keysym: d, char: d, keycode: 33554532
+2025-01-23 20:40:52,336 - AITerm - INFO - logger:54 - Current text: 'pwd'
+2025-01-23 20:40:52,336 - AITerm - INFO - logger:54 - Getting suggestions for text: 'pwd'
+2025-01-23 20:40:52,336 - AITerm - INFO - logger:54 - Prefix matches for 'pwd': ['pwd']
+2025-01-23 20:40:52,336 - AITerm - INFO - logger:54 - Fuzzy matches for 'pwd': ['pwd', 'wc', 'ps', 'du']
+2025-01-23 20:40:52,336 - AITerm - INFO - logger:54 - New fuzzy matches: ['wc', 'ps', 'du']
+2025-01-23 20:40:52,336 - AITerm - INFO - logger:54 - Final suggestions: ['pwd', 'wc', 'ps', 'du']
+2025-01-23 20:40:52,336 - AITerm - INFO - logger:54 - Got suggestions: ['pwd', 'wc', 'ps', 'du']
+2025-01-23 20:40:52,336 - AITerm - INFO - logger:54 - Showing dropdown at position (134, 672)
+2025-01-23 20:40:52,336 - AITerm - INFO - logger:54 - Showing dropdown with 4 suggestions at (134, 672)
+2025-01-23 20:40:52,338 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 20:40:52,338 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 20:40:52,338 - AITerm - INFO - logger:54 - Dropdown visible: True
+2025-01-23 20:40:52,338 - AITerm - INFO - logger:54 - Dropdown geometry: 404x184+134+672
+2025-01-23 20:40:52,370 - AITerm - INFO - logger:54 - Executing command: pwd
+2025-01-23 20:40:52,370 - AITerm - DEBUG - logger:51 - Added command to history. Total commands: 3
+2025-01-23 20:40:52,482 - AITerm - INFO - logger:54 - Key release event - keysym: Return, char: , keycode: 603979789
+2025-01-23 20:40:52,482 - AITerm - INFO - logger:54 - Ignoring special key: Return
+2025-01-23 20:40:54,382 - AITerm - INFO - logger:54 - Key release event - keysym: l, char: l, keycode: 620757100
+2025-01-23 20:40:54,383 - AITerm - INFO - logger:54 - Current text: 'ls'
+2025-01-23 20:40:54,383 - AITerm - INFO - logger:54 - Getting suggestions for text: 'ls'
+2025-01-23 20:40:54,383 - AITerm - INFO - logger:54 - Prefix matches for 'ls': ['ls']
+2025-01-23 20:40:54,383 - AITerm - INFO - logger:54 - Fuzzy matches for 'ls': ['ls', 'less', 'ps', 'svn']
+2025-01-23 20:40:54,383 - AITerm - INFO - logger:54 - New fuzzy matches: ['less', 'ps', 'svn']
+2025-01-23 20:40:54,383 - AITerm - INFO - logger:54 - Final suggestions: ['ls', 'less', 'ps', 'svn']
+2025-01-23 20:40:54,383 - AITerm - INFO - logger:54 - Got suggestions: ['ls', 'less', 'ps', 'svn']
+2025-01-23 20:40:54,383 - AITerm - INFO - logger:54 - Showing dropdown at position (134, 672)
+2025-01-23 20:40:54,383 - AITerm - INFO - logger:54 - Showing dropdown with 4 suggestions at (134, 672)
+2025-01-23 20:40:54,384 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 20:40:54,385 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 20:40:54,385 - AITerm - INFO - logger:54 - Dropdown visible: True
+2025-01-23 20:40:54,386 - AITerm - INFO - logger:54 - Dropdown geometry: 404x184+134+672
+2025-01-23 20:40:54,495 - AITerm - INFO - logger:54 - Key release event - keysym: s, char: s, keycode: 16777331
+2025-01-23 20:40:54,495 - AITerm - INFO - logger:54 - Current text: 'ls'
+2025-01-23 20:40:54,495 - AITerm - INFO - logger:54 - Getting suggestions for text: 'ls'
+2025-01-23 20:40:54,495 - AITerm - INFO - logger:54 - Prefix matches for 'ls': ['ls']
+2025-01-23 20:40:54,496 - AITerm - INFO - logger:54 - Fuzzy matches for 'ls': ['ls', 'less', 'ps', 'svn']
+2025-01-23 20:40:54,496 - AITerm - INFO - logger:54 - New fuzzy matches: ['less', 'ps', 'svn']
+2025-01-23 20:40:54,496 - AITerm - INFO - logger:54 - Final suggestions: ['ls', 'less', 'ps', 'svn']
+2025-01-23 20:40:54,496 - AITerm - INFO - logger:54 - Got suggestions: ['ls', 'less', 'ps', 'svn']
+2025-01-23 20:40:54,496 - AITerm - INFO - logger:54 - Showing dropdown at position (134, 672)
+2025-01-23 20:40:54,496 - AITerm - INFO - logger:54 - Showing dropdown with 4 suggestions at (134, 672)
+2025-01-23 20:40:54,497 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 20:40:54,498 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 20:40:54,498 - AITerm - INFO - logger:54 - Dropdown visible: True
+2025-01-23 20:40:54,498 - AITerm - INFO - logger:54 - Dropdown geometry: 404x184+134+672
+2025-01-23 20:40:54,506 - AITerm - INFO - logger:54 - Executing command: ls
+2025-01-23 20:40:54,506 - AITerm - DEBUG - logger:51 - Added command to history. Total commands: 4
+2025-01-23 20:40:54,620 - AITerm - INFO - logger:54 - Key release event - keysym: Return, char: , keycode: 603979789
+2025-01-23 20:40:54,620 - AITerm - INFO - logger:54 - Ignoring special key: Return
+2025-01-23 20:40:55,125 - AITerm - INFO - logger:54 - Key release event - keysym: c, char: c, keycode: 134217827
+2025-01-23 20:40:55,125 - AITerm - INFO - logger:54 - Current text: 'cl'
+2025-01-23 20:40:55,125 - AITerm - INFO - logger:54 - Getting suggestions for text: 'cl'
+2025-01-23 20:40:55,126 - AITerm - INFO - logger:54 - Prefix matches for 'cl': ['clear']
+2025-01-23 20:40:55,126 - AITerm - INFO - logger:54 - Fuzzy matches for 'cl': ['curl', 'clear', 'wc', 'ls']
+2025-01-23 20:40:55,126 - AITerm - INFO - logger:54 - New fuzzy matches: ['curl', 'wc', 'ls']
+2025-01-23 20:40:55,126 - AITerm - INFO - logger:54 - Final suggestions: ['clear', 'curl', 'wc', 'ls']
+2025-01-23 20:40:55,126 - AITerm - INFO - logger:54 - Got suggestions: ['clear', 'curl', 'wc', 'ls']
+2025-01-23 20:40:55,126 - AITerm - INFO - logger:54 - Showing dropdown at position (134, 672)
+2025-01-23 20:40:55,126 - AITerm - INFO - logger:54 - Showing dropdown with 4 suggestions at (134, 672)
+2025-01-23 20:40:55,127 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 20:40:55,128 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 20:40:55,128 - AITerm - INFO - logger:54 - Dropdown visible: True
+2025-01-23 20:40:55,128 - AITerm - INFO - logger:54 - Dropdown geometry: 404x184+134+672
+2025-01-23 20:40:55,182 - AITerm - INFO - logger:54 - Key release event - keysym: l, char: l, keycode: 620757100
+2025-01-23 20:40:55,182 - AITerm - INFO - logger:54 - Current text: 'cl'
+2025-01-23 20:40:55,182 - AITerm - INFO - logger:54 - Getting suggestions for text: 'cl'
+2025-01-23 20:40:55,182 - AITerm - INFO - logger:54 - Prefix matches for 'cl': ['clear']
+2025-01-23 20:40:55,182 - AITerm - INFO - logger:54 - Fuzzy matches for 'cl': ['curl', 'clear', 'wc', 'ls']
+2025-01-23 20:40:55,182 - AITerm - INFO - logger:54 - New fuzzy matches: ['curl', 'wc', 'ls']
+2025-01-23 20:40:55,182 - AITerm - INFO - logger:54 - Final suggestions: ['clear', 'curl', 'wc', 'ls']
+2025-01-23 20:40:55,182 - AITerm - INFO - logger:54 - Got suggestions: ['clear', 'curl', 'wc', 'ls']
+2025-01-23 20:40:55,182 - AITerm - INFO - logger:54 - Showing dropdown at position (134, 672)
+2025-01-23 20:40:55,182 - AITerm - INFO - logger:54 - Showing dropdown with 4 suggestions at (134, 672)
+2025-01-23 20:40:55,184 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 20:40:55,185 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 20:40:55,185 - AITerm - INFO - logger:54 - Dropdown visible: True
+2025-01-23 20:40:55,185 - AITerm - INFO - logger:54 - Dropdown geometry: 404x184+134+672
+2025-01-23 20:40:55,374 - AITerm - INFO - logger:54 - Key release event - keysym: e, char: e, keycode: 234881125
+2025-01-23 20:40:55,374 - AITerm - INFO - logger:54 - Current text: 'cle'
+2025-01-23 20:40:55,374 - AITerm - INFO - logger:54 - Getting suggestions for text: 'cle'
+2025-01-23 20:40:55,374 - AITerm - INFO - logger:54 - Prefix matches for 'cle': ['clear']
+2025-01-23 20:40:55,375 - AITerm - INFO - logger:54 - Fuzzy matches for 'cle': ['clear', 'less', 'curl', 'locate']
+2025-01-23 20:40:55,375 - AITerm - INFO - logger:54 - New fuzzy matches: ['less', 'curl', 'locate']
+2025-01-23 20:40:55,375 - AITerm - INFO - logger:54 - Final suggestions: ['clear', 'less', 'curl', 'locate']
+2025-01-23 20:40:55,375 - AITerm - INFO - logger:54 - Got suggestions: ['clear', 'less', 'curl', 'locate']
+2025-01-23 20:40:55,375 - AITerm - INFO - logger:54 - Showing dropdown at position (134, 672)
+2025-01-23 20:40:55,375 - AITerm - INFO - logger:54 - Showing dropdown with 4 suggestions at (134, 672)
+2025-01-23 20:40:55,376 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 20:40:55,377 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 20:40:55,377 - AITerm - INFO - logger:54 - Dropdown visible: True
+2025-01-23 20:40:55,377 - AITerm - INFO - logger:54 - Dropdown geometry: 404x184+134+672
+2025-01-23 20:40:55,541 - AITerm - INFO - logger:54 - Key release event - keysym: a, char: a, keycode: 97
+2025-01-23 20:40:55,541 - AITerm - INFO - logger:54 - Current text: 'clear'
+2025-01-23 20:40:55,541 - AITerm - INFO - logger:54 - Getting suggestions for text: 'clear'
+2025-01-23 20:40:55,541 - AITerm - INFO - logger:54 - Prefix matches for 'clear': ['clear']
+2025-01-23 20:40:55,542 - AITerm - INFO - logger:54 - Fuzzy matches for 'clear': ['clear', 'tar', 'cat', 'less']
+2025-01-23 20:40:55,542 - AITerm - INFO - logger:54 - New fuzzy matches: ['tar', 'cat', 'less']
+2025-01-23 20:40:55,542 - AITerm - INFO - logger:54 - Final suggestions: ['clear', 'tar', 'cat', 'less']
+2025-01-23 20:40:55,542 - AITerm - INFO - logger:54 - Got suggestions: ['clear', 'tar', 'cat', 'less']
+2025-01-23 20:40:55,542 - AITerm - INFO - logger:54 - Showing dropdown at position (134, 672)
+2025-01-23 20:40:55,542 - AITerm - INFO - logger:54 - Showing dropdown with 4 suggestions at (134, 672)
+2025-01-23 20:40:55,543 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 20:40:55,544 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 20:40:55,544 - AITerm - INFO - logger:54 - Dropdown visible: True
+2025-01-23 20:40:55,544 - AITerm - INFO - logger:54 - Dropdown geometry: 404x184+134+672
+2025-01-23 20:40:55,677 - AITerm - INFO - logger:54 - Key release event - keysym: r, char: r, keycode: 251658354
+2025-01-23 20:40:55,677 - AITerm - INFO - logger:54 - Current text: 'clear'
+2025-01-23 20:40:55,677 - AITerm - INFO - logger:54 - Getting suggestions for text: 'clear'
+2025-01-23 20:40:55,677 - AITerm - INFO - logger:54 - Prefix matches for 'clear': ['clear']
+2025-01-23 20:40:55,678 - AITerm - INFO - logger:54 - Fuzzy matches for 'clear': ['clear', 'tar', 'cat', 'less']
+2025-01-23 20:40:55,678 - AITerm - INFO - logger:54 - New fuzzy matches: ['tar', 'cat', 'less']
+2025-01-23 20:40:55,678 - AITerm - INFO - logger:54 - Final suggestions: ['clear', 'tar', 'cat', 'less']
+2025-01-23 20:40:55,678 - AITerm - INFO - logger:54 - Got suggestions: ['clear', 'tar', 'cat', 'less']
+2025-01-23 20:40:55,678 - AITerm - INFO - logger:54 - Showing dropdown at position (134, 672)
+2025-01-23 20:40:55,678 - AITerm - INFO - logger:54 - Showing dropdown with 4 suggestions at (134, 672)
+2025-01-23 20:40:55,679 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 20:40:55,680 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 20:40:55,680 - AITerm - INFO - logger:54 - Dropdown visible: True
+2025-01-23 20:40:55,680 - AITerm - INFO - logger:54 - Dropdown geometry: 404x184+134+672
+2025-01-23 20:40:55,687 - AITerm - INFO - logger:54 - Executing command: clear
+2025-01-23 20:40:55,687 - AITerm - DEBUG - logger:51 - Added command to history. Total commands: 5
+2025-01-23 20:40:55,689 - AITerm - DEBUG - logger:51 - Clearing terminal output
+2025-01-23 20:40:55,789 - AITerm - INFO - logger:54 - Key release event - keysym: Return, char: , keycode: 603979789
+2025-01-23 20:40:55,789 - AITerm - INFO - logger:54 - Ignoring special key: Return
+2025-01-23 20:41:02,541 - AITerm - INFO - logger:54 - Key release event - keysym: p, char: p, keycode: 587202672
+2025-01-23 20:41:02,541 - AITerm - INFO - logger:54 - Current text: 'p'
+2025-01-23 20:41:02,541 - AITerm - INFO - logger:54 - Getting suggestions for text: 'p'
+2025-01-23 20:41:02,542 - AITerm - INFO - logger:54 - Prefix matches for 'p': ['ping', 'pip', 'ps', 'pwd', 'python']
+2025-01-23 20:41:02,542 - AITerm - INFO - logger:54 - Final suggestions: ['ping', 'pip', 'ps', 'pwd', 'python']
+2025-01-23 20:41:02,542 - AITerm - INFO - logger:54 - Got suggestions: ['ping', 'pip', 'ps', 'pwd', 'python']
+2025-01-23 20:41:02,542 - AITerm - INFO - logger:54 - Showing dropdown at position (134, 672)
+2025-01-23 20:41:02,542 - AITerm - INFO - logger:54 - Showing dropdown with 5 suggestions at (134, 672)
+2025-01-23 20:41:02,544 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 20:41:02,546 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 20:41:02,546 - AITerm - INFO - logger:54 - Dropdown visible: True
+2025-01-23 20:41:02,546 - AITerm - INFO - logger:54 - Dropdown geometry: 404x184+134+672
+2025-01-23 20:41:02,686 - AITerm - INFO - logger:54 - Key release event - keysym: w, char: w, keycode: 218103927
+2025-01-23 20:41:02,686 - AITerm - INFO - logger:54 - Current text: 'pwd'
+2025-01-23 20:41:02,686 - AITerm - INFO - logger:54 - Getting suggestions for text: 'pwd'
+2025-01-23 20:41:02,686 - AITerm - INFO - logger:54 - Prefix matches for 'pwd': ['pwd']
+2025-01-23 20:41:02,686 - AITerm - INFO - logger:54 - Fuzzy matches for 'pwd': ['pwd', 'wc', 'ps', 'du']
+2025-01-23 20:41:02,686 - AITerm - INFO - logger:54 - New fuzzy matches: ['wc', 'ps', 'du']
+2025-01-23 20:41:02,686 - AITerm - INFO - logger:54 - Final suggestions: ['pwd', 'wc', 'ps', 'du']
+2025-01-23 20:41:02,686 - AITerm - INFO - logger:54 - Got suggestions: ['pwd', 'wc', 'ps', 'du']
+2025-01-23 20:41:02,687 - AITerm - INFO - logger:54 - Showing dropdown at position (134, 672)
+2025-01-23 20:41:02,687 - AITerm - INFO - logger:54 - Showing dropdown with 4 suggestions at (134, 672)
+2025-01-23 20:41:02,688 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 20:41:02,689 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 20:41:02,689 - AITerm - INFO - logger:54 - Dropdown visible: True
+2025-01-23 20:41:02,689 - AITerm - INFO - logger:54 - Dropdown geometry: 404x184+134+672
+2025-01-23 20:41:02,787 - AITerm - INFO - logger:54 - Key release event - keysym: d, char: d, keycode: 33554532
+2025-01-23 20:41:02,787 - AITerm - INFO - logger:54 - Current text: 'pwd'
+2025-01-23 20:41:02,787 - AITerm - INFO - logger:54 - Getting suggestions for text: 'pwd'
+2025-01-23 20:41:02,787 - AITerm - INFO - logger:54 - Prefix matches for 'pwd': ['pwd']
+2025-01-23 20:41:02,788 - AITerm - INFO - logger:54 - Fuzzy matches for 'pwd': ['pwd', 'wc', 'ps', 'du']
+2025-01-23 20:41:02,788 - AITerm - INFO - logger:54 - New fuzzy matches: ['wc', 'ps', 'du']
+2025-01-23 20:41:02,788 - AITerm - INFO - logger:54 - Final suggestions: ['pwd', 'wc', 'ps', 'du']
+2025-01-23 20:41:02,788 - AITerm - INFO - logger:54 - Got suggestions: ['pwd', 'wc', 'ps', 'du']
+2025-01-23 20:41:02,788 - AITerm - INFO - logger:54 - Showing dropdown at position (134, 672)
+2025-01-23 20:41:02,788 - AITerm - INFO - logger:54 - Showing dropdown with 4 suggestions at (134, 672)
+2025-01-23 20:41:02,789 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 20:41:02,790 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 20:41:02,790 - AITerm - INFO - logger:54 - Dropdown visible: True
+2025-01-23 20:41:02,790 - AITerm - INFO - logger:54 - Dropdown geometry: 404x184+134+672
+2025-01-23 20:41:03,102 - AITerm - INFO - logger:54 - Executing command: pwd
+2025-01-23 20:41:03,103 - AITerm - DEBUG - logger:51 - Added command to history. Total commands: 6
+2025-01-23 20:41:03,214 - AITerm - INFO - logger:54 - Key release event - keysym: Return, char: , keycode: 603979789
+2025-01-23 20:41:03,214 - AITerm - INFO - logger:54 - Ignoring special key: Return

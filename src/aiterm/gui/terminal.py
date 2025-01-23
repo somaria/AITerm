@@ -522,6 +522,9 @@ class TerminalGUI:
     
     def execute_command(self, event=None):
         """Execute the entered command"""
+        # Hide suggestion dropdown
+        self.suggestion_dropdown.hide()
+        
         command = self.command_entry.get().strip()
         if not command:
             return
