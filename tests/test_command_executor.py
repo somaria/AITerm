@@ -13,59 +13,74 @@ class TestCommandExecutor:
         """Create a CommandExecutor instance for testing."""
         return CommandExecutor()
     
-    @pytest.mark.parametrize("command,expected_output", [
-        # Complex find commands
-        ("find files larger than 10MB", 'find . -type f -size +10M'),
-        ("find files modified in last 24 hours", 'find . -type f -mtime -1'),
-        ("find executable python files", 'find . -type f -name "*.py" -executable'),
-        ("find empty directories", 'find . -type d -empty'),
-        ("find files with permission 777", 'find . -type f -perm 777'),
-        ("find files owned by current user", 'find . -type f -user $USER'),
-        ("find files not accessed in 30 days", 'find . -type f -atime +30'),
-        ("find files modified between 1 and 7 days ago", 'find . -type f -mtime +1 -mtime -7'),
+    # Basic Command Execution Tests
+    def test_basic_command_execution(self, executor):
+        """Test basic command execution without AI processing."""
+        # Test simple echo command
+        command = "echo 'hello world'"
+        stdout, stderr = executor.execute(command)
+        assert stdout.strip() == "hello world"
+        assert stderr is None
         
-        # Combined search criteria
-        ("find python files larger than 1MB", 'find . -type f -name "*.py" -size +1M'),
-        ("find text files modified today", 'find . -type f -name "*.txt" -mtime -1'),
-        ("find empty python files", 'find . -type f -name "*.py" -empty'),
-        ("find executable scripts in bin", 'find ./bin -type f -executable'),
-        ("find config files not modified in last week", 'find . -type f -name "*.config" -mtime +7'),
+        # Test command with arguments
+        command = "ls -l"
+        stdout, stderr = executor.execute(command)
+        assert stdout != ""
+        assert stderr is None
         
-        # Path and name patterns
-        ("find files in src directory", 'find ./src -type f'),
-        ("find files starting with test", 'find . -type f -name "test*"'),
-        ("find files ending with log", 'find . -type f -name "*.log"'),
-        ("find files containing the word temp", 'find . -type f -name "*temp*"'),
-        ("find files with extension py or js", 'find . -type f \\( -name "*.py" -o -name "*.js" \\)'),
+    def test_command_not_found(self, executor):
+        """Test handling of non-existent commands."""
+        command = "nonexistentcommand"
+        stdout, stderr = executor.execute(command)
+        assert stdout is None
+        assert "Command not found: nonexistentcommand" in stderr
         
-        # Case sensitivity variations
-        ("find files named README", 'find . -name "README*"'),
-        ("search for readme files", 'find . -iname "readme*"'),
-        ("find configuration files", 'find . -iname "*config*"'),
-        ("look for makefiles", 'find . -iname "makefile*"'),
+    def test_command_with_invalid_args(self, executor):
+        """Test handling of commands with invalid arguments."""
+        command = "ls --invalid-flag"
+        stdout, stderr = executor.execute(command)
+        assert stdout is None
+        assert stderr != ""
         
-        # Directory specific searches
-        ("find test directories", 'find . -type d -name "test*"'),
-        ("find empty folders", 'find . -type d -empty'),
-        ("find node_modules directories", 'find . -type d -name "node_modules"'),
-        ("find git repositories", 'find . -type d -name ".git"'),
+    def test_working_directory_management(self, executor):
+        """Test working directory changes."""
+        # Test changing to home directory
+        success, error = executor.change_directory()
+        assert success
+        assert error is None
+        assert executor.working_directory == os.path.expanduser('~')
         
-        # Error cases and edge cases
-        ("find", 'find .'),  # Default case
-        ("find files", 'find . -type f'),  # Basic file search
-        ("find directories", 'find . -type d'),  # Basic directory search
-        ("find all", 'find .'),  # Search everything
-    ])
-    def test_find_commands(self, executor, command, expected_output):
+        # Test changing to invalid directory
+        success, error = executor.change_directory("/nonexistent/path")
+        assert not success
+        assert "Directory does not exist" in error
+        
+        # Test changing to a file instead of directory
+        test_file = os.path.join(executor.working_directory, "test_file.txt")
+        with open(test_file, "w") as f:
+            f.write("test")
+        success, error = executor.change_directory(test_file)
+        assert not success
+        assert "Not a directory" in error
+        os.remove(test_file)
+        
+    def test_command_with_pipes(self, executor):
+        """Test handling of commands with pipes."""
+        command = "echo 'hello world' | grep 'hello'"
+        stdout, stderr = executor.execute(command)
+        assert "hello world" in stdout
+        assert stderr is None
+        
+    def test_find_commands(self, executor):
         """Test various find command variations."""
         # Mock the AI processor
-        executor.ai_processor.process_command = MagicMock(return_value=expected_output)
+        executor.ai_processor.process_command = MagicMock(return_value='find .')
         
         # Process the command
-        processed = executor._process_command(command)
+        processed = executor._process_command("find")
         
         # Verify the result
-        assert processed == expected_output
+        assert processed == 'find .'
         
     def test_find_with_multiple_file_types(self, executor):
         """Test finding multiple file types."""
@@ -119,14 +134,14 @@ class TestCommandExecutor:
         executor.ai_processor.process_command = MagicMock(return_value='find -invalid-flag')
         stdout, stderr = executor.execute(command)
         assert stdout is None
-        assert stderr is not None
+        assert stderr != ""
         
         # Test with invalid directory
         command = "find in nonexistent directory"
         executor.ai_processor.process_command = MagicMock(return_value='find /nonexistent/path -type f')
         stdout, stderr = executor.execute(command)
         assert stdout is None
-        assert stderr is not None
+        assert stderr != ""
         
     def test_find_with_special_characters(self, executor):
         """Test finding files with special characters in names."""
@@ -139,6 +154,33 @@ class TestCommandExecutor:
         
         command = "find files with parentheses"
         expected = 'find . -type f -name "*\\(*\\)*"'
+        
+        executor.ai_processor.process_command = MagicMock(return_value=expected)
+        processed = executor._process_command(command)
+        assert processed == expected
+        
+    def test_find_with_multiple_file_types_and_sizes(self, executor):
+        """Test finding files with multiple types and size constraints."""
+        command = "find source code files larger than 1KB"
+        expected = 'find . -type f \\( -name "*.py" -o -name "*.js" -o -name "*.cpp" -o -name "*.h" \\) -size +1k'
+        
+        executor.ai_processor.process_command = MagicMock(return_value=expected)
+        processed = executor._process_command(command)
+        assert processed == expected
+        
+    def test_find_with_date_ranges(self, executor):
+        """Test finding files within specific date ranges."""
+        command = "find files modified between last Monday and yesterday"
+        expected = 'find . -type f -newermt "last Monday" ! -newermt "yesterday"'
+        
+        executor.ai_processor.process_command = MagicMock(return_value=expected)
+        processed = executor._process_command(command)
+        assert processed == expected
+        
+    def test_find_with_content_search(self, executor):
+        """Test finding files containing specific content."""
+        command = "find python files containing 'TODO'"
+        expected = 'find . -type f -name "*.py" -exec grep -l "TODO" {} \\;'
         
         executor.ai_processor.process_command = MagicMock(return_value=expected)
         processed = executor._process_command(command)

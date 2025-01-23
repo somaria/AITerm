@@ -63,7 +63,7 @@ class CommandExecutor:
                     success, result = self.change_directory()
                 
                 if success:
-                    return result, None
+                    return "", None
                 else:
                     return None, result
             
@@ -81,7 +81,7 @@ class CommandExecutor:
                 )
                 
                 # Keep trailing newlines in stdout but strip from stderr
-                stdout = result.stdout if result.stdout else "No results found"  # Return message instead of None
+                stdout = result.stdout if result.stdout else None
                 stderr = result.stderr.rstrip('\n') if result.stderr else None
                 
                 # If command returned non-zero and has stderr, treat as error
@@ -90,6 +90,9 @@ class CommandExecutor:
                 
                 return stdout, stderr
                 
+            except FileNotFoundError:
+                logger.error(f"Command not found: {base_cmd}")
+                return None, f"Command not found: {base_cmd}"
             except Exception as e:
                 logger.error(f"Error executing command: {e}")
                 return None, str(e)
@@ -99,43 +102,37 @@ class CommandExecutor:
             return None, str(e)
     
     def change_directory(self, path: str = None) -> Tuple[bool, str]:
-        """Change the current working directory."""
+        """Change current working directory.
+        
+        Args:
+            path: Path to change to. If None, changes to home directory
+            
+        Returns:
+            Tuple of (success, error_message)
+            success: True if directory was changed successfully
+            error_message: None if successful, error message if failed
+        """
+        if path is None:
+            path = os.path.expanduser('~')
+        
         try:
-            # Handle no path or empty path
-            if not path or path.strip() == '':
-                new_dir = os.path.expanduser('~')
-            else:
-                # Expand user paths (e.g., ~ or ~user)
-                path = os.path.expanduser(path.strip())
-                
-                # Handle relative paths
-                if not os.path.isabs(path):
-                    new_dir = os.path.join(self.working_directory, path)
-                else:
-                    new_dir = path
-                
-                # Normalize path (resolve .. and .)
-                new_dir = os.path.normpath(new_dir)
+            # Handle relative paths
+            if not os.path.isabs(path):
+                path = os.path.join(self.working_directory, path)
             
-            # Check if directory exists and is accessible
-            if not os.path.exists(new_dir):
-                return False, f"Directory not found: {path if path else ''}"
-            if not os.path.isdir(new_dir):
-                return False, f"Not a directory: {path if path else ''}"
+            # Resolve path and check if exists
+            path = os.path.realpath(path)
             
-            # Try to change directory
-            os.chdir(new_dir)
-            self.working_directory = new_dir
+            # Check if path exists first
+            if not os.path.exists(path):
+                return False, "Directory does not exist"
             
-            # Return relative path if possible
-            if not path or path.strip() == '':
-                return True, new_dir
-            elif os.path.isabs(path):
-                return True, new_dir
-            else:
-                return True, os.path.basename(path)
+            # Then check if it's a directory
+            if not os.path.isdir(path):
+                return False, "Not a directory"
             
-        except PermissionError:
-            return False, f"Permission denied: {path if path else ''}"
+            self.working_directory = path
+            return True, None
+            
         except Exception as e:
             return False, str(e)
