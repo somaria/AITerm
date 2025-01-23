@@ -18,8 +18,9 @@ class SuggestionDropdown(tk.Toplevel):
         self.attributes('-topmost', True)  # Keep above other windows
         self.transient(parent)  # Make window transient (will close with parent)
         
-        # Set background color
+        # Set background color and transparency
         self.configure(bg='#1e1e1e')
+        self.attributes('-alpha', 0.95)  # Slight transparency
         
         # Create frame with border
         self.frame = tk.Frame(
@@ -30,19 +31,20 @@ class SuggestionDropdown(tk.Toplevel):
         )
         self.frame.pack(fill=tk.BOTH, expand=True, padx=1, pady=1)
         
-        # Create listbox for suggestions
+        # Create listbox for suggestions with improved styling
         self.listbox = tk.Listbox(
             self.frame,
             bg='#1e1e1e',
             fg='#ffffff',
             selectmode=tk.SINGLE,
             font=('Courier', 12),
-            selectbackground='#4a4a4a',
+            selectbackground='#3a3a3a',  # Lighter selection background
             selectforeground='#ffffff',
             borderwidth=0,
             highlightthickness=0,
             height=10,  # Show up to 10 items
-            width=40    # Set minimum width
+            width=40,   # Set minimum width
+            activestyle='none'  # Remove dotted line around selected item
         )
         self.listbox.pack(fill=tk.BOTH, expand=True)
         

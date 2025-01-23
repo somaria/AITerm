@@ -188,63 +188,85 @@ class CommandSuggester:
 
         return unique_suggestions
 
-    def get_suggestions(self, partial_command: str, max_suggestions: int = 5) -> List[str]:
-        """Get command suggestions based on partial input."""
-        if not partial_command:
-            return self._get_default_suggestions(max_suggestions)
+    def get_suggestions(self, text: str) -> List[str]:
+        """Get command suggestions based on current input."""
+        if not text:
+            return []
             
-        # Fix any typos in the command
-        fixed_command = self._fix_typos(partial_command)
-        if fixed_command != partial_command:
-            print(f"\033[2mCorrected '{partial_command}' to '{fixed_command}'\033[0m")
+        # Fix any typos first
+        fixed_command = self._fix_typos(text)
+        logger.info(f"Corrected '{text}' to '{fixed_command}'")
         
-        # Split into parts for better matching
+        # Split into parts
         parts = fixed_command.split()
-        base_cmd = parts[0].lower() if parts else ""
+        if not parts:
+            return []
+            
+        # Get command part
+        cmd = parts[0].lower()
         
-        # Handle docker and docker-compose commands
-        if base_cmd == "docker":
-            # Check if it's a compose command
-            if len(parts) > 1 and parts[1] in ["c", "comp", "compose"]:
-                suggestions = self._get_docker_compose_suggestions()
-                # If we have more parts, use them for filtering
-                if len(parts) > 2:
-                    # Get the subcommand (e.g., 'st' from 'd c st')
-                    subcommand = parts[2].lower()
-                    # Special handling for start/stop/stats
-                    if subcommand.startswith("st"):
-                        suggestions = [
-                            "docker-compose start (Start services)",
-                            "docker-compose stop (Stop services)",
-                            "docker-compose restart (Restart services)",
-                            "docker-compose up -d (Start services in background)",
-                            "docker-compose up (Start services)",
-                            "docker-compose down (Stop and remove containers)",
-                        ]
-                    elif subcommand.startswith("sp"):
-                        suggestions = [
-                            "docker-compose stop (Stop services)",
-                            "docker-compose down (Stop and remove containers)",
-                            "docker-compose restart (Restart services)",
-                        ]
-                    elif subcommand.startswith("rs"):
-                        suggestions = [
-                            "docker-compose restart (Restart services)",
-                            "docker-compose stop (Stop services)",
-                            "docker-compose start (Start services)",
-                        ]
-            else:
-                suggestions = self._get_docker_suggestions()
-        else:
-            suggestions = self._get_all_suggestions()
+        # Get relevant history entries
+        history_entries = self.command_history.history if hasattr(self.command_history, 'history') else []
+        suggestions = []
         
-        # Filter and prioritize suggestions
-        filtered = self._filter_suggestions(suggestions, fixed_command)
-        prioritized = self._prioritize_suggestions(filtered, fixed_command)
-        
-        # Return top N suggestions
-        return prioritized[:max_suggestions]
-    
+        # First try exact matches from history
+        for hist_entry in history_entries:
+            if not isinstance(hist_entry, dict) or 'command' not in hist_entry:
+                continue
+                
+            # Try both original and interpreted commands
+            hist_cmd = hist_entry['command']
+            interpreted_cmd = hist_entry.get('interpreted_as')
+            
+            # Check original command
+            hist_parts = hist_cmd.lower().split()
+            if hist_parts and hist_parts[0].startswith(cmd):
+                if hist_cmd not in suggestions:
+                    suggestions.append(hist_cmd)
+                    
+            # Check interpreted command if present
+            if interpreted_cmd:
+                int_parts = interpreted_cmd.lower().split()
+                if int_parts and int_parts[0].startswith(cmd):
+                    if interpreted_cmd not in suggestions:
+                        suggestions.append(interpreted_cmd)
+                    
+        # Then try default commands
+        for default_cmd in self.default_commands:
+            if default_cmd.lower().startswith(cmd):
+                if default_cmd not in suggestions:
+                    suggestions.append(default_cmd)
+                    
+        # If no matches found, try similar commands
+        if not suggestions:
+            for hist_entry in history_entries:
+                if not isinstance(hist_entry, dict) or 'command' not in hist_entry:
+                    continue
+                    
+                # Try both original and interpreted commands
+                hist_cmd = hist_entry['command']
+                interpreted_cmd = hist_entry.get('interpreted_as')
+                
+                # Check original command
+                hist_parts = hist_cmd.lower().split()
+                if hist_parts:
+                    similarity = self._similarity(cmd, hist_parts[0])
+                    if similarity > 0.7:  # Threshold for similarity
+                        if hist_cmd not in suggestions:
+                            suggestions.append(hist_cmd)
+                            
+                # Check interpreted command if present
+                if interpreted_cmd:
+                    int_parts = interpreted_cmd.lower().split()
+                    if int_parts:
+                        similarity = self._similarity(cmd, int_parts[0])
+                        if similarity > 0.7:  # Threshold for similarity
+                            if interpreted_cmd not in suggestions:
+                                suggestions.append(interpreted_cmd)
+                        
+        # Limit number of suggestions
+        return suggestions[:5]  # Return top 5 suggestions
+
     def _prioritize_suggestions(self, suggestions: List[str], partial_args: str = "") -> List[str]:
         """Prioritize suggestions based on partial arguments."""
         if not partial_args:
@@ -767,83 +789,81 @@ class CommandSuggester:
         # Then try regex patterns
         return any(re.match(pattern, cmd) for pattern in patterns)
 
-    def _fix_typos(self, input_str: str) -> list[str]:
-        """Fix common typos in command input using Levenshtein distance and transposition check."""
-        if not input_str:
-            return []
+    def _fix_typos(self, text: str) -> str:
+        """Fix common typos in commands based on history."""
+        if not text:
+            return text
             
-        # Get all known commands from history and defaults
-        known_commands = set(self.default_commands.keys())
-        known_commands.update(self.command_history.get_all_commands())
-        
-        # Find similar commands using Levenshtein distance and transposition check
-        similar_commands = []
-        input_lower = input_str.lower()
-        
-        for known_cmd in known_commands:
-            known_lower = known_cmd.lower()
+        # Get command part (first word)
+        parts = text.split()
+        if not parts:
+            return text
             
-            # First try exact prefix match
-            if known_lower.startswith(input_lower):
-                similar_commands.append(known_cmd)
+        cmd = parts[0].lower()
+        
+        # Get history entries
+        history_entries = self.command_history.history if hasattr(self.command_history, 'history') else []
+        
+        # Check against history
+        for hist_entry in history_entries:
+            if not isinstance(hist_entry, dict) or 'command' not in hist_entry:
                 continue
                 
-            # Then try word-by-word matching for multi-word commands
-            input_parts = input_lower.split()
-            known_parts = known_lower.split()
-            
-            if len(input_parts) > 1:
-                # For multi-word inputs, check each word
-                matches = 0
-                for i, part in enumerate(input_parts):
-                    if i >= len(known_parts):
-                        break
-                        
-                    # Check for prefix match or small typo
-                    if known_parts[i].startswith(part):
-                        matches += 1
-                    else:
-                        # Check for transposition in the first word
-                        if i == 0 and len(part) >= 3:
-                            for j in range(len(part) - 1):
-                                transposed = list(part)
-                                transposed[j], transposed[j + 1] = transposed[j + 1], transposed[j]
-                                if ''.join(transposed) == known_parts[i]:
-                                    matches += 1
-                                    break
-                        
-                        # Check for other typos
-                        distance = self._levenshtein_distance(part, known_parts[i])
-                        if distance <= min(2, len(part) // 2):
-                            matches += 1
-                            
-                if matches >= len(input_parts) * 0.5:
-                    similar_commands.append(known_cmd)
-            else:
-                # For single-word inputs, use more aggressive matching
-                # First check if it's a prefix of any word in the command
-                if any(word.startswith(input_lower) for word in known_parts):
-                    similar_commands.append(known_cmd)
-                    continue
-                    
-                # Check for transposition in the first word
-                first_word = known_parts[0]
-                if len(input_lower) >= 3 and len(first_word) >= 3:
-                    for j in range(len(input_lower) - 1):
-                        transposed = list(input_lower)
-                        transposed[j], transposed[j + 1] = transposed[j + 1], transposed[j]
-                        if ''.join(transposed) == first_word:
-                            similar_commands.append(known_cmd)
-                            continue
+            hist_cmd = hist_entry['command']
+            hist_parts = hist_cmd.lower().split()
+            if not hist_parts:
+                continue
                 
-                # Then check for typos in the first word
-                distance = self._levenshtein_distance(input_lower, first_word)
-                max_distance = min(2, max(1, len(input_lower) // 2))
+            # If very similar, use the historical command
+            similarity = self._similarity(cmd, hist_parts[0])
+            if similarity > 0.8:  # High threshold for auto-correction
+                logger.info(f"Auto-correcting '{cmd}' to '{hist_parts[0]}'")
+                # Replace just the command part
+                parts[0] = hist_parts[0]
+                return ' '.join(parts)
                 
-                if distance <= max_distance:
-                    similar_commands.append(known_cmd)
+        # No correction needed
+        return text
         
-        return similar_commands if similar_commands else [input_str]
+    def _similarity(self, s1: str, s2: str) -> float:
+        """Calculate similarity between two strings."""
+        if not s1 or not s2:
+            return 0.0
+            
+        # Convert to lowercase for comparison
+        s1 = s1.lower()
+        s2 = s2.lower()
+        
+        # If strings are equal, return 1.0
+        if s1 == s2:
+            return 1.0
+            
+        # Calculate Levenshtein distance
+        m = len(s1)
+        n = len(s2)
+        
+        # Create matrix
+        d = [[0] * (n + 1) for _ in range(m + 1)]
+        
+        # Initialize first row and column
+        for i in range(m + 1):
+            d[i][0] = i
+        for j in range(n + 1):
+            d[0][j] = j
+            
+        # Fill in the rest of the matrix
+        for i in range(1, m + 1):
+            for j in range(1, n + 1):
+                if s1[i-1] == s2[j-1]:
+                    d[i][j] = d[i-1][j-1]
+                else:
+                    d[i][j] = min(d[i-1][j], d[i][j-1], d[i-1][j-1]) + 1
+                    
+        # Calculate similarity score
+        max_len = max(m, n)
+        if max_len == 0:
+            return 0.0
+        return 1.0 - (d[m][n] / max_len)
 
     def _calculate_similarity(self, cmd1: str, cmd2: str) -> float:
         """Calculate similarity score between two commands."""

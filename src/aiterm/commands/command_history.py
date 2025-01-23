@@ -23,7 +23,7 @@ class CommandHistory:
         self.history_file.parent.mkdir(parents=True, exist_ok=True)
         
         # Load existing history or create empty one
-        self.history: List[Dict] = self._load_history()
+        self._history: List[Dict] = self._load_history()
         
     def _load_history(self) -> List[Dict]:
         """Load command history from file."""
@@ -39,27 +39,29 @@ class CommandHistory:
         """Save command history to file."""
         try:
             with open(self.history_file, 'w') as f:
-                json.dump(self.history, f, indent=2)
+                json.dump(self._history, f, indent=2)
         except Exception as e:
             print(f"Error saving history: {e}")
     
-    def add_command(self, command: str, working_dir: str, exit_code: int = 0, output: str = ""):
+    def add_command(self, command: str, working_dir: str, exit_code: int = 0, output: str = "", interpreted_as: str = None):
         """Add a command to history.
         
         Args:
             command: The command that was executed
             working_dir: Working directory when command was executed
-            exit_code: Command exit code (0 for success)
-            output: Command output (truncated if too long)
+            exit_code: Exit code from command execution
+            output: Command output (truncated)
+            interpreted_as: If command was interpreted from natural language, the actual command executed
         """
         entry = {
             "command": command,
             "working_dir": working_dir,
             "timestamp": datetime.now().isoformat(),
             "exit_code": exit_code,
-            "output": output[:1000] if output else ""  # Limit output size
+            "output": output[:1000] if output else "",  # Limit output size
+            "interpreted_as": interpreted_as  # Store interpreted command if present
         }
-        self.history.append(entry)
+        self._history.append(entry)
         self._save_history()
     
     def get_recent_commands(self, count: int = 10) -> List[str]:
@@ -71,7 +73,7 @@ class CommandHistory:
         Returns:
             List of recent command entries
         """
-        return [entry["command"] for entry in self.history[-count:]]
+        return [entry["command"] for entry in self._history[-count:]]
 
     def get_commands_in_directory(self, directory: str) -> List[str]:
         """Get commands executed in a specific directory.
@@ -83,14 +85,14 @@ class CommandHistory:
             List of command entries executed in the directory
         """
         return [
-            entry["command"] for entry in self.history 
+            entry["command"] for entry in self._history 
             if entry["working_dir"] == directory
         ]
     
     def get_similar_commands(self, command: str) -> List[str]:
         """Get commands similar to the given command."""
         similar = []
-        for cmd in self.history:
+        for cmd in self._history:
             if command.lower() in cmd['command'].lower():
                 similar.append(cmd['command'])
         return similar
@@ -109,10 +111,10 @@ class CommandHistory:
             return {}
             
         # Get current working directory from most recent command
-        current_dir = self.history[-1]["working_dir"] if self.history else None
+        current_dir = self._history[-1]["working_dir"] if self._history else None
         
         # Analyze command patterns
-        working_dirs = [entry["working_dir"] for entry in self.history[-last_n:]]
+        working_dirs = [entry["working_dir"] for entry in self._history[-last_n:]]
         
         return {
             "current_directory": current_dir,
@@ -123,4 +125,21 @@ class CommandHistory:
     
     def get_all_commands(self) -> List[str]:
         """Get all commands in history."""
-        return [cmd['command'] for cmd in self.history]
+        return [cmd['command'] for cmd in self._history]
+
+    def get_command_strings(self) -> List[str]:
+        """Get list of command strings from history.
+        
+        Returns:
+            List of command strings, most recent first.
+        """
+        return [entry['command'] for entry in reversed(self._history)]
+        
+    @property 
+    def history(self) -> List[Dict]:
+        """Get the command history.
+        
+        Returns:
+            List of command history entries.
+        """
+        return self._load_history()
