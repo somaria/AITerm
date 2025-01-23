@@ -521,7 +521,7 @@ class TerminalGUI:
             return
 
         # If AI mode is enabled and it's not a built-in command, interpret it
-        if self.ai_mode.get() and not any(command.startswith(cmd) for cmd in ['cd', 'pwd', 'exit', 'clear', 'history']):
+        if self.ai_mode.get() and not any(command.startswith(cmd) for cmd in ['cd', 'pwd', 'exit', 'clear', 'history', 'tail']):
             try:
                 interpreted_command = CommandInterpreter.interpret(command)
                 if interpreted_command:
@@ -532,9 +532,34 @@ class TerminalGUI:
                 return
         
         try:
+            # Get the command without arguments
+            command_name = command.split()[0]
+            
             # Handle interactive commands with PTY
-            interactive_commands = ['vi', 'vim', 'nano', 'emacs', 'less', 'more']
-            if any(command.startswith(cmd) for cmd in interactive_commands):
+            interactive_commands = {
+                # Editors
+                'vi', 'vim', 'nano', 'emacs', 'pico',
+                # Pagers
+                'less', 'more', 'most',
+                # Interactive monitoring
+                'top', 'htop',
+                # Interactive file viewing
+                'tail -f', 'watch',
+                # Interactive shells
+                'python', 'ipython', 'node', 'mysql', 'psql',
+                # Interactive git commands
+                'git add -p', 'git rebase -i'
+            }
+            
+            # Check if it's an interactive command
+            is_interactive = command_name in interactive_commands or \
+                           any(command.startswith(cmd) for cmd in interactive_commands)
+            
+            # Special case for tail -f
+            if command_name == 'tail' and '-f' in command.split():
+                is_interactive = True
+            
+            if is_interactive:
                 self.start_pty_mode(command)
                 return
                 
