@@ -1,3 +1,5 @@
+"""AITerm package initialization."""
+
 """
 AI-powered Terminal Application
 """

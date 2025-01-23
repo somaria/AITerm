@@ -1,3 +1,1 @@
-"""
-Command handling and execution functionality
-"""
+"""Commands package initialization."""

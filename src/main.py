@@ -3,13 +3,24 @@
 import os
 import sys
 from aiterm.gui.window_manager import WindowManager
+from aiterm.commands.git_command import GitCommand
+
+def handle_git_command(args):
+    """Handle Git command execution."""
+    git_handler = GitCommand()
+    command_str = " ".join(args).strip()
+    return git_handler.execute(command_str)
 
 def main():
     """Main entry point."""
-    # Get the window manager instance
+    if len(sys.argv) > 1:
+        command = sys.argv[1:]
+        result = handle_git_command(command)
+        print(result)
+        return
+
+    # GUI mode if no commands provided
     window_manager = WindowManager.get_instance()
-    
-    # Start the main event loop
     window_manager.root.mainloop()
 
 if __name__ == "__main__":
