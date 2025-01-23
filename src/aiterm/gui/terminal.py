@@ -254,8 +254,14 @@ class TerminalGUI:
             self.parent.quit()
             return
 
+        # Handle history command directly
+        if command.strip() == 'history':
+            for i, cmd in enumerate(self.command_history, 1):
+                self.append_output(f"\n{i:4d}  {cmd}")
+            return
+
         # If AI mode is enabled and it's not a built-in command, interpret it
-        if self.ai_mode.get() and not any(command.startswith(cmd) for cmd in ['cd', 'pwd', 'exit', 'clear']):
+        if self.ai_mode.get() and not any(command.startswith(cmd) for cmd in ['cd', 'pwd', 'exit', 'clear', 'history']):
             try:
                 interpreted_command = CommandInterpreter.interpret(command)
                 if interpreted_command:
