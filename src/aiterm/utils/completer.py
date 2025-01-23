@@ -14,39 +14,66 @@ class TerminalCompleter:
     def __init__(self):
         self.matches = []
         # Expanded command set
-        self.commands = set([
-            # File operations
-            'ls', 'cd', 'pwd', 'mkdir', 'rm', 'cp', 'mv', 'touch',
-            # File viewing/editing
-            'cat', 'less', 'more', 'vim', 'nano', 'head', 'tail',
-            # Text processing
-            'grep', 'sed', 'awk', 'sort', 'uniq', 'wc',
-            # Search
-            'find', 'locate', 'which',
-            # Process
-            'ps', 'kill', 'top',
-            # System
-            'df', 'du', 'free',
-            # Network
-            'ping', 'curl', 'wget', 'ssh',
-            # Archive
-            'tar', 'gzip', 'zip', 'unzip',
-            # Package management
-            'pip', 'brew',
-            # Version control
-            'git', 'svn',
-            # Others
-            'echo', 'clear', 'python', 'node'
-        ])
-        
-        self.git_patterns = {
-            'show last': ['commits', 'changes'],
-            'git show last': ['commits', 'changes'],
-            'git log': ['-n', '--oneline', '--graph'],
-            'git show': ['last', 'HEAD', 'master']
+        self.commands = {
+            'git': {
+                'description': 'Git version control',
+                'subcommands': [
+                    'status', 'add', 'commit', 'push', 'pull', 'checkout', 'branch',
+                    'merge', 'rebase', 'fetch', 'clone', 'init', 'log', 'diff',
+                    'stash', 'remote', 'reset', 'tag'
+                ]
+            },
+            'docker': {
+                'description': 'Docker container management',
+                'subcommands': [
+                    'ps', 'images', 'run', 'exec', 'build', 'pull', 'push',
+                    'logs', 'stop', 'start', 'restart', 'rm', 'rmi', 'network',
+                    'volume', 'compose'
+                ]
+            },
+            'file': {
+                'description': 'File operations',
+                'commands': ['ls', 'cd', 'pwd', 'mkdir', 'rm', 'cp', 'mv', 'touch']
+            },
+            'text': {
+                'description': 'Text operations',
+                'commands': ['cat', 'less', 'more', 'vim', 'nano', 'head', 'tail']
+            },
+            'search': {
+                'description': 'Search operations',
+                'commands': ['grep', 'find', 'locate', 'which']
+            },
+            'process': {
+                'description': 'Process management',
+                'commands': ['ps', 'kill', 'top']
+            },
+            'network': {
+                'description': 'Network operations',
+                'commands': ['ping', 'curl', 'wget', 'ssh']
+            },
+            'archive': {
+                'description': 'Archive operations',
+                'commands': ['tar', 'gzip', 'zip', 'unzip']
+            },
+            'package': {
+                'description': 'Package management',
+                'commands': ['pip', 'brew']
+            },
+            'other': {
+                'description': 'Other commands',
+                'commands': ['echo', 'clear', 'python', 'node']
+            }
         }
         
-        logger.info(f"Initialized TerminalCompleter with {len(self.commands)} commands")
+        # Flatten commands for quick lookup
+        self.all_commands = set()
+        for category in self.commands.values():
+            if 'commands' in category:
+                self.all_commands.update(category['commands'])
+            if 'subcommands' in category:
+                self.all_commands.add(category['description'].split()[0].lower())
+
+        logger.info(f"Initialized TerminalCompleter with {len(self.all_commands)} commands")
         
     def get_suggestions(self, text):
         """Get all matching suggestions for the given text"""
@@ -60,79 +87,46 @@ class TerminalCompleter:
         text = parts[0].lower()  # Only match first word, case insensitive
         logger.info(f"Getting suggestions for text: '{text}'")
         
-        # Handle git command patterns
+        # Handle command with subcommands (like git)
         if len(parts) >= 2:
-            pattern = ' '.join(parts[:2])
-            if pattern in self.git_patterns:
-                return [f"{text} {suffix}" for suffix in self.git_patterns[pattern]]
+            main_command = parts[0].lower()
+            subcommand = parts[1].lower()
+            
+            # Check if this is a command with subcommands
+            for category, info in self.commands.items():
+                if info.get('subcommands') and category == main_command:
+                    # Get matching subcommands
+                    matches = [cmd for cmd in info['subcommands'] if cmd.startswith(subcommand)]
+                    if matches:
+                        return [f"{main_command} {cmd}" for cmd in matches]
+                    
+                    # If no exact matches, try fuzzy matching with higher cutoff
+                    fuzzy_matches = get_close_matches(subcommand, info['subcommands'], n=5, cutoff=0.6)
+                    if fuzzy_matches:
+                        return [f"{main_command} {cmd}" for cmd in fuzzy_matches]
         
-        # If we have multiple parts, complete the last part as a path
-        if len(parts) > 1:
-            last_part = parts[-1]
-            if last_part.startswith('~'):
-                last_part = os.path.expanduser(last_part)
+        # Handle single command completion
+        if len(parts) == 1:
+            # First try exact category matches
+            for category, info in self.commands.items():
+                if category.startswith(text):
+                    suggestions.append(category)
             
-            # Get directory and base for path completion
-            path_dir = os.path.dirname(last_part)
-            path_base = os.path.basename(last_part)
-            if path_dir == '':
-                path_dir = '.'
-            elif path_dir.startswith('~'):
-                path_dir = os.path.expanduser(path_dir)
+            # Then try command matches from all categories
+            command_matches = []
+            for category in self.commands.values():
+                if 'commands' in category:
+                    command_matches.extend([cmd for cmd in category['commands'] if cmd.startswith(text)])
+            suggestions.extend(command_matches)
             
-            try:
-                logger.info(f"Trying path completion for: {path_dir}/{path_base}*")
-                matches = glob.glob(os.path.join(path_dir, path_base + '*'))
-                # Add trailing slash to directories
-                matches = [f"{m}{'/' if os.path.isdir(m) else ''}" for m in matches]
-                # Reconstruct full command with completion
-                if matches:
-                    suggestions = [' '.join(parts[:-1] + [m]) for m in matches]
-                    logger.info(f"Path suggestions: {suggestions}")
-            except Exception as e:
-                logger.error(f"Error in path completion: {e}")
-                
-        # Single word - try path completion first, then command completion
-        else:
-            # Try path completion if it looks like a path
-            if text.startswith('~') or '/' in text:
-                try:
-                    path_dir = os.path.dirname(text)
-                    path_base = os.path.basename(text)
-                    if path_dir == '':
-                        path_dir = '.'
-                    elif path_dir.startswith('~'):
-                        path_dir = os.path.expanduser(path_dir)
-                        
-                    logger.info(f"Trying path completion for: {path_dir}/{path_base}*")
-                    matches = glob.glob(os.path.join(path_dir, path_base + '*'))
-                    suggestions.extend([f"{m}{'/' if os.path.isdir(m) else ''}" for m in matches])
-                    logger.info(f"Path suggestions: {suggestions}")
-                except Exception as e:
-                    logger.error(f"Error in path completion: {e}")
-            
-            # Try command completion with fuzzy matching
-            if not suggestions:
-                # Convert commands set to sorted list for consistent matching
-                command_list = sorted(self.commands)
-                
-                # First try prefix matches
-                prefix_matches = [cmd for cmd in command_list if cmd.startswith(text)]
-                logger.info(f"Prefix matches for '{text}': {prefix_matches}")
-                suggestions.extend(prefix_matches)
-                
-                # Then try fuzzy matches if we don't have enough prefix matches
-                if len(prefix_matches) < 5:
-                    # Use list for fuzzy matching
-                    fuzzy_matches = get_close_matches(text, command_list, n=5-len(prefix_matches), cutoff=0.3)
-                    logger.info(f"Fuzzy matches for '{text}': {fuzzy_matches}")
-                    # Only add fuzzy matches that aren't already in prefix matches
-                    new_matches = [m for m in fuzzy_matches if m not in prefix_matches]
-                    logger.info(f"New fuzzy matches: {new_matches}")
-                    suggestions.extend(new_matches)
-            
+            # If we don't have enough matches, try fuzzy matching with higher cutoff
+            if len(suggestions) < 5:
+                all_commands = list(self.all_commands)
+                fuzzy_matches = get_close_matches(text, all_commands, n=5-len(suggestions), cutoff=0.6)
+                suggestions.extend([m for m in fuzzy_matches if m not in suggestions])
+        
         logger.info(f"Final suggestions: {suggestions}")
-        return suggestions
+        return suggestions[:5]  # Limit to top 5 suggestions
         
     def complete(self, text, state):
         """Return the state'th completion for text"""
