@@ -614,6 +614,34 @@ class TerminalGUI:
         """Update the prompt with current working directory"""
         self.prompt_label.config(text=f"{self.command_executor.working_directory}")
 
+    def handle_key(self, event):
+        """Handle key events in interactive mode"""
+        if not self.in_pty_mode or not self.pty:
+            return
+        
+        # Handle special keys
+        if event.keysym == 'c' and event.state & 0x4:  # Ctrl+C
+            self.pty.write('\x03')  # Send SIGINT
+            return "break"
+        elif event.keysym == 'd' and event.state & 0x4:  # Ctrl+D
+            self.pty.write('\x04')  # Send EOF
+            return "break"
+        elif event.keysym == 'z' and event.state & 0x4:  # Ctrl+Z
+            self.pty.write('\x1A')  # Send SIGTSTP
+            return "break"
+        elif event.keysym == 'Return':
+            self.pty.write('\r')
+            return "break"
+        elif event.keysym == 'BackSpace':
+            self.pty.write('\x7f')  # Send backspace
+            return "break"
+        elif event.keysym == 'Tab':
+            self.pty.write('\t')
+            return "break"
+        elif len(event.char) > 0:
+            self.pty.write(event.char)
+            return "break"
+    
     def _handle_tab(self, event):
         """Handle tab key press for command completion"""
         current_text = self.command_entry.get()
