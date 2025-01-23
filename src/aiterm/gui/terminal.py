@@ -25,7 +25,7 @@ class TerminalGUI:
         self.history_index = 0
         self.current_completions = []
         self.completion_index = 0
-        self.ai_mode = tk.BooleanVar(value=False)
+        self.ai_mode = tk.BooleanVar(value=True)  # Set AI mode to True by default
         
         # Create output area
         self.output_area = tk.Text(
@@ -61,13 +61,28 @@ class TerminalGUI:
         )
         self.command_entry.pack(side='left', fill='x', expand=True)
         
-        # Create AI mode toggle
-        self.ai_toggle = ttk.Label(
+        # Create AI mode toggle frame
+        self.ai_toggle_frame = tk.Frame(
             self.cmd_frame,
-            text="AI MODE",
-            cursor="hand2"
+            bg='cyan',  # Start with cyan background since AI mode is on
+            bd=1,
+            relief='solid'
         )
-        self.ai_toggle.pack(side='right', padx=5)
+        self.ai_toggle_frame.pack(side='right', padx=5)
+        
+        # Create AI mode toggle
+        self.ai_toggle = tk.Label(
+            self.ai_toggle_frame,
+            text="AI MODE",
+            cursor="hand2",
+            bg='cyan',  # Start with cyan background
+            fg='black',  # Start with black text
+            padx=8,
+            pady=2,
+            font=('Courier', 10, 'bold'),
+            relief='solid'  # Start with solid relief
+        )
+        self.ai_toggle.pack()
         self.ai_toggle.bind('<Button-1>', self._toggle_ai_mode)
         
         # Configure tags for colored output
@@ -88,7 +103,7 @@ class TerminalGUI:
         
         # Show welcome message
         self.append_output("Welcome to AI Terminal!\nClick 'AI MODE' to toggle AI interpretation.", 'cyan')
-        
+    
     def _toggle_ai_mode(self, event=None):
         """Toggle AI mode and update display"""
         self.ai_mode.set(not self.ai_mode.get())
@@ -97,10 +112,24 @@ class TerminalGUI:
     def _update_ai_mode_display(self):
         """Update the AI mode toggle display"""
         if self.ai_mode.get():
-            self.ai_toggle.configure(fg='cyan')
+            self.ai_toggle.configure(
+                fg='black',
+                bg='cyan',
+                relief='solid'
+            )
+            self.ai_toggle_frame.configure(
+                bg='cyan'
+            )
         else:
-            self.ai_toggle.configure(fg='gray')
-
+            self.ai_toggle.configure(
+                fg='gray',
+                bg='black',
+                relief='flat'
+            )
+            self.ai_toggle_frame.configure(
+                bg='black'
+            )
+    
     def append_output(self, text, color=None):
         """Append text to output area with optional color"""
         if not text:
