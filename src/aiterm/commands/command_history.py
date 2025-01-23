@@ -62,7 +62,7 @@ class CommandHistory:
         self.history.append(entry)
         self._save_history()
     
-    def get_recent_commands(self, count: int = 10) -> List[Dict]:
+    def get_recent_commands(self, count: int = 10) -> List[str]:
         """Get most recent commands.
         
         Args:
@@ -71,9 +71,9 @@ class CommandHistory:
         Returns:
             List of recent command entries
         """
-        return self.history[-count:]
-    
-    def get_commands_in_directory(self, directory: str) -> List[Dict]:
+        return [entry["command"] for entry in self.history[-count:]]
+
+    def get_commands_in_directory(self, directory: str) -> List[str]:
         """Get commands executed in a specific directory.
         
         Args:
@@ -83,52 +83,16 @@ class CommandHistory:
             List of command entries executed in the directory
         """
         return [
-            entry for entry in self.history 
+            entry["command"] for entry in self.history 
             if entry["working_dir"] == directory
         ]
-    
-    def get_similar_commands(self, current_cmd: str, threshold: float = 0.6) -> List[str]:
-        """Find similar commands from history.
-        
-        Args:
-            current_cmd: Current command to find similar ones for
-            threshold: Similarity threshold (0-1)
-            
-        Returns:
-            List of similar commands
-        """
-        # Simple similarity based on common words
-        current_words = set(current_cmd.lower().split())
-        similar = []
-        
-        for entry in self.history:
-            cmd = entry["command"]
-            cmd_words = set(cmd.lower().split())
-            
-            # Calculate Jaccard similarity
-            intersection = len(current_words & cmd_words)
-            union = len(current_words | cmd_words)
-            
-            if union > 0:
-                similarity = intersection / union
-                if similarity >= threshold and cmd != current_cmd:
-                    similar.append(cmd)
-        
-        return similar
     
     def get_similar_commands(self, command: str) -> List[str]:
         """Get commands similar to the given command."""
         similar = []
-        cmd_parts = command.lower().split()
-        
-        for entry in self.history:
-            stored_cmd = entry["command"].lower()
-            stored_parts = stored_cmd.split()
-            
-            # Check if command is a prefix or shares common words
-            if stored_cmd.startswith(command.lower()) or any(part in stored_parts for part in cmd_parts):
-                similar.append(entry["command"])
-        
+        for cmd in self.history:
+            if command.lower() in cmd['command'].lower():
+                similar.append(cmd['command'])
         return similar
     
     def get_command_context(self, last_n: int = 5) -> Dict:
@@ -145,22 +109,18 @@ class CommandHistory:
             return {}
             
         # Get current working directory from most recent command
-        current_dir = recent[-1]["working_dir"] if recent else None
+        current_dir = self.history[-1]["working_dir"] if self.history else None
         
         # Analyze command patterns
-        commands = [entry["command"] for entry in recent]
-        working_dirs = [entry["working_dir"] for entry in recent]
+        working_dirs = [entry["working_dir"] for entry in self.history[-last_n:]]
         
         return {
             "current_directory": current_dir,
-            "recent_commands": commands,
+            "recent_commands": recent,
             "recent_directories": working_dirs,
             "timestamp": datetime.now().isoformat()
         }
     
     def get_all_commands(self) -> List[str]:
-        """Get all commands from history across all directories."""
-        all_commands = set()
-        for entry in self.history:
-            all_commands.add(entry["command"])
-        return list(all_commands)
+        """Get all commands in history."""
+        return [cmd['command'] for cmd in self.history]

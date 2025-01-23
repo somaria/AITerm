@@ -10,7 +10,7 @@ import logging
 logger = logging.getLogger(__name__)
 
 class CommandSuggester:
-    """Suggests commands based on history and context using AI."""
+    """Suggests commands based on user input and command history."""
     
     # Command descriptions for better help
     COMMAND_DESCRIPTIONS = {
@@ -85,27 +85,67 @@ class CommandSuggester:
     }
     
     def __init__(self):
-        """Initialize command suggester."""
-        self.history = CommandHistory()
+        """Initialize the command suggester."""
+        self.command_history = CommandHistory()
         self.ai_processor = AICommandProcessor()
         self.current_suggestions: List[str] = []
         self.current_placeholder: Optional[str] = None
-    
+        
+        # Default commands
+        self.default_commands = {
+            # Theme commands
+            "dark": "Switch to dark theme",
+            "light": "Switch to light theme",
+            
+            # Git commands
+            "status": "Check git status",
+            "commit": "Commit changes",
+            "push": "Push changes",
+            "pull": "Pull changes",
+            "add": "Stage files",
+            "branch": "List branches",
+            "checkout": "Switch branches",
+            "merge": "Merge branches",
+            "stash": "Stash changes",
+            "log": "View commit history",
+            "diff": "Show changes",
+            
+            # Docker commands
+            "docker": "Run docker command",
+            "docker-compose": "Run docker-compose command",
+            "docker ps": "List containers",
+            "docker images": "List images",
+            "docker build": "Build image",
+            "docker run": "Run container",
+            
+            # Python commands
+            "python": "Run python script",
+            "pip": "Package installer",
+            "pytest": "Run tests",
+            "python -m": "Run module",
+            "pip install": "Install package",
+            "pip uninstall": "Remove package",
+        }
+        
+        # Add default commands to history with a default working directory
+        for cmd in self.default_commands:
+            self.command_history.add_command(cmd, working_dir="/", exit_code=0, output="")
+
     def get_similar_commands(self, command: str, max_suggestions: int = 5) -> List[str]:
         """Get commands similar to the given command."""
         # Get all commands from history
-        all_commands = self.history.get_all_commands()
+        all_commands = self.command_history.get_all_commands()
         
         # Calculate similarity scores
         scores = []
         for cmd in all_commands:
-            score = self._calculate_similarity(command, cmd)
+            score = self._calculate_similarity(command, cmd['command'])
             if score > 0.3:  # Only include reasonably similar commands
                 scores.append((score, cmd))
         
         # Sort by similarity score and return top N
         scores.sort(reverse=True)
-        return [cmd for _, cmd in scores[:max_suggestions]]
+        return [cmd['command'] for _, cmd in scores[:max_suggestions]]
     
     def get_current_placeholder(self) -> Optional[str]:
         """Get the current placeholder suggestion."""
@@ -116,36 +156,38 @@ class CommandSuggester:
     def suggest_commands(self, command: str) -> List[str]:
         """Suggest commands based on input."""
         suggestions = []
-        
+
         # Get similar commands from history
         if command:
-            similar = self.history.get_similar_commands(command)
-            suggestions.extend([s for s in similar if s.startswith(command)])
-        
-        # Get AI suggestions
+            similar = self.command_history.get_similar_commands(command)
+            suggestions.extend(similar)
+
+        # Add default suggestions
+        if command in self.default_commands:
+            suggestions.append(command)
+        else:
+            # Try to fix typos
+            fixed = self._fix_typos(command)
+            suggestions.extend(fixed)
+
+        # Get suggestions from AI
         try:
             ai_suggestions = self.ai_processor.process_command(command)
             if ai_suggestions:
-                # Split AI suggestions into separate commands
-                for suggestion in ai_suggestions.split('\n'):
-                    suggestion = suggestion.strip()
-                    if suggestion and suggestion.startswith(command):
-                        suggestions.append(suggestion)
+                suggestions.extend(ai_suggestions.split('\n'))
         except Exception as e:
-            logger.warning(f"AI suggestions failed: {e}")
-            # Fall back to default suggestions if available
-            if command in self.DEFAULT_SUGGESTIONS:
-                suggestions.extend([s for s in self.DEFAULT_SUGGESTIONS[command] if s.startswith(command)])
-        
+            logger.error(f"Error getting AI suggestions: {str(e)}")
+
         # Remove duplicates while preserving order
         seen = set()
-        suggestions = [x for x in suggestions if not (x in seen or seen.add(x))]
-        
-        # Store current suggestions
-        self.current_suggestions = suggestions
-        
-        return suggestions
-    
+        unique_suggestions = []
+        for s in suggestions:
+            if s not in seen:
+                seen.add(s)
+                unique_suggestions.append(s)
+
+        return unique_suggestions
+
     def get_suggestions(self, partial_command: str, max_suggestions: int = 5) -> List[str]:
         """Get command suggestions based on partial input."""
         if not partial_command:
@@ -463,7 +505,7 @@ class CommandSuggester:
         ]
         if exact_matches:
             # Prioritize commands from history in current directory
-            dir_history = self.history.get_commands_in_directory(current_dir)
+            dir_history = self.command_history.get_commands_in_directory(current_dir)
             dir_commands = [cmd['command'] for cmd in dir_history]
             for cmd in exact_matches:
                 if cmd in dir_commands:
@@ -520,7 +562,7 @@ class CommandSuggester:
             exit_code: Command exit code (0 for success)
             output: Command output
         """
-        self.history.add_command(command, working_dir, exit_code, output)
+        self.command_history.add_command(command, working_dir, exit_code, output)
 
     def _get_fallback_suggestions(self, partial_input: str, current_dir: str) -> List[str]:
         """Get fallback suggestions when main suggestion logic fails.
@@ -725,113 +767,83 @@ class CommandSuggester:
         # Then try regex patterns
         return any(re.match(pattern, cmd) for pattern in patterns)
 
-    def _fix_typos(self, input_str: str) -> str:
-        """Fix common typos in command input using fuzzy matching."""
-        # Common typos and their corrections
-        typos = {
-            # Docker variations (most common typos)
-            'docket': 'docker',
-            'dokcer': 'docker',
-            'docger': 'docker',
-            'dockek': 'docker',
-            'doker': 'docker',
-            'dcker': 'docker',
-            'dokker': 'docker',
-            'dockerr': 'docker',
-            'doccer': 'docker',
-            'docer': 'docker',
-            'dockr': 'docker',
-            'dcoker': 'docker',
-            'dccker': 'docker',
-            'dacker': 'docker',
-            'ddcker': 'docker',
-            'dockker': 'docker',
-            'dkcer': 'docker',
-            'dockre': 'docker',
-            'bocker': 'docker',
-            'dcoker': 'docker',
-            'docc': 'docker',
-            'dok': 'docker',
-            'do': 'docker',
-            'd': 'docker',
-            'dk': 'docker',
-            'dc': 'docker',
-            'dark': 'docker',
-            'dck': 'docker',
-            'dkr': 'docker',
-            'dockk': 'docker',
-            'darkk': 'docker',
-            'darck': 'docker',
-            'dork': 'docker',
-            'dack': 'docker',
-            'da': 'docker',
-            'dar': 'docker',
-            'dak': 'docker',
-            'dac': 'docker',
-            # Docker-compose shortcuts
-            'c': 'docker',  # Will be expanded to docker-compose in context
-            'dc': 'docker', # Will be expanded to docker-compose in context
-            # Compose variations
-            'dcomp': 'docker-compose',
-            'compse': 'compose',
-            'compos': 'compose',
-            'comp': 'compose',
-            'cmp': 'compose',
-            'cpose': 'compose',
-            'compse': 'compose',
-            'compsoe': 'compose',
-        }
+    def _fix_typos(self, input_str: str) -> list[str]:
+        """Fix common typos in command input using Levenshtein distance and transposition check."""
+        if not input_str:
+            return []
+            
+        # Get all known commands from history and defaults
+        known_commands = set(self.default_commands.keys())
+        known_commands.update(self.command_history.get_all_commands())
         
-        input_lower = input_str.lower().strip()
+        # Find similar commands using Levenshtein distance and transposition check
+        similar_commands = []
+        input_lower = input_str.lower()
         
-        # Split into command and args
-        parts = input_lower.split()
-        cmd = parts[0] if parts else input_lower
-        args = parts[1:] if len(parts) > 1 else []
-        
-        # Special case: single 'c' with compose-related args
-        if cmd == 'c' and args and args[0] in ['c', 'comp', 'compose']:
-            return f"docker {' '.join(args)}"
-        
-        # First try exact matches for the command
-        if cmd in typos:
-            return f"{typos[cmd]} {' '.join(args)}".strip()
-        
-        # Then try prefix matches for the command
-        for typo, correct in typos.items():
-            if cmd.startswith(typo) and len(cmd) > len(typo):
-                fixed_cmd = cmd.replace(typo, correct)
-                return f"{fixed_cmd} {' '.join(args)}".strip()
-        
-        # Try fuzzy matching for docker
-        if self._fuzzy_match_docker(cmd):
-            return f"docker {' '.join(args)}".strip()
-        
-        # Handle docker-compose shortcuts and variations
-        if cmd.startswith(('d-c', 'd-comp', 'dc-', 'dc', 'c')) or '-c' in cmd:
-            # If it's just the command part (no args), return full docker-compose
-            if not args and ('-c' in cmd or cmd in ['dc', 'c']):
-                return 'docker-compose'
-            # If we have args, preserve them
-            fixed_cmd = 'docker-compose'
-            return f"{fixed_cmd} {' '.join(args)}".strip()
-        
-        # If we see something like 'dokker-c', convert to 'docker-compose'
-        if any(part.startswith('c') for part in cmd.split('-')[1:]):
-            fixed_parts = []
-            for part in cmd.split('-'):
-                if part.startswith('c'):
-                    fixed_parts.append('compose')
-                else:
-                    # Try to fix the docker part
-                    if self._fuzzy_match_docker(part):
-                        fixed_parts.append('docker')
+        for known_cmd in known_commands:
+            known_lower = known_cmd.lower()
+            
+            # First try exact prefix match
+            if known_lower.startswith(input_lower):
+                similar_commands.append(known_cmd)
+                continue
+                
+            # Then try word-by-word matching for multi-word commands
+            input_parts = input_lower.split()
+            known_parts = known_lower.split()
+            
+            if len(input_parts) > 1:
+                # For multi-word inputs, check each word
+                matches = 0
+                for i, part in enumerate(input_parts):
+                    if i >= len(known_parts):
+                        break
+                        
+                    # Check for prefix match or small typo
+                    if known_parts[i].startswith(part):
+                        matches += 1
                     else:
-                        fixed_parts.append(part)
-            fixed_cmd = '-'.join(fixed_parts)
-            return f"{fixed_cmd} {' '.join(args)}".strip()
+                        # Check for transposition in the first word
+                        if i == 0 and len(part) >= 3:
+                            for j in range(len(part) - 1):
+                                transposed = list(part)
+                                transposed[j], transposed[j + 1] = transposed[j + 1], transposed[j]
+                                if ''.join(transposed) == known_parts[i]:
+                                    matches += 1
+                                    break
+                        
+                        # Check for other typos
+                        distance = self._levenshtein_distance(part, known_parts[i])
+                        if distance <= min(2, len(part) // 2):
+                            matches += 1
+                            
+                if matches >= len(input_parts) * 0.5:
+                    similar_commands.append(known_cmd)
+            else:
+                # For single-word inputs, use more aggressive matching
+                # First check if it's a prefix of any word in the command
+                if any(word.startswith(input_lower) for word in known_parts):
+                    similar_commands.append(known_cmd)
+                    continue
+                    
+                # Check for transposition in the first word
+                first_word = known_parts[0]
+                if len(input_lower) >= 3 and len(first_word) >= 3:
+                    for j in range(len(input_lower) - 1):
+                        transposed = list(input_lower)
+                        transposed[j], transposed[j + 1] = transposed[j + 1], transposed[j]
+                        if ''.join(transposed) == first_word:
+                            similar_commands.append(known_cmd)
+                            continue
+                
+                # Then check for typos in the first word
+                distance = self._levenshtein_distance(input_lower, first_word)
+                max_distance = min(2, max(1, len(input_lower) // 2))
+                
+                if distance <= max_distance:
+                    similar_commands.append(known_cmd)
         
-        return input_lower
+        return similar_commands if similar_commands else [input_str]
 
     def _calculate_similarity(self, cmd1: str, cmd2: str) -> float:
         """Calculate similarity score between two commands."""
@@ -854,3 +866,23 @@ class CommandSuggester:
         # Calculate Jaccard similarity
         similarity = len(common_words) / len(words1.union(words2))
         return similarity
+
+    def _levenshtein_distance(self, s1: str, s2: str) -> int:
+        """Calculate Levenshtein distance between two strings."""
+        if len(s1) < len(s2):
+            return self._levenshtein_distance(s2, s1)
+
+        if len(s2) == 0:
+            return len(s1)
+
+        previous_row = range(len(s2) + 1)
+        for i, c1 in enumerate(s1):
+            current_row = [i + 1]
+            for j, c2 in enumerate(s2):
+                insertions = previous_row[j + 1] + 1 
+                deletions = current_row[j] + 1  
+                substitutions = previous_row[j] + (c1 != c2)
+                current_row.append(min(insertions, deletions, substitutions))
+            previous_row = current_row
+        
+        return previous_row[-1]

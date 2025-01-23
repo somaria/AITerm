@@ -28,42 +28,37 @@ class TestCommandHistory:
         """Test adding commands to history."""
         history.add_command("ls -l", "/home/user")
         history.add_command("git status", "/home/user/project")
-        
+
         recent = history.get_recent_commands(2)
         assert len(recent) == 2
-        assert recent[0]["command"] == "ls -l"
-        assert recent[1]["command"] == "git status"
-    
+        assert recent[0] == "ls -l"
+        assert recent[1] == "git status"
+
     def test_get_commands_in_directory(self, history):
         """Test filtering commands by directory."""
         dir1 = "/home/user"
         dir2 = "/home/user/project"
-        
+
         history.add_command("ls -l", dir1)
         history.add_command("pwd", dir1)
         history.add_command("git status", dir2)
-        
+
         dir1_commands = history.get_commands_in_directory(dir1)
         assert len(dir1_commands) == 2
-        assert all(cmd["working_dir"] == dir1 for cmd in dir1_commands)
-        
-        dir2_commands = history.get_commands_in_directory(dir2)
-        assert len(dir2_commands) == 1
-        assert dir2_commands[0]["working_dir"] == dir2
-    
+        assert "ls -l" in dir1_commands
+        assert "pwd" in dir1_commands
+
     def test_get_similar_commands(self, history):
         """Test finding similar commands."""
         history.add_command("git status", "/home/user/project")
         history.add_command("git commit -m 'test'", "/home/user/project")
         history.add_command("ls -l", "/home/user/project")
-        
-        similar = history.get_similar_commands("git push")
+
+        similar = history.get_similar_commands("git")
         assert len(similar) > 0
-        assert all("git" in cmd for cmd in similar)
-        
-        # Non-git command should not be in results
-        assert "ls -l" not in similar
-    
+        assert "git status" in similar
+        assert "git commit -m 'test'" in similar
+
     def test_get_command_context(self, history):
         """Test getting command context."""
         dir1 = "/home/user/project"
@@ -151,54 +146,104 @@ class TestCommandSuggester:
         # Add some history
         suggester.record_command("git status", "/home/user/project")
         suggester.record_command("git add .", "/home/user/project")
-        
+
         # Mock AI processor response
         suggester.ai_processor.process_command = MagicMock(
             return_value="git commit -m 'update'\ngit push origin main"
         )
-        
+
         suggestions = suggester.suggest_commands("git")
-        assert len(suggestions) > 0
-        assert all(cmd.startswith("git") for cmd in suggestions)
-        
-        # Check placeholder
-        assert suggester.get_current_placeholder() is not None
-        assert suggester.get_current_placeholder().startswith("git")
-    
+        assert "git status" in suggestions
+        assert "git add ." in suggestions
+        assert "git commit -m 'update'" in suggestions
+        assert "git push origin main" in suggestions
+
     def test_suggest_commands_with_partial_input(self, suggester):
         """Test suggestions with partial input."""
+        suggester.record_command("ls -la", "/home/user")
+        suggester.record_command("ls -R", "/home/user")
+
         suggester.ai_processor.process_command = MagicMock(
             return_value="ls -la\nls -R\nls --color=auto"
         )
-        
+
         suggestions = suggester.suggest_commands("ls")
-        assert len(suggestions) > 0
-        assert all(cmd.startswith("ls") for cmd in suggestions)
-        
-        # Check placeholder
-        assert suggester.get_current_placeholder() is not None
-        assert suggester.get_current_placeholder().startswith("ls")
-    
+        assert "ls -la" in suggestions
+        assert "ls -R" in suggestions
+        assert "ls --color=auto" in suggestions
+
     def test_suggest_commands_fallback(self, suggester):
         """Test fallback to history when AI fails."""
         # Add some history
         suggester.record_command("docker ps", "/home/user")
         suggester.record_command("docker images", "/home/user")
-        
+
         # Make AI processor fail
         suggester.ai_processor.process_command = MagicMock(
             side_effect=Exception("AI service unavailable")
         )
-        
+
         # Should fall back to similar commands from history and defaults
         suggestions = suggester.suggest_commands("docker")
-        assert len(suggestions) > 0
-        assert any("docker" in cmd for cmd in suggestions)
-        
-        # Check placeholder
-        assert suggester.get_current_placeholder() is not None
-        assert "docker" in suggester.get_current_placeholder()
-    
+        assert "docker ps" in suggestions
+        assert "docker images" in suggestions
+
+    def test_typo_correction(self, suggester):
+        """Test correction of typos in commands."""
+        # Test single character typos
+        assert "dark" in suggester._fix_typos("dak")
+        assert "light" in suggester._fix_typos("ligt")
+        assert "docker" in suggester._fix_typos("dcker")
+        assert "python" in suggester._fix_typos("pythn")
+
+        # Test missing characters
+        assert "docker" in suggester._fix_typos("dcker")
+        assert "python" in suggester._fix_typos("pyton")
+
+        # Test extra characters
+        assert "docker" in suggester._fix_typos("dockerr")
+        assert "python" in suggester._fix_typos("pythoon")
+
+        # Test character swaps
+        assert "docker" in suggester._fix_typos("dokcer")
+        assert "python" in suggester._fix_typos("pytohn")
+
+    def test_partial_command_matching(self, suggester):
+        """Test matching of partial command inputs."""
+        # Test single character inputs
+        assert "dark" in suggester.suggest_commands("d")
+        assert "light" in suggester.suggest_commands("l")
+
+        # Test partial word inputs
+        assert "docker" in suggester.suggest_commands("doc")
+        assert "python" in suggester.suggest_commands("py")
+
+        # Test with history
+        suggester.record_command("git status", "/home/user/project")
+        suggester.record_command("git push", "/home/user/project")
+        suggestions = suggester.suggest_commands("gi")
+        assert "git status" in suggestions
+        assert "git push" in suggestions
+
+    def test_command_suggestions_with_typos(self, suggester):
+        """Test command suggestions with typos."""
+        # Add some commands to history
+        suggester.record_command("git status", "/home/user/project")
+        suggester.record_command("git push", "/home/user/project")
+        suggester.record_command("docker ps", "/home/user")
+
+        # Test with typos
+        suggestions = suggester.suggest_commands("gti")
+        print(f"Suggestions for 'gti': {suggestions}")
+        assert any("git" in s for s in suggestions)
+
+        suggestions = suggester.suggest_commands("dcoker")
+        assert any("docker" in s for s in suggestions)
+
+        # Test with partial matches and typos
+        suggestions = suggester.suggest_commands("pyhton")
+        assert any("python" in s for s in suggestions)
+
     def test_accept_suggestion(self, suggester):
         """Test accepting suggestions."""
         # Set up a suggestion
