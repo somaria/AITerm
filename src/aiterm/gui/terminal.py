@@ -43,27 +43,31 @@ class TerminalGUI:
         self.cmd_frame = ttk.Frame(self.frame)
         self.cmd_frame.pack(fill='x', padx=5, pady=5)
         
+        # Create directory frame (first line)
+        self.dir_frame = ttk.Frame(self.cmd_frame)
+        self.dir_frame.pack(fill='x', pady=(0, 5))
+        
+        # Create directory label
+        self.dir_label = tk.Label(
+            self.dir_frame,
+            text="DIRECTORY",
+            font=('Courier', 10),
+            bg='black',
+            fg='gray'
+        )
+        self.dir_label.pack(side='left', padx=(0, 10))
+        
         # Create prompt label
         self.prompt_label = ttk.Label(
-            self.cmd_frame,
+            self.dir_frame,
             text=self.command_executor.working_directory,
             font=('Courier', 12)
         )
-        self.prompt_label.pack(side='left', padx=(0,5))
+        self.prompt_label.pack(side='left', fill='x', expand=True)
         
-        # Create command entry
-        self.command_entry = tk.Entry(
-            self.cmd_frame,
-            bg='black',
-            fg='white',
-            insertbackground='white',
-            font=('Courier', 12)
-        )
-        self.command_entry.pack(side='left', fill='x', expand=True)
-        
-        # Create AI mode toggle frame
+        # Create AI mode toggle frame on directory line
         self.ai_toggle_frame = tk.Frame(
-            self.cmd_frame,
+            self.dir_frame,
             bg='cyan',  # Start with cyan background since AI mode is on
             bd=1,
             relief='solid'
@@ -84,6 +88,30 @@ class TerminalGUI:
         )
         self.ai_toggle.pack()
         self.ai_toggle.bind('<Button-1>', self._toggle_ai_mode)
+        
+        # Create input frame (second line)
+        self.input_frame = ttk.Frame(self.cmd_frame)
+        self.input_frame.pack(fill='x')
+        
+        # Create prompt symbol
+        self.prompt_symbol = tk.Label(
+            self.input_frame,
+            text="❯",
+            font=('Courier', 12),
+            bg='black',
+            fg='cyan'
+        )
+        self.prompt_symbol.pack(side='left', padx=(0, 10))
+        
+        # Create command entry
+        self.command_entry = tk.Entry(
+            self.input_frame,
+            bg='black',
+            fg='white',
+            insertbackground='white',
+            font=('Courier', 12)
+        )
+        self.command_entry.pack(side='left', fill='x', expand=True)
         
         # Configure tags for colored output
         self.output_area.tag_configure('red', foreground='red')
