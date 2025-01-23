@@ -12,6 +12,35 @@ from ..commands.executor import CommandExecutor
 from ..utils.formatter import OutputFormatter
 from ..utils.completer import TerminalCompleter
 
+class RoundedFrame(tk.Canvas):
+    def __init__(self, parent, bg='black', height=35, corner_radius=10, **kwargs):
+        super().__init__(parent, bg=bg, height=height, highlightthickness=0, **kwargs)
+        self._corner_radius = corner_radius
+        self.bind('<Configure>', self._on_resize)
+
+    def _on_resize(self, event):
+        self.delete("rounded")
+        width = self.winfo_width()
+        height = self.winfo_height()
+        self.create_rounded_rect(0, 0, width, height, self._corner_radius, fill='black', outline='#333333', width=1, tags="rounded")
+
+    def create_rounded_rect(self, x1, y1, x2, y2, radius, **kwargs):
+        points = [
+            x1 + radius, y1,
+            x2 - radius, y1,
+            x2, y1,
+            x2, y1 + radius,
+            x2, y2 - radius,
+            x2, y2,
+            x2 - radius, y2,
+            x1 + radius, y2,
+            x1, y2,
+            x1, y2 - radius,
+            x1, y1 + radius,
+            x1, y1
+        ]
+        return self.create_polygon(points, smooth=True, **kwargs)
+
 class TerminalGUI:
     def __init__(self, parent):
         """Initialize terminal GUI"""
@@ -101,20 +130,28 @@ class TerminalGUI:
             bg='black',
             fg='cyan'
         )
-        self.prompt_symbol.pack(side='left')
+        self.prompt_symbol.pack(side='left', padx=(0, 5))
+        
+        # Create rounded frame for input
+        self.entry_frame = RoundedFrame(self.input_frame)
+        self.entry_frame.pack(side='left', fill='x', expand=True)
         
         # Create command entry
         self.command_entry = tk.Entry(
-            self.input_frame,
+            self.entry_frame,
             bg='black',
             fg='white',
             insertbackground='white',
-            font=('Courier', 12)
+            font=('Courier', 12),
+            bd=0,
+            highlightthickness=0
         )
-        self.command_entry.pack(side='left', fill='x', expand=True)
+        # Place the entry widget in the canvas
+        self.entry_frame.create_window(10, 17, window=self.command_entry, 
+                                     anchor='w', width=self.entry_frame.winfo_width() - 20)
         
-        # Add padding inside the input field
-        self.command_entry.configure(bd=5, relief='flat')
+        # Bind frame resize to update entry width
+        self.entry_frame.bind('<Configure>', self._on_frame_resize)
         
         # Configure tags for colored output
         self.output_area.tag_configure('red', foreground='red')
@@ -305,3 +342,8 @@ class TerminalGUI:
             self.history_index = len(self.command_history)
             self.command_entry.delete(0, tk.END)
         return "break"
+
+    def _on_frame_resize(self, event):
+        """Update entry width when frame is resized"""
+        self.entry_frame.create_window(10, 17, window=self.command_entry,
+                                     anchor='w', width=event.width - 20)
