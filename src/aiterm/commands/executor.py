@@ -35,9 +35,34 @@ class CommandExecutor:
         Change the current working directory
         """
         try:
-            new_dir = path if path else os.path.expanduser('~')
+            # Handle no path or empty path
+            if not path or path.strip() == '':
+                new_dir = os.path.expanduser('~')
+            else:
+                # Expand user paths (e.g., ~ or ~user)
+                path = os.path.expanduser(path.strip())
+                
+                # Handle relative paths
+                if not os.path.isabs(path):
+                    path = os.path.join(self.working_directory, path)
+                
+                # Normalize path (resolve .. and .)
+                new_dir = os.path.normpath(path)
+            
+            # Check if directory exists
+            if not os.path.exists(new_dir):
+                return False, f"Directory not found: {new_dir}"
+                
+            # Check if it's a directory
+            if not os.path.isdir(new_dir):
+                return False, f"Not a directory: {new_dir}"
+                
+            # Change directory
             os.chdir(new_dir)
             self.working_directory = os.getcwd()
             return True, self.working_directory
+            
+        except PermissionError:
+            return False, f"Permission denied: {path}"
         except Exception as e:
             return False, str(e)

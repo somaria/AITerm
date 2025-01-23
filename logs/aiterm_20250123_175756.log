@@ -1,0 +1,7 @@
+2025-01-23 17:57:56,458 - AITerm - INFO - logger:48 - Logger initialized. Log file: logs/aiterm_20250123_175756.log
+2025-01-23 17:58:06,476 - AITerm - INFO - logger:54 - Executing command: pwd
+2025-01-23 17:58:06,477 - AITerm - DEBUG - logger:51 - Added command to history. Total commands: 1
+2025-01-23 17:58:08,343 - AITerm - INFO - logger:54 - Executing command: ls
+2025-01-23 17:58:08,343 - AITerm - DEBUG - logger:51 - Added command to history. Total commands: 2
+2025-01-23 17:58:11,618 - AITerm - INFO - logger:54 - Executing command: cd home
+2025-01-23 17:58:11,619 - AITerm - DEBUG - logger:51 - Added command to history. Total commands: 3

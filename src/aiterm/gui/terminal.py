@@ -543,6 +543,12 @@ class TerminalGUI:
             self.parent.quit()
             return
 
+        # Handle clear command directly
+        if command.strip() == 'clear':
+            logger.debug("Clearing terminal output")
+            self.output_area.delete(1.0, tk.END)
+            return
+
         # Handle history command directly
         if command.strip() == 'history':
             logger.debug("Showing command history")
@@ -550,10 +556,70 @@ class TerminalGUI:
                 self.append_output(f"\n{i:4d}  {cmd}")
             return
 
-        try:
-            # Get the command without arguments
-            command_name = command.split()[0]
-            
+        # Get the command without arguments
+        command_name = command.split()[0]
+        
+        # Always interpret cd commands
+        if command_name == 'cd':
+            try:
+                original_args = command[2:].strip() if len(command) > 2 else ""
+                interpreted_command = CommandInterpreter.interpret(command)
+                if interpreted_command:
+                    logger.debug(f"Interpreted cd command: {interpreted_command}")
+                    
+                    # Show helpful message for special paths
+                    if not original_args:
+                        self.append_output("\nInterpreted as: Going to home directory (~)\n", 'cyan')
+                    elif original_args.lower() == "home":
+                        self.append_output("\nInterpreted as: Going to home directory (~)\n", 'cyan')
+                    elif original_args.lower() == "downloads":
+                        self.append_output("\nInterpreted as: Going to Downloads directory (~/Downloads)\n", 'cyan')
+                    elif original_args.lower() in ["documents", "docs"]:
+                        self.append_output("\nInterpreted as: Going to Documents directory (~/Documents)\n", 'cyan')
+                    elif original_args.lower() == "desktop":
+                        self.append_output("\nInterpreted as: Going to Desktop directory (~/Desktop)\n", 'cyan')
+                    elif original_args.lower() == "pictures":
+                        self.append_output("\nInterpreted as: Going to Pictures directory (~/Pictures)\n", 'cyan')
+                    elif original_args.lower() == "music":
+                        self.append_output("\nInterpreted as: Going to Music directory (~/Music)\n", 'cyan')
+                    elif original_args.lower() == "movies":
+                        self.append_output("\nInterpreted as: Going to Movies directory (~/Movies)\n", 'cyan')
+                    elif original_args.lower() == "applications":
+                        self.append_output("\nInterpreted as: Going to Applications directory (/Applications)\n", 'cyan')
+                    elif original_args == "-":
+                        self.append_output("\nInterpreted as: Going to previous directory (cd -)\n", 'cyan')
+                    elif interpreted_command != command:
+                        self.append_output(f"\nInterpreted as: {interpreted_command}\n", 'cyan')
+                        
+                    command = interpreted_command
+            except Exception as e:
+                logger.error(f"Error interpreting cd command: {e}")
+                self.append_output(f"\nError interpreting command: {str(e)}\n", 'red')
+                return
+        
+        # If AI mode is enabled and it's not a built-in command, interpret it
+        if self.ai_mode.get() and not any(command.startswith(cmd) for cmd in ['cd', 'pwd', 'exit', 'clear', 'history', 'tail']):
+            try:
+                interpreted_command = CommandInterpreter.interpret(command)
+                if interpreted_command:
+                    self.append_output(f"\nInterpreted as: {interpreted_command}\n", 'cyan')
+                    command = interpreted_command
+            except Exception as e:
+                self.append_output(f"\nError interpreting command: {str(e)}\n", 'red')
+                return
+        
+        # Handle built-in commands
+        if command == 'pwd':
+            self.append_output(self.command_executor.working_directory)
+        elif command.startswith('cd'):
+            # Extract the path from the cd command
+            path = command[2:].strip() if len(command) > 2 else None
+            success, result = self.command_executor.change_directory(path)
+            if success:
+                self.update_prompt()
+            else:
+                self.append_output(f"Error: {result}", 'red')
+        else:
             # Handle interactive commands with PTY
             interactive_commands = {
                 # Editors
@@ -583,54 +649,14 @@ class TerminalGUI:
                 logger.info(f"Starting interactive mode for command: {command}")
                 self.start_pty_mode(command)
                 return
+            
+            # Execute command and handle output
+            stdout, stderr = self.command_executor.execute(command)
+            if stdout:
+                self.append_output(stdout)
+            if stderr:
+                self.append_output(stderr, 'red')
                 
-            # If AI mode is enabled and it's not a built-in command, interpret it
-            if self.ai_mode.get() and not any(command.startswith(cmd) for cmd in ['cd', 'pwd', 'exit', 'clear', 'history', 'tail']):
-                try:
-                    interpreted_command = CommandInterpreter.interpret(command)
-                    if interpreted_command:
-                        self.append_output(f"\nInterpreted as: {interpreted_command}\n", 'cyan')
-                        command = interpreted_command
-                except Exception as e:
-                    self.append_output(f"\nError interpreting command: {str(e)}\n", 'red')
-                    return
-        
-            # Handle built-in commands
-            if command == 'pwd':
-                self.append_output(self.command_executor.working_directory)
-            elif command.startswith('cd'):
-                parts = command.split(maxsplit=1)
-                success, result = self.command_executor.change_directory(
-                    parts[1] if len(parts) > 1 else None
-                )
-                if not success:
-                    self.append_output(f"\nError: {result}\n", 'red')
-                self.update_prompt()
-            elif command == 'clear':
-                self.output_area.delete(1.0, tk.END)
-            else:
-                # Execute external command
-                stdout, stderr = self.command_executor.execute(command)
-                
-                if stdout:
-                    if command.startswith('ls'):
-                        # Format ls output
-                        for line in stdout.rstrip().split('\n'):
-                            if os.path.isdir(os.path.join(self.command_executor.working_directory, line)):
-                                self.append_output(line, 'blue')
-                            elif os.access(os.path.join(self.command_executor.working_directory, line), os.X_OK):
-                                self.append_output(line, 'green')
-                            else:
-                                self.append_output(line)
-                    else:
-                        self.append_output(stdout.rstrip())
-                
-                if stderr:
-                    self.append_output(f"\n{stderr.rstrip()}\n", 'red')
-
-        except Exception as e:
-            self.append_output(f"\nError: {str(e)}\n", 'red')
-
     def start_pty_mode(self, command):
         """Start PTY mode with the given command"""
         logger.debug(f"Starting PTY mode with command: {command}")
