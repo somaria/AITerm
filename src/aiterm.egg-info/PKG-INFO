@@ -1,0 +1,79 @@
+Metadata-Version: 2.2
+Name: aiterm
+Version: 0.1.0
+Summary: An AI-powered terminal application
+Home-page: https://github.com/yourusername/aiterm
+Author: Your Name
+Author-email: your.email@example.com
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
+Requires-Dist: openai>=0.27.0
+Requires-Dist: python-dotenv>=0.19.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: summary
+
+# AI Terminal
+
+A Python-based terminal emulator with AI command interpretation capabilities. This terminal allows you to use natural language to execute terminal commands.
+
+## Features
+
+- Modern dark theme GUI interface
+- Natural language command interpretation using OpenAI's GPT-3.5
+- Toggle between AI and regular command mode
+- Support for all standard terminal commands
+- Color-coded output for better readability
+- Scrollable command history
+
+## Setup
+
+1. Install the required packages:
+```bash
+pip install -r requirements.txt
+```
+
+2. Configure your OpenAI API key:
+- Open `config.py`
+- Replace `your_api_key_here` with your actual OpenAI API key
+
+## Usage
+
+Run the terminal:
+```bash
+python main.py
+```
+
+### Example Commands
+
+With AI mode enabled (default), you can use natural language:
+- "list the files in this directory" → `ls`
+- "show me where I am" → `pwd`
+- "go to parent directory" → `cd ..`
+- "what's the current date" → `date`
+
+You can also use regular terminal commands directly:
+- `ls`
+- `pwd`
+- `cd`
+- `clear`
+
+### Controls
+
+- Toggle AI mode using the checkbox in the bottom-left corner
+- Press Enter to execute commands
+- Type 'exit' or close the window to quit
+
+## Requirements
+
+- Python 3.x
+- tkinter
+- OpenAI API key

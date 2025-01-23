@@ -1,16 +1,27 @@
+"""
+AI Terminal main entry point
+"""
+
 import os
-import subprocess
 import sys
 import tkinter as tk
-from tkinter import ttk, scrolledtext
-from tkinter import font as tkfont
 import openai
 from dotenv import load_dotenv
+from tkinter import ttk, scrolledtext, font as tkfont
+import subprocess
+
+# Add src directory to Python path
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "src")))
+
+from aiterm.gui.window_manager import WindowManager
+from aiterm.utils.logger import get_logger
 
 # Load environment variables
 load_dotenv()
 openai.api_key = os.getenv('OPENAI_API_KEY')
 OPENAI_MODEL = os.getenv('OPENAI_MODEL_NAME', 'gpt-4o-mini')
+
+logger = get_logger()
 
 class TerminalGUI:
     def __init__(self, root):
@@ -162,8 +173,18 @@ class TerminalGUI:
             self.append_output(f"Error: {str(e)}", 'red')
 
 def main():
+    """Main entry point"""
+    logger.info("Starting AI Terminal")
     root = tk.Tk()
+    root.withdraw()  # Hide the root window
+    
+    # Create window manager
+    window_manager = WindowManager.get_instance()
+    
+    # Create Terminal GUI
     app = TerminalGUI(root)
+    
+    # Start main loop
     root.mainloop()
 
 if __name__ == "__main__":

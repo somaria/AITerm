@@ -22,6 +22,7 @@ from ..commands.executor import CommandExecutor
 from ..utils.formatter import OutputFormatter
 from ..utils.completer import TerminalCompleter
 from ..utils.logger import get_logger
+from .suggestion_dropdown import SuggestionDropdown
 
 logger = get_logger()
 
@@ -336,6 +337,10 @@ class TerminalGUI:
         self.pty = None
         self.in_pty_mode = False
         
+        # Create suggestion dropdown
+        self.suggestion_dropdown = SuggestionDropdown(self.frame)
+        self.suggestion_dropdown.withdraw()  # Hide initially
+        
         # Create output area
         self.output_area = tk.Text(
             self.frame,
@@ -445,6 +450,10 @@ class TerminalGUI:
         self.command_entry.bind('<Up>', self._history_up)
         self.command_entry.bind('<Down>', self._history_down)
         self.command_entry.bind('<Tab>', self._handle_tab)
+        self.command_entry.bind('<Shift-Tab>', self._handle_tab)  # Add Shift-Tab binding
+        self.command_entry.bind('<ISO_Left_Tab>', self._handle_tab)  # Alternative Shift-Tab binding
+        self.command_entry.bind('<KeyRelease>', self._handle_key_release)
+        self.command_entry.bind('<Escape>', self._hide_suggestions)
         
         # Focus command entry
         self.command_entry.focus_set()
@@ -703,7 +712,7 @@ class TerminalGUI:
             return
         
         # Debug logging
-        logger.debug(f"Key event - keysym: {event.keysym}, state: {event.state}, char: {repr(event.char)}")
+        logger.info(f"Key event - keysym: {event.keysym}, state: {event.state}, char: {repr(event.char)}")
         
         # Handle special keys
         if event.state & 0x4:  # Control key is pressed
@@ -749,56 +758,95 @@ class TerminalGUI:
             self.pty.write(event.char)
             return "break"
     
+    def _handle_key_release(self, event):
+        """Handle key release events for real-time suggestions"""
+        # Log the key event
+        logger.info(f"Key release event - keysym: {event.keysym}, char: {event.char}, keycode: {event.keycode}")
+        
+        # Ignore special keys
+        if event.keysym in ('Up', 'Down', 'Left', 'Right', 'Return', 'Tab', 'Escape', 'ISO_Left_Tab'):
+            logger.info(f"Ignoring special key: {event.keysym}")
+            return
+            
+        # Get current text and cursor position
+        text = self.command_entry.get()
+        logger.info(f"Current text: '{text}'")
+        if not text:
+            logger.info("No text, hiding suggestions")
+            self._hide_suggestions()
+            return
+            
+        # Get suggestions
+        suggestions = self.completer.get_suggestions(text)
+        logger.info(f"Got suggestions: {suggestions}")
+        
+        if suggestions:
+            # Calculate position for dropdown
+            x = self.command_entry.winfo_rootx()
+            y = self.command_entry.winfo_rooty() + self.command_entry.winfo_height()
+            logger.info(f"Showing dropdown at position ({x}, {y})")
+            
+            # Show dropdown with suggestions
+            self.suggestion_dropdown.show(suggestions, x, y)
+            
+            # Verify dropdown state
+            logger.info(f"Dropdown visible: {self.suggestion_dropdown.is_visible()}")
+            logger.info(f"Dropdown geometry: {self.suggestion_dropdown.winfo_geometry()}")
+        else:
+            logger.info("No suggestions, hiding dropdown")
+            self._hide_suggestions()
+        
+    def _hide_suggestions(self, event=None):
+        """Hide suggestion dropdown"""
+        if self.suggestion_dropdown.is_visible():
+            self.suggestion_dropdown.hide()
+            
     def _handle_tab(self, event):
         """Handle tab key press for command completion"""
-        current_text = self.command_entry.get()
-        cursor_pos = self.command_entry.index(tk.INSERT)
-        text_before_cursor = current_text[:cursor_pos]
+        if event.state & 0x1:  # Shift is pressed
+            if self.suggestion_dropdown.is_visible():
+                suggestion = self.suggestion_dropdown.prev_suggestion()
+                if suggestion:
+                    self.command_entry.delete(0, tk.END)
+                    self.command_entry.insert(0, suggestion)
+            return 'break'
+        else:
+            if self.suggestion_dropdown.is_visible():
+                suggestion = self.suggestion_dropdown.next_suggestion()
+                if suggestion:
+                    self.command_entry.delete(0, tk.END)
+                    self.command_entry.insert(0, suggestion)
+            else:
+                # Show suggestions on first tab
+                text = self.command_entry.get()
+                suggestions = self.completer.get_suggestions(text)
+                if suggestions:
+                    x = self.command_entry.winfo_rootx()
+                    y = self.command_entry.winfo_rooty() + self.command_entry.winfo_height()
+                    self.suggestion_dropdown.show(suggestions, x, y)
+            return 'break'
         
-        # If we don't have completions or pressed tab on new text
-        if not self.current_completions or self.last_completion_text != text_before_cursor:
-            # Get all completions
-            self.current_completions = []
-            state = 0
-            while True:
-                completion = self.completer.complete(text_before_cursor, state)
-                if completion is None:
-                    break
-                self.current_completions.append(completion)
-                state += 1
-            self.completion_index = 0
-            self.last_completion_text = text_before_cursor
-        
-        if self.current_completions:
-            # Get the completion and update index
-            completion = self.current_completions[self.completion_index]
-            self.completion_index = (self.completion_index + 1) % len(self.current_completions)
-            
-            # Replace the text
-            self.command_entry.delete(0, tk.END)
-            self.command_entry.insert(0, completion)
-        
-        return "break"  
-
     def _history_up(self, event):
         """Handle up arrow key press for command history"""
-        if self.history_index > 0:
-            self.history_index -= 1
-            self.command_entry.delete(0, tk.END)
-            self.command_entry.insert(0, self.command_history[self.history_index])
-        return "break"
-    
-    def _history_down(self, event):
-        """Handle down arrow key press for command history"""
-        if self.history_index < len(self.command_history) - 1:
+        self._hide_suggestions()
+        if self.history_index < len(self.command_history):
             self.history_index += 1
             self.command_entry.delete(0, tk.END)
-            self.command_entry.insert(0, self.command_history[self.history_index])
-        elif self.history_index == len(self.command_history) - 1:
-            self.history_index = len(self.command_history)
+            self.command_entry.insert(0, self.command_history[-self.history_index])
+        return 'break'
+        
+    def _history_down(self, event):
+        """Handle down arrow key press for command history"""
+        self._hide_suggestions()
+        if self.history_index > 1:
+            self.history_index -= 1
             self.command_entry.delete(0, tk.END)
-        return "break"
-
+            self.command_entry.insert(0, self.command_history[-self.history_index])
+        elif self.history_index == 1:
+            self.history_index = 0
+            self.command_entry.delete(0, tk.END)
+        return 'break'
+        
     def _on_frame_resize(self, event):
         """Update entry width when frame is resized"""
         self.entry_frame.create_window(12, 16, window=self.command_entry,  
