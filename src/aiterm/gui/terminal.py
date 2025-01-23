@@ -101,7 +101,7 @@ class TerminalGUI:
             bg='black',
             fg='cyan'
         )
-        self.prompt_symbol.pack(side='left', padx=(0, 10))
+        self.prompt_symbol.pack(side='left')
         
         # Create command entry
         self.command_entry = tk.Entry(
