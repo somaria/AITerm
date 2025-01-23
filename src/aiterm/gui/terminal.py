@@ -6,6 +6,7 @@ import tkinter as tk
 from tkinter import ttk, scrolledtext
 from tkinter import font as tkfont
 import os
+import math
 
 from ..commands.interpreter import CommandInterpreter, CommandInterpretationError
 from ..commands.executor import CommandExecutor
@@ -13,7 +14,7 @@ from ..utils.formatter import OutputFormatter
 from ..utils.completer import TerminalCompleter
 
 class RoundedFrame(tk.Canvas):
-    def __init__(self, parent, bg='black', height=35, corner_radius=10, **kwargs):
+    def __init__(self, parent, bg='black', height=32, corner_radius=16, **kwargs):
         super().__init__(parent, bg=bg, height=height, highlightthickness=0, **kwargs)
         self._corner_radius = corner_radius
         self.bind('<Configure>', self._on_resize)
@@ -22,23 +23,25 @@ class RoundedFrame(tk.Canvas):
         self.delete("rounded")
         width = self.winfo_width()
         height = self.winfo_height()
-        self.create_rounded_rect(0, 0, width, height, self._corner_radius, fill='black', outline='#333333', width=1, tags="rounded")
+        self.create_rounded_rect(0, 0, width, height, self._corner_radius, 
+                               fill='black', outline='#333333', width=1, tags="rounded")
 
     def create_rounded_rect(self, x1, y1, x2, y2, radius, **kwargs):
-        points = [
-            x1 + radius, y1,
-            x2 - radius, y1,
-            x2, y1,
-            x2, y1 + radius,
-            x2, y2 - radius,
-            x2, y2,
-            x2 - radius, y2,
-            x1 + radius, y2,
-            x1, y2,
-            x1, y2 - radius,
-            x1, y1 + radius,
-            x1, y1
-        ]
+        points = []
+        for i in range(0, 360, 5):  
+            angle = i * math.pi / 180
+            if 0 <= i < 90:
+                points.extend([x2 - radius + math.cos(angle) * radius,
+                             y1 + radius - math.sin(angle) * radius])
+            elif 90 <= i < 180:
+                points.extend([x1 + radius - math.cos(math.pi - angle) * radius,
+                             y1 + radius - math.sin(math.pi - angle) * radius])
+            elif 180 <= i < 270:
+                points.extend([x1 + radius - math.cos(angle - math.pi) * radius,
+                             y2 - radius + math.sin(angle - math.pi) * radius])
+            else:
+                points.extend([x2 - radius + math.cos(2 * math.pi - angle) * radius,
+                             y2 - radius + math.sin(2 * math.pi - angle) * radius])
         return self.create_polygon(points, smooth=True, **kwargs)
 
 class TerminalGUI:
@@ -54,7 +57,9 @@ class TerminalGUI:
         self.history_index = 0
         self.current_completions = []
         self.completion_index = 0
-        self.ai_mode = tk.BooleanVar(value=True)  # Set AI mode to True by default
+        self.ai_mode = tk.BooleanVar(value=True)  
+        self.completer = TerminalCompleter()
+        self.last_completion_text = ""
         
         # Create output area
         self.output_area = tk.Text(
@@ -97,7 +102,7 @@ class TerminalGUI:
         # Create AI mode toggle frame on directory line
         self.ai_toggle_frame = tk.Frame(
             self.dir_frame,
-            bg='cyan',  # Start with cyan background since AI mode is on
+            bg='cyan',  
             bd=1,
             relief='solid'
         )
@@ -108,12 +113,12 @@ class TerminalGUI:
             self.ai_toggle_frame,
             text="AI MODE",
             cursor="hand2",
-            bg='cyan',  # Start with cyan background
-            fg='black',  # Start with black text
+            bg='cyan',  
+            fg='black',  
             padx=8,
             pady=2,
             font=('Courier', 10, 'bold'),
-            relief='solid'  # Start with solid relief
+            relief='solid'  
         )
         self.ai_toggle.pack()
         self.ai_toggle.bind('<Button-1>', self._toggle_ai_mode)
@@ -134,7 +139,7 @@ class TerminalGUI:
         
         # Create rounded frame for input
         self.entry_frame = RoundedFrame(self.input_frame)
-        self.entry_frame.pack(side='left', fill='x', expand=True)
+        self.entry_frame.pack(side='left', fill='x', expand=True, pady=2)  
         
         # Create command entry
         self.command_entry = tk.Entry(
@@ -147,8 +152,8 @@ class TerminalGUI:
             highlightthickness=0
         )
         # Place the entry widget in the canvas
-        self.entry_frame.create_window(10, 17, window=self.command_entry, 
-                                     anchor='w', width=self.entry_frame.winfo_width() - 20)
+        self.entry_frame.create_window(12, 16, window=self.command_entry,  
+                                     anchor='w', width=self.entry_frame.winfo_width() - 24)
         
         # Bind frame resize to update entry width
         self.entry_frame.bind('<Configure>', self._on_frame_resize)
@@ -322,8 +327,8 @@ class TerminalGUI:
             self.command_entry.delete(0, tk.END)
             self.command_entry.insert(0, completion)
         
-        return "break"  # Prevent default tab behavior
-    
+        return "break"  
+
     def _history_up(self, event):
         """Handle up arrow key press for command history"""
         if self.history_index > 0:
@@ -345,5 +350,5 @@ class TerminalGUI:
 
     def _on_frame_resize(self, event):
         """Update entry width when frame is resized"""
-        self.entry_frame.create_window(10, 17, window=self.command_entry,
-                                     anchor='w', width=event.width - 20)
+        self.entry_frame.create_window(12, 16, window=self.command_entry,  
+                                     anchor='w', width=event.width - 24)  
