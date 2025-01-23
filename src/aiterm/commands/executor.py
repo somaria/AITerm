@@ -20,7 +20,8 @@ class CommandExecutor:
                 command = command.replace('ls', 'ls -F', 1)
 
             result = subprocess.run(
-                command.split(),
+                command,
+                shell=True,
                 capture_output=True,
                 text=True,
                 cwd=self.working_directory

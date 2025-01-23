@@ -17,6 +17,10 @@ class CommandInterpreter:
         """
         Interpret natural language input into terminal commands
         """
+        # Check if input is already a valid shell command
+        if any(user_input.startswith(cmd) for cmd in ['ls', 'cd', 'pwd', 'cat', 'more', 'less', 'vim', 'vi', 'nano', 'grep', 'find', 'echo']):
+            return user_input
+            
         try:
             response = openai.ChatCompletion.create(
                 model=OPENAI_MODEL,

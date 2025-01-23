@@ -6,6 +6,16 @@ import tkinter as tk
 from tkinter import ttk, scrolledtext
 from tkinter import font as tkfont
 import os
+import pty
+import termios
+import select
+import fcntl
+import struct
+import signal
+import threading
+import queue
+import subprocess
+import re
 import math
 
 from ..commands.interpreter import CommandInterpreter, CommandInterpretationError
@@ -44,11 +54,242 @@ class RoundedFrame(tk.Canvas):
                              y2 - radius + math.sin(2 * math.pi - angle) * radius])
         return self.create_polygon(points, smooth=True, **kwargs)
 
+class PseudoTerminal:
+    def __init__(self, callback, exit_callback, rows=24, cols=80):
+        self.callback = callback
+        self.exit_callback = exit_callback
+        self.master_fd = None
+        self.slave_fd = None
+        self.process = None
+        self.running = False
+        self.read_thread = None
+        self.write_queue = queue.Queue()
+        
+        # Terminal size
+        self.rows = rows
+        self.cols = cols
+        
+        # Screen buffer
+        self.screen = []
+        self.cursor_x = 0
+        self.cursor_y = 0
+        self.saved_cursor = (0, 0)
+        self.alternate_screen = False
+        
+        # Initialize empty screen
+        self._init_screen()
+
+    def _init_screen(self):
+        """Initialize empty screen buffer"""
+        self.screen = [[' ' for _ in range(self.cols)] for _ in range(self.rows)]
+
+    def _clear_screen(self):
+        """Clear the screen buffer"""
+        self._init_screen()
+        self.cursor_x = 0
+        self.cursor_y = 0
+
+    def _process_escape_sequence(self, seq):
+        """Process ANSI escape sequence"""
+        if seq.startswith('[?'):
+            # Handle mode changes
+            mode = seq[2:-1]
+            if mode == '1049':  # Alternate screen buffer
+                if 'h' in seq:  # Enable alternate screen
+                    self._clear_screen()
+                    self.alternate_screen = True
+                elif 'l' in seq:  # Disable alternate screen
+                    self._clear_screen()
+                    self.alternate_screen = False
+            return
+
+        if seq.startswith('['):
+            cmd = seq[-1]
+            params = seq[1:-1].split(';')
+            params = [int(p) if p.isdigit() else 0 for p in params]
+            
+            if cmd == 'H':  # Cursor position
+                self.cursor_y = (params[0] if params else 1) - 1
+                self.cursor_x = (params[1] if len(params) > 1 else 1) - 1
+            elif cmd == 'J':  # Clear screen
+                if params[0] == 2:
+                    self._clear_screen()
+            elif cmd == 'K':  # Clear line
+                if not params or params[0] == 0:  # Clear from cursor to end
+                    for x in range(self.cursor_x, self.cols):
+                        self.screen[self.cursor_y][x] = ' '
+            elif cmd == 's':  # Save cursor position
+                self.saved_cursor = (self.cursor_x, self.cursor_y)
+            elif cmd == 'u':  # Restore cursor position
+                self.cursor_x, self.cursor_y = self.saved_cursor
+
+    def _process_output(self, data):
+        """Process terminal output and update screen buffer"""
+        text = data.decode('utf-8', errors='replace')
+        i = 0
+        while i < len(text):
+            if text[i] == '\x1b':  # ESC
+                # Find the end of the escape sequence
+                j = i + 1
+                while j < len(text) and text[j] not in 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@':
+                    j += 1
+                if j < len(text):
+                    self._process_escape_sequence(text[i+1:j+1])
+                    i = j + 1
+                    continue
+            
+            char = text[i]
+            if char == '\n':
+                self.cursor_y += 1
+                self.cursor_x = 0
+            elif char == '\r':
+                self.cursor_x = 0
+            elif char == '\b':
+                self.cursor_x = max(0, self.cursor_x - 1)
+            elif char >= ' ':  # Printable characters
+                if self.cursor_x < self.cols and self.cursor_y < self.rows:
+                    self.screen[self.cursor_y][self.cursor_x] = char
+                    self.cursor_x += 1
+            
+            # Handle line wrapping
+            if self.cursor_x >= self.cols:
+                self.cursor_x = 0
+                self.cursor_y += 1
+            
+            # Handle scrolling
+            if self.cursor_y >= self.rows:
+                self.screen.pop(0)
+                self.screen.append([' ' for _ in range(self.cols)])
+                self.cursor_y = self.rows - 1
+            
+            i += 1
+
+    def _set_window_size(self, fd):
+        """Set the terminal window size"""
+        winsize = struct.pack("HHHH", self.rows, self.cols, 0, 0)
+        fcntl.ioctl(fd, termios.TIOCSWINSZ, winsize)
+
+    def start(self, command):
+        """Start the pseudo-terminal with the given command"""
+        import subprocess
+
+        # Open PTY
+        self.master_fd, self.slave_fd = pty.openpty()
+        
+        # Set terminal size
+        self._set_window_size(self.slave_fd)
+        
+        # Set raw mode properly for vi
+        mode = termios.tcgetattr(self.slave_fd)
+        mode[0] &= ~(termios.BRKINT | termios.ICRNL | termios.INPCK | termios.ISTRIP | termios.IXON)  # Input modes
+        mode[1] &= ~(termios.OPOST)  # Output modes
+        mode[2] &= ~(termios.CSIZE | termios.PARENB)  # Control modes
+        mode[2] |= termios.CS8
+        mode[3] &= ~(termios.ECHO | termios.ICANON | termios.IEXTEN | termios.ISIG)  # Local modes
+        mode[6][termios.VMIN] = 1
+        mode[6][termios.VTIME] = 0
+        termios.tcsetattr(self.slave_fd, termios.TCSAFLUSH, mode)
+        
+        # Prepare environment
+        env = dict(os.environ)
+        env['TERM'] = 'xterm'
+        env['COLUMNS'] = str(self.cols)
+        env['LINES'] = str(self.rows)
+        
+        # Split command if it's a string
+        if isinstance(command, str):
+            import shlex
+            command = shlex.split(command)
+        
+        # Start process with Popen
+        self.process = subprocess.Popen(
+            command,
+            stdin=self.slave_fd,
+            stdout=self.slave_fd,
+            stderr=self.slave_fd,
+            env=env,
+            preexec_fn=os.setsid  # Create new process group
+        )
+        
+        # Close slave fd in parent
+        os.close(self.slave_fd)
+        
+        # Start read thread
+        self.running = True
+        self.read_thread = threading.Thread(target=self._read_loop)
+        self.read_thread.daemon = True
+        self.read_thread.start()
+
+    def stop(self):
+        """Stop the pseudo-terminal"""
+        self.running = False
+        if hasattr(self, 'process') and self.process:
+            try:
+                os.killpg(os.getpgid(self.process.pid), signal.SIGTERM)
+                self.process.wait()
+            except (OSError, ProcessLookupError):
+                pass
+        if self.master_fd:
+            try:
+                os.close(self.master_fd)
+            except OSError:
+                pass
+
+    def _read_loop(self):
+        """Read loop for the pseudo-terminal"""
+        while self.running:
+            try:
+                # Check for data to read
+                r, w, e = select.select([self.master_fd], [], [], 0.1)
+                if self.master_fd in r:
+                    data = os.read(self.master_fd, 1024)
+                    if data:
+                        self._process_output(data)
+                        self.callback(self._get_screen_content())
+                    else:
+                        # EOF - process exited
+                        break
+
+                # Check for data to write
+                try:
+                    data = self.write_queue.get_nowait()
+                    os.write(self.master_fd, data.encode())
+                except queue.Empty:
+                    pass
+
+            except (OSError, IOError) as e:
+                if e.errno != errno.EINTR:
+                    break
+
+        self.running = False
+        self.stop()
+        if self.exit_callback:
+            self.exit_callback()
+
+    def _get_screen_content(self):
+        """Get the current screen content"""
+        output = []
+        for y, line in enumerate(self.screen):
+            current_line = []
+            for x, char in enumerate(line):
+                if x == self.cursor_x and y == self.cursor_y:
+                    current_line.append('█')
+                else:
+                    current_line.append(char)
+            output.append(''.join(current_line).rstrip())
+        return '\n'.join(output)
+
+    def write(self, data):
+        """Write data to the terminal"""
+        if self.running:
+            self.write_queue.put(data)
+
 class TerminalGUI:
     def __init__(self, parent):
         """Initialize terminal GUI"""
+        self.parent = parent  # Store the parent
         # Create main frame
-        self.frame = ttk.Frame(parent)
+        self.frame = ttk.Frame(self.parent)
         self.frame.pack(fill=tk.BOTH, expand=True)
         
         # Initialize components
@@ -60,6 +301,8 @@ class TerminalGUI:
         self.ai_mode = tk.BooleanVar(value=True)  
         self.completer = TerminalCompleter()
         self.last_completion_text = ""
+        self.pty = None
+        self.in_pty_mode = False
         
         # Create output area
         self.output_area = tk.Text(
@@ -174,6 +417,13 @@ class TerminalGUI:
         # Focus command entry
         self.command_entry.focus_set()
         
+        # Calculate terminal size based on font
+        font = tkfont.Font(font=('Courier', 12))
+        char_width = font.measure('0')
+        char_height = font.metrics()['linespace']
+        self.term_cols = 80
+        self.term_rows = 24
+        
         # Show welcome message
         self.append_output("Welcome to AI Terminal!\nClick 'AI MODE' to toggle AI interpretation.", 'cyan')
     
@@ -237,6 +487,11 @@ class TerminalGUI:
         if not command:
             return
 
+        # If we're in PTY mode, send directly to PTY
+        if self.in_pty_mode:
+            self.pty.write(command + '\n')
+            return
+
         # Reset completion state
         self.current_completions = []
         self.completion_index = 0
@@ -251,6 +506,11 @@ class TerminalGUI:
         
         # Handle exit command
         if command == 'exit':
+            if self.pty:
+                self.pty.stop()
+                self.pty = None
+                self.in_pty_mode = False
+                return
             self.parent.quit()
             return
 
@@ -272,6 +532,12 @@ class TerminalGUI:
                 return
         
         try:
+            # Handle interactive commands with PTY
+            interactive_commands = ['vi', 'vim', 'nano', 'emacs', 'less', 'more']
+            if any(command.startswith(cmd) for cmd in interactive_commands):
+                self.start_pty_mode(command)
+                return
+                
             # Handle built-in commands
             if command == 'pwd':
                 self.append_output(self.command_executor.working_directory)
@@ -307,6 +573,42 @@ class TerminalGUI:
 
         except Exception as e:
             self.append_output(f"\nError: {str(e)}\n", 'red')
+
+    def start_pty_mode(self, command):
+        """Start PTY mode with the given command"""
+        if self.pty:
+            self.pty.stop()
+        
+        def pty_callback(data):
+            # Clear and update the output area
+            self.output_area.delete(1.0, tk.END)
+            self.output_area.insert(tk.END, data)
+            
+            # Ensure cursor is visible
+            self.output_area.see(tk.END)
+            
+            # Update the display immediately
+            self.output_area.update_idletasks()
+            
+            # Ensure cursor is visible
+            self.output_area.see(tk.END)
+
+        def pty_exit_callback():
+            self.in_pty_mode = False
+            self.pty = None
+            self.append_output("\nInteractive program exited. You can now use normal commands.\n", 'cyan')
+            self.command_entry.focus_set()
+        
+        # Create new PTY
+        self.pty = PseudoTerminal(pty_callback, pty_exit_callback, rows=self.term_rows, cols=self.term_cols)
+        
+        # Start PTY with command
+        self.pty.start(command)
+        self.in_pty_mode = True
+        
+        # Bind key events for PTY input
+        self.output_area.bind('<Key>', self.handle_key)
+        self.output_area.focus_set()
     
     def update_prompt(self):
         """Update the prompt with current working directory"""
@@ -320,7 +622,15 @@ class TerminalGUI:
         
         # If we don't have completions or pressed tab on new text
         if not self.current_completions or self.last_completion_text != text_before_cursor:
-            self.current_completions = self.completer.get_completions(text_before_cursor)
+            # Get all completions
+            self.current_completions = []
+            state = 0
+            while True:
+                completion = self.completer.complete(text_before_cursor, state)
+                if completion is None:
+                    break
+                self.current_completions.append(completion)
+                state += 1
             self.completion_index = 0
             self.last_completion_text = text_before_cursor
         
@@ -358,3 +668,9 @@ class TerminalGUI:
         """Update entry width when frame is resized"""
         self.entry_frame.create_window(12, 16, window=self.command_entry,  
                                      anchor='w', width=event.width - 24)  
+
+    def destroy(self):
+        """Clean up resources"""
+        if self.pty:
+            self.pty.stop()
+        super().destroy()
