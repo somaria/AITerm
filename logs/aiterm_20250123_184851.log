@@ -1,0 +1,70 @@
+2025-01-23 18:48:51,188 - AITerm - INFO - logger:48 - Logger initialized. Log file: logs/aiterm_20250123_184851.log
+2025-01-23 18:48:51,469 - AITerm - INFO - logger:54 - Initialized TerminalCompleter with 46 commands
+2025-01-23 18:48:51,469 - AITerm - INFO - logger:54 - Initializing SuggestionDropdown
+2025-01-23 18:48:51,506 - AITerm - INFO - logger:54 - SuggestionDropdown initialized and hidden
+2025-01-23 18:48:55,178 - AITerm - INFO - logger:54 - Key release event - keysym: l, char: l, keycode: 620757100
+2025-01-23 18:48:55,179 - AITerm - INFO - logger:54 - Current text: 'l'
+2025-01-23 18:48:55,179 - AITerm - INFO - logger:54 - Getting suggestions for text: 'l'
+2025-01-23 18:48:55,179 - AITerm - INFO - logger:54 - Prefix matches for 'l': ['less', 'locate', 'ls']
+2025-01-23 18:48:55,179 - AITerm - INFO - logger:54 - Fuzzy matches for 'l': ['ls', 'tail']
+2025-01-23 18:48:55,179 - AITerm - INFO - logger:54 - New fuzzy matches: ['tail']
+2025-01-23 18:48:55,179 - AITerm - INFO - logger:54 - Final suggestions: ['less', 'locate', 'ls', 'tail']
+2025-01-23 18:48:55,179 - AITerm - INFO - logger:54 - Got suggestions: ['less', 'locate', 'ls', 'tail']
+2025-01-23 18:48:55,179 - AITerm - INFO - logger:54 - Showing dropdown at position (134, 672)
+2025-01-23 18:48:55,179 - AITerm - INFO - logger:54 - Showing dropdown with 4 suggestions at (134, 672)
+2025-01-23 18:48:55,180 - AITerm - INFO - logger:54 - Setting geometry to: 1x1+34+59
+2025-01-23 18:48:55,184 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 18:48:55,185 - AITerm - INFO - logger:54 - Dropdown visible: True
+2025-01-23 18:48:55,185 - AITerm - INFO - logger:54 - Dropdown geometry: 404x184+134+672
+2025-01-23 18:48:55,415 - AITerm - INFO - logger:54 - Key release event - keysym: s, char: s, keycode: 16777331
+2025-01-23 18:48:55,415 - AITerm - INFO - logger:54 - Current text: 'ls'
+2025-01-23 18:48:55,415 - AITerm - INFO - logger:54 - Getting suggestions for text: 'ls'
+2025-01-23 18:48:55,415 - AITerm - INFO - logger:54 - Prefix matches for 'ls': ['ls']
+2025-01-23 18:48:55,415 - AITerm - INFO - logger:54 - Fuzzy matches for 'ls': ['ls', 'less', 'ps', 'svn']
+2025-01-23 18:48:55,416 - AITerm - INFO - logger:54 - New fuzzy matches: ['less', 'ps', 'svn']
+2025-01-23 18:48:55,416 - AITerm - INFO - logger:54 - Final suggestions: ['ls', 'less', 'ps', 'svn']
+2025-01-23 18:48:55,416 - AITerm - INFO - logger:54 - Got suggestions: ['ls', 'less', 'ps', 'svn']
+2025-01-23 18:48:55,416 - AITerm - INFO - logger:54 - Showing dropdown at position (134, 672)
+2025-01-23 18:48:55,416 - AITerm - INFO - logger:54 - Showing dropdown with 4 suggestions at (134, 672)
+2025-01-23 18:48:55,417 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 18:48:55,418 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 18:48:55,418 - AITerm - INFO - logger:54 - Dropdown visible: True
+2025-01-23 18:48:55,418 - AITerm - INFO - logger:54 - Dropdown geometry: 404x184+134+672
+2025-01-23 18:48:56,258 - AITerm - INFO - logger:54 - Hiding dropdown
+2025-01-23 18:48:56,260 - AITerm - INFO - logger:54 - Executing command: ls
+2025-01-23 18:48:56,287 - AITerm - ERROR - logger:60 - Error executing command: 'tuple' object has no attribute 'endswith'
+2025-01-23 18:48:56,381 - AITerm - INFO - logger:54 - Key release event - keysym: Return, char: , keycode: 603979789
+2025-01-23 18:48:56,381 - AITerm - INFO - logger:54 - Ignoring special key: Return
+2025-01-23 18:49:00,217 - AITerm - INFO - logger:54 - Key release event - keysym: l, char: l, keycode: 620757100
+2025-01-23 18:49:00,217 - AITerm - INFO - logger:54 - Current text: 'ls'
+2025-01-23 18:49:00,217 - AITerm - INFO - logger:54 - Getting suggestions for text: 'ls'
+2025-01-23 18:49:00,217 - AITerm - INFO - logger:54 - Prefix matches for 'ls': ['ls']
+2025-01-23 18:49:00,217 - AITerm - INFO - logger:54 - Fuzzy matches for 'ls': ['ls', 'less', 'ps', 'svn']
+2025-01-23 18:49:00,218 - AITerm - INFO - logger:54 - New fuzzy matches: ['less', 'ps', 'svn']
+2025-01-23 18:49:00,218 - AITerm - INFO - logger:54 - Final suggestions: ['ls', 'less', 'ps', 'svn']
+2025-01-23 18:49:00,218 - AITerm - INFO - logger:54 - Got suggestions: ['ls', 'less', 'ps', 'svn']
+2025-01-23 18:49:00,218 - AITerm - INFO - logger:54 - Showing dropdown at position (134, 672)
+2025-01-23 18:49:00,218 - AITerm - INFO - logger:54 - Showing dropdown with 4 suggestions at (134, 672)
+2025-01-23 18:49:00,218 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 18:49:00,222 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 18:49:00,222 - AITerm - INFO - logger:54 - Dropdown visible: True
+2025-01-23 18:49:00,222 - AITerm - INFO - logger:54 - Dropdown geometry: 404x184+134+672
+2025-01-23 18:49:00,354 - AITerm - INFO - logger:54 - Key release event - keysym: s, char: s, keycode: 16777331
+2025-01-23 18:49:00,354 - AITerm - INFO - logger:54 - Current text: 'ls'
+2025-01-23 18:49:00,354 - AITerm - INFO - logger:54 - Getting suggestions for text: 'ls'
+2025-01-23 18:49:00,354 - AITerm - INFO - logger:54 - Prefix matches for 'ls': ['ls']
+2025-01-23 18:49:00,354 - AITerm - INFO - logger:54 - Fuzzy matches for 'ls': ['ls', 'less', 'ps', 'svn']
+2025-01-23 18:49:00,354 - AITerm - INFO - logger:54 - New fuzzy matches: ['less', 'ps', 'svn']
+2025-01-23 18:49:00,354 - AITerm - INFO - logger:54 - Final suggestions: ['ls', 'less', 'ps', 'svn']
+2025-01-23 18:49:00,354 - AITerm - INFO - logger:54 - Got suggestions: ['ls', 'less', 'ps', 'svn']
+2025-01-23 18:49:00,354 - AITerm - INFO - logger:54 - Showing dropdown at position (134, 672)
+2025-01-23 18:49:00,354 - AITerm - INFO - logger:54 - Showing dropdown with 4 suggestions at (134, 672)
+2025-01-23 18:49:00,356 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 18:49:00,357 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 18:49:00,357 - AITerm - INFO - logger:54 - Dropdown visible: True
+2025-01-23 18:49:00,357 - AITerm - INFO - logger:54 - Dropdown geometry: 404x184+134+672
+2025-01-23 18:49:00,534 - AITerm - INFO - logger:54 - Hiding dropdown
+2025-01-23 18:49:00,534 - AITerm - INFO - logger:54 - Executing command: ls
+2025-01-23 18:49:00,566 - AITerm - ERROR - logger:60 - Error executing command: 'tuple' object has no attribute 'endswith'
+2025-01-23 18:49:00,646 - AITerm - INFO - logger:54 - Key release event - keysym: Return, char: , keycode: 603979789
+2025-01-23 18:49:00,646 - AITerm - INFO - logger:54 - Ignoring special key: Return

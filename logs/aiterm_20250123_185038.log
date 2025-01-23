@@ -1,0 +1,33 @@
+2025-01-23 18:50:38,249 - AITerm - INFO - logger:48 - Logger initialized. Log file: logs/aiterm_20250123_185038.log
+2025-01-23 18:50:38,499 - AITerm - INFO - logger:54 - Initialized TerminalCompleter with 46 commands
+2025-01-23 18:50:38,499 - AITerm - INFO - logger:54 - Initializing SuggestionDropdown
+2025-01-23 18:50:38,529 - AITerm - INFO - logger:54 - SuggestionDropdown initialized and hidden
+2025-01-23 18:50:41,592 - AITerm - DEBUG - logger:51 - Key released: l, current text: ls
+2025-01-23 18:50:41,592 - AITerm - INFO - logger:54 - Updating suggestions for text: 'ls'
+2025-01-23 18:50:41,592 - AITerm - INFO - logger:54 - Getting suggestions for text: 'ls'
+2025-01-23 18:50:41,592 - AITerm - INFO - logger:54 - Prefix matches for 'ls': ['ls']
+2025-01-23 18:50:41,592 - AITerm - INFO - logger:54 - Fuzzy matches for 'ls': ['ls', 'less', 'ps', 'svn']
+2025-01-23 18:50:41,592 - AITerm - INFO - logger:54 - New fuzzy matches: ['less', 'ps', 'svn']
+2025-01-23 18:50:41,592 - AITerm - INFO - logger:54 - Final suggestions: ['ls', 'less', 'ps', 'svn']
+2025-01-23 18:50:41,593 - AITerm - INFO - logger:54 - Got suggestions: ['ls', 'less', 'ps', 'svn']
+2025-01-23 18:50:41,593 - AITerm - INFO - logger:54 - Showing dropdown with 4 suggestions at (134, 672)
+2025-01-23 18:50:41,593 - AITerm - INFO - logger:54 - Setting geometry to: 1x1+34+59
+2025-01-23 18:50:41,597 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 18:50:41,740 - AITerm - DEBUG - logger:51 - Key released: s, current text: ls
+2025-01-23 18:50:41,740 - AITerm - INFO - logger:54 - Updating suggestions for text: 'ls'
+2025-01-23 18:50:41,740 - AITerm - INFO - logger:54 - Getting suggestions for text: 'ls'
+2025-01-23 18:50:41,740 - AITerm - INFO - logger:54 - Prefix matches for 'ls': ['ls']
+2025-01-23 18:50:41,740 - AITerm - INFO - logger:54 - Fuzzy matches for 'ls': ['ls', 'less', 'ps', 'svn']
+2025-01-23 18:50:41,741 - AITerm - INFO - logger:54 - New fuzzy matches: ['less', 'ps', 'svn']
+2025-01-23 18:50:41,741 - AITerm - INFO - logger:54 - Final suggestions: ['ls', 'less', 'ps', 'svn']
+2025-01-23 18:50:41,741 - AITerm - INFO - logger:54 - Got suggestions: ['ls', 'less', 'ps', 'svn']
+2025-01-23 18:50:41,741 - AITerm - INFO - logger:54 - Showing dropdown with 4 suggestions at (134, 672)
+2025-01-23 18:50:41,742 - AITerm - INFO - logger:54 - Setting geometry to: 404x184+134+672
+2025-01-23 18:50:41,743 - AITerm - INFO - logger:54 - Dropdown shown and configured
+2025-01-23 18:50:42,810 - AITerm - INFO - logger:54 - Hiding dropdown
+2025-01-23 18:50:42,810 - AITerm - INFO - logger:54 - Executing command: ls
+2025-01-23 18:50:42,836 - AITerm - ERROR - logger:60 - Error executing command: 'tuple' object has no attribute 'endswith'
+2025-01-23 18:50:42,977 - AITerm - DEBUG - logger:51 - Key released: Return, current text: 
+2025-01-23 18:50:42,977 - AITerm - INFO - logger:54 - Updating suggestions for text: ''
+2025-01-23 18:50:42,977 - AITerm - INFO - logger:54 - No text to get suggestions for
+2025-01-23 18:50:42,977 - AITerm - INFO - logger:54 - Got suggestions: []

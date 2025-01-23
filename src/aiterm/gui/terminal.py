@@ -447,6 +447,7 @@ class TerminalGUI:
         
         # Bind events
         self.command_entry.bind('<Return>', self.execute_command)
+        self.command_entry.bind('<KP_Enter>', self.execute_command)  # Numpad Enter
         self.command_entry.bind('<Up>', self._history_up)
         self.command_entry.bind('<Down>', self._history_down)
         self.command_entry.bind('<Tab>', self._handle_tab)
@@ -494,178 +495,100 @@ class TerminalGUI:
                 bg='black'
             )
     
-    def append_output(self, text, color=None):
-        """Append text to output area with optional color"""
+    def update_prompt(self):
+        """Update the command prompt"""
+        # Get current working directory
+        cwd = self.command_executor.working_directory
+        
+        # Replace home directory with ~
+        home = os.path.expanduser("~")
+        if cwd.startswith(home):
+            cwd = "~" + cwd[len(home):]
+            
+        # Update directory label
+        self.prompt_label.config(text=cwd)
+            
+        # Set prompt
+        prompt = f"\n{cwd}$ "
+        self.append_output(prompt)
+        
+    def append_output(self, text, color='white'):
+        """Append text to the output area"""
         if not text:
             return
             
-        # Add newline if needed
+        # Add newline if text doesn't end with one
         if not text.endswith('\n'):
             text += '\n'
             
         # Get current position
-        pos = self.output_area.index(tk.END)
+        current = self.output_area.index(tk.END)
         
         # Insert text
         self.output_area.insert(tk.END, text)
         
-        # Apply color tag if specified
-        if color:
-            # Calculate end position
-            start = f"{float(pos) - 1.0}"
-            end = self.output_area.index(tk.END)
-            self.output_area.tag_add(color, start, end)
-            self.output_area.tag_config(color, foreground=color)
+        # Apply color tag
+        start = current
+        end = self.output_area.index(tk.END)
+        self.output_area.tag_add(color, start, end)
         
         # Scroll to end
         self.output_area.see(tk.END)
     
     def execute_command(self, event=None):
         """Execute the entered command"""
+        # Hide suggestions first
+        self._hide_suggestions()
+        
+        # Get command text
         command = self.command_entry.get().strip()
         if not command:
-            return
+            return 'break'
             
-        logger.info(f"Executing command: {command}")
+        # Add to history
+        self.command_history.append(command)
+        self.history_index = len(self.command_history)
         
         # Clear command entry
         self.command_entry.delete(0, tk.END)
         
-        # Add to history
-        if not self.command_history or command != self.command_history[-1]:
-            self.command_history.append(command)
-            self.history_index = len(self.command_history)
-            logger.debug(f"Added command to history. Total commands: {len(self.command_history)}")
-
-        # Show command in output area
-        self.append_output(f"\n{self.command_executor.working_directory}$ {command}")
-        
-        # Handle exit command
-        if command == 'exit':
-            logger.info("Exit command received")
-            if self.pty:
-                logger.debug("Stopping PTY before exit")
-                self.pty.stop()
-                self.pty = None
-                self.in_pty_mode = False
-                return
-            self.parent.quit()
-            return
-
-        # Handle clear command directly
-        if command.strip() == 'clear':
-            logger.debug("Clearing terminal output")
-            self.output_area.delete(1.0, tk.END)
-            return
-
-        # Handle history command directly
-        if command.strip() == 'history':
-            logger.debug("Showing command history")
-            for i, cmd in enumerate(self.command_history, 1):
-                self.append_output(f"\n{i:4d}  {cmd}")
-            return
-
-        # Get the command without arguments
-        command_name = command.split()[0]
-        
-        # Always interpret cd commands
-        if command_name == 'cd':
-            try:
-                original_args = command[2:].strip() if len(command) > 2 else ""
-                interpreted_command = CommandInterpreter.interpret(command)
-                if interpreted_command:
-                    logger.debug(f"Interpreted cd command: {interpreted_command}")
-                    
-                    # Show helpful message for special paths
-                    if not original_args:
-                        self.append_output("\nInterpreted as: Going to home directory (~)\n", 'cyan')
-                    elif original_args.lower() == "home":
-                        self.append_output("\nInterpreted as: Going to home directory (~)\n", 'cyan')
-                    elif original_args.lower() == "downloads":
-                        self.append_output("\nInterpreted as: Going to Downloads directory (~/Downloads)\n", 'cyan')
-                    elif original_args.lower() in ["documents", "docs"]:
-                        self.append_output("\nInterpreted as: Going to Documents directory (~/Documents)\n", 'cyan')
-                    elif original_args.lower() == "desktop":
-                        self.append_output("\nInterpreted as: Going to Desktop directory (~/Desktop)\n", 'cyan')
-                    elif original_args.lower() == "pictures":
-                        self.append_output("\nInterpreted as: Going to Pictures directory (~/Pictures)\n", 'cyan')
-                    elif original_args.lower() == "music":
-                        self.append_output("\nInterpreted as: Going to Music directory (~/Music)\n", 'cyan')
-                    elif original_args.lower() == "movies":
-                        self.append_output("\nInterpreted as: Going to Movies directory (~/Movies)\n", 'cyan')
-                    elif original_args.lower() == "applications":
-                        self.append_output("\nInterpreted as: Going to Applications directory (/Applications)\n", 'cyan')
-                    elif original_args == "-":
-                        self.append_output("\nInterpreted as: Going to previous directory (cd -)\n", 'cyan')
-                    elif interpreted_command != command:
-                        self.append_output(f"\nInterpreted as: {interpreted_command}\n", 'cyan')
-                        
-                    command = interpreted_command
-            except Exception as e:
-                logger.error(f"Error interpreting cd command: {e}")
-                self.append_output(f"\nError interpreting command: {str(e)}\n", 'red')
-                return
-        
-        # If AI mode is enabled and it's not a built-in command, interpret it
-        if self.ai_mode.get() and not any(command.startswith(cmd) for cmd in ['cd', 'pwd', 'exit', 'clear', 'history', 'tail']):
-            try:
-                interpreted_command = CommandInterpreter.interpret(command)
-                if interpreted_command:
-                    self.append_output(f"\nInterpreted as: {interpreted_command}\n", 'cyan')
-                    command = interpreted_command
-            except Exception as e:
-                self.append_output(f"\nError interpreting command: {str(e)}\n", 'red')
-                return
-        
-        # Handle built-in commands
-        if command == 'pwd':
-            self.append_output(self.command_executor.working_directory)
-        elif command.startswith('cd'):
-            # Extract the path from the cd command
-            path = command[2:].strip() if len(command) > 2 else None
-            success, result = self.command_executor.change_directory(path)
-            if success:
-                self.update_prompt()
+        try:
+            # Show command in output
+            self.append_output(f"\n{self.command_executor.working_directory}$ {command}")
+            
+            # Execute command
+            if self.in_pty_mode:
+                # In PTY mode, send command directly to PTY
+                self.pty.write(command + '\n')
             else:
-                self.append_output(f"Error: {result}", 'red')
-        else:
-            # Handle interactive commands with PTY
-            interactive_commands = {
-                # Editors
-                'vi', 'vim', 'nano', 'emacs', 'pico',
-                # Pagers
-                'less', 'more', 'most',
-                # Interactive monitoring
-                'top', 'htop',
-                # Interactive file viewing
-                'tail -f', 'watch',
-                # Interactive shells
-                'python', 'ipython', 'node', 'mysql', 'psql',
-                # Interactive git commands
-                'git add -p', 'git rebase -i'
-            }
-            
-            # Check if it's an interactive command
-            is_interactive = command_name in interactive_commands or \
-                           any(command.startswith(cmd) for cmd in interactive_commands)
-            
-            # Special case for tail -f
-            if command_name == 'tail' and '-f' in command.split():
-                is_interactive = True
-                logger.debug("Detected tail -f command")
-            
-            if is_interactive:
-                logger.info(f"Starting interactive mode for command: {command}")
-                self.start_pty_mode(command)
-                return
-            
-            # Execute command and handle output
-            stdout, stderr = self.command_executor.execute(command)
-            if stdout:
-                self.append_output(stdout)
-            if stderr:
-                self.append_output(stderr, 'red')
+                # Use command interpreter in AI mode
+                if self.ai_mode.get():
+                    from ..commands.interpreter import CommandInterpreter
+                    try:
+                        interpreted_command = CommandInterpreter.interpret(command)
+                        logger.info(f"Interpreted command '{command}' as '{interpreted_command}'")
+                        stdout, stderr = self.command_executor.execute(interpreted_command)
+                    except Exception as e:
+                        self.append_output(f"Error interpreting command: {str(e)}", 'red')
+                        return 'break'
+                else:
+                    # Execute command directly in non-AI mode
+                    stdout, stderr = self.command_executor.execute(command)
                 
+                if stdout:
+                    self.append_output(stdout)
+                if stderr:
+                    self.append_output(f"Error: {stderr}", 'red')
+                
+                # Update prompt if directory changed
+                self.update_prompt()
+                
+        except Exception as e:
+            logger.error(f"Error executing command: {e}")
+            self.append_output(f"Error: {str(e)}", 'red')
+            
+        return 'break'
+    
     def start_pty_mode(self, command):
         """Start PTY mode with the given command"""
         logger.debug(f"Starting PTY mode with command: {command}")
@@ -701,10 +624,6 @@ class TerminalGUI:
             self.append_output(f"\nError starting interactive mode: {e}\n", 'red')
             return
     
-    def update_prompt(self):
-        """Update the prompt with current working directory"""
-        self.prompt_label.config(text=f"{self.command_executor.working_directory}")
-
     def handle_key(self, event):
         """Handle key events in interactive mode"""
         if not self.in_pty_mode or not self.pty:
@@ -758,74 +677,74 @@ class TerminalGUI:
             self.pty.write(event.char)
             return "break"
     
-    def _handle_key_release(self, event):
-        """Handle key release events for real-time suggestions"""
-        # Log the key event
-        logger.info(f"Key release event - keysym: {event.keysym}, char: {event.char}, keycode: {event.keycode}")
+    def _handle_tab(self, event=None):
+        """Handle tab key press"""
+        logger.info("Tab pressed")
         
-        # Ignore special keys
-        if event.keysym in ('Up', 'Down', 'Left', 'Right', 'Return', 'Tab', 'Escape', 'ISO_Left_Tab'):
-            logger.info(f"Ignoring special key: {event.keysym}")
-            return
-            
-        # Get current text and cursor position
-        text = self.command_entry.get()
-        logger.info(f"Current text: '{text}'")
-        if not text:
-            logger.info("No text, hiding suggestions")
-            self._hide_suggestions()
-            return
-            
-        # Get suggestions
-        suggestions = self.completer.get_suggestions(text)
-        logger.info(f"Got suggestions: {suggestions}")
-        
-        if suggestions:
-            # Calculate position for dropdown
-            x = self.command_entry.winfo_rootx()
-            y = self.command_entry.winfo_rooty() + self.command_entry.winfo_height()
-            logger.info(f"Showing dropdown at position ({x}, {y})")
-            
-            # Show dropdown with suggestions
-            self.suggestion_dropdown.show(suggestions, x, y)
-            
-            # Verify dropdown state
-            logger.info(f"Dropdown visible: {self.suggestion_dropdown.is_visible()}")
-            logger.info(f"Dropdown geometry: {self.suggestion_dropdown.winfo_geometry()}")
+        # Check if dropdown is visible
+        if self.suggestion_dropdown.is_visible():
+            # Get next/prev suggestion based on shift key
+            if event.state & 0x1:  # Shift is pressed
+                suggestion = self.suggestion_dropdown.prev_suggestion()
+                logger.info(f"Selected previous suggestion: {suggestion}")
+            else:
+                suggestion = self.suggestion_dropdown.next_suggestion()
+                logger.info(f"Selected next suggestion: {suggestion}")
+                
+            if suggestion:
+                # Update command entry with suggestion
+                self.command_entry.delete(0, tk.END)
+                self.command_entry.insert(0, suggestion)
         else:
-            logger.info("No suggestions, hiding dropdown")
-            self._hide_suggestions()
+            # Show suggestions if not visible
+            self._update_suggestions()
+            
+        return 'break'  # Prevent default tab behavior
+        
+    def _handle_key_release(self, event):
+        """Handle key release events for command entry"""
+        # Ignore special keys
+        if event.keysym in {'Tab', 'Shift_L', 'Shift_R', 'Control_L', 'Control_R', 
+                           'Alt_L', 'Alt_R', 'Up', 'Down', 'Left', 'Right'}:
+            logger.debug(f"Ignoring special key: {event.keysym}")
+            return
+            
+        # Get current text
+        current_text = self.command_entry.get()
+        logger.debug(f"Key released: {event.keysym}, current text: {current_text}")
+        
+        # Update suggestions
+        self._update_suggestions(current_text)
         
     def _hide_suggestions(self, event=None):
         """Hide suggestion dropdown"""
         if self.suggestion_dropdown.is_visible():
             self.suggestion_dropdown.hide()
             
-    def _handle_tab(self, event):
-        """Handle tab key press for command completion"""
-        if event.state & 0x1:  # Shift is pressed
-            if self.suggestion_dropdown.is_visible():
-                suggestion = self.suggestion_dropdown.prev_suggestion()
-                if suggestion:
-                    self.command_entry.delete(0, tk.END)
-                    self.command_entry.insert(0, suggestion)
-            return 'break'
-        else:
-            if self.suggestion_dropdown.is_visible():
-                suggestion = self.suggestion_dropdown.next_suggestion()
-                if suggestion:
-                    self.command_entry.delete(0, tk.END)
-                    self.command_entry.insert(0, suggestion)
-            else:
-                # Show suggestions on first tab
-                text = self.command_entry.get()
-                suggestions = self.completer.get_suggestions(text)
-                if suggestions:
-                    x = self.command_entry.winfo_rootx()
-                    y = self.command_entry.winfo_rooty() + self.command_entry.winfo_height()
-                    self.suggestion_dropdown.show(suggestions, x, y)
-            return 'break'
+    def _update_suggestions(self, text=None):
+        """Update suggestions based on current text"""
+        if text is None:
+            text = self.command_entry.get()
+            
+        logger.info(f"Updating suggestions for text: '{text}'")
         
+        # Get suggestions from completer
+        try:
+            suggestions = self.completer.get_suggestions(text)
+            logger.info(f"Got suggestions: {suggestions}")
+            
+            if suggestions:
+                # Show dropdown below command entry
+                x = self.command_entry.winfo_rootx()
+                y = self.command_entry.winfo_rooty() + self.command_entry.winfo_height()
+                self.suggestion_dropdown.show(suggestions, x, y)
+            else:
+                self._hide_suggestions()
+                
+        except Exception as e:
+            logger.error(f"Error getting suggestions: {e}")
+            self._hide_suggestions()
+
     def _history_up(self, event):
         """Handle up arrow key press for command history"""
         self._hide_suggestions()

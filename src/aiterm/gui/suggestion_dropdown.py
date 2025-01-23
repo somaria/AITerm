@@ -55,6 +55,11 @@ class SuggestionDropdown(tk.Toplevel):
         self.withdraw()
         logger.info("SuggestionDropdown initialized and hidden")
         
+        # Bind events
+        self.listbox.bind('<Double-Button-1>', self._on_select)
+        self.listbox.bind('<Return>', self._on_select)
+        self.listbox.bind('<KP_Enter>', self._on_select)  # Numpad Enter
+        
     def show(self, suggestions, x, y):
         """Show dropdown with suggestions at specified position"""
         if not suggestions:
@@ -63,16 +68,18 @@ class SuggestionDropdown(tk.Toplevel):
             return
             
         logger.info(f"Showing dropdown with {len(suggestions)} suggestions at ({x}, {y})")
-        self.suggestions = suggestions
+        
+        # Convert suggestions to strings if they aren't already
+        self.suggestions = [str(s) for s in suggestions]
         self.selected_index = 0
         
         # Update listbox items
         self.listbox.delete(0, tk.END)
-        for suggestion in suggestions:
+        for suggestion in self.suggestions:
             self.listbox.insert(tk.END, suggestion)
             
         # Update size based on content
-        width = max(len(str(s)) for s in suggestions) + 5  # Add padding
+        width = max(len(str(s)) for s in self.suggestions) + 5  # Add padding
         self.listbox.configure(width=max(40, width))
         
         # Get screen dimensions
@@ -147,9 +154,19 @@ class SuggestionDropdown(tk.Toplevel):
         """Check if dropdown is visible"""
         return self.visible
         
-    def _on_select(self, event):
-        """Handle listbox selection"""
-        selection = self.listbox.curselection()
-        if selection:
-            self.selected_index = selection[0]
-            logger.info(f"Selected suggestion: {self.get_selected()}")
+    def _on_select(self, event=None):
+        """Handle selection event"""
+        if not self.suggestions:
+            return
+            
+        # Get selected suggestion
+        suggestion = self.get_selected()
+        if suggestion:
+            logger.info(f"Selected suggestion: {suggestion}")
+            # Update command entry
+            if hasattr(self.master, 'command_entry'):
+                self.master.command_entry.delete(0, tk.END)
+                self.master.command_entry.insert(0, suggestion)
+                self.master.command_entry.focus_set()
+            # Hide dropdown
+            self.hide()
