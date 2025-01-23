@@ -113,6 +113,9 @@ class TerminalGUI:
         )
         self.command_entry.pack(side='left', fill='x', expand=True)
         
+        # Add padding inside the input field
+        self.command_entry.configure(bd=5, relief='flat')
+        
         # Configure tags for colored output
         self.output_area.tag_configure('red', foreground='red')
         self.output_area.tag_configure('green', foreground='green')
