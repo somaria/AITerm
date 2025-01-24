@@ -1,9 +1,0 @@
-INFO - Found .env file at: /Volumes/wd/code/Python/AITerm/.env
-INFO - Loaded OpenAI API key (masked): sk-proj-...M9gA
-INFO - Using OpenAI model: gpt-4o-mini
-INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
-INFO - Using OpenAI model: gpt-4o-mini
-INFO - Initializing AI processor with API key (masked): sk-proj-...M9gA
-INFO - Using OpenAI model: gpt-4o-mini
-INFO - Processing command: where am i
-INFO - AI interpreted command 'where am i' as: pwd
