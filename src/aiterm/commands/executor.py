@@ -178,11 +178,8 @@ class CommandExecutor:
     def execute(self, command: str) -> Tuple[Optional[str], Optional[str]]:
         """Execute a command and return stdout and stderr."""
         try:
-            # Process natural language command
-            processed_command = self._process_command(command)
-            
             # Split command into parts
-            cmd_parts = shlex.split(processed_command)
+            cmd_parts = shlex.split(command)
             if not cmd_parts:
                 return None, "Empty command"
             
@@ -208,17 +205,52 @@ class CommandExecutor:
                     self.suggester.record_command(command, self.working_directory, exit_code=1)
                     return None, result
             
-            # Expand Docker commands if needed
-            expanded_parts = self._expand_docker_command(cmd_parts)
-            if expanded_parts != cmd_parts:
-                logger.debug(f"Expanded command from '{' '.join(cmd_parts)}' to '{' '.join(expanded_parts)}'")
-                cmd_parts = expanded_parts
+            # Handle ls command specially
+            if base_cmd == 'ls':
+                # Always use shell=True for ls to handle wildcards
+                # Split command and rebuild with proper spacing
+                cmd_parts = command.split()
+                base = cmd_parts[0]  # 'ls'
+                args = []
+                
+                # Add color flag first
+                args.append('--color=always')
+                
+                # Add any other flags (starting with -)
+                flags = [arg for arg in cmd_parts[1:] if arg.startswith('-')]
+                args.extend(flags)
+                
+                # Add remaining arguments
+                other_args = [arg for arg in cmd_parts[1:] if not arg.startswith('-')]
+                args.extend(other_args)
+                
+                # Build final command
+                command = f"{base} {' '.join(args)}"
+                
+                result = subprocess.run(
+                    command,
+                    cwd=self.working_directory,
+                    capture_output=True,
+                    text=True,
+                    shell=True,
+                    env={"LANG": "en_US.UTF-8", "TERM": "xterm-256color"}  # Ensure consistent output
+                )
+                
+                # Record command in history
+                self.suggester.record_command(
+                    command=command,
+                    working_dir=self.working_directory,
+                    exit_code=result.returncode,
+                    output=result.stdout if result.stdout else result.stderr
+                )
+                
+                # For ls command, always return stdout (even if empty) and only return stderr on error
+                if result.returncode == 0:
+                    return result.stdout.rstrip('\n') if result.stdout else "", None
+                else:
+                    return None, result.stderr.rstrip('\n') if result.stderr else "Unknown error"
             
-            # Handle other special commands
-            if base_cmd in self.SPECIAL_COMMANDS:
-                cmd_parts = self.SPECIAL_COMMANDS[base_cmd] + cmd_parts[1:]
-            
-            # Run command and capture output
+            # For other commands, use normal execution
             try:
                 result = subprocess.run(
                     cmd_parts,
@@ -227,23 +259,19 @@ class CommandExecutor:
                     text=True
                 )
                 
-                # Keep trailing newlines in stdout but strip from stderr
-                stdout = result.stdout if result.stdout else None
-                stderr = result.stderr.rstrip('\n') if result.stderr else None
-                
                 # Record command in history
                 self.suggester.record_command(
                     command=command,
                     working_dir=self.working_directory,
                     exit_code=result.returncode,
-                    output=stdout if stdout else stderr
+                    output=result.stdout if result.stdout else result.stderr
                 )
                 
                 # If command returned non-zero and has stderr, treat as error
-                if result.returncode != 0 and stderr:
-                    return None, stderr
+                if result.returncode != 0 and result.stderr:
+                    return None, result.stderr.rstrip('\n')
                 
-                return stdout, stderr
+                return result.stdout.rstrip('\n') if result.stdout else "", result.stderr.rstrip('\n') if result.stderr else None
                 
             except FileNotFoundError:
                 logger.error(f"Command not found: {base_cmd}")

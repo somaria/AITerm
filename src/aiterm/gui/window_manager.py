@@ -8,6 +8,9 @@ import sys
 import os
 from typing import Optional, Dict, List
 from .terminal import TerminalGUI
+from ..commands.executor import CommandExecutor
+from ..commands.interpreter import CommandInterpreter
+from ..commands.command_suggester import CommandSuggester
 from ..utils.logger import get_logger
 
 logger = get_logger()
@@ -64,132 +67,73 @@ class WindowManager:
             window.apply_theme(theme)
 
 class NotebookWindow(tk.Toplevel):
+    """A window containing a notebook with multiple terminal tabs."""
+    
     def __init__(self, manager):
-        """Initialize notebook window"""
+        """Initialize notebook window."""
         super().__init__(manager.root)
         self.manager = manager
         
-        # Store initial position for dragging
-        self.drag_start_x = 0
-        self.drag_start_y = 0
+        # Set window size and position
+        window_width = 800
+        window_height = 600
+        screen_width = self.winfo_screenwidth()
+        screen_height = self.winfo_screenheight()
+        center_x = int(screen_width/2 - window_width/2)
+        center_y = int(screen_height/2 - window_height/2)
+        self.geometry(f'{window_width}x{window_height}+{center_x}+{center_y}')
         
-        # Set up the window
+        # Set title
         self.title('AI Terminal')
-        self.geometry('800x600')
         
-        # Create title bar for frameless mode
-        self.title_bar = None
-        
-        # Create menu bar
-        self.menu_bar = tk.Menu(self)
-        self.config(menu=self.menu_bar)
-        
-        # File menu
-        file_menu = tk.Menu(self.menu_bar, tearoff=0)
-        self.menu_bar.add_cascade(label='File', menu=file_menu)
-        file_menu.add_command(label='New Tab', command=self.add_terminal)
-        file_menu.add_command(label='Close Tab', command=self.close_current_tab)
-        file_menu.add_separator()
-        file_menu.add_command(label='Close Window', command=self.close_window)
-        
-        # Edit menu
-        edit_menu = tk.Menu(self.menu_bar, tearoff=0)
-        self.menu_bar.add_cascade(label='Edit', menu=edit_menu)
-        edit_menu.add_command(label='Copy', command=self.copy_selection)
-        edit_menu.add_command(label='Paste', command=self.paste_clipboard)
-        
-        # Theme menu (synced with main window)
-        theme_menu = tk.Menu(self.menu_bar, tearoff=0)
-        self.menu_bar.add_cascade(label='Theme', menu=theme_menu)
-        theme_menu.add_radiobutton(label='Retro', value='retro',
-                                 variable=manager.current_theme,
-                                 command=manager.apply_theme)
-        theme_menu.add_radiobutton(label='Modern', value='modern',
-                                 variable=manager.current_theme,
-                                 command=manager.apply_theme)
-        
-        # Configure style for tabs
-        style = ttk.Style()
-        style.configure('TNotebook', tabposition='nw')
-        style.configure('TNotebook.Tab', padding=[10, 5])
-        
-        # Create notebook for tabs
+        # Create notebook
         self.notebook = ttk.Notebook(self)
-        self.notebook.pack(fill=tk.BOTH, expand=True, padx=5, pady=5)
+        self.notebook.pack(expand=True, fill='both')
         
-        # Keep track of terminals and tab labels
-        self.terminals = {}
-        self.tab_labels = {}
-        
-        # Bind tab change event
-        self.notebook.bind('<<NotebookTabChanged>>', self._on_tab_changed)
-        
-        # Set minimum size
-        self.minsize(600, 400)
-        
-        # Add initial tab
+        # Create first terminal tab
         self.add_terminal()
         
+        # Bind events
+        self.protocol("WM_DELETE_WINDOW", self._on_close)
+        self.notebook.bind("<Button-2>", self._on_tab_middle_click)  # Middle click to close tab
+        self.notebook.bind("<Control-t>", lambda e: self.add_terminal())  # Ctrl+T to open new tab
+        
     def add_terminal(self):
-        """Add a new terminal tab"""
-        # Create a frame for the terminal
+        """Add a new terminal tab."""
         tab_frame = ttk.Frame(self.notebook)
         
-        # Create terminal in the frame
-        terminal = TerminalGUI(tab_frame)
-        terminal.frame.pack(fill=tk.BOTH, expand=True)
+        # Initialize components
+        command_executor = CommandExecutor()
+        command_interpreter = CommandInterpreter()
+        command_suggester = CommandSuggester()
         
-        # Add to notebook
-        self.notebook.add(tab_frame, text=f'Terminal {len(self.terminals) + 1}')
+        # Create terminal with components
+        terminal = TerminalGUI(
+            tab_frame,
+            command_executor=command_executor,
+            command_interpreter=command_interpreter,
+            command_suggester=command_suggester
+        )
+        terminal.pack(expand=True, fill='both')
         
-        # Store references
-        self.terminals[tab_frame] = terminal
-        self.tab_labels[tab_frame] = f'Terminal {len(self.terminals)}'
-        
-        # Select the new tab
+        # Add tab to notebook
+        tab_name = f"Terminal {len(self.notebook.tabs()) + 1}"
+        self.notebook.add(tab_frame, text=tab_name)
         self.notebook.select(tab_frame)
         
-    def close_tab(self, tab_frame):
-        """Close a specific tab"""
-        if tab_frame in self.terminals:
-            terminal = self.terminals[tab_frame]
-            del self.terminals[tab_frame]
-            del self.tab_labels[tab_frame]
-            self.notebook.forget(tab_frame)
-            
-            # Create new tab if last one closed
-            if not self.terminals:
-                self.add_terminal()
-                
-    def close_current_tab(self):
-        """Close the currently selected tab"""
-        current = self.notebook.select()
-        if current:
-            self.close_tab(current)
-            
-    def close_window(self):
-        """Close this window"""
+    def _on_close(self):
+        """Handle window close event"""
         self.manager.close_window(self)
         
-    def _on_tab_changed(self, event):
-        """Handle tab change event"""
-        current = self.notebook.select()
-        if current in self.terminals:
-            self.terminals[current].command_entry.focus_set()
-            
-    def copy_selection(self):
-        """Copy selected text"""
-        current = self.notebook.select()
-        if current in self.terminals:
-            self.terminals[current].copy_selection()
-            
-    def paste_clipboard(self):
-        """Paste clipboard content"""
-        current = self.notebook.select()
-        if current in self.terminals:
-            self.terminals[current].paste_clipboard()
+    def _on_tab_middle_click(self, event):
+        """Handle tab middle click event"""
+        tab = self.notebook.identify(event.x, event.y)
+        if tab:
+            self.notebook.forget(tab)
             
     def apply_theme(self, theme):
         """Apply theme to all terminals"""
-        for terminal in self.terminals.values():
-            terminal.apply_theme(theme)
+        for tab in self.notebook.tabs():
+            for widget in tab.winfo_children():
+                if isinstance(widget, TerminalGUI):
+                    widget.apply_theme(theme)
